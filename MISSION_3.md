@@ -1,4 +1,50 @@
-# Mission 3 — évaluation de la force des agents
+# Mission 3 — évaluation de la force réelle des agents
+
+Rapport final. Mission commencée dans Codex (protocole, TightAggressiveAgent, audit,
+calculs), puis terminée dans Claude Code (rejeu de contrôle, agrégation, rake,
+sensibilité 64/256/1024, fréquences, tests de l'analyse et synthèse). L'état exact
+au moment de la reprise est conservé dans `MISSION_3_ETAT.md`.
+
+## Synthèse
+
+**Réponse à la question posée : non, EquityHeuristicAgent n'est pas compétitif.**
+Sa victoire de la mission 2 tenait à la faiblesse d'un adversaire aléatoire.
+
+| Confrontation (3 graines × 10 000 mains) | bb/100 net du premier agent, rake 5 % [IC 95 %] | Lecture |
+| --- | ---: | --- |
+| Equity vs TightAggressive | **−187,83** [−209,55 ; −166,11] | perte nette, très nette sur les 3 graines |
+| Equity vs Heuristic simple | **+44,32** [+41,94 ; +46,71] | gain contre un joueur qui ne mise jamais |
+| TightAggressive vs Heuristic simple | **+2,66** [+1,77 ; +3,56] | gain faible mais positif, même à 7 % de rake |
+
+- Les 3 graines indépendantes donnent toutes le même signe ; l'écart-type entre graines
+  (9,1 bb/100 pour Equity/TAG) est plus faible que la demi-largeur de l'IC.
+- La perte contre le TAG **ne vient pas du rake** : elle vaut déjà −177,03 bb/100 à 0 %.
+- Le principal défaut identifié est l'**estimation contre une main uniforme** : sur un échantillon
+  river non sélectionné, Equity s'attribue 54,7 % d'équité alors que sa part réelle au
+  showdown est de 16,0 % (écart de 38,7 points).
+- **Plus de simulations n'améliorent pas le résultat** : à 256 et 1024 tirages, Equity
+  perd ~46–48 bb/100 de plus qu'à 64 sur les mêmes 1 000 mains, pour un coût
+  par décision 1,6× à 4,4× plus élevé. Une estimation plus précise d'une
+  quantité mal définie (range uniforme) ne corrige pas le biais.
+- Ces résultats sont des simulations entre bots à stacks réinitialisés : **ils ne
+  constituent ni une mesure d'exploitabilité, ni une promesse de rentabilité réelle**.
+
+## Reprise et contrôle d'intégrité
+
+Les 12 journaux de décisions de plus de 50 Mo n'avaient pas pu être poussés sur GitHub
+par Codex. Toutes les expériences ont donc été rejouées depuis le plan enregistré
+(`mission3 run --workers 4 --output artifacts/mission3-reprise`) :
+
+- les **11 `hands.csv` régénérés sont identiques octet par octet** à ceux de Codex ;
+- les **22 empreintes SHA-256** (`hands.csv` et `decisions.jsonl`) correspondent à celles des
+  manifestes Codex ;
+- `analyze` a ensuite revérifié ces empreintes, l'alternance des positions et, main par main,
+  que le recalcul indépendant du rake à 5 % reproduit exactement les gains nets enregistrés.
+
+Les résultats sont donc reproductibles, et les journaux manquants sont restaurés à
+l'identique (localement, hors Git, car ils contiennent les cartes privées de chaque acteur).
+`artifacts/mission3/analysis.json`, `analysis.csv` et `frequencies.json` proviennent de
+cette exécution ; seuls les temps CPU de `runs[].runtime` sont ceux de la machine de reprise.
 
 ## Question et protocole fixé avant les résultats
 
@@ -163,108 +209,216 @@ Le protocole de partie exporte également les secondes CPU et les nombres de
 décisions par siège ; ce chronométrage inclut le pont de validation/applique du
 moteur, contrairement au contrôle ci-dessus qui ne mesure que la politique.
 
-## Faiblesses structurelles à confronter aux résultats
+## Résultats mesurés
 
-1. **Ranges** : l'équité d'EquityHeuristicAgent suppose une main adverse uniforme
-   même après plusieurs relances. Augmenter les tirages réduit le bruit, pas ce
-   biais. Une main forte contre une range uniforme peut être dominée par une
-   range de value très serrée.
-2. **Préflop** : pas de table d'ouverture ni de défense par position, pas de
-   logique de 3-bet/4-bet et pas de traitement particulier des mains spéculatives
-   profondes. Les choix dépendent de seuils d'équité uniforme.
-3. **Relances** : relance minimale dès 65 % d'équité estimée, même après une
-   escalade adverse ; pas de calcul de fold equity, pas de tailles différenciées
-   pour value/protection/bluff, pas de limite de relances par street.
-4. **Postflop et risque** : le seuil du call utilise les pot odds et une marge
-   fixe de 2 points, sans réalisation d'équité, mises futures, reverse implied
-   odds, stack-to-pot ratio ou risque de stack entier.
-5. **Bluffs** : aucune politique de bluff ou semi-bluff délibérée, ni fréquences
-   équilibrées, ni sélection de bloqueurs. Le bruit Monte Carlo n'est pas une
-   stratégie de bluff.
-6. **Blindes** : la position ne modifie pas la politique d'Equity ; les décisions
-   de défense doivent être analysées séparément des vols faciles contre un TAG
-   qui n'ouvre que 22,8 % des combinaisons.
+Toutes les valeurs sont en bb/100 nets, sauf indication. IC à 95 % asymptotiques sur les
+blocs indépendants de deux mains (une main par position). Écart-type exprimé **en BB par
+main** (dispersion), distinct de l'erreur standard.
 
-Les fréquences observées et les résultats ne permettent pas d'attribuer
-causalement un écart à une seule règle. Pour cela, il faudra des ablations
-préenregistrées (range, sizing, seuil de call, position), sur les mêmes graines.
+### Résultats par graine (rake 5 %, plafond 3 BB, no-flop-no-drop)
+
+| Confrontation | Graine 31001 | Graine 31002 | Graine 31003 | Écart-type des 3 moyennes |
+| --- | ---: | ---: | ---: | ---: |
+| Equity vs TAG (Equity) | −184,37 [−222,30 ; −146,45] | −180,95 [−218,81 ; −143,10] | −198,16 [−235,23 ; −161,09] | 9,11 |
+| Equity vs Heuristic (Equity) | +43,09 [+38,93 ; +47,25] | +46,14 [+42,04 ; +50,24] | +43,74 [+39,59 ; +47,89] | 1,61 |
+| TAG vs Heuristic (TAG) | +1,88 [+0,30 ; +3,46] | +2,05 [+0,53 ; +3,57] | +4,06 [+2,51 ; +5,61] | 1,21 |
+
+Chaque expérience comporte exactement 5 000 mains au bouton et 5 000 en BB par siège.
+Les confrontations partagent les mêmes couples de graines ; elles sont donc corrélées entre
+elles, alors que les trois graines sont des réplications indépendantes.
+
+### Agrégat de 30 000 mains et sensibilité au rake
+
+Plafond fixe de **3 BB par main** à tous les taux, no-flop-no-drop, mêmes mains et mêmes
+décisions (aucune adaptation stratégique au rake n'est simulée).
+
+| Confrontation | Siège | 0 % | 2 % | 5 % | 7 % | Écart-type (BB/main) |
+| --- | --- | ---: | ---: | ---: | ---: | ---: |
+| Equity vs TAG | Equity | −177,03 [−198,95 ; −155,11] | −182,84 [−204,59 ; −161,08] | −187,83 [−209,55 ; −166,11] | −190,62 [−212,33 ; −168,91] | 19,0 |
+| | TAG | +177,03 [155,11 ; 198,95] | +164,85 [143,33 ; 186,37] | +155,64 [134,21 ; 177,07] | +151,31 [129,90 ; 172,72] | |
+| Equity vs Heuristic | Equity | +57,15 [54,59 ; 59,70] | +52,02 [49,53 ; 54,50] | +44,32 [41,94 ; 46,71] | +39,19 [36,87 ; 41,51] | 2,1 |
+| | Heuristic | −57,15 [−59,70 ; −54,59] | −59,98 [−62,50 ; −57,46] | −64,23 [−66,70 ; −61,76] | −67,06 [−69,49 ; −64,63] | |
+| TAG vs Heuristic | TAG | +4,71 [3,79 ; 5,62] | +3,89 [2,98 ; 4,80] | +2,66 [1,77 ; 3,56] | +1,85 [0,96 ; 2,73] | 0,8 |
+| | Heuristic | −4,71 [−5,62 ; −3,79] | −5,46 [−6,36 ; −4,56] | −6,58 [−7,47 ; −5,70] | −7,33 [−8,21 ; −6,46] | |
+
+Rake total prélevé sur les 30 000 mains, en BB :
+
+| Confrontation | 2 % | 5 % | 7 % |
+| --- | ---: | ---: | ---: |
+| Equity vs TAG | 5 397,3 | 9 656,9 | 11 793,2 |
+| Equity vs Heuristic | 2 388,6 | 5 971,4 | 8 360,0 |
+| TAG vs Heuristic | 470,5 | 1 176,2 | 1 646,7 |
+
+Lecture :
+
+- À 0 %, le jeu est à somme nulle ; dès 2 %, les deux sièges paient et la somme des
+  bb/100 devient négative.
+- Le plafond de 3 BB limite fortement le coût : entre 5 % et 7 %, le rake prélevé n'augmente
+  que d'environ 22 % sur Equity/TAG (gros pots plafonnés) contre 40 % sur Equity/Heuristic
+  (pots moyens rarement plafonnés).
+- **La marge du TAG contre l'heuristique simple (+4,71 à 0 %) est la plus sensible** :
+  le rake à 7 % en retire 61 %. Un avantage de quelques bb/100 entre bots peut
+  disparaître avec un rake réel plus élevé ou un plafond plus haut.
+- Le classement des agents est le même aux quatre taux.
+
+### Sensibilité au nombre de simulations d'équité
+
+Diagnostic secondaire, fixé avant les résultats : 1 000 premières mains d'Equity/TAG à la
+graine 31001, TAG fixé à 64 tirages, seul Equity varie. Les écarts sont appariés main par
+main (blocs de deux mains). Ce n'est **pas** une confrontation principale.
+
+| Tirages Equity | bb/100 net Equity (1 000 mains) | Écart apparié vs 64 [IC 95 %] | CPU par décision, moteur inclus | CPU par décision, politique seule (200 états fixes) | Décisions changées vs 64 (200 états) |
+| ---: | ---: | ---: | ---: | ---: | ---: |
+| 64 | −144,50 [−263,15 ; −25,85] | — | 8,2 ms | 4,99 ms | — |
+| 256 | −192,20 [−313,49 ; −70,91] | −47,70 [−83,75 ; −11,65] | 13,4 ms | 8,76 ms | 19 (9,5 %) |
+| 1024 | −190,19 [−313,83 ; −66,56] | −45,70 [−83,47 ; −7,92] | 35,6 ms | 24,48 ms | 20 (10 %) |
+
+Le CPU « moteur inclus » vient des manifestes de partie (pont de validation et
+application PokerKit compris ; à 64 tirages, sur les 10 000 mains). Les intervalles
+individuels sont très larges sur 1 000 mains ; seule la comparaison appariée est
+informative. Elle indique que **plus de précision rend Equity légèrement pire** sur cette
+graine, cohérent avec un biais de range : plus l'estimation uniforme est stable, plus
+l'agent s'engage de façon cohérente avec une équité surestimée. Cette conclusion repose
+sur une seule graine et 1 000 mains ; elle devra être répliquée. **Recommandation :
+garder 64 tirages tant que le modèle de range n'est pas corrigé** ; le gain de calcul
+est réel et l'augmentation n'apporte aucun bénéfice mesuré.
+
+## Faiblesses d'EquityHeuristicAgent, mesurées
+
+Fréquences agrégées sur les 3 graines (`artifacts/mission3/frequencies.json`).
+VPIP = part des mains où l'agent met volontairement de l'argent préflop ; PFR = part des
+mains où il relance préflop.
+
+| Agent (adversaire) | VPIP | PFR | Fold de la BB face à une relance | Fold face à une mise postflop | bb/100 au bouton | bb/100 en BB |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Equity (TAG) | 59,5 % | 6,2 % | 11,3 % (3 387 cas) | 22,6 % | −209,1 | −166,6 |
+| TAG (Equity) | 22,0 % | 21,2 % | 70,9 % (1 560 cas) | 21,8 % | +145,4 | +165,9 |
+| Equity (Heuristic) | 54,1 % | 9,4 % | — (aucune relance subie) | — (aucune mise subie) | +44,9 | +43,8 |
+| TAG (Heuristic) | 22,3 % | 22,3 % | — | — | −15,5 | +20,9 |
+| Heuristic (TAG) | 50,0 % | 0,0 % | 100 % (3 445 cas) | 100 % | −28,7 | +15,5 |
+
+Les bb/100 par position sont des moyennes simples des 3 graines, calculées sur 5 000
+mains par position et par graine.
+
+1. **Estimation des ranges (défaut principal).** L'équité est calculée contre une main
+   uniforme même après une ou plusieurs relances. Sur 200 décisions river face à une mise,
+   tirées sans regarder le résultat parmi 1 256 éligibles (graine 31001), l'équité uniforme
+   moyenne est de 54,73 % contre une part réelle au showdown de 16,00 % : surestimation de
+   **38,7 points** [34,7 ; 42,7]. Dans les 20 plus gros pots perdus, l'équité uniforme moyenne
+   était de 83,0 % (sélection sur les pertes, indicative seulement).
+2. **Préflop trop passif et trop large.** VPIP 59,5 % mais PFR 6,2 % contre le TAG :
+   87 % de ses décisions préflop sont des calls (limps au bouton compris) et il n'abandonne
+   la BB face à une relance que dans 11,3 % des cas. Il paie donc les ouvertures d'une range de 22,8 % des combinaisons avec
+   une majorité de mains dominées.
+3. **Défense des blindes et position.** Equity perd plus au bouton (−209,1) qu'en BB
+   (−166,6) : il n'exploite pas la position. Il ne vole presque jamais les blindes alors que
+   le TAG abandonne sa BB à 70,9 % face à une relance ; c'est un profit laissé sur la table.
+4. **Relances.** Equity relance 24 % de ses décisions au flop, 26 % au turn et 32 % à la
+   river. Les relances suivent un seuil d'équité uniforme et ignorent le message de
+   l'agression adverse. Il n'a aucune limite de relances par street et aucune taille
+   distincte pour la valeur et le bluff.
+5. **Bluff.** Equity n'a aucune stratégie de bluff ou de semi-bluff explicite ; son
+   agression vient uniquement de l'équité surestimée. Contre l'heuristique simple, aucune
+   mise ne reçoit de fold (cet adversaire ne mise jamais et ne se couche jamais postflop),
+   donc la fold equity n'y est pas testée.
+6. **Postflop et risque.** Il paie avec des pot odds et une marge fixe, sans tenir compte du
+   risque sur le tapis : 20 actions all-in contre le TAG (6 mains sur la graine 31001, toutes
+   perdues : −1 200 BB). Cependant, l'essentiel de la perte (−17 237 BB sur cette graine) vient
+   des autres mains, c'est-à-dire de l'accumulation de calls et de relances moyens contre
+   une range forte.
+
+Limites : ces fréquences sont descriptives. Attribuer causalement la perte à une règle
+précise exigera des ablations préenregistrées (range adverse conditionnelle, table
+d'ouverture, seuil de call, sizing) sur les mêmes graines.
+
+Le TAG n'est pas non plus un joueur fort : sa marge contre l'heuristique simple est faible
+(+2,66 bb/100 à 5 %) et il perd au bouton (−15,5) en abandonnant 39 % de ses décisions
+préflop. Il sert de référence sélective, pas d'objectif.
 
 ## Reproduction
 
-Depuis `/workspace/Poker-AI-Lab`, choisir des sorties inexistantes ; aucune
-expérience antérieure n'est écrasée :
+Depuis la racine du dépôt, avec des dossiers de sortie inexistants (aucune expérience n'est
+écrasée). Les commandes `pokerbench.*` se lancent depuis `backend/`, ou avec
+`PYTHONPATH=backend` :
 
 ```bash
-# Rejouer l'audit des anciennes mains ; créer le dossier parent auparavant.
-mkdir -p artifacts/mission3-reproduction-audit
-.venv/bin/python -m pokerbench.mission3 audit artifacts/mission2/random-v-equity \
-  --output artifacts/mission3-reproduction-audit/equity.json
-.venv/bin/python -m pokerbench.mission3 audit artifacts/mission2/random-v-heuristic \
-  --output artifacts/mission3-reproduction-audit/simple.json
+cd backend
+# Plan complet : 90 000 mains principales + 2 000 mains de sensibilité (≈ 25 min sur 4 CPU).
+../.venv/bin/python -m pokerbench.mission3 run --workers 4 --output ../artifacts/mission3-reproduction
+../.venv/bin/python -m pokerbench.mission3 analyze ../artifacts/mission3-reproduction \
+  --output ../artifacts/mission3-reproduction/analysis.json
+PYTHONPATH=. ../.venv/bin/python ../scripts/mission3_review.py frequencies \
+  ../artifacts/mission3-reproduction ../artifacts/mission3-reproduction/frequencies.json
 
-# Plan complet : 90 000 mains principales + 2 000 mains de sensibilité.
-.venv/bin/python -m pokerbench.mission3 run --workers 3 \
-  --output artifacts/mission3-reproduction
-.venv/bin/python -m pokerbench.mission3 analyze artifacts/mission3-reproduction \
-  --output artifacts/mission3-reproduction/analysis.json
+# Vérifier l'identité avec les résultats enregistrés.
+for d in ../artifacts/mission3/*/; do cmp "$d/hands.csv" "../artifacts/mission3-reproduction/$(basename $d)/hands.csv"; done
 
-# Diagnostic de coût sur états fixes.
-.venv/bin/python -m pokerbench.mission3 cost artifacts/mission2/random-v-equity \
-  --output artifacts/mission3-reproduction-audit/cost.json
-
-# Exemple d'une confrontation individuelle.
-.venv/bin/python -m pokerbench.benchmark --hands 10000 \
-  --agent-a equity --agent-b tag --deck-seed 31001 --policy-seed 41001 \
-  --equity-samples 64 --tag-samples 64 --measure-time \
-  --output artifacts/mission3-single
+# Audit des mains de la mission 2 et diagnostic de coût (nécessitent leurs decisions.jsonl).
+mkdir -p ../artifacts/mission3-reproduction-audit
+../.venv/bin/python -m pokerbench.mission3 audit ../artifacts/mission2/random-v-equity \
+  --output ../artifacts/mission3-reproduction-audit/equity.json
+../.venv/bin/python -m pokerbench.mission3 cost ../artifacts/mission2/random-v-equity \
+  --output ../artifacts/mission3-reproduction-audit/cost.json
 ```
 
-Le temps CPU et le temps mural varient d'une exécution à l'autre ; les actions,
-profits et observations restent reproductibles aux mêmes sources, versions et
-graines. Les nouveaux fichiers de manifeste contiennent les écarts-types et
-la configuration TAG ; les anciens manifests de mission 2 sont conservés.
-Les empreintes des sources et des données sont enregistrées par expérience.
+`analyze` refuse toute expérience incomplète, déséquilibrée en positions, dont un fichier
+diffère de son empreinte ou dont le rake recalculé indépendamment ne reproduit pas les gains
+nets. Un clone GitHub ne contient pas les `decisions.jsonl` principaux : il faut d'abord
+relancer `run`, qui les régénère à l'identique. Les temps CPU varient selon la machine ; les
+actions, profits et observations ne varient pas.
 
-## Tests et priorités CFR/self-play
-
-Commandes exécutées :
+## Tests exécutés
 
 ```bash
-.venv/bin/python -m pytest -q backend/tests/test_mission3.py backend/tests/test_benchmark.py backend/tests/test_agents.py
-.venv/bin/python -m pytest -q
-# Depuis frontend :
-npm test
-npm run build
-PB_BASE_URL=http://127.0.0.1:8097 PB_BROWSER_EXECUTABLE=/usr/bin/chromium npm run test:browser
+.venv/bin/python -m pytest -q backend/tests/test_mission3.py   # 19 réussis
+.venv/bin/python -m pytest -q                                   # 643 réussis
+cd frontend && npm test && npm run build                        # 26 réussis, build OK
 ```
 
-**52 tests ciblés et 641 tests Python réussis** ; 17 nouveaux cas pour cette
-mission. Couverture ajoutée : classes préflop, défense BB, rejet des all-in
-spéculatifs, seuils de risque postflop, tirages, confidentialité et
-reproductibilité, audit détectant une observation falsifiée même si son checksum
-est recalculé, rake indépendant monotone, tailles/graines du plan et unités des
-écarts-types. Les **26 tests frontend et la compilation** passent également.
-Les vérifications numériques des fichiers complets sont distinctes de ces tests.
+- **643 tests Python réussis** (641 hérités de Codex + 2 ajoutés à la reprise), **26 tests
+  frontend réussis**, compilation TypeScript/Vite réussie.
+- Tests de la mission 3 : classes préflop du TAG, défense de BB, rejet des all-in
+  spéculatifs, seuils de risque postflop, détection des tirages, confidentialité et
+  reproductibilité, détection par l'audit d'une observation falsifiée même avec empreinte
+  recalculée, rake indépendant et monotone, tailles et graines du plan, unités des écarts-types.
+- Ajoutés à la reprise : `analyze` exécuté sur un mini-plan réel (agrégation des 3 graines,
+  rake 0 % = brut, 5 % = net enregistré, monotonie, diagnostic 64/256/1024, export CSV), et
+  rejet d'un journal altéré ou manquant. Les tailles du plan sont devenues des constantes
+  (`MAIN_HANDS`, `DIAGNOSTIC_HANDS`) pour permettre ce test, sans changer le plan.
+- Vérifications sur les données complètes (en plus des tests) : 92 000 mains rejouées
+  identiques à la reprise ; audits effectués par Codex sur 30 000 mains et 152 087 décisions
+  (missions 2 et 3) et 120 showdowns contrôlés indépendamment avec Treys, sans divergence. PokerKit reste l'unique arbitre ;
+  aucune observation d'agent ne contient de carte cachée adverse.
 
-Priorités après cette évaluation, sans lancer d'entraînement dans cette mission :
+Non fait dans cette mission : tableau de bord visuel de la mission 3 (les résultats sont
+dans `analysis.csv`), ablations causales des règles d'Equity, réplication multi-graines du
+diagnostic 64/256/1024.
 
-1. Définir un jeu abstrait heads-up à mises limitées et ensembles d'information
-   à rappel parfait ; tester regret matching, stratégie moyenne et best-response
-   sur Kuhn/Leduc avant toute revendication sur Hold'em.
-2. Conserver PokerKit comme arbitre des transitions réelles ; séparer état complet
-   d'arbitre et observation d'agent, et vérifier chaque mapping d'abstraction.
-3. Benchmarker une population d'adversaires diversifiée, geler checkpoints et
-   budgets d'évaluation, utiliser des graines d'entraînement et de test disjointes.
-4. Ajouter des tests d'exploitabilité dans le petit jeu, des ablations de ranges
-   et de sizing, et une évaluation multi-graines des politiques moyennes.
-5. Traiter le rake séparément : le cadre à deux joueurs et somme nulle du CFR
-   standard ne s'étend pas automatiquement au jeu à prélèvement variable.
+## Priorités pour l'agent CFR/self-play (Mission 4, non lancée)
 
-Aucun entraînement CFR/self-play, connexion Jev ou site tiers n'a été lancé.
+1. **Modèle de range d'abord.** Le défaut mesuré (+38,7 points d'équité surestimée à la
+   river) est exactement celui que le CFR corrige : raisonner sur des ensembles
+   d'information et des ranges conditionnées par l'historique, pas sur une main uniforme.
+2. **Petit jeu exact avant Hold'em.** Regret matching, stratégie moyenne et best-response
+   sur Kuhn puis Leduc, avec exploitabilité calculée exactement, avant toute abstraction
+   heads-up de Hold'em à mises limitées.
+3. **PokerKit reste l'arbitre.** Séparer l'état complet de l'arbitre de l'observation de
+   l'agent, et tester chaque correspondance entre abstraction et action légale réelle.
+4. **Banc d'évaluation existant réutilisé.** Mêmes protocoles (alternance des positions,
+   graines séparées et disjointes entre entraînement et test, IC sur blocs) contre une
+   population : Random, Heuristic, Equity et TAG. Viser d'abord de battre nettement le TAG.
+5. **Rake traité à part.** Le CFR standard suppose un jeu à deux joueurs et à somme nulle ;
+   avec rake, le jeu n'est plus à somme nulle. Entraîner sans rake, puis mesurer l'impact du
+   rake à l'évaluation, comme ici.
+6. **Budget de calcul.** Le coût par décision devient un critère : la mesure ci-dessus montre
+   qu'un calcul plus long n'est utile que si le modèle sous-jacent est juste.
+
+Aucun entraînement CFR/self-play, aucune connexion Jev et aucun site tiers n'a été utilisé
+dans cette mission.
 
 ## Mission 2 : Equity contre Random — 20 plus gros pots gagnés et perdus
 
-Pots disputés et profits nets en BB. Les identifiants renvoient aux traces locales ; aucune carte cachée n’est publiée ici. Les égalités de taille sont départagées selon le tri fixé dans l’audit.
+Pots disputés et profits nets en BB. Les identifiants renvoient aux traces privées ; aucune carte cachée n’est publiée ici. Les égalités de taille sont départagées selon le tri fixé dans l’audit.
 
 | Main gagnée | Pot | Net Equity | Main perdue | Pot | Net Equity |
 | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -291,7 +445,7 @@ Pots disputés et profits nets en BB. Les identifiants renvoient aux traces loca
 
 ## Mission 3 : Equity contre TAG, graine 31001 — 20 plus gros pots gagnés et perdus
 
-Pots disputés et profits nets en BB. Les identifiants renvoient aux traces locales ; aucune carte cachée n’est publiée ici. Les égalités de taille sont départagées selon le tri fixé dans l’audit.
+Pots disputés et profits nets en BB. Les identifiants renvoient aux traces privées ; aucune carte cachée n’est publiée ici. Les égalités de taille sont départagées selon le tri fixé dans l’audit.
 
 | Main gagnée | Pot | Net Equity | Main perdue | Pot | Net Equity |
 | ---: | ---: | ---: | ---: | ---: | ---: |

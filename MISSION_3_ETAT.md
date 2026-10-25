@@ -1,4 +1,6 @@
-# Sauvegarde Missions 1–3 — état courant
+# Sauvegarde Missions 1–3 — état au moment de la reprise
+
+> **Mise à jour : la Mission 3 est terminée.** Ce fichier décrit l'état laissé par Codex. L'analyse finale, les fréquences et la synthèse sont dans `MISSION_3.md` et `artifacts/mission3/analysis.*`, `frequencies.json`. Les 11 expériences rejouées sont identiques octet par octet à celles listées ici.
 
 Sauvegarde demandée le 2026-10-25 à 22:32:54 CET.
 Base : `549983a59104eee12cf7055cbc0b1793b0adb773`. Branche demandée : `codex/missions-1-3`.

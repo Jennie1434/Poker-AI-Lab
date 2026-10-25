@@ -155,3 +155,13 @@ sont ce rapport, `agents.py`, `local_play.py` et `test_agents.py`.
 Limites : aucun appel réel aux fournisseurs, aucune validation de clés, aucun
 entraînement, aucun benchmark statistique de 10 000 mains ni rake implémenté.
 Les appels modèles ne sont pas nécessaires à cette première amélioration.
+
+## Mission 3 (terminée)
+
+Commencée dans Codex, terminée dans Claude Code après récupération de la branche
+`codex/missions-1-3`. Les 92 000 mains du plan ont été rejouées à l'identique (11
+`hands.csv` et 22 empreintes SHA-256 identiques), puis analysées : agrégation des 3 graines,
+rake 0/2/5/7 % (plafond 3 BB), sensibilité 64/256/1024 tirages et fréquences. Résultat
+principal : EquityHeuristicAgent perd −187,83 bb/100 nets [−209,55 ; −166,11] contre
+TightAggressiveAgent. **643 tests Python et 26 tests frontend réussis.** Détails, commandes et
+limites : `MISSION_3.md`. Aucun CFR/self-play lancé.
