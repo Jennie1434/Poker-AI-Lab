@@ -68,7 +68,7 @@ async def audit(folder: Path, output: Path):
                 raise ValueError("Position imbalance")
             h = Hand([{"id": "a", "stack": 20000}, {"id": "b", "stack": 20000}], index % 2,
                      (50, 100, 0), derive_seed(cfg.deck_seed, "deck", index), number, chip_unit=50)
-            agents = {seat: make_agent(policy, derive_seed(cfg.policy_seed, f"policy:{seat}", index), cfg.equity_samples, cfg.tag_samples)
+            agents = {seat: make_agent(policy, derive_seed(cfg.policy_seed, f"policy:{seat}", index), cfg.equity_samples, cfg.tag_samples, cfg.cfr_policy)
                       for seat, policy in (("a", cfg.agent_a), ("b", cfg.agent_b))} if number in selected else None
             all_in = False
             decisions = []
@@ -192,7 +192,7 @@ def analyze(root, output):
     for name, cfg in jobs():
         folder = root/name
         m = json.loads((folder/'experiment.json').read_text())
-        if m['status'] != 'complete' or m['config'] != asdict(cfg):
+        if m['status'] != 'complete' or Config(**m['config']) != cfg:
             raise ValueError('Missing or incompatible experiment')
         rows = read_rows(folder)
         if len(rows) != cfg.hands or [r['button'] for r in rows] != ['a','b']*(cfg.hands//2):

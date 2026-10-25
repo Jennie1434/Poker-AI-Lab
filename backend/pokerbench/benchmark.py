@@ -19,7 +19,7 @@ from .engine import Hand
 
 ROOT = Path(__file__).resolve().parents[2]
 BB = 100
-POLICIES = ("random", "heuristic", "equity", "tag")
+POLICIES = ("random", "heuristic", "equity", "tag", "cfr")
 
 
 def derive_seed(master: int, domain: str, hand: int) -> int:
@@ -39,6 +39,7 @@ class Config:
     rake_percent: str = "5"
     rake_cap_bb: str = "3"
     no_flop_no_drop: bool = True
+    cfr_policy: str = ""
 
     def validate(self):
         if self.hands < 4 or self.hands % 2:
@@ -50,9 +51,11 @@ class Config:
         percent, cap = Decimal(self.rake_percent), Decimal(self.rake_cap_bb)
         if not percent.is_finite() or not cap.is_finite() or not 0 <= percent <= 100 or cap < 0:
             raise ValueError("Invalid rake percentage or cap")
+        if "cfr" in (self.agent_a, self.agent_b) and not self.cfr_policy:
+            raise ValueError("cfr policy requires --cfr-policy")
 
 
-def make_agent(name, seed, samples, tag_samples=64):
+def make_agent(name, seed, samples, tag_samples=64, cfr_policy=""):
     if name == "random":
         return RandomAgent(seed)
     if name == "heuristic":
@@ -61,6 +64,9 @@ def make_agent(name, seed, samples, tag_samples=64):
         return EquityHeuristicAgent(seed, samples)
     if name == "tag":
         return TightAggressiveAgent(seed, tag_samples)
+    if name == "cfr":
+        from .holdem_abstraction import CFRAgent, cached_policy
+        return CFRAgent(seed, cached_policy(cfr_policy))
     raise ValueError("Unknown policy")
 
 
@@ -152,6 +158,9 @@ async def experiment(cfg: Config, output: Path) -> dict:
                                "win_rate": "fraction of hands with strictly positive profit; ties separate",
                                "small_sample": cfg.hands < 10000},
                 "provenance": fingerprint()}
+    if cfg.cfr_policy:
+        from .holdem_abstraction import resolve_policy
+        manifest["provenance"]["cfr_policy_sha256"] = hashlib.sha256(resolve_policy(cfg.cfr_policy).read_bytes()).hexdigest()
     manifest_path = output / "experiment.json"
     def save():
         temporary = output / "experiment.tmp"
@@ -165,7 +174,7 @@ async def experiment(cfg: Config, output: Path) -> dict:
             writer = csv.DictWriter(hf, fieldnames=["hand", "block", "button", "decisions", "saw_flop", "contested_pot_chips", "rake_chips", "a_gross_chips", "b_gross_chips", "a_net_chips", "b_net_chips"])
             writer.writeheader()
             for number in range(cfg.hands):
-                agents = {seat: make_agent(policy, derive_seed(cfg.policy_seed, f"policy:{seat}", number), cfg.equity_samples, cfg.tag_samples)
+                agents = {seat: make_agent(policy, derive_seed(cfg.policy_seed, f"policy:{seat}", number), cfg.equity_samples, cfg.tag_samples, cfg.cfr_policy)
                           for seat, policy in (("a", cfg.agent_a), ("b", cfg.agent_b))}
                 hand = Hand([{"id": "a", "stack": 20000}, {"id": "b", "stack": 20000}],
                             button=number % 2, blinds=(50, BB, 0),
@@ -223,6 +232,7 @@ def main():
     parser.add_argument("--rake-percent", default="5")
     parser.add_argument("--rake-cap-bb", default="3")
     parser.add_argument("--no-flop-no-drop", action=argparse.BooleanOptionalAction, default=True)
+    parser.add_argument("--cfr-policy", default="", help="frozen policy file for the cfr agent")
     parser.add_argument("--output", type=Path, required=True)
     args = vars(parser.parse_args())
     output = args.pop("output")
