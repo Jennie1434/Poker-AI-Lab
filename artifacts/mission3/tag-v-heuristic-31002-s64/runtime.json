@@ -1,0 +1,17 @@
+{
+  "config": {
+    "agent_a": "tag",
+    "agent_b": "heuristic",
+    "deck_seed": 31002,
+    "equity_samples": 64,
+    "hands": 10000,
+    "measure_time": true,
+    "no_flop_no_drop": true,
+    "policy_seed": 41002,
+    "rake_cap_bb": "3",
+    "rake_percent": "5",
+    "tag_samples": 64
+  },
+  "cpu_seconds": 89.046074841,
+  "wall_seconds": 89.2803785140004
+}

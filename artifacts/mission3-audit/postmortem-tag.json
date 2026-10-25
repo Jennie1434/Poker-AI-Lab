@@ -1,0 +1,406 @@
+{
+  "scope": "selected large wins/losses, posthoc known opponent, no future board; not an agent input",
+  "samples": 1024,
+  "results": [
+    {
+      "hand": 207,
+      "category": "win",
+      "street": "river",
+      "last_equity_action": "raise_to_9600",
+      "pay_chips": 9600,
+      "uniform_equity": 0.92822265625,
+      "actual_opponent_equity_posthoc": 1.0,
+      "pot_odds": 0.25
+    },
+    {
+      "hand": 273,
+      "category": "loss",
+      "street": "river",
+      "last_equity_action": "raise_to_14400",
+      "pay_chips": 14400,
+      "uniform_equity": 0.85693359375,
+      "actual_opponent_equity_posthoc": 0.0,
+      "pot_odds": 0.3
+    },
+    {
+      "hand": 342,
+      "category": "loss",
+      "street": "river",
+      "last_equity_action": "call",
+      "pay_chips": 11600,
+      "uniform_equity": 0.681640625,
+      "actual_opponent_equity_posthoc": 0.0,
+      "pot_odds": 0.29
+    },
+    {
+      "hand": 889,
+      "category": "win",
+      "street": "river",
+      "last_equity_action": "raise_to_9600",
+      "pay_chips": 9600,
+      "uniform_equity": 0.986328125,
+      "actual_opponent_equity_posthoc": 1.0,
+      "pot_odds": 0.25
+    },
+    {
+      "hand": 1030,
+      "category": "win",
+      "street": "river",
+      "last_equity_action": "call",
+      "pay_chips": 10350,
+      "uniform_equity": 0.9951171875,
+      "actual_opponent_equity_posthoc": 1.0,
+      "pot_odds": 0.3
+    },
+    {
+      "hand": 1034,
+      "category": "loss",
+      "street": "river",
+      "last_equity_action": "call",
+      "pay_chips": 11900,
+      "uniform_equity": 0.7314453125,
+      "actual_opponent_equity_posthoc": 0.0,
+      "pot_odds": 0.2975
+    },
+    {
+      "hand": 1206,
+      "category": "win",
+      "street": "river",
+      "last_equity_action": "raise_to_9300",
+      "pay_chips": 9200,
+      "uniform_equity": 0.8984375,
+      "actual_opponent_equity_posthoc": 1.0,
+      "pot_odds": 0.2
+    },
+    {
+      "hand": 1541,
+      "category": "loss",
+      "street": "river",
+      "last_equity_action": "raise_to_14400",
+      "pay_chips": 14400,
+      "uniform_equity": 0.96728515625,
+      "actual_opponent_equity_posthoc": 0.0,
+      "pot_odds": 0.3
+    },
+    {
+      "hand": 1685,
+      "category": "win",
+      "street": "river",
+      "last_equity_action": "raise_to_9600",
+      "pay_chips": 9600,
+      "uniform_equity": 0.8837890625,
+      "actual_opponent_equity_posthoc": 1.0,
+      "pot_odds": 0.25
+    },
+    {
+      "hand": 1748,
+      "category": "win",
+      "street": "river",
+      "last_equity_action": "raise_to_9300",
+      "pay_chips": 9200,
+      "uniform_equity": 0.92626953125,
+      "actual_opponent_equity_posthoc": 1.0,
+      "pot_odds": 0.2
+    },
+    {
+      "hand": 1879,
+      "category": "win",
+      "street": "river",
+      "last_equity_action": "raise_to_9600",
+      "pay_chips": 9600,
+      "uniform_equity": 0.91552734375,
+      "actual_opponent_equity_posthoc": 1.0,
+      "pot_odds": 0.25
+    },
+    {
+      "hand": 1901,
+      "category": "win",
+      "street": "river",
+      "last_equity_action": "raise_to_9600",
+      "pay_chips": 9600,
+      "uniform_equity": 0.96044921875,
+      "actual_opponent_equity_posthoc": 1.0,
+      "pot_odds": 0.25
+    },
+    {
+      "hand": 2062,
+      "category": "win",
+      "street": "river",
+      "last_equity_action": "call",
+      "pay_chips": 10350,
+      "uniform_equity": 0.9697265625,
+      "actual_opponent_equity_posthoc": 1.0,
+      "pot_odds": 0.3
+    },
+    {
+      "hand": 2184,
+      "category": "loss",
+      "street": "river",
+      "last_equity_action": "call",
+      "pay_chips": 9900,
+      "uniform_equity": 0.89794921875,
+      "actual_opponent_equity_posthoc": 0.0,
+      "pot_odds": 0.2475
+    },
+    {
+      "hand": 2797,
+      "category": "win",
+      "street": "river",
+      "last_equity_action": "raise_to_9600",
+      "pay_chips": 9600,
+      "uniform_equity": 0.9716796875,
+      "actual_opponent_equity_posthoc": 1.0,
+      "pot_odds": 0.25
+    },
+    {
+      "hand": 2979,
+      "category": "loss",
+      "street": "river",
+      "last_equity_action": "raise_to_14400",
+      "pay_chips": 14400,
+      "uniform_equity": 0.87451171875,
+      "actual_opponent_equity_posthoc": 0.0,
+      "pot_odds": 0.3
+    },
+    {
+      "hand": 2983,
+      "category": "loss",
+      "street": "river",
+      "last_equity_action": "raise_to_14400",
+      "pay_chips": 14400,
+      "uniform_equity": 0.6328125,
+      "actual_opponent_equity_posthoc": 0.0,
+      "pot_odds": 0.3
+    },
+    {
+      "hand": 3289,
+      "category": "loss",
+      "street": "river",
+      "last_equity_action": "raise_to_14400",
+      "pay_chips": 14400,
+      "uniform_equity": 0.779296875,
+      "actual_opponent_equity_posthoc": 0.0,
+      "pot_odds": 0.3
+    },
+    {
+      "hand": 4465,
+      "category": "loss",
+      "street": "river",
+      "last_equity_action": "raise_to_14400",
+      "pay_chips": 14400,
+      "uniform_equity": 0.900390625,
+      "actual_opponent_equity_posthoc": 0.0,
+      "pot_odds": 0.3
+    },
+    {
+      "hand": 5777,
+      "category": "loss",
+      "street": "river",
+      "last_equity_action": "raise_to_14400",
+      "pay_chips": 14400,
+      "uniform_equity": 0.884765625,
+      "actual_opponent_equity_posthoc": 0.0,
+      "pot_odds": 0.3
+    },
+    {
+      "hand": 5929,
+      "category": "win",
+      "street": "river",
+      "last_equity_action": "raise_to_14400",
+      "pay_chips": 14400,
+      "uniform_equity": 0.9248046875,
+      "actual_opponent_equity_posthoc": 1.0,
+      "pot_odds": 0.3
+    },
+    {
+      "hand": 5953,
+      "category": "win",
+      "street": "river",
+      "last_equity_action": "raise_to_9600",
+      "pay_chips": 9600,
+      "uniform_equity": 0.9052734375,
+      "actual_opponent_equity_posthoc": 1.0,
+      "pot_odds": 0.25
+    },
+    {
+      "hand": 6261,
+      "category": "loss",
+      "street": "river",
+      "last_equity_action": "raise_to_14400",
+      "pay_chips": 14400,
+      "uniform_equity": 0.69970703125,
+      "actual_opponent_equity_posthoc": 0.0,
+      "pot_odds": 0.3
+    },
+    {
+      "hand": 6686,
+      "category": "loss",
+      "street": "river",
+      "last_equity_action": "call",
+      "pay_chips": 9900,
+      "uniform_equity": 0.84375,
+      "actual_opponent_equity_posthoc": 0.0,
+      "pot_odds": 0.2475
+    },
+    {
+      "hand": 6895,
+      "category": "loss",
+      "street": "river",
+      "last_equity_action": "raise_to_14400",
+      "pay_chips": 14400,
+      "uniform_equity": 0.99755859375,
+      "actual_opponent_equity_posthoc": 0.0,
+      "pot_odds": 0.3
+    },
+    {
+      "hand": 7431,
+      "category": "loss",
+      "street": "river",
+      "last_equity_action": "raise_to_14400",
+      "pay_chips": 14400,
+      "uniform_equity": 0.6650390625,
+      "actual_opponent_equity_posthoc": 0.0,
+      "pot_odds": 0.3
+    },
+    {
+      "hand": 8103,
+      "category": "loss",
+      "street": "river",
+      "last_equity_action": "raise_to_14400",
+      "pay_chips": 14400,
+      "uniform_equity": 0.67626953125,
+      "actual_opponent_equity_posthoc": 0.0,
+      "pot_odds": 0.3
+    },
+    {
+      "hand": 8137,
+      "category": "loss",
+      "street": "river",
+      "last_equity_action": "call",
+      "pay_chips": 8000,
+      "uniform_equity": 0.96484375,
+      "actual_opponent_equity_posthoc": 0.0,
+      "pot_odds": 0.2
+    },
+    {
+      "hand": 8193,
+      "category": "win",
+      "street": "river",
+      "last_equity_action": "raise_to_9600",
+      "pay_chips": 9600,
+      "uniform_equity": 0.77001953125,
+      "actual_opponent_equity_posthoc": 1.0,
+      "pot_odds": 0.25
+    },
+    {
+      "hand": 8231,
+      "category": "loss",
+      "street": "river",
+      "last_equity_action": "raise_to_14400",
+      "pay_chips": 14400,
+      "uniform_equity": 0.81298828125,
+      "actual_opponent_equity_posthoc": 0.0,
+      "pot_odds": 0.3
+    },
+    {
+      "hand": 8269,
+      "category": "loss",
+      "street": "river",
+      "last_equity_action": "raise_to_14400",
+      "pay_chips": 14400,
+      "uniform_equity": 0.955078125,
+      "actual_opponent_equity_posthoc": 0.0,
+      "pot_odds": 0.3
+    },
+    {
+      "hand": 8445,
+      "category": "win",
+      "street": "river",
+      "last_equity_action": "raise_to_14400",
+      "pay_chips": 14400,
+      "uniform_equity": 0.9482421875,
+      "actual_opponent_equity_posthoc": 1.0,
+      "pot_odds": 0.3
+    },
+    {
+      "hand": 8962,
+      "category": "win",
+      "street": "river",
+      "last_equity_action": "raise_to_9300",
+      "pay_chips": 9200,
+      "uniform_equity": 0.90966796875,
+      "actual_opponent_equity_posthoc": 1.0,
+      "pot_odds": 0.2
+    },
+    {
+      "hand": 9017,
+      "category": "win",
+      "street": "river",
+      "last_equity_action": "raise_to_9600",
+      "pay_chips": 9600,
+      "uniform_equity": 0.9560546875,
+      "actual_opponent_equity_posthoc": 1.0,
+      "pot_odds": 0.25
+    },
+    {
+      "hand": 9093,
+      "category": "win",
+      "street": "river",
+      "last_equity_action": "raise_to_9600",
+      "pay_chips": 9600,
+      "uniform_equity": 0.919921875,
+      "actual_opponent_equity_posthoc": 1.0,
+      "pot_odds": 0.25
+    },
+    {
+      "hand": 9139,
+      "category": "loss",
+      "street": "river",
+      "last_equity_action": "raise_to_14400",
+      "pay_chips": 14400,
+      "uniform_equity": 0.912109375,
+      "actual_opponent_equity_posthoc": 0.0,
+      "pot_odds": 0.3
+    },
+    {
+      "hand": 9399,
+      "category": "win",
+      "street": "river",
+      "last_equity_action": "raise_to_9600",
+      "pay_chips": 9600,
+      "uniform_equity": 0.91162109375,
+      "actual_opponent_equity_posthoc": 1.0,
+      "pot_odds": 0.25
+    },
+    {
+      "hand": 9437,
+      "category": "win",
+      "street": "river",
+      "last_equity_action": "raise_to_9600",
+      "pay_chips": 9600,
+      "uniform_equity": 0.93017578125,
+      "actual_opponent_equity_posthoc": 1.0,
+      "pot_odds": 0.25
+    },
+    {
+      "hand": 9627,
+      "category": "win",
+      "street": "river",
+      "last_equity_action": "raise_to_9600",
+      "pay_chips": 9600,
+      "uniform_equity": 0.88525390625,
+      "actual_opponent_equity_posthoc": 1.0,
+      "pot_odds": 0.25
+    },
+    {
+      "hand": 9956,
+      "category": "loss",
+      "street": "river",
+      "last_equity_action": "call",
+      "pay_chips": 9900,
+      "uniform_equity": 0.86669921875,
+      "actual_opponent_equity_posthoc": 0.0,
+      "pot_odds": 0.2475
+    }
+  ]
+}

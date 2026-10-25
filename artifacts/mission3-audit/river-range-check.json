@@ -1,0 +1,1214 @@
+{
+  "scope": "First facing-bet river decision per hand; 200 smallest deterministic hashes, no outcome selection. Actual cards only used by offline auditor.",
+  "eligible_hands": 1256,
+  "sample_size": 200,
+  "mean_uniform_equity": 0.5473046875,
+  "mean_actual_showdown_share": 0.16,
+  "mean_gap": 0.3873046875,
+  "normal_ci95_gap": [
+    0.3473414776769624,
+    0.42726789732303766
+  ],
+  "results": [
+    {
+      "hand": 4339,
+      "uniform_equity": 0.33349609375,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 9615,
+      "uniform_equity": 0.43701171875,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 8295,
+      "uniform_equity": 0.76025390625,
+      "actual_showdown_share": 0,
+      "action": "raise_to_2000"
+    },
+    {
+      "hand": 6117,
+      "uniform_equity": 0.38720703125,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 5141,
+      "uniform_equity": 0.9140625,
+      "actual_showdown_share": 1,
+      "action": "raise_to_300"
+    },
+    {
+      "hand": 2840,
+      "uniform_equity": 0.18310546875,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 1328,
+      "uniform_equity": 0.345703125,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 7649,
+      "uniform_equity": 0.4267578125,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 7384,
+      "uniform_equity": 0.84619140625,
+      "actual_showdown_share": 0,
+      "action": "raise_to_9300"
+    },
+    {
+      "hand": 8400,
+      "uniform_equity": 0.1767578125,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 5573,
+      "uniform_equity": 0.6064453125,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 1618,
+      "uniform_equity": 0.65673828125,
+      "actual_showdown_share": 0,
+      "action": "raise_to_10400"
+    },
+    {
+      "hand": 8889,
+      "uniform_equity": 0.94873046875,
+      "actual_showdown_share": 0.5,
+      "action": "raise_to_1200"
+    },
+    {
+      "hand": 8703,
+      "uniform_equity": 0.6142578125,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 625,
+      "uniform_equity": 0.2314453125,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 4135,
+      "uniform_equity": 0.48681640625,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 555,
+      "uniform_equity": 0.59326171875,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 532,
+      "uniform_equity": 0.783203125,
+      "actual_showdown_share": 0,
+      "action": "raise_to_6400"
+    },
+    {
+      "hand": 3605,
+      "uniform_equity": 0.48828125,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 1034,
+      "uniform_equity": 0.75,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 9291,
+      "uniform_equity": 0.52197265625,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 7826,
+      "uniform_equity": 0.80517578125,
+      "actual_showdown_share": 0,
+      "action": "raise_to_10700"
+    },
+    {
+      "hand": 2849,
+      "uniform_equity": 0.91748046875,
+      "actual_showdown_share": 1,
+      "action": "raise_to_7200"
+    },
+    {
+      "hand": 269,
+      "uniform_equity": 0.05615234375,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 1771,
+      "uniform_equity": 0.60302734375,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 7279,
+      "uniform_equity": 0.41845703125,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 6993,
+      "uniform_equity": 0.0693359375,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 8656,
+      "uniform_equity": 0.21240234375,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 8387,
+      "uniform_equity": 0.4453125,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 8776,
+      "uniform_equity": 0.720703125,
+      "actual_showdown_share": 0,
+      "action": "raise_to_1900"
+    },
+    {
+      "hand": 2191,
+      "uniform_equity": 0.8916015625,
+      "actual_showdown_share": 1,
+      "action": "raise_to_4800"
+    },
+    {
+      "hand": 4975,
+      "uniform_equity": 0.1318359375,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 9023,
+      "uniform_equity": 0.45751953125,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 2539,
+      "uniform_equity": 0.0087890625,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 1030,
+      "uniform_equity": 0.9921875,
+      "actual_showdown_share": 1,
+      "action": "call"
+    },
+    {
+      "hand": 4823,
+      "uniform_equity": 0.94921875,
+      "actual_showdown_share": 1,
+      "action": "raise_to_300"
+    },
+    {
+      "hand": 3344,
+      "uniform_equity": 0.408203125,
+      "actual_showdown_share": 0.5,
+      "action": "call"
+    },
+    {
+      "hand": 3318,
+      "uniform_equity": 0.20263671875,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 9053,
+      "uniform_equity": 0.7548828125,
+      "actual_showdown_share": 0.5,
+      "action": "raise_to_300"
+    },
+    {
+      "hand": 6555,
+      "uniform_equity": 0.7607421875,
+      "actual_showdown_share": 0,
+      "action": "raise_to_2400"
+    },
+    {
+      "hand": 4091,
+      "uniform_equity": 0.93603515625,
+      "actual_showdown_share": 1,
+      "action": "raise_to_9600"
+    },
+    {
+      "hand": 8615,
+      "uniform_equity": 0.37841796875,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 9601,
+      "uniform_equity": 0.58837890625,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 5153,
+      "uniform_equity": 0.5390625,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 1989,
+      "uniform_equity": 0.44580078125,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 2993,
+      "uniform_equity": 0.56494140625,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 7911,
+      "uniform_equity": 0.8564453125,
+      "actual_showdown_share": 1,
+      "action": "raise_to_600"
+    },
+    {
+      "hand": 3843,
+      "uniform_equity": 0.3037109375,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 75,
+      "uniform_equity": 0.9638671875,
+      "actual_showdown_share": 1,
+      "action": "raise_to_3200"
+    },
+    {
+      "hand": 9085,
+      "uniform_equity": 0.9755859375,
+      "actual_showdown_share": 1,
+      "action": "raise_to_4800"
+    },
+    {
+      "hand": 1050,
+      "uniform_equity": 0.05859375,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 7437,
+      "uniform_equity": 0.55029296875,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 9465,
+      "uniform_equity": 0.2509765625,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 5357,
+      "uniform_equity": 0.42333984375,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 8673,
+      "uniform_equity": 0.67529296875,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 3441,
+      "uniform_equity": 0.529296875,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 6913,
+      "uniform_equity": 0.7490234375,
+      "actual_showdown_share": 0,
+      "action": "raise_to_4800"
+    },
+    {
+      "hand": 2159,
+      "uniform_equity": 0.810546875,
+      "actual_showdown_share": 0,
+      "action": "raise_to_2400"
+    },
+    {
+      "hand": 89,
+      "uniform_equity": 0.931640625,
+      "actual_showdown_share": 1,
+      "action": "raise_to_9600"
+    },
+    {
+      "hand": 7536,
+      "uniform_equity": 0.5224609375,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 3271,
+      "uniform_equity": 0.4228515625,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 2983,
+      "uniform_equity": 0.650390625,
+      "actual_showdown_share": 0,
+      "action": "raise_to_14400"
+    },
+    {
+      "hand": 1023,
+      "uniform_equity": 0.232421875,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 9062,
+      "uniform_equity": 0.93359375,
+      "actual_showdown_share": 0,
+      "action": "raise_to_1600"
+    },
+    {
+      "hand": 8553,
+      "uniform_equity": 0.72021484375,
+      "actual_showdown_share": 0,
+      "action": "raise_to_2400"
+    },
+    {
+      "hand": 2743,
+      "uniform_equity": 0.15966796875,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 1425,
+      "uniform_equity": 0.7685546875,
+      "actual_showdown_share": 0,
+      "action": "raise_to_1200"
+    },
+    {
+      "hand": 5957,
+      "uniform_equity": 0.12255859375,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 7700,
+      "uniform_equity": 0.494140625,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 9875,
+      "uniform_equity": 0.94482421875,
+      "actual_showdown_share": 1,
+      "action": "raise_to_800"
+    },
+    {
+      "hand": 877,
+      "uniform_equity": 0.87451171875,
+      "actual_showdown_share": 0.5,
+      "action": "raise_to_3200"
+    },
+    {
+      "hand": 9956,
+      "uniform_equity": 0.87646484375,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 5821,
+      "uniform_equity": 0.30615234375,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 5983,
+      "uniform_equity": 0.72412109375,
+      "actual_showdown_share": 0,
+      "action": "raise_to_2200"
+    },
+    {
+      "hand": 337,
+      "uniform_equity": 0.537109375,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 4053,
+      "uniform_equity": 0.75390625,
+      "actual_showdown_share": 0,
+      "action": "raise_to_3000"
+    },
+    {
+      "hand": 1635,
+      "uniform_equity": 0.8759765625,
+      "actual_showdown_share": 0,
+      "action": "raise_to_3800"
+    },
+    {
+      "hand": 5555,
+      "uniform_equity": 0.984375,
+      "actual_showdown_share": 1,
+      "action": "raise_to_4000"
+    },
+    {
+      "hand": 6250,
+      "uniform_equity": 0.4912109375,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 71,
+      "uniform_equity": 0.43701171875,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 239,
+      "uniform_equity": 0.84326171875,
+      "actual_showdown_share": 0,
+      "action": "raise_to_9600"
+    },
+    {
+      "hand": 9387,
+      "uniform_equity": 0.7041015625,
+      "actual_showdown_share": 0,
+      "action": "raise_to_300"
+    },
+    {
+      "hand": 5172,
+      "uniform_equity": 0.6494140625,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 8630,
+      "uniform_equity": 0.94482421875,
+      "actual_showdown_share": 1,
+      "action": "raise_to_5500"
+    },
+    {
+      "hand": 989,
+      "uniform_equity": 0.90771484375,
+      "actual_showdown_share": 1,
+      "action": "raise_to_2400"
+    },
+    {
+      "hand": 2292,
+      "uniform_equity": 0.3330078125,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 5653,
+      "uniform_equity": 0.66455078125,
+      "actual_showdown_share": 0,
+      "action": "raise_to_4800"
+    },
+    {
+      "hand": 3050,
+      "uniform_equity": 0.3330078125,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 1651,
+      "uniform_equity": 0.53271484375,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 2082,
+      "uniform_equity": 0.06103515625,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 4383,
+      "uniform_equity": 0.67138671875,
+      "actual_showdown_share": 0,
+      "action": "raise_to_1500"
+    },
+    {
+      "hand": 1009,
+      "uniform_equity": 0.64111328125,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 205,
+      "uniform_equity": 0.02587890625,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 2876,
+      "uniform_equity": 0.3974609375,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 8924,
+      "uniform_equity": 0.23095703125,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 8070,
+      "uniform_equity": 0.1806640625,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 8756,
+      "uniform_equity": 0.2373046875,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 6318,
+      "uniform_equity": 0.41015625,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 8043,
+      "uniform_equity": 0.462890625,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 723,
+      "uniform_equity": 0.88134765625,
+      "actual_showdown_share": 0,
+      "action": "raise_to_3200"
+    },
+    {
+      "hand": 8781,
+      "uniform_equity": 0.14404296875,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 1522,
+      "uniform_equity": 0.2275390625,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 4500,
+      "uniform_equity": 0.72998046875,
+      "actual_showdown_share": 0,
+      "action": "raise_to_1900"
+    },
+    {
+      "hand": 2928,
+      "uniform_equity": 0.39990234375,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 2305,
+      "uniform_equity": 0.44189453125,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 7558,
+      "uniform_equity": 0.42529296875,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 3448,
+      "uniform_equity": 0.3203125,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 1529,
+      "uniform_equity": 0.8603515625,
+      "actual_showdown_share": 1,
+      "action": "raise_to_1900"
+    },
+    {
+      "hand": 6686,
+      "uniform_equity": 0.84619140625,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 6941,
+      "uniform_equity": 0.3232421875,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 2509,
+      "uniform_equity": 0.685546875,
+      "actual_showdown_share": 0,
+      "action": "raise_to_1500"
+    },
+    {
+      "hand": 2062,
+      "uniform_equity": 0.9833984375,
+      "actual_showdown_share": 1,
+      "action": "call"
+    },
+    {
+      "hand": 3345,
+      "uniform_equity": 0.57568359375,
+      "actual_showdown_share": 0,
+      "action": "raise_to_600"
+    },
+    {
+      "hand": 9367,
+      "uniform_equity": 0.49072265625,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 9144,
+      "uniform_equity": 0.54345703125,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 9512,
+      "uniform_equity": 0.90625,
+      "actual_showdown_share": 1,
+      "action": "raise_to_2900"
+    },
+    {
+      "hand": 5515,
+      "uniform_equity": 0.40478515625,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 97,
+      "uniform_equity": 0.1083984375,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 1227,
+      "uniform_equity": 0.9697265625,
+      "actual_showdown_share": 1,
+      "action": "raise_to_3200"
+    },
+    {
+      "hand": 5412,
+      "uniform_equity": 0.92529296875,
+      "actual_showdown_share": 0,
+      "action": "raise_to_1300"
+    },
+    {
+      "hand": 793,
+      "uniform_equity": 0.91015625,
+      "actual_showdown_share": 1,
+      "action": "raise_to_3200"
+    },
+    {
+      "hand": 4535,
+      "uniform_equity": 0.4072265625,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 3943,
+      "uniform_equity": 0.31640625,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 9927,
+      "uniform_equity": 0.849609375,
+      "actual_showdown_share": 1,
+      "action": "raise_to_3600"
+    },
+    {
+      "hand": 8479,
+      "uniform_equity": 0.6455078125,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 9270,
+      "uniform_equity": 0.60986328125,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 7142,
+      "uniform_equity": 0.7431640625,
+      "actual_showdown_share": 0,
+      "action": "raise_to_5900"
+    },
+    {
+      "hand": 9645,
+      "uniform_equity": 0.73681640625,
+      "actual_showdown_share": 0,
+      "action": "raise_to_800"
+    },
+    {
+      "hand": 739,
+      "uniform_equity": 0.4619140625,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 9129,
+      "uniform_equity": 0.53271484375,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 1449,
+      "uniform_equity": 0.59130859375,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 8449,
+      "uniform_equity": 0.56005859375,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 4952,
+      "uniform_equity": 0.501953125,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 3401,
+      "uniform_equity": 0.19921875,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 6459,
+      "uniform_equity": 0.23681640625,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 9288,
+      "uniform_equity": 0.45361328125,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 5257,
+      "uniform_equity": 0.71240234375,
+      "actual_showdown_share": 0,
+      "action": "raise_to_1200"
+    },
+    {
+      "hand": 2549,
+      "uniform_equity": 0.8759765625,
+      "actual_showdown_share": 1,
+      "action": "raise_to_4800"
+    },
+    {
+      "hand": 4603,
+      "uniform_equity": 0.69970703125,
+      "actual_showdown_share": 0,
+      "action": "raise_to_800"
+    },
+    {
+      "hand": 3748,
+      "uniform_equity": 0.83251953125,
+      "actual_showdown_share": 0,
+      "action": "raise_to_10700"
+    },
+    {
+      "hand": 719,
+      "uniform_equity": 0.66162109375,
+      "actual_showdown_share": 0,
+      "action": "raise_to_9600"
+    },
+    {
+      "hand": 5779,
+      "uniform_equity": 0.076171875,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 6531,
+      "uniform_equity": 0.9814453125,
+      "actual_showdown_share": 1,
+      "action": "raise_to_2200"
+    },
+    {
+      "hand": 7473,
+      "uniform_equity": 0.43017578125,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 8521,
+      "uniform_equity": 0.71875,
+      "actual_showdown_share": 0,
+      "action": "raise_to_900"
+    },
+    {
+      "hand": 2382,
+      "uniform_equity": 0.267578125,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 7072,
+      "uniform_equity": 0.755859375,
+      "actual_showdown_share": 0,
+      "action": "raise_to_5900"
+    },
+    {
+      "hand": 5647,
+      "uniform_equity": 0.84912109375,
+      "actual_showdown_share": 1,
+      "action": "raise_to_900"
+    },
+    {
+      "hand": 3357,
+      "uniform_equity": 0.2021484375,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 851,
+      "uniform_equity": 0.2412109375,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 1365,
+      "uniform_equity": 0.35693359375,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 1748,
+      "uniform_equity": 0.91162109375,
+      "actual_showdown_share": 1,
+      "action": "raise_to_9300"
+    },
+    {
+      "hand": 6471,
+      "uniform_equity": 0.39599609375,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 4831,
+      "uniform_equity": 0.46923828125,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 9142,
+      "uniform_equity": 0.4990234375,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 7766,
+      "uniform_equity": 0.0888671875,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 1292,
+      "uniform_equity": 0.572265625,
+      "actual_showdown_share": 0,
+      "action": "raise_to_2200"
+    },
+    {
+      "hand": 3170,
+      "uniform_equity": 0.78515625,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 5169,
+      "uniform_equity": 0.99609375,
+      "actual_showdown_share": 1,
+      "action": "raise_to_5600"
+    },
+    {
+      "hand": 1892,
+      "uniform_equity": 0.69091796875,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 2996,
+      "uniform_equity": 0.43994140625,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 379,
+      "uniform_equity": 0.1103515625,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 7431,
+      "uniform_equity": 0.685546875,
+      "actual_showdown_share": 0,
+      "action": "raise_to_14400"
+    },
+    {
+      "hand": 3067,
+      "uniform_equity": 0.6435546875,
+      "actual_showdown_share": 0,
+      "action": "raise_to_1500"
+    },
+    {
+      "hand": 6472,
+      "uniform_equity": 0.580078125,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 8149,
+      "uniform_equity": 0.55908203125,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 3033,
+      "uniform_equity": 0.3837890625,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 5305,
+      "uniform_equity": 0.9228515625,
+      "actual_showdown_share": 1,
+      "action": "raise_to_600"
+    },
+    {
+      "hand": 2813,
+      "uniform_equity": 0.77490234375,
+      "actual_showdown_share": 0,
+      "action": "raise_to_1300"
+    },
+    {
+      "hand": 8171,
+      "uniform_equity": 0.236328125,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 9541,
+      "uniform_equity": 0.41943359375,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 6705,
+      "uniform_equity": 0.09521484375,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 1725,
+      "uniform_equity": 0.42431640625,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 4741,
+      "uniform_equity": 0.50537109375,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 6711,
+      "uniform_equity": 0.4189453125,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 1565,
+      "uniform_equity": 0.35302734375,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 519,
+      "uniform_equity": 0.23193359375,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 1303,
+      "uniform_equity": 0.71826171875,
+      "actual_showdown_share": 0,
+      "action": "raise_to_2200"
+    },
+    {
+      "hand": 931,
+      "uniform_equity": 0.31982421875,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 7987,
+      "uniform_equity": 0.03955078125,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 8321,
+      "uniform_equity": 0.3515625,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 3272,
+      "uniform_equity": 0.333984375,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 6791,
+      "uniform_equity": 0.93603515625,
+      "actual_showdown_share": 1,
+      "action": "raise_to_1200"
+    },
+    {
+      "hand": 8873,
+      "uniform_equity": 0.67431640625,
+      "actual_showdown_share": 0,
+      "action": "raise_to_300"
+    },
+    {
+      "hand": 4719,
+      "uniform_equity": 0.40673828125,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 3056,
+      "uniform_equity": 0.9091796875,
+      "actual_showdown_share": 1,
+      "action": "raise_to_7200"
+    },
+    {
+      "hand": 8197,
+      "uniform_equity": 0.57666015625,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 4001,
+      "uniform_equity": 0.61572265625,
+      "actual_showdown_share": 0,
+      "action": "raise_to_9000"
+    },
+    {
+      "hand": 2518,
+      "uniform_equity": 0.0458984375,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 3407,
+      "uniform_equity": 0.36474609375,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 767,
+      "uniform_equity": 0.56396484375,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 8515,
+      "uniform_equity": 0.34912109375,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 5855,
+      "uniform_equity": 0.6015625,
+      "actual_showdown_share": 0,
+      "action": "raise_to_300"
+    },
+    {
+      "hand": 4581,
+      "uniform_equity": 1.0,
+      "actual_showdown_share": 1,
+      "action": "raise_to_3600"
+    },
+    {
+      "hand": 2027,
+      "uniform_equity": 0.67236328125,
+      "actual_showdown_share": 0,
+      "action": "raise_to_2200"
+    },
+    {
+      "hand": 8177,
+      "uniform_equity": 0.28955078125,
+      "actual_showdown_share": 0,
+      "action": "call"
+    },
+    {
+      "hand": 2896,
+      "uniform_equity": 0.826171875,
+      "actual_showdown_share": 0,
+      "action": "raise_to_7900"
+    },
+    {
+      "hand": 6833,
+      "uniform_equity": 0.2763671875,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    },
+    {
+      "hand": 7581,
+      "uniform_equity": 0.74658203125,
+      "actual_showdown_share": 1,
+      "action": "raise_to_4300"
+    },
+    {
+      "hand": 993,
+      "uniform_equity": 0.14501953125,
+      "actual_showdown_share": 0,
+      "action": "fold"
+    }
+  ]
+}

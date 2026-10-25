@@ -1,0 +1,4711 @@
+{
+  "hidden_card_mismatches": 0,
+  "policy_reproduced_hands": 40,
+  "profit_mismatches": 0,
+  "source": "artifacts/mission3/equity-v-tag-31001-s64",
+  "target_action_counts": {
+    "bb_facing_bet": 1135,
+    "bb_fold_facing_bet": 117,
+    "flop:call": 637,
+    "flop:check": 3529,
+    "flop:fold": 234,
+    "flop:raise": 1369,
+    "preflop:call": 6186,
+    "preflop:fold": 295,
+    "preflop:raise": 649,
+    "preflop_facing_bet": 7130,
+    "preflop_folds_facing_bet": 295,
+    "river:call": 504,
+    "river:check": 2378,
+    "river:fold": 303,
+    "river:raise": 1472,
+    "turn:call": 605,
+    "turn:check": 2950,
+    "turn:fold": 271,
+    "turn:raise": 1331
+  },
+  "target_all_in_net_bb": -1200.0,
+  "target_other_net_bb": -17237.22,
+  "target_seat": "a",
+  "target_street_decisions": {
+    "flop": 5769,
+    "preflop": 7130,
+    "river": 4657,
+    "turn": 5157
+  },
+  "top_details": [
+    {
+      "a_gross_chips": 14400,
+      "a_net_chips": 14100,
+      "all_in": false,
+      "b_gross_chips": -14400,
+      "b_net_chips": -14400,
+      "block": 103,
+      "button": "a",
+      "category": "win",
+      "contested_pot_chips": 28800,
+      "decisions": [
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 50,
+          "pot_before": 150,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_300",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 200,
+          "street": "preflop"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 400,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_450",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 600,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_900",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 900,
+          "pot_before": 1050,
+          "street": "flop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 1950,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 2400,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_3600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 3600,
+          "pot_before": 4200,
+          "street": "turn"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 7800,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_4800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 4800,
+          "pot_before": 9600,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_9600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 9600,
+          "pot_before": 14400,
+          "street": "river"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 4800,
+          "pot_before": 24000,
+          "street": "river"
+        }
+      ],
+      "hand": 207,
+      "rake_chips": 300,
+      "saw_flop": 1
+    },
+    {
+      "a_gross_chips": -19200,
+      "a_net_chips": -19200,
+      "all_in": false,
+      "b_gross_chips": 19200,
+      "b_net_chips": 18900,
+      "block": 136,
+      "button": "a",
+      "category": "loss",
+      "contested_pot_chips": 38400,
+      "decisions": [
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 50,
+          "pot_before": 150,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_300",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 200,
+          "street": "preflop"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 400,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_450",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 600,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_900",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 900,
+          "pot_before": 1050,
+          "street": "flop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 1950,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 2400,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_3600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 3600,
+          "pot_before": 4200,
+          "street": "turn"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 7800,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_7200",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 7200,
+          "pot_before": 9600,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_14400",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 14400,
+          "pot_before": 16800,
+          "street": "river"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 7200,
+          "pot_before": 31200,
+          "street": "river"
+        }
+      ],
+      "hand": 273,
+      "rake_chips": 300,
+      "saw_flop": 1
+    },
+    {
+      "a_gross_chips": -20000,
+      "a_net_chips": -20000,
+      "all_in": true,
+      "b_gross_chips": 20000,
+      "b_net_chips": 19700,
+      "block": 170,
+      "button": "b",
+      "category": "loss",
+      "contested_pot_chips": 40000,
+      "decisions": [
+        {
+          "action": "raise_to_300",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 250,
+          "pot_before": 150,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_500",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 400,
+          "pot_before": 400,
+          "street": "preflop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 800,
+          "street": "preflop"
+        },
+        {
+          "action": "check",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 0,
+          "pot_before": 1000,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_750",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 750,
+          "pot_before": 1000,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1500",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 1500,
+          "pot_before": 1750,
+          "street": "flop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 750,
+          "pot_before": 3250,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_100",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 100,
+          "pot_before": 4000,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_3250",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 3250,
+          "pot_before": 4100,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_6400",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 6300,
+          "pot_before": 7350,
+          "street": "turn"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 3150,
+          "pot_before": 13650,
+          "street": "turn"
+        },
+        {
+          "action": "check",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 0,
+          "pot_before": 16800,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_11600",
+          "actor": "b",
+          "all_in": true,
+          "pay_chips": 11600,
+          "pot_before": 16800,
+          "street": "river"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": true,
+          "pay_chips": 11600,
+          "pot_before": 28400,
+          "street": "river"
+        }
+      ],
+      "hand": 342,
+      "rake_chips": 300,
+      "saw_flop": 1
+    },
+    {
+      "a_gross_chips": 14400,
+      "a_net_chips": 14100,
+      "all_in": false,
+      "b_gross_chips": -14400,
+      "b_net_chips": -14400,
+      "block": 444,
+      "button": "a",
+      "category": "win",
+      "contested_pot_chips": 28800,
+      "decisions": [
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 50,
+          "pot_before": 150,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_300",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 200,
+          "street": "preflop"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 400,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_450",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 600,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_900",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 900,
+          "pot_before": 1050,
+          "street": "flop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 1950,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 2400,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_3600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 3600,
+          "pot_before": 4200,
+          "street": "turn"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 7800,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_4800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 4800,
+          "pot_before": 9600,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_9600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 9600,
+          "pot_before": 14400,
+          "street": "river"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 4800,
+          "pot_before": 24000,
+          "street": "river"
+        }
+      ],
+      "hand": 889,
+      "rake_chips": 300,
+      "saw_flop": 1
+    },
+    {
+      "a_gross_chips": 17250,
+      "a_net_chips": 16950,
+      "all_in": false,
+      "b_gross_chips": -17250,
+      "b_net_chips": -17250,
+      "block": 514,
+      "button": "b",
+      "category": "win",
+      "contested_pot_chips": 34500,
+      "decisions": [
+        {
+          "action": "raise_to_300",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 250,
+          "pot_before": 150,
+          "street": "preflop"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 400,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_100",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 100,
+          "pot_before": 600,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_700",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 700,
+          "pot_before": 700,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1300",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 1200,
+          "pot_before": 1400,
+          "street": "flop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 600,
+          "pot_before": 2600,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_100",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 100,
+          "pot_before": 3200,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_2650",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 2650,
+          "pot_before": 3300,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_5200",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 5100,
+          "pot_before": 5950,
+          "street": "turn"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 2550,
+          "pot_before": 11050,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_100",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 100,
+          "pot_before": 13600,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_10450",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 10450,
+          "pot_before": 13700,
+          "street": "river"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 10350,
+          "pot_before": 24150,
+          "street": "river"
+        }
+      ],
+      "hand": 1030,
+      "rake_chips": 300,
+      "saw_flop": 1
+    },
+    {
+      "a_gross_chips": -20000,
+      "a_net_chips": -20000,
+      "all_in": true,
+      "b_gross_chips": 20000,
+      "b_net_chips": 19700,
+      "block": 516,
+      "button": "b",
+      "category": "loss",
+      "contested_pot_chips": 40000,
+      "decisions": [
+        {
+          "action": "raise_to_300",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 250,
+          "pot_before": 150,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_500",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 400,
+          "pot_before": 400,
+          "street": "preflop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 800,
+          "street": "preflop"
+        },
+        {
+          "action": "check",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 0,
+          "pot_before": 1000,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_750",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 750,
+          "pot_before": 1000,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1500",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 1500,
+          "pot_before": 1750,
+          "street": "flop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 750,
+          "pot_before": 3250,
+          "street": "flop"
+        },
+        {
+          "action": "check",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 0,
+          "pot_before": 4000,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_3000",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 3000,
+          "pot_before": 4000,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_6000",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 6000,
+          "pot_before": 7000,
+          "street": "turn"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 3000,
+          "pot_before": 13000,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_100",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 100,
+          "pot_before": 16000,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_12000",
+          "actor": "b",
+          "all_in": true,
+          "pay_chips": 12000,
+          "pot_before": 16100,
+          "street": "river"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": true,
+          "pay_chips": 11900,
+          "pot_before": 28100,
+          "street": "river"
+        }
+      ],
+      "hand": 1034,
+      "rake_chips": 300,
+      "saw_flop": 1
+    },
+    {
+      "a_gross_chips": 16100,
+      "a_net_chips": 15800,
+      "all_in": false,
+      "b_gross_chips": -16100,
+      "b_net_chips": -16100,
+      "block": 602,
+      "button": "b",
+      "category": "win",
+      "contested_pot_chips": 32200,
+      "decisions": [
+        {
+          "action": "raise_to_300",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 250,
+          "pot_before": 150,
+          "street": "preflop"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 400,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_100",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 100,
+          "pot_before": 600,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_700",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 700,
+          "pot_before": 700,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1300",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 1200,
+          "pot_before": 1400,
+          "street": "flop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 600,
+          "pot_before": 2600,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_100",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 100,
+          "pot_before": 3200,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_2650",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 2650,
+          "pot_before": 3300,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_5200",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 5100,
+          "pot_before": 5950,
+          "street": "turn"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 2550,
+          "pot_before": 11050,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_100",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 100,
+          "pot_before": 13600,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_4700",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 4700,
+          "pot_before": 13700,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_9300",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 9200,
+          "pot_before": 18400,
+          "street": "river"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 4600,
+          "pot_before": 27600,
+          "street": "river"
+        }
+      ],
+      "hand": 1206,
+      "rake_chips": 300,
+      "saw_flop": 1
+    },
+    {
+      "a_gross_chips": -19200,
+      "a_net_chips": -19200,
+      "all_in": false,
+      "b_gross_chips": 19200,
+      "b_net_chips": 18900,
+      "block": 770,
+      "button": "a",
+      "category": "loss",
+      "contested_pot_chips": 38400,
+      "decisions": [
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 50,
+          "pot_before": 150,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_300",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 200,
+          "street": "preflop"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 400,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_450",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 600,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_900",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 900,
+          "pot_before": 1050,
+          "street": "flop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 1950,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 2400,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_3600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 3600,
+          "pot_before": 4200,
+          "street": "turn"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 7800,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_7200",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 7200,
+          "pot_before": 9600,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_14400",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 14400,
+          "pot_before": 16800,
+          "street": "river"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 7200,
+          "pot_before": 31200,
+          "street": "river"
+        }
+      ],
+      "hand": 1541,
+      "rake_chips": 300,
+      "saw_flop": 1
+    },
+    {
+      "a_gross_chips": 14400,
+      "a_net_chips": 14100,
+      "all_in": false,
+      "b_gross_chips": -14400,
+      "b_net_chips": -14400,
+      "block": 842,
+      "button": "a",
+      "category": "win",
+      "contested_pot_chips": 28800,
+      "decisions": [
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 50,
+          "pot_before": 150,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_300",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 200,
+          "street": "preflop"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 400,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_450",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 600,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_900",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 900,
+          "pot_before": 1050,
+          "street": "flop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 1950,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 2400,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_3600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 3600,
+          "pot_before": 4200,
+          "street": "turn"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 7800,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_4800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 4800,
+          "pot_before": 9600,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_9600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 9600,
+          "pot_before": 14400,
+          "street": "river"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 4800,
+          "pot_before": 24000,
+          "street": "river"
+        }
+      ],
+      "hand": 1685,
+      "rake_chips": 300,
+      "saw_flop": 1
+    },
+    {
+      "a_gross_chips": 16100,
+      "a_net_chips": 15800,
+      "all_in": false,
+      "b_gross_chips": -16100,
+      "b_net_chips": -16100,
+      "block": 873,
+      "button": "b",
+      "category": "win",
+      "contested_pot_chips": 32200,
+      "decisions": [
+        {
+          "action": "raise_to_300",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 250,
+          "pot_before": 150,
+          "street": "preflop"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 400,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_100",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 100,
+          "pot_before": 600,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_700",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 700,
+          "pot_before": 700,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1300",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 1200,
+          "pot_before": 1400,
+          "street": "flop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 600,
+          "pot_before": 2600,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_100",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 100,
+          "pot_before": 3200,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_2650",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 2650,
+          "pot_before": 3300,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_5200",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 5100,
+          "pot_before": 5950,
+          "street": "turn"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 2550,
+          "pot_before": 11050,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_100",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 100,
+          "pot_before": 13600,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_4700",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 4700,
+          "pot_before": 13700,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_9300",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 9200,
+          "pot_before": 18400,
+          "street": "river"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 4600,
+          "pot_before": 27600,
+          "street": "river"
+        }
+      ],
+      "hand": 1748,
+      "rake_chips": 300,
+      "saw_flop": 1
+    },
+    {
+      "a_gross_chips": 14400,
+      "a_net_chips": 14100,
+      "all_in": false,
+      "b_gross_chips": -14400,
+      "b_net_chips": -14400,
+      "block": 939,
+      "button": "a",
+      "category": "win",
+      "contested_pot_chips": 28800,
+      "decisions": [
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 50,
+          "pot_before": 150,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_300",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 200,
+          "street": "preflop"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 400,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_450",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 600,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_900",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 900,
+          "pot_before": 1050,
+          "street": "flop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 1950,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 2400,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_3600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 3600,
+          "pot_before": 4200,
+          "street": "turn"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 7800,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_4800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 4800,
+          "pot_before": 9600,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_9600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 9600,
+          "pot_before": 14400,
+          "street": "river"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 4800,
+          "pot_before": 24000,
+          "street": "river"
+        }
+      ],
+      "hand": 1879,
+      "rake_chips": 300,
+      "saw_flop": 1
+    },
+    {
+      "a_gross_chips": 14400,
+      "a_net_chips": 14100,
+      "all_in": false,
+      "b_gross_chips": -14400,
+      "b_net_chips": -14400,
+      "block": 950,
+      "button": "a",
+      "category": "win",
+      "contested_pot_chips": 28800,
+      "decisions": [
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 50,
+          "pot_before": 150,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_300",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 200,
+          "street": "preflop"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 400,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_450",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 600,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_900",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 900,
+          "pot_before": 1050,
+          "street": "flop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 1950,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 2400,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_3600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 3600,
+          "pot_before": 4200,
+          "street": "turn"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 7800,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_4800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 4800,
+          "pot_before": 9600,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_9600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 9600,
+          "pot_before": 14400,
+          "street": "river"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 4800,
+          "pot_before": 24000,
+          "street": "river"
+        }
+      ],
+      "hand": 1901,
+      "rake_chips": 300,
+      "saw_flop": 1
+    },
+    {
+      "a_gross_chips": 17250,
+      "a_net_chips": 16950,
+      "all_in": false,
+      "b_gross_chips": -17250,
+      "b_net_chips": -17250,
+      "block": 1030,
+      "button": "b",
+      "category": "win",
+      "contested_pot_chips": 34500,
+      "decisions": [
+        {
+          "action": "raise_to_300",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 250,
+          "pot_before": 150,
+          "street": "preflop"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 400,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_100",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 100,
+          "pot_before": 600,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_700",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 700,
+          "pot_before": 700,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1300",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 1200,
+          "pot_before": 1400,
+          "street": "flop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 600,
+          "pot_before": 2600,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_100",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 100,
+          "pot_before": 3200,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_2650",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 2650,
+          "pot_before": 3300,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_5200",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 5100,
+          "pot_before": 5950,
+          "street": "turn"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 2550,
+          "pot_before": 11050,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_100",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 100,
+          "pot_before": 13600,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_10450",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 10450,
+          "pot_before": 13700,
+          "street": "river"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 10350,
+          "pot_before": 24150,
+          "street": "river"
+        }
+      ],
+      "hand": 2062,
+      "rake_chips": 300,
+      "saw_flop": 1
+    },
+    {
+      "a_gross_chips": -20000,
+      "a_net_chips": -20000,
+      "all_in": true,
+      "b_gross_chips": 20000,
+      "b_net_chips": 19700,
+      "block": 1091,
+      "button": "b",
+      "category": "loss",
+      "contested_pot_chips": 40000,
+      "decisions": [
+        {
+          "action": "raise_to_300",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 250,
+          "pot_before": 150,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_500",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 400,
+          "pot_before": 400,
+          "street": "preflop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 800,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_100",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 100,
+          "pot_before": 1000,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1000",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1000,
+          "pot_before": 1100,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1900",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 2100,
+          "street": "flop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 900,
+          "pot_before": 3900,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_100",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 100,
+          "pot_before": 4800,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_3850",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 3850,
+          "pot_before": 4900,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_7600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 7500,
+          "pot_before": 8750,
+          "street": "turn"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 3750,
+          "pot_before": 16250,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_100",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 100,
+          "pot_before": 20000,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_10000",
+          "actor": "b",
+          "all_in": true,
+          "pay_chips": 10000,
+          "pot_before": 20100,
+          "street": "river"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": true,
+          "pay_chips": 9900,
+          "pot_before": 30100,
+          "street": "river"
+        }
+      ],
+      "hand": 2184,
+      "rake_chips": 300,
+      "saw_flop": 1
+    },
+    {
+      "a_gross_chips": 14400,
+      "a_net_chips": 14100,
+      "all_in": false,
+      "b_gross_chips": -14400,
+      "b_net_chips": -14400,
+      "block": 1398,
+      "button": "a",
+      "category": "win",
+      "contested_pot_chips": 28800,
+      "decisions": [
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 50,
+          "pot_before": 150,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_300",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 200,
+          "street": "preflop"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 400,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_450",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 600,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_900",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 900,
+          "pot_before": 1050,
+          "street": "flop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 1950,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 2400,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_3600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 3600,
+          "pot_before": 4200,
+          "street": "turn"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 7800,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_4800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 4800,
+          "pot_before": 9600,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_9600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 9600,
+          "pot_before": 14400,
+          "street": "river"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 4800,
+          "pot_before": 24000,
+          "street": "river"
+        }
+      ],
+      "hand": 2797,
+      "rake_chips": 300,
+      "saw_flop": 1
+    },
+    {
+      "a_gross_chips": -19200,
+      "a_net_chips": -19200,
+      "all_in": false,
+      "b_gross_chips": 19200,
+      "b_net_chips": 18900,
+      "block": 1489,
+      "button": "a",
+      "category": "loss",
+      "contested_pot_chips": 38400,
+      "decisions": [
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 50,
+          "pot_before": 150,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_300",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 200,
+          "street": "preflop"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 400,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_450",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 600,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_900",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 900,
+          "pot_before": 1050,
+          "street": "flop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 1950,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 2400,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_3600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 3600,
+          "pot_before": 4200,
+          "street": "turn"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 7800,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_7200",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 7200,
+          "pot_before": 9600,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_14400",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 14400,
+          "pot_before": 16800,
+          "street": "river"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 7200,
+          "pot_before": 31200,
+          "street": "river"
+        }
+      ],
+      "hand": 2979,
+      "rake_chips": 300,
+      "saw_flop": 1
+    },
+    {
+      "a_gross_chips": -19200,
+      "a_net_chips": -19200,
+      "all_in": false,
+      "b_gross_chips": 19200,
+      "b_net_chips": 18900,
+      "block": 1491,
+      "button": "a",
+      "category": "loss",
+      "contested_pot_chips": 38400,
+      "decisions": [
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 50,
+          "pot_before": 150,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_300",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 200,
+          "street": "preflop"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 400,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_450",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 600,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_900",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 900,
+          "pot_before": 1050,
+          "street": "flop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 1950,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 2400,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_3600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 3600,
+          "pot_before": 4200,
+          "street": "turn"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 7800,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_7200",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 7200,
+          "pot_before": 9600,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_14400",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 14400,
+          "pot_before": 16800,
+          "street": "river"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 7200,
+          "pot_before": 31200,
+          "street": "river"
+        }
+      ],
+      "hand": 2983,
+      "rake_chips": 300,
+      "saw_flop": 1
+    },
+    {
+      "a_gross_chips": -19200,
+      "a_net_chips": -19200,
+      "all_in": false,
+      "b_gross_chips": 19200,
+      "b_net_chips": 18900,
+      "block": 1644,
+      "button": "a",
+      "category": "loss",
+      "contested_pot_chips": 38400,
+      "decisions": [
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 50,
+          "pot_before": 150,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_300",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 200,
+          "street": "preflop"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 400,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_450",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 600,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_900",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 900,
+          "pot_before": 1050,
+          "street": "flop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 1950,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 2400,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_3600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 3600,
+          "pot_before": 4200,
+          "street": "turn"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 7800,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_7200",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 7200,
+          "pot_before": 9600,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_14400",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 14400,
+          "pot_before": 16800,
+          "street": "river"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 7200,
+          "pot_before": 31200,
+          "street": "river"
+        }
+      ],
+      "hand": 3289,
+      "rake_chips": 300,
+      "saw_flop": 1
+    },
+    {
+      "a_gross_chips": -19200,
+      "a_net_chips": -19200,
+      "all_in": false,
+      "b_gross_chips": 19200,
+      "b_net_chips": 18900,
+      "block": 2232,
+      "button": "a",
+      "category": "loss",
+      "contested_pot_chips": 38400,
+      "decisions": [
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 50,
+          "pot_before": 150,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_300",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 200,
+          "street": "preflop"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 400,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_450",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 600,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_900",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 900,
+          "pot_before": 1050,
+          "street": "flop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 1950,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 2400,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_3600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 3600,
+          "pot_before": 4200,
+          "street": "turn"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 7800,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_7200",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 7200,
+          "pot_before": 9600,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_14400",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 14400,
+          "pot_before": 16800,
+          "street": "river"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 7200,
+          "pot_before": 31200,
+          "street": "river"
+        }
+      ],
+      "hand": 4465,
+      "rake_chips": 300,
+      "saw_flop": 1
+    },
+    {
+      "a_gross_chips": -19200,
+      "a_net_chips": -19200,
+      "all_in": false,
+      "b_gross_chips": 19200,
+      "b_net_chips": 18900,
+      "block": 2888,
+      "button": "a",
+      "category": "loss",
+      "contested_pot_chips": 38400,
+      "decisions": [
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 50,
+          "pot_before": 150,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_300",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 200,
+          "street": "preflop"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 400,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_450",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 600,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_900",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 900,
+          "pot_before": 1050,
+          "street": "flop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 1950,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 2400,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_3600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 3600,
+          "pot_before": 4200,
+          "street": "turn"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 7800,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_7200",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 7200,
+          "pot_before": 9600,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_14400",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 14400,
+          "pot_before": 16800,
+          "street": "river"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 7200,
+          "pot_before": 31200,
+          "street": "river"
+        }
+      ],
+      "hand": 5777,
+      "rake_chips": 300,
+      "saw_flop": 1
+    },
+    {
+      "a_gross_chips": 19200,
+      "a_net_chips": 18900,
+      "all_in": false,
+      "b_gross_chips": -19200,
+      "b_net_chips": -19200,
+      "block": 2964,
+      "button": "a",
+      "category": "win",
+      "contested_pot_chips": 38400,
+      "decisions": [
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 50,
+          "pot_before": 150,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_300",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 200,
+          "street": "preflop"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 400,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_450",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 600,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_900",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 900,
+          "pot_before": 1050,
+          "street": "flop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 1950,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 2400,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_3600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 3600,
+          "pot_before": 4200,
+          "street": "turn"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 7800,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_7200",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 7200,
+          "pot_before": 9600,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_14400",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 14400,
+          "pot_before": 16800,
+          "street": "river"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 7200,
+          "pot_before": 31200,
+          "street": "river"
+        }
+      ],
+      "hand": 5929,
+      "rake_chips": 300,
+      "saw_flop": 1
+    },
+    {
+      "a_gross_chips": 14400,
+      "a_net_chips": 14100,
+      "all_in": false,
+      "b_gross_chips": -14400,
+      "b_net_chips": -14400,
+      "block": 2976,
+      "button": "a",
+      "category": "win",
+      "contested_pot_chips": 28800,
+      "decisions": [
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 50,
+          "pot_before": 150,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_300",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 200,
+          "street": "preflop"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 400,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_450",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 600,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_900",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 900,
+          "pot_before": 1050,
+          "street": "flop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 1950,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 2400,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_3600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 3600,
+          "pot_before": 4200,
+          "street": "turn"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 7800,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_4800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 4800,
+          "pot_before": 9600,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_9600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 9600,
+          "pot_before": 14400,
+          "street": "river"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 4800,
+          "pot_before": 24000,
+          "street": "river"
+        }
+      ],
+      "hand": 5953,
+      "rake_chips": 300,
+      "saw_flop": 1
+    },
+    {
+      "a_gross_chips": -19200,
+      "a_net_chips": -19200,
+      "all_in": false,
+      "b_gross_chips": 19200,
+      "b_net_chips": 18900,
+      "block": 3130,
+      "button": "a",
+      "category": "loss",
+      "contested_pot_chips": 38400,
+      "decisions": [
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 50,
+          "pot_before": 150,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_300",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 200,
+          "street": "preflop"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 400,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_450",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 600,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_900",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 900,
+          "pot_before": 1050,
+          "street": "flop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 1950,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 2400,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_3600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 3600,
+          "pot_before": 4200,
+          "street": "turn"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 7800,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_7200",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 7200,
+          "pot_before": 9600,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_14400",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 14400,
+          "pot_before": 16800,
+          "street": "river"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 7200,
+          "pot_before": 31200,
+          "street": "river"
+        }
+      ],
+      "hand": 6261,
+      "rake_chips": 300,
+      "saw_flop": 1
+    },
+    {
+      "a_gross_chips": -20000,
+      "a_net_chips": -20000,
+      "all_in": true,
+      "b_gross_chips": 20000,
+      "b_net_chips": 19700,
+      "block": 3342,
+      "button": "b",
+      "category": "loss",
+      "contested_pot_chips": 40000,
+      "decisions": [
+        {
+          "action": "raise_to_300",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 250,
+          "pot_before": 150,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_500",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 400,
+          "pot_before": 400,
+          "street": "preflop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 800,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_100",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 100,
+          "pot_before": 1000,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1000",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1000,
+          "pot_before": 1100,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1900",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 2100,
+          "street": "flop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 900,
+          "pot_before": 3900,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_100",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 100,
+          "pot_before": 4800,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_3850",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 3850,
+          "pot_before": 4900,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_7600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 7500,
+          "pot_before": 8750,
+          "street": "turn"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 3750,
+          "pot_before": 16250,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_100",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 100,
+          "pot_before": 20000,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_10000",
+          "actor": "b",
+          "all_in": true,
+          "pay_chips": 10000,
+          "pot_before": 20100,
+          "street": "river"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": true,
+          "pay_chips": 9900,
+          "pot_before": 30100,
+          "street": "river"
+        }
+      ],
+      "hand": 6686,
+      "rake_chips": 300,
+      "saw_flop": 1
+    },
+    {
+      "a_gross_chips": -19200,
+      "a_net_chips": -19200,
+      "all_in": false,
+      "b_gross_chips": 19200,
+      "b_net_chips": 18900,
+      "block": 3447,
+      "button": "a",
+      "category": "loss",
+      "contested_pot_chips": 38400,
+      "decisions": [
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 50,
+          "pot_before": 150,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_300",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 200,
+          "street": "preflop"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 400,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_450",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 600,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_900",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 900,
+          "pot_before": 1050,
+          "street": "flop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 1950,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 2400,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_3600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 3600,
+          "pot_before": 4200,
+          "street": "turn"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 7800,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_7200",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 7200,
+          "pot_before": 9600,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_14400",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 14400,
+          "pot_before": 16800,
+          "street": "river"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 7200,
+          "pot_before": 31200,
+          "street": "river"
+        }
+      ],
+      "hand": 6895,
+      "rake_chips": 300,
+      "saw_flop": 1
+    },
+    {
+      "a_gross_chips": -19200,
+      "a_net_chips": -19200,
+      "all_in": false,
+      "b_gross_chips": 19200,
+      "b_net_chips": 18900,
+      "block": 3715,
+      "button": "a",
+      "category": "loss",
+      "contested_pot_chips": 38400,
+      "decisions": [
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 50,
+          "pot_before": 150,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_300",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 200,
+          "street": "preflop"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 400,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_450",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 600,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_900",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 900,
+          "pot_before": 1050,
+          "street": "flop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 1950,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 2400,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_3600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 3600,
+          "pot_before": 4200,
+          "street": "turn"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 7800,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_7200",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 7200,
+          "pot_before": 9600,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_14400",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 14400,
+          "pot_before": 16800,
+          "street": "river"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 7200,
+          "pot_before": 31200,
+          "street": "river"
+        }
+      ],
+      "hand": 7431,
+      "rake_chips": 300,
+      "saw_flop": 1
+    },
+    {
+      "a_gross_chips": -19200,
+      "a_net_chips": -19200,
+      "all_in": false,
+      "b_gross_chips": 19200,
+      "b_net_chips": 18900,
+      "block": 4051,
+      "button": "a",
+      "category": "loss",
+      "contested_pot_chips": 38400,
+      "decisions": [
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 50,
+          "pot_before": 150,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_300",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 200,
+          "street": "preflop"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 400,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_450",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 600,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_900",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 900,
+          "pot_before": 1050,
+          "street": "flop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 1950,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 2400,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_3600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 3600,
+          "pot_before": 4200,
+          "street": "turn"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 7800,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_7200",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 7200,
+          "pot_before": 9600,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_14400",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 14400,
+          "pot_before": 16800,
+          "street": "river"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 7200,
+          "pot_before": 31200,
+          "street": "river"
+        }
+      ],
+      "hand": 8103,
+      "rake_chips": 300,
+      "saw_flop": 1
+    },
+    {
+      "a_gross_chips": -20000,
+      "a_net_chips": -20000,
+      "all_in": true,
+      "b_gross_chips": 20000,
+      "b_net_chips": 19700,
+      "block": 4068,
+      "button": "a",
+      "category": "loss",
+      "contested_pot_chips": 40000,
+      "decisions": [
+        {
+          "action": "raise_to_200",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 150,
+          "pot_before": 150,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_600",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 500,
+          "pot_before": 300,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_1000",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 800,
+          "pot_before": 800,
+          "street": "preflop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 400,
+          "pot_before": 1600,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_1500",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1500,
+          "pot_before": 2000,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_3000",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 3000,
+          "pot_before": 3500,
+          "street": "flop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1500,
+          "pot_before": 6500,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_4000",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 4000,
+          "pot_before": 8000,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_8000",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 8000,
+          "pot_before": 12000,
+          "street": "turn"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 4000,
+          "pot_before": 20000,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_8000",
+          "actor": "b",
+          "all_in": true,
+          "pay_chips": 8000,
+          "pot_before": 24000,
+          "street": "river"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": true,
+          "pay_chips": 8000,
+          "pot_before": 32000,
+          "street": "river"
+        }
+      ],
+      "hand": 8137,
+      "rake_chips": 300,
+      "saw_flop": 1
+    },
+    {
+      "a_gross_chips": 14400,
+      "a_net_chips": 14100,
+      "all_in": false,
+      "b_gross_chips": -14400,
+      "b_net_chips": -14400,
+      "block": 4096,
+      "button": "a",
+      "category": "win",
+      "contested_pot_chips": 28800,
+      "decisions": [
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 50,
+          "pot_before": 150,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_300",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 200,
+          "street": "preflop"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 400,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_450",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 600,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_900",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 900,
+          "pot_before": 1050,
+          "street": "flop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 1950,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 2400,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_3600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 3600,
+          "pot_before": 4200,
+          "street": "turn"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 7800,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_4800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 4800,
+          "pot_before": 9600,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_9600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 9600,
+          "pot_before": 14400,
+          "street": "river"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 4800,
+          "pot_before": 24000,
+          "street": "river"
+        }
+      ],
+      "hand": 8193,
+      "rake_chips": 300,
+      "saw_flop": 1
+    },
+    {
+      "a_gross_chips": -19200,
+      "a_net_chips": -19200,
+      "all_in": false,
+      "b_gross_chips": 19200,
+      "b_net_chips": 18900,
+      "block": 4115,
+      "button": "a",
+      "category": "loss",
+      "contested_pot_chips": 38400,
+      "decisions": [
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 50,
+          "pot_before": 150,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_300",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 200,
+          "street": "preflop"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 400,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_450",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 600,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_900",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 900,
+          "pot_before": 1050,
+          "street": "flop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 1950,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 2400,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_3600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 3600,
+          "pot_before": 4200,
+          "street": "turn"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 7800,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_7200",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 7200,
+          "pot_before": 9600,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_14400",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 14400,
+          "pot_before": 16800,
+          "street": "river"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 7200,
+          "pot_before": 31200,
+          "street": "river"
+        }
+      ],
+      "hand": 8231,
+      "rake_chips": 300,
+      "saw_flop": 1
+    },
+    {
+      "a_gross_chips": -19200,
+      "a_net_chips": -19200,
+      "all_in": false,
+      "b_gross_chips": 19200,
+      "b_net_chips": 18900,
+      "block": 4134,
+      "button": "a",
+      "category": "loss",
+      "contested_pot_chips": 38400,
+      "decisions": [
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 50,
+          "pot_before": 150,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_300",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 200,
+          "street": "preflop"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 400,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_450",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 600,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_900",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 900,
+          "pot_before": 1050,
+          "street": "flop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 1950,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 2400,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_3600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 3600,
+          "pot_before": 4200,
+          "street": "turn"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 7800,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_7200",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 7200,
+          "pot_before": 9600,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_14400",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 14400,
+          "pot_before": 16800,
+          "street": "river"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 7200,
+          "pot_before": 31200,
+          "street": "river"
+        }
+      ],
+      "hand": 8269,
+      "rake_chips": 300,
+      "saw_flop": 1
+    },
+    {
+      "a_gross_chips": 19200,
+      "a_net_chips": 18900,
+      "all_in": false,
+      "b_gross_chips": -19200,
+      "b_net_chips": -19200,
+      "block": 4222,
+      "button": "a",
+      "category": "win",
+      "contested_pot_chips": 38400,
+      "decisions": [
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 50,
+          "pot_before": 150,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_300",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 200,
+          "street": "preflop"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 400,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_450",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 600,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_900",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 900,
+          "pot_before": 1050,
+          "street": "flop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 1950,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 2400,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_3600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 3600,
+          "pot_before": 4200,
+          "street": "turn"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 7800,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_7200",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 7200,
+          "pot_before": 9600,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_14400",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 14400,
+          "pot_before": 16800,
+          "street": "river"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 7200,
+          "pot_before": 31200,
+          "street": "river"
+        }
+      ],
+      "hand": 8445,
+      "rake_chips": 300,
+      "saw_flop": 1
+    },
+    {
+      "a_gross_chips": 16100,
+      "a_net_chips": 15800,
+      "all_in": false,
+      "b_gross_chips": -16100,
+      "b_net_chips": -16100,
+      "block": 4480,
+      "button": "b",
+      "category": "win",
+      "contested_pot_chips": 32200,
+      "decisions": [
+        {
+          "action": "raise_to_300",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 250,
+          "pot_before": 150,
+          "street": "preflop"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 400,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_100",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 100,
+          "pot_before": 600,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_700",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 700,
+          "pot_before": 700,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1300",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 1200,
+          "pot_before": 1400,
+          "street": "flop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 600,
+          "pot_before": 2600,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_100",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 100,
+          "pot_before": 3200,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_2650",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 2650,
+          "pot_before": 3300,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_5200",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 5100,
+          "pot_before": 5950,
+          "street": "turn"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 2550,
+          "pot_before": 11050,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_100",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 100,
+          "pot_before": 13600,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_4700",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 4700,
+          "pot_before": 13700,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_9300",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 9200,
+          "pot_before": 18400,
+          "street": "river"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 4600,
+          "pot_before": 27600,
+          "street": "river"
+        }
+      ],
+      "hand": 8962,
+      "rake_chips": 300,
+      "saw_flop": 1
+    },
+    {
+      "a_gross_chips": 14400,
+      "a_net_chips": 14100,
+      "all_in": false,
+      "b_gross_chips": -14400,
+      "b_net_chips": -14400,
+      "block": 4508,
+      "button": "a",
+      "category": "win",
+      "contested_pot_chips": 28800,
+      "decisions": [
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 50,
+          "pot_before": 150,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_300",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 200,
+          "street": "preflop"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 400,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_450",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 600,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_900",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 900,
+          "pot_before": 1050,
+          "street": "flop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 1950,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 2400,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_3600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 3600,
+          "pot_before": 4200,
+          "street": "turn"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 7800,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_4800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 4800,
+          "pot_before": 9600,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_9600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 9600,
+          "pot_before": 14400,
+          "street": "river"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 4800,
+          "pot_before": 24000,
+          "street": "river"
+        }
+      ],
+      "hand": 9017,
+      "rake_chips": 300,
+      "saw_flop": 1
+    },
+    {
+      "a_gross_chips": 14400,
+      "a_net_chips": 14100,
+      "all_in": false,
+      "b_gross_chips": -14400,
+      "b_net_chips": -14400,
+      "block": 4546,
+      "button": "a",
+      "category": "win",
+      "contested_pot_chips": 28800,
+      "decisions": [
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 50,
+          "pot_before": 150,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_300",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 200,
+          "street": "preflop"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 400,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_450",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 600,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_900",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 900,
+          "pot_before": 1050,
+          "street": "flop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 1950,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 2400,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_3600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 3600,
+          "pot_before": 4200,
+          "street": "turn"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 7800,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_4800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 4800,
+          "pot_before": 9600,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_9600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 9600,
+          "pot_before": 14400,
+          "street": "river"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 4800,
+          "pot_before": 24000,
+          "street": "river"
+        }
+      ],
+      "hand": 9093,
+      "rake_chips": 300,
+      "saw_flop": 1
+    },
+    {
+      "a_gross_chips": -19200,
+      "a_net_chips": -19200,
+      "all_in": false,
+      "b_gross_chips": 19200,
+      "b_net_chips": 18900,
+      "block": 4569,
+      "button": "a",
+      "category": "loss",
+      "contested_pot_chips": 38400,
+      "decisions": [
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 50,
+          "pot_before": 150,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_300",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 200,
+          "street": "preflop"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 400,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_450",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 600,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_900",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 900,
+          "pot_before": 1050,
+          "street": "flop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 1950,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 2400,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_3600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 3600,
+          "pot_before": 4200,
+          "street": "turn"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 7800,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_7200",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 7200,
+          "pot_before": 9600,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_14400",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 14400,
+          "pot_before": 16800,
+          "street": "river"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 7200,
+          "pot_before": 31200,
+          "street": "river"
+        }
+      ],
+      "hand": 9139,
+      "rake_chips": 300,
+      "saw_flop": 1
+    },
+    {
+      "a_gross_chips": 14400,
+      "a_net_chips": 14100,
+      "all_in": false,
+      "b_gross_chips": -14400,
+      "b_net_chips": -14400,
+      "block": 4699,
+      "button": "a",
+      "category": "win",
+      "contested_pot_chips": 28800,
+      "decisions": [
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 50,
+          "pot_before": 150,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_300",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 200,
+          "street": "preflop"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 400,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_450",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 600,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_900",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 900,
+          "pot_before": 1050,
+          "street": "flop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 1950,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 2400,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_3600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 3600,
+          "pot_before": 4200,
+          "street": "turn"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 7800,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_4800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 4800,
+          "pot_before": 9600,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_9600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 9600,
+          "pot_before": 14400,
+          "street": "river"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 4800,
+          "pot_before": 24000,
+          "street": "river"
+        }
+      ],
+      "hand": 9399,
+      "rake_chips": 300,
+      "saw_flop": 1
+    },
+    {
+      "a_gross_chips": 14400,
+      "a_net_chips": 14100,
+      "all_in": false,
+      "b_gross_chips": -14400,
+      "b_net_chips": -14400,
+      "block": 4718,
+      "button": "a",
+      "category": "win",
+      "contested_pot_chips": 28800,
+      "decisions": [
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 50,
+          "pot_before": 150,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_300",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 200,
+          "street": "preflop"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 400,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_450",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 600,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_900",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 900,
+          "pot_before": 1050,
+          "street": "flop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 1950,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 2400,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_3600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 3600,
+          "pot_before": 4200,
+          "street": "turn"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 7800,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_4800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 4800,
+          "pot_before": 9600,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_9600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 9600,
+          "pot_before": 14400,
+          "street": "river"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 4800,
+          "pot_before": 24000,
+          "street": "river"
+        }
+      ],
+      "hand": 9437,
+      "rake_chips": 300,
+      "saw_flop": 1
+    },
+    {
+      "a_gross_chips": 14400,
+      "a_net_chips": 14100,
+      "all_in": false,
+      "b_gross_chips": -14400,
+      "b_net_chips": -14400,
+      "block": 4813,
+      "button": "a",
+      "category": "win",
+      "contested_pot_chips": 28800,
+      "decisions": [
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 50,
+          "pot_before": 150,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_300",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 200,
+          "street": "preflop"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 400,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_450",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 600,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_900",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 900,
+          "pot_before": 1050,
+          "street": "flop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 450,
+          "pot_before": 1950,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 2400,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_3600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 3600,
+          "pot_before": 4200,
+          "street": "turn"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 7800,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_4800",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 4800,
+          "pot_before": 9600,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_9600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 9600,
+          "pot_before": 14400,
+          "street": "river"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 4800,
+          "pot_before": 24000,
+          "street": "river"
+        }
+      ],
+      "hand": 9627,
+      "rake_chips": 300,
+      "saw_flop": 1
+    },
+    {
+      "a_gross_chips": -20000,
+      "a_net_chips": -20000,
+      "all_in": true,
+      "b_gross_chips": 20000,
+      "b_net_chips": 19700,
+      "block": 4977,
+      "button": "b",
+      "category": "loss",
+      "contested_pot_chips": 40000,
+      "decisions": [
+        {
+          "action": "raise_to_300",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 250,
+          "pot_before": 150,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_500",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 400,
+          "pot_before": 400,
+          "street": "preflop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 200,
+          "pot_before": 800,
+          "street": "preflop"
+        },
+        {
+          "action": "raise_to_100",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 100,
+          "pot_before": 1000,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1000",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 1000,
+          "pot_before": 1100,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_1900",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 1800,
+          "pot_before": 2100,
+          "street": "flop"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 900,
+          "pot_before": 3900,
+          "street": "flop"
+        },
+        {
+          "action": "raise_to_100",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 100,
+          "pot_before": 4800,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_3850",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 3850,
+          "pot_before": 4900,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_7600",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 7500,
+          "pot_before": 8750,
+          "street": "turn"
+        },
+        {
+          "action": "call",
+          "actor": "b",
+          "all_in": false,
+          "pay_chips": 3750,
+          "pot_before": 16250,
+          "street": "turn"
+        },
+        {
+          "action": "raise_to_100",
+          "actor": "a",
+          "all_in": false,
+          "pay_chips": 100,
+          "pot_before": 20000,
+          "street": "river"
+        },
+        {
+          "action": "raise_to_10000",
+          "actor": "b",
+          "all_in": true,
+          "pay_chips": 10000,
+          "pot_before": 20100,
+          "street": "river"
+        },
+        {
+          "action": "call",
+          "actor": "a",
+          "all_in": true,
+          "pay_chips": 9900,
+          "pot_before": 30100,
+          "street": "river"
+        }
+      ],
+      "hand": 9956,
+      "rake_chips": 300,
+      "saw_flop": 1
+    }
+  ],
+  "top_losses": [
+    342,
+    1034,
+    2184,
+    6686,
+    8137,
+    9956,
+    273,
+    1541,
+    2979,
+    2983,
+    3289,
+    4465,
+    5777,
+    6261,
+    6895,
+    7431,
+    8103,
+    8231,
+    8269,
+    9139
+  ],
+  "top_wins": [
+    5929,
+    8445,
+    1030,
+    2062,
+    1206,
+    1748,
+    8962,
+    207,
+    889,
+    1685,
+    1879,
+    1901,
+    2797,
+    5953,
+    8193,
+    9017,
+    9093,
+    9399,
+    9437,
+    9627
+  ],
+  "verified": {
+    "all_in_hands": 6,
+    "decisions_verified": 50709,
+    "hands_verified": 10000
+  }
+}

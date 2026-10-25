@@ -1,0 +1,17 @@
+{
+  "config": {
+    "agent_a": "equity",
+    "agent_b": "tag",
+    "deck_seed": 31002,
+    "equity_samples": 64,
+    "hands": 10000,
+    "measure_time": true,
+    "no_flop_no_drop": true,
+    "policy_seed": 41002,
+    "rake_cap_bb": "3",
+    "rake_percent": "5",
+    "tag_samples": 64
+  },
+  "cpu_seconds": 268.31697911000003,
+  "wall_seconds": 268.9476946670002
+}
