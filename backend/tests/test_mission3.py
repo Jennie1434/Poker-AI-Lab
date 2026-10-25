@@ -121,3 +121,45 @@ def test_dispersion_is_in_bb_per_hand_not_standard_error():
     metrics=performance([0,200,200,400])
     assert metrics['stddev_hand_bb']==pytest.approx((8/3)**0.5)
     assert metrics['stddev_block_mean_bb']==pytest.approx(2**0.5)
+
+
+async def tiny_suite(tmp_path, monkeypatch):
+    import pokerbench.mission3 as m3
+    monkeypatch.setattr(m3, 'MAIN_HANDS', 8)
+    monkeypatch.setattr(m3, 'DIAGNOSTIC_HANDS', 4)
+    root = tmp_path/'suite'
+    for name, cfg in m3.jobs():
+        await experiment(cfg, root/name)
+        (root/name/'runtime.json').write_text(json.dumps({'wall_seconds': 0, 'cpu_seconds': 0}))
+    return m3, root
+
+
+@pytest.mark.asyncio
+async def test_analyze_aggregates_seeds_rake_and_sample_diagnostic(tmp_path, monkeypatch):
+    m3, root = await tiny_suite(tmp_path, monkeypatch)
+    result = m3.analyze(root, root/'analysis.json')
+    assert {(e['agent_a'], e['agent_b']) for e in result['primary']} == set(m3.MATCHUPS)
+    for entry in result['primary']:
+        assert entry['hands'] == 24 and entry['seeds'] == 3 and len(entry['seed_means_net_bb100']) == 3
+        rows = [r for deck, _ in m3.SEEDS for r in read_rows(root/f"{entry['agent_a']}-v-{entry['agent_b']}-{deck}-s64")]
+        assert entry['rake']['0']['a']['profit_chips'] == sum(r['a_gross_chips'] for r in rows)
+        assert entry['rake']['5']['a']['profit_chips'] == sum(r['a_net_chips'] for r in rows)
+        for seat in ('a', 'b'):
+            profits = [entry['rake'][rate][seat]['profit_chips'] for rate in ('0', '2', '5', '7')]
+            assert profits == sorted(profits, reverse=True)
+    samples = {d['samples']: d for d in result['equity_samples_diagnostic']}
+    assert sorted(samples) == [64, 256, 1024]
+    assert samples[64]['paired_delta_vs_64']['profit_chips'] == 0
+    assert (root/'analysis.csv').read_text().count('\n') == 1 + 3*4*2
+
+
+@pytest.mark.asyncio
+async def test_analyze_rejects_altered_or_missing_trace(tmp_path, monkeypatch):
+    m3, root = await tiny_suite(tmp_path, monkeypatch)
+    trace = root/f'equity-v-tag-{m3.SEEDS[0][0]}-s64'/'decisions.jsonl'
+    trace.write_bytes(trace.read_bytes() + b' ')
+    with pytest.raises(ValueError, match='checksum'):
+        m3.analyze(root, root/'analysis.json')
+    trace.unlink()
+    with pytest.raises(FileNotFoundError):
+        m3.analyze(root, root/'analysis2.json')

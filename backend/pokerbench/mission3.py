@@ -21,6 +21,7 @@ from .engine import Hand
 # paired comparisons; three master pairs are independent replication units.
 SEEDS = ((31001, 41001), (31002, 41002), (31003, 41003))
 MATCHUPS = (("equity", "tag"), ("equity", "heuristic"), ("tag", "heuristic"))
+MAIN_HANDS, DIAGNOSTIC_HANDS = 10000, 1000
 
 
 def write_json(path, data):
@@ -137,11 +138,11 @@ async def audit(folder: Path, output: Path):
 def jobs():
     for deck, policy in SEEDS:
         for a, b in MATCHUPS:
-            yield f'{a}-v-{b}-{deck}-s64', Config(agent_a=a, agent_b=b, deck_seed=deck, policy_seed=policy, measure_time=True)
+            yield f'{a}-v-{b}-{deck}-s64', Config(hands=MAIN_HANDS, agent_a=a, agent_b=b, deck_seed=deck, policy_seed=policy, measure_time=True)
     # Secondary diagnostic, predeclared smaller size due to 16x equity cost.
     # Reuse the first 1,000 hands of the first main equity/tag run at 64.
     for samples in (256, 1024):
-        yield f'equity-v-tag-{SEEDS[0][0]}-s{samples}-diagnostic', Config(hands=1000, agent_a='equity', agent_b='tag',
+        yield f'equity-v-tag-{SEEDS[0][0]}-s{samples}-diagnostic', Config(hands=DIAGNOSTIC_HANDS, agent_a='equity', agent_b='tag',
                 deck_seed=SEEDS[0][0], policy_seed=SEEDS[0][1], equity_samples=samples, tag_samples=64, measure_time=True)
 
 
@@ -159,7 +160,7 @@ def run_suite(root, workers):
     plan = list(jobs())
     root.mkdir(parents=True, exist_ok=False, mode=0o700)
     write_json(root/'plan.json', {'workers': workers, 'jobs': {name: asdict(cfg) for name,cfg in plan},
-                               'primary_hands': 90000, 'diagnostic_hands': 2000,
+                               'primary_hands': MAIN_HANDS*len(SEEDS)*len(MATCHUPS), 'diagnostic_hands': 2*DIAGNOSTIC_HANDS,
                                'rake_rates': [0,2,5,7], 'rake_cap_bb': 3})
     with ProcessPoolExecutor(max_workers=workers) as pool:
         futures = [pool.submit(run_job, (name,cfg,root)) for name,cfg in plan]
@@ -205,7 +206,7 @@ def analyze(root, output):
         reports[name] = (m, rows)
         per_run.append({'name': name, 'config': asdict(cfg), 'summary': m['summary'],
                         'timing': m['decision_bridge_timing'], 'runtime': json.loads((folder/'runtime.json').read_text())})
-        if cfg.hands == 10000:
+        if cfg.hands == MAIN_HANDS:
             groups[(cfg.agent_a,cfg.agent_b)].append(rows)
     combined = []
     for (a,b), sets in groups.items():
@@ -218,13 +219,13 @@ def analyze(root, output):
         entry['sd_seed_means_bb100'] = statistics.stdev(entry['seed_means_net_bb100'])
         combined.append(entry)
     base_name = f'equity-v-tag-{SEEDS[0][0]}-s64'
-    base = reports[base_name][1][:1000]
+    base = reports[base_name][1][:DIAGNOSTIC_HANDS]
     sensitivity = []
     for samples in (64,256,1024):
         name = base_name if samples == 64 else f'equity-v-tag-{SEEDS[0][0]}-s{samples}-diagnostic'
         m, rows = reports[name]
-        rows = rows[:1000]
-        sensitivity.append({'samples':samples, 'hands':1000,
+        rows = rows[:DIAGNOSTIC_HANDS]
+        sensitivity.append({'samples':samples, 'hands':DIAGNOSTIC_HANDS,
                             'equity_net': performance([r['a_net_chips'] for r in rows]),
                             'paired_delta_vs_64': performance([r['a_net_chips']-b['a_net_chips'] for r,b in zip(rows,base)]),
                             'timing_scope_hands':m['summary']['completed_hands'],
