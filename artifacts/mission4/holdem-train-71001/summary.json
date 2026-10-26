@@ -1,0 +1,20 @@
+{
+  "abstraction": {
+    "max_pot_raises": 2,
+    "max_raises": 3,
+    "postflop_buckets": 8,
+    "postflop_samples": 32,
+    "preflop_buckets": 8,
+    "preflop_table_samples": 4000,
+    "preflop_table_seed": 20261101
+  },
+  "final": {
+    "avg_positive_regret_per_iteration": 0.0016691533413774155,
+    "cpu_seconds": 2452.515,
+    "information_sets": 8063,
+    "iteration": 200000
+  },
+  "game": "holdem-hu-abstract-v1",
+  "iterations": 200000,
+  "seed": 71001
+}

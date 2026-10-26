@@ -1,0 +1,1134 @@
+[
+  {
+    "agents": {
+      "a": {
+        "counts": {
+          "all_in_actions": 641,
+          "flop:call": 638,
+          "flop:check": 4904,
+          "flop:fold": 1190,
+          "flop:raise": 2421,
+          "postflop_facing_bet": 4564,
+          "postflop_fold_facing_bet": 2318,
+          "preflop:call": 2189,
+          "preflop:check": 3414,
+          "preflop:fold": 1613,
+          "preflop:raise": 3121,
+          "river:call": 418,
+          "river:check": 2699,
+          "river:fold": 492,
+          "river:raise": 1326,
+          "turn:call": 507,
+          "turn:check": 3473,
+          "turn:fold": 636,
+          "turn:raise": 2009
+        },
+        "hand_counts": {
+          "bb_facing_bet": 537,
+          "bb_fold_facing_bet": 275,
+          "pfr": 3080,
+          "vpip": 5083
+        },
+        "policy": "cfr",
+        "positions": {
+          "BB": {
+            "hands": 5000,
+            "net_bb100": 170.29
+          },
+          "BTN": {
+            "hands": 5000,
+            "net_bb100": 196.895
+          }
+        }
+      },
+      "b": {
+        "counts": {
+          "all_in_actions": 447,
+          "flop:call": 1243,
+          "flop:check": 5155,
+          "flop:fold": 694,
+          "flop:raise": 2145,
+          "postflop_facing_bet": 5756,
+          "postflop_fold_facing_bet": 2047,
+          "preflop:call": 6935,
+          "preflop:check": 1689,
+          "preflop:fold": 469,
+          "preflop:raise": 884,
+          "river:call": 560,
+          "river:check": 2793,
+          "river:fold": 597,
+          "river:raise": 1065,
+          "turn:call": 955,
+          "turn:check": 3891,
+          "turn:fold": 756,
+          "turn:raise": 1354
+        },
+        "hand_counts": {
+          "bb_facing_bet": 1956,
+          "bb_fold_facing_bet": 226,
+          "pfr": 850,
+          "vpip": 6827
+        },
+        "policy": "equity",
+        "positions": {
+          "BB": {
+            "hands": 5000,
+            "net_bb100": -242.153
+          },
+          "BTN": {
+            "hands": 5000,
+            "net_bb100": -214.64
+          }
+        }
+      }
+    },
+    "run": "cfr-v-equity-51001"
+  },
+  {
+    "agents": {
+      "a": {
+        "counts": {
+          "all_in_actions": 673,
+          "flop:call": 614,
+          "flop:check": 4915,
+          "flop:fold": 1166,
+          "flop:raise": 2369,
+          "postflop_facing_bet": 4362,
+          "postflop_fold_facing_bet": 2236,
+          "preflop:call": 2090,
+          "preflop:check": 3390,
+          "preflop:fold": 1573,
+          "preflop:raise": 3292,
+          "river:call": 406,
+          "river:check": 2722,
+          "river:fold": 455,
+          "river:raise": 1376,
+          "turn:call": 487,
+          "turn:check": 3472,
+          "turn:fold": 615,
+          "turn:raise": 2015
+        },
+        "hand_counts": {
+          "bb_facing_bet": 486,
+          "bb_fold_facing_bet": 266,
+          "pfr": 3250,
+          "vpip": 5145
+        },
+        "policy": "cfr",
+        "positions": {
+          "BB": {
+            "hands": 5000,
+            "net_bb100": 145.708
+          },
+          "BTN": {
+            "hands": 5000,
+            "net_bb100": 255.001
+          }
+        }
+      },
+      "b": {
+        "counts": {
+          "all_in_actions": 436,
+          "flop:call": 1189,
+          "flop:check": 5208,
+          "flop:fold": 725,
+          "flop:raise": 2065,
+          "postflop_facing_bet": 5760,
+          "postflop_fold_facing_bet": 2073,
+          "preflop:call": 7100,
+          "preflop:check": 1623,
+          "preflop:fold": 494,
+          "preflop:raise": 851,
+          "river:call": 622,
+          "river:check": 2840,
+          "river:fold": 605,
+          "river:raise": 1006,
+          "turn:call": 995,
+          "turn:check": 3919,
+          "turn:fold": 743,
+          "turn:raise": 1291
+        },
+        "hand_counts": {
+          "bb_facing_bet": 2070,
+          "bb_fold_facing_bet": 250,
+          "pfr": 823,
+          "vpip": 6910
+        },
+        "policy": "equity",
+        "positions": {
+          "BB": {
+            "hands": 5000,
+            "net_bb100": -300.995
+          },
+          "BTN": {
+            "hands": 5000,
+            "net_bb100": -190.34
+          }
+        }
+      }
+    },
+    "run": "cfr-v-equity-51002"
+  },
+  {
+    "agents": {
+      "a": {
+        "counts": {
+          "all_in_actions": 665,
+          "flop:call": 624,
+          "flop:check": 4865,
+          "flop:fold": 1111,
+          "flop:raise": 2415,
+          "postflop_facing_bet": 4407,
+          "postflop_fold_facing_bet": 2271,
+          "preflop:call": 2119,
+          "preflop:check": 3445,
+          "preflop:fold": 1615,
+          "preflop:raise": 3186,
+          "river:call": 406,
+          "river:check": 2699,
+          "river:fold": 514,
+          "river:raise": 1281,
+          "turn:call": 476,
+          "turn:check": 3486,
+          "turn:fold": 646,
+          "turn:raise": 2011
+        },
+        "hand_counts": {
+          "bb_facing_bet": 481,
+          "bb_fold_facing_bet": 256,
+          "pfr": 3131,
+          "vpip": 5052
+        },
+        "policy": "cfr",
+        "positions": {
+          "BB": {
+            "hands": 5000,
+            "net_bb100": 133.871
+          },
+          "BTN": {
+            "hands": 5000,
+            "net_bb100": 131.031
+          }
+        }
+      },
+      "b": {
+        "counts": {
+          "all_in_actions": 435,
+          "flop:call": 1191,
+          "flop:check": 5183,
+          "flop:fold": 754,
+          "flop:raise": 2023,
+          "postflop_facing_bet": 5707,
+          "postflop_fold_facing_bet": 2122,
+          "preflop:call": 7000,
+          "preflop:check": 1654,
+          "preflop:fold": 480,
+          "preflop:raise": 856,
+          "river:call": 537,
+          "river:check": 2762,
+          "river:fold": 598,
+          "river:raise": 1051,
+          "turn:call": 934,
+          "turn:check": 3883,
+          "turn:fold": 770,
+          "turn:raise": 1333
+        },
+        "hand_counts": {
+          "bb_facing_bet": 1993,
+          "bb_fold_facing_bet": 232,
+          "pfr": 830,
+          "vpip": 6846
+        },
+        "policy": "equity",
+        "positions": {
+          "BB": {
+            "hands": 5000,
+            "net_bb100": -174.891
+          },
+          "BTN": {
+            "hands": 5000,
+            "net_bb100": -177.309
+          }
+        }
+      }
+    },
+    "run": "cfr-v-equity-51003"
+  },
+  {
+    "agents": {
+      "a": {
+        "counts": {
+          "all_in_actions": 204,
+          "flop:check": 4046,
+          "flop:raise": 1649,
+          "preflop:call": 1856,
+          "preflop:check": 3839,
+          "preflop:fold": 1200,
+          "preflop:raise": 3105,
+          "river:check": 1965,
+          "river:raise": 699,
+          "turn:check": 2664,
+          "turn:raise": 1382
+        },
+        "hand_counts": {
+          "pfr": 3105,
+          "vpip": 4961
+        },
+        "policy": "cfr",
+        "positions": {
+          "BB": {
+            "hands": 5000,
+            "net_bb100": 46.893
+          },
+          "BTN": {
+            "hands": 5000,
+            "net_bb100": 56.583
+          }
+        }
+      },
+      "b": {
+        "counts": {
+          "all_in_actions": 0,
+          "flop:check": 4930,
+          "flop:fold": 1649,
+          "postflop_facing_bet": 3730,
+          "postflop_fold_facing_bet": 3730,
+          "preflop:call": 5000,
+          "preflop:check": 1856,
+          "preflop:fold": 3105,
+          "river:check": 2098,
+          "river:fold": 699,
+          "turn:check": 3356,
+          "turn:fold": 1382
+        },
+        "hand_counts": {
+          "bb_facing_bet": 1944,
+          "bb_fold_facing_bet": 1944,
+          "vpip": 5000
+        },
+        "policy": "heuristic",
+        "positions": {
+          "BB": {
+            "hands": 5000,
+            "net_bb100": -60.295
+          },
+          "BTN": {
+            "hands": 5000,
+            "net_bb100": -54.571
+          }
+        }
+      }
+    },
+    "run": "cfr-v-heuristic-51001"
+  },
+  {
+    "agents": {
+      "a": {
+        "counts": {
+          "all_in_actions": 250,
+          "flop:check": 4012,
+          "flop:raise": 1551,
+          "preflop:call": 1776,
+          "preflop:check": 3787,
+          "preflop:fold": 1164,
+          "preflop:raise": 3273,
+          "river:check": 2005,
+          "river:raise": 660,
+          "turn:check": 2665,
+          "turn:raise": 1347
+        },
+        "hand_counts": {
+          "pfr": 3273,
+          "vpip": 5049
+        },
+        "policy": "cfr",
+        "positions": {
+          "BB": {
+            "hands": 5000,
+            "net_bb100": 48.232
+          },
+          "BTN": {
+            "hands": 5000,
+            "net_bb100": 57.329
+          }
+        }
+      },
+      "b": {
+        "counts": {
+          "all_in_actions": 0,
+          "flop:check": 4856,
+          "flop:fold": 1551,
+          "postflop_facing_bet": 3558,
+          "postflop_fold_facing_bet": 3558,
+          "preflop:call": 5000,
+          "preflop:check": 1776,
+          "preflop:fold": 3273,
+          "river:check": 2115,
+          "river:fold": 660,
+          "turn:check": 3330,
+          "turn:fold": 1347
+        },
+        "hand_counts": {
+          "bb_facing_bet": 2060,
+          "bb_fold_facing_bet": 2060,
+          "vpip": 5000
+        },
+        "policy": "heuristic",
+        "positions": {
+          "BB": {
+            "hands": 5000,
+            "net_bb100": -60.881
+          },
+          "BTN": {
+            "hands": 5000,
+            "net_bb100": -55.806
+          }
+        }
+      }
+    },
+    "run": "cfr-v-heuristic-51002"
+  },
+  {
+    "agents": {
+      "a": {
+        "counts": {
+          "all_in_actions": 246,
+          "flop:check": 3957,
+          "flop:raise": 1673,
+          "preflop:call": 1804,
+          "preflop:check": 3826,
+          "preflop:fold": 1214,
+          "preflop:raise": 3156,
+          "river:check": 1977,
+          "river:raise": 668,
+          "turn:check": 2645,
+          "turn:raise": 1312
+        },
+        "hand_counts": {
+          "pfr": 3156,
+          "vpip": 4960
+        },
+        "policy": "cfr",
+        "positions": {
+          "BB": {
+            "hands": 5000,
+            "net_bb100": 46.957
+          },
+          "BTN": {
+            "hands": 5000,
+            "net_bb100": 56.685
+          }
+        }
+      },
+      "b": {
+        "counts": {
+          "all_in_actions": 0,
+          "flop:check": 4846,
+          "flop:fold": 1673,
+          "postflop_facing_bet": 3653,
+          "postflop_fold_facing_bet": 3653,
+          "preflop:call": 5000,
+          "preflop:check": 1804,
+          "preflop:fold": 3156,
+          "river:check": 2102,
+          "river:fold": 668,
+          "turn:check": 3303,
+          "turn:fold": 1312
+        },
+        "hand_counts": {
+          "bb_facing_bet": 1982,
+          "bb_fold_facing_bet": 1982,
+          "vpip": 5000
+        },
+        "policy": "heuristic",
+        "positions": {
+          "BB": {
+            "hands": 5000,
+            "net_bb100": -60.293
+          },
+          "BTN": {
+            "hands": 5000,
+            "net_bb100": -54.609
+          }
+        }
+      }
+    },
+    "run": "cfr-v-heuristic-51003"
+  },
+  {
+    "agents": {
+      "a": {
+        "counts": {
+          "all_in_actions": 1163,
+          "flop:call": 1024,
+          "flop:check": 1624,
+          "flop:fold": 1896,
+          "flop:raise": 801,
+          "postflop_facing_bet": 5061,
+          "postflop_fold_facing_bet": 2680,
+          "preflop:call": 4400,
+          "preflop:check": 562,
+          "preflop:fold": 4766,
+          "preflop:raise": 2969,
+          "river:call": 255,
+          "river:check": 309,
+          "river:fold": 187,
+          "river:raise": 110,
+          "turn:call": 500,
+          "turn:check": 658,
+          "turn:fold": 597,
+          "turn:raise": 271
+        },
+        "hand_counts": {
+          "bb_facing_bet": 3688,
+          "bb_fold_facing_bet": 2148,
+          "pfr": 2707,
+          "vpip": 5529
+        },
+        "policy": "cfr",
+        "positions": {
+          "BB": {
+            "hands": 5000,
+            "net_bb100": 529.4654
+          },
+          "BTN": {
+            "hands": 5000,
+            "net_bb100": 585.409
+          }
+        }
+      },
+      "b": {
+        "counts": {
+          "all_in_actions": 2430,
+          "flop:call": 141,
+          "flop:check": 440,
+          "flop:fold": 133,
+          "flop:raise": 3318,
+          "postflop_facing_bet": 1182,
+          "postflop_fold_facing_bet": 238,
+          "preflop:call": 1270,
+          "preflop:check": 331,
+          "preflop:fold": 1242,
+          "preflop:raise": 6982,
+          "river:call": 44,
+          "river:check": 88,
+          "river:fold": 41,
+          "river:raise": 508,
+          "turn:call": 71,
+          "turn:check": 182,
+          "turn:fold": 64,
+          "turn:raise": 1235
+        },
+        "hand_counts": {
+          "bb_facing_bet": 2023,
+          "bb_fold_facing_bet": 386,
+          "pfr": 6636,
+          "vpip": 7491
+        },
+        "policy": "random",
+        "positions": {
+          "BB": {
+            "hands": 5000,
+            "net_bb100": -639.353
+          },
+          "BTN": {
+            "hands": 5000,
+            "net_bb100": -578.8314
+          }
+        }
+      }
+    },
+    "run": "cfr-v-random-51001"
+  },
+  {
+    "agents": {
+      "a": {
+        "counts": {
+          "all_in_actions": 1091,
+          "flop:call": 921,
+          "flop:check": 1538,
+          "flop:fold": 1874,
+          "flop:raise": 758,
+          "postflop_facing_bet": 4781,
+          "postflop_fold_facing_bet": 2622,
+          "preflop:call": 4205,
+          "preflop:check": 543,
+          "preflop:fold": 4892,
+          "preflop:raise": 3008,
+          "river:call": 240,
+          "river:check": 261,
+          "river:fold": 168,
+          "river:raise": 94,
+          "turn:call": 444,
+          "turn:check": 571,
+          "turn:fold": 580,
+          "turn:raise": 235
+        },
+        "hand_counts": {
+          "bb_facing_bet": 3680,
+          "bb_fold_facing_bet": 2214,
+          "pfr": 2793,
+          "vpip": 5472
+        },
+        "policy": "cfr",
+        "positions": {
+          "BB": {
+            "hands": 5000,
+            "net_bb100": 685.057
+          },
+          "BTN": {
+            "hands": 5000,
+            "net_bb100": 524.129
+          }
+        }
+      },
+      "b": {
+        "counts": {
+          "all_in_actions": 2489,
+          "flop:call": 148,
+          "flop:check": 413,
+          "flop:fold": 137,
+          "flop:raise": 3186,
+          "postflop_facing_bet": 1087,
+          "postflop_fold_facing_bet": 214,
+          "preflop:call": 1281,
+          "preflop:check": 319,
+          "preflop:fold": 1247,
+          "preflop:raise": 6937,
+          "river:call": 35,
+          "river:check": 76,
+          "river:fold": 27,
+          "river:raise": 459,
+          "turn:call": 63,
+          "turn:check": 145,
+          "turn:fold": 50,
+          "turn:raise": 1136
+        },
+        "hand_counts": {
+          "bb_facing_bet": 2129,
+          "bb_fold_facing_bet": 363,
+          "pfr": 6642,
+          "vpip": 7550
+        },
+        "policy": "random",
+        "positions": {
+          "BB": {
+            "hands": 5000,
+            "net_bb100": -575.13
+          },
+          "BTN": {
+            "hands": 5000,
+            "net_bb100": -732.897
+          }
+        }
+      }
+    },
+    "run": "cfr-v-random-51002"
+  },
+  {
+    "agents": {
+      "a": {
+        "counts": {
+          "all_in_actions": 1161,
+          "flop:call": 951,
+          "flop:check": 1522,
+          "flop:fold": 1813,
+          "flop:raise": 772,
+          "postflop_facing_bet": 4752,
+          "postflop_fold_facing_bet": 2520,
+          "preflop:call": 4204,
+          "preflop:check": 546,
+          "preflop:fold": 4919,
+          "preflop:raise": 3038,
+          "river:call": 243,
+          "river:check": 273,
+          "river:fold": 166,
+          "river:raise": 118,
+          "turn:call": 459,
+          "turn:check": 600,
+          "turn:fold": 541,
+          "turn:raise": 273
+        },
+        "hand_counts": {
+          "bb_facing_bet": 3696,
+          "bb_fold_facing_bet": 2217,
+          "pfr": 2768,
+          "vpip": 5457
+        },
+        "policy": "cfr",
+        "positions": {
+          "BB": {
+            "hands": 5000,
+            "net_bb100": 518.4954
+          },
+          "BTN": {
+            "hands": 5000,
+            "net_bb100": 551.791
+          }
+        }
+      },
+      "b": {
+        "counts": {
+          "all_in_actions": 2457,
+          "flop:call": 141,
+          "flop:check": 391,
+          "flop:fold": 129,
+          "flop:raise": 3136,
+          "postflop_facing_bet": 1163,
+          "postflop_fold_facing_bet": 237,
+          "preflop:call": 1303,
+          "preflop:check": 287,
+          "preflop:fold": 1280,
+          "preflop:raise": 6972,
+          "river:call": 39,
+          "river:check": 72,
+          "river:fold": 47,
+          "river:raise": 478,
+          "turn:call": 70,
+          "turn:check": 164,
+          "turn:fold": 61,
+          "turn:raise": 1138
+        },
+        "hand_counts": {
+          "bb_facing_bet": 2043,
+          "bb_fold_facing_bet": 413,
+          "pfr": 6660,
+          "vpip": 7520
+        },
+        "policy": "random",
+        "positions": {
+          "BB": {
+            "hands": 5000,
+            "net_bb100": -602.208
+          },
+          "BTN": {
+            "hands": 5000,
+            "net_bb100": -567.8614
+          }
+        }
+      }
+    },
+    "run": "cfr-v-random-51003"
+  },
+  {
+    "agents": {
+      "a": {
+        "counts": {
+          "all_in_actions": 249,
+          "flop:call": 157,
+          "flop:check": 1239,
+          "flop:fold": 239,
+          "flop:raise": 957,
+          "postflop_facing_bet": 1143,
+          "postflop_fold_facing_bet": 556,
+          "preflop:call": 2461,
+          "preflop:fold": 1979,
+          "preflop:raise": 2173,
+          "river:call": 81,
+          "river:check": 472,
+          "river:fold": 141,
+          "river:raise": 313,
+          "turn:call": 112,
+          "turn:check": 653,
+          "turn:fold": 176,
+          "turn:raise": 762
+        },
+        "hand_counts": {
+          "bb_facing_bet": 1149,
+          "bb_fold_facing_bet": 584,
+          "pfr": 2155,
+          "vpip": 4365
+        },
+        "policy": "cfr",
+        "positions": {
+          "BB": {
+            "hands": 5000,
+            "net_bb100": -2.0956
+          },
+          "BTN": {
+            "hands": 5000,
+            "net_bb100": -26.5208
+          }
+        }
+      },
+      "b": {
+        "counts": {
+          "all_in_actions": 62,
+          "flop:call": 338,
+          "flop:check": 1891,
+          "flop:fold": 601,
+          "flop:raise": 494,
+          "postflop_facing_bet": 2032,
+          "postflop_fold_facing_bet": 1280,
+          "preflop:call": 376,
+          "preflop:check": 1487,
+          "preflop:fold": 5553,
+          "preflop:raise": 1613,
+          "river:call": 104,
+          "river:check": 617,
+          "river:fold": 203,
+          "river:raise": 283,
+          "turn:call": 277,
+          "turn:check": 1173,
+          "turn:fold": 476,
+          "turn:raise": 366
+        },
+        "hand_counts": {
+          "bb_facing_bet": 1967,
+          "bb_fold_facing_bet": 1551,
+          "pfr": 1613,
+          "vpip": 1940
+        },
+        "policy": "tag",
+        "positions": {
+          "BB": {
+            "hands": 5000,
+            "net_bb100": 7.6098
+          },
+          "BTN": {
+            "hands": 5000,
+            "net_bb100": -5.5924
+          }
+        }
+      }
+    },
+    "run": "cfr-v-tag-51001"
+  },
+  {
+    "agents": {
+      "a": {
+        "counts": {
+          "all_in_actions": 255,
+          "flop:call": 136,
+          "flop:check": 1192,
+          "flop:fold": 267,
+          "flop:raise": 898,
+          "postflop_facing_bet": 1043,
+          "postflop_fold_facing_bet": 547,
+          "preflop:call": 2354,
+          "preflop:fold": 1935,
+          "preflop:raise": 2282,
+          "river:call": 73,
+          "river:check": 412,
+          "river:fold": 113,
+          "river:raise": 291,
+          "turn:call": 90,
+          "turn:check": 594,
+          "turn:fold": 167,
+          "turn:raise": 743
+        },
+        "hand_counts": {
+          "bb_facing_bet": 1097,
+          "bb_fold_facing_bet": 577,
+          "pfr": 2267,
+          "vpip": 4356
+        },
+        "policy": "cfr",
+        "positions": {
+          "BB": {
+            "hands": 5000,
+            "net_bb100": -5.4836
+          },
+          "BTN": {
+            "hands": 5000,
+            "net_bb100": 7.9062
+          }
+        }
+      },
+      "b": {
+        "counts": {
+          "all_in_actions": 51,
+          "flop:call": 310,
+          "flop:check": 1822,
+          "flop:fold": 570,
+          "flop:raise": 490,
+          "postflop_facing_bet": 1932,
+          "postflop_fold_facing_bet": 1243,
+          "preflop:call": 388,
+          "preflop:check": 1411,
+          "preflop:fold": 5688,
+          "preflop:raise": 1571,
+          "river:call": 103,
+          "river:check": 591,
+          "river:fold": 184,
+          "river:raise": 224,
+          "turn:call": 247,
+          "turn:check": 1114,
+          "turn:fold": 489,
+          "turn:raise": 329
+        },
+        "hand_counts": {
+          "bb_facing_bet": 2080,
+          "bb_fold_facing_bet": 1638,
+          "pfr": 1571,
+          "vpip": 1910
+        },
+        "policy": "tag",
+        "positions": {
+          "BB": {
+            "hands": 5000,
+            "net_bb100": -26.4622
+          },
+          "BTN": {
+            "hands": 5000,
+            "net_bb100": -0.7684
+          }
+        }
+      }
+    },
+    "run": "cfr-v-tag-51002"
+  },
+  {
+    "agents": {
+      "a": {
+        "counts": {
+          "all_in_actions": 242,
+          "flop:call": 144,
+          "flop:check": 1226,
+          "flop:fold": 236,
+          "flop:raise": 919,
+          "postflop_facing_bet": 1071,
+          "postflop_fold_facing_bet": 540,
+          "preflop:call": 2381,
+          "preflop:fold": 2013,
+          "preflop:raise": 2228,
+          "river:call": 78,
+          "river:check": 455,
+          "river:fold": 135,
+          "river:raise": 284,
+          "turn:call": 99,
+          "turn:check": 640,
+          "turn:fold": 169,
+          "turn:raise": 725
+        },
+        "hand_counts": {
+          "bb_facing_bet": 1126,
+          "bb_fold_facing_bet": 587,
+          "pfr": 2207,
+          "vpip": 4325
+        },
+        "policy": "cfr",
+        "positions": {
+          "BB": {
+            "hands": 5000,
+            "net_bb100": -25.1726
+          },
+          "BTN": {
+            "hands": 5000,
+            "net_bb100": -6.2192
+          }
+        }
+      },
+      "b": {
+        "counts": {
+          "all_in_actions": 62,
+          "flop:call": 308,
+          "flop:check": 1860,
+          "flop:fold": 592,
+          "flop:raise": 477,
+          "postflop_facing_bet": 1928,
+          "postflop_fold_facing_bet": 1252,
+          "preflop:call": 400,
+          "preflop:check": 1438,
+          "preflop:fold": 5572,
+          "preflop:raise": 1622,
+          "river:call": 87,
+          "river:check": 621,
+          "river:fold": 195,
+          "river:raise": 246,
+          "turn:call": 250,
+          "turn:check": 1154,
+          "turn:fold": 465,
+          "turn:raise": 348
+        },
+        "hand_counts": {
+          "bb_facing_bet": 1999,
+          "bb_fold_facing_bet": 1525,
+          "pfr": 1622,
+          "vpip": 1973
+        },
+        "policy": "tag",
+        "positions": {
+          "BB": {
+            "hands": 5000,
+            "net_bb100": -12.5498
+          },
+          "BTN": {
+            "hands": 5000,
+            "net_bb100": 18.3586
+          }
+        }
+      }
+    },
+    "run": "cfr-v-tag-51003"
+  },
+  {
+    "agents": {
+      "a": {
+        "counts": {
+          "all_in_actions": 2234,
+          "flop:call": 392,
+          "flop:check": 4065,
+          "flop:fold": 863,
+          "flop:raise": 1841,
+          "postflop_facing_bet": 3110,
+          "postflop_fold_facing_bet": 1463,
+          "preflop:call": 2021,
+          "preflop:check": 3123,
+          "preflop:fold": 2642,
+          "preflop:raise": 2428,
+          "river:call": 277,
+          "river:check": 1518,
+          "river:fold": 260,
+          "river:raise": 1382,
+          "turn:call": 317,
+          "turn:check": 2275,
+          "turn:fold": 340,
+          "turn:raise": 2042
+        },
+        "hand_counts": {
+          "bb_facing_bet": 534,
+          "bb_fold_facing_bet": 314,
+          "pfr": 2396,
+          "vpip": 4213
+        },
+        "policy": "cfr",
+        "positions": {
+          "BB": {
+            "hands": 5000,
+            "net_bb100": -198.14
+          },
+          "BTN": {
+            "hands": 5000,
+            "net_bb100": 166.905
+          }
+        }
+      },
+      "b": {
+        "counts": {
+          "all_in_actions": 1176,
+          "flop:call": 963,
+          "flop:check": 3966,
+          "flop:fold": 635,
+          "flop:raise": 1510,
+          "postflop_facing_bet": 5265,
+          "postflop_fold_facing_bet": 2060,
+          "preflop:call": 6077,
+          "preflop:check": 1647,
+          "preflop:fold": 737,
+          "preflop:raise": 761,
+          "river:call": 552,
+          "river:check": 1563,
+          "river:fold": 616,
+          "river:raise": 710,
+          "turn:call": 953,
+          "turn:check": 2626,
+          "turn:fold": 809,
+          "turn:raise": 890
+        },
+        "hand_counts": {
+          "bb_facing_bet": 935,
+          "bb_fold_facing_bet": 261,
+          "pfr": 729,
+          "vpip": 5723
+        },
+        "policy": "equity",
+        "positions": {
+          "BB": {
+            "hands": 5000,
+            "net_bb100": -209.561
+          },
+          "BTN": {
+            "hands": 5000,
+            "net_bb100": 132.13
+          }
+        }
+      }
+    },
+    "run": "cfr20000-v-equity-51001-diagnostic"
+  },
+  {
+    "agents": {
+      "a": {
+        "counts": {
+          "all_in_actions": 1056,
+          "flop:call": 104,
+          "flop:check": 1009,
+          "flop:fold": 149,
+          "flop:raise": 717,
+          "postflop_facing_bet": 765,
+          "postflop_fold_facing_bet": 271,
+          "preflop:call": 2155,
+          "preflop:fold": 3069,
+          "preflop:raise": 1305,
+          "river:call": 69,
+          "river:check": 344,
+          "river:fold": 64,
+          "river:raise": 237,
+          "turn:call": 96,
+          "turn:check": 465,
+          "turn:fold": 58,
+          "turn:raise": 692
+        },
+        "hand_counts": {
+          "bb_facing_bet": 1149,
+          "bb_fold_facing_bet": 718,
+          "pfr": 1299,
+          "vpip": 3121
+        },
+        "policy": "cfr",
+        "positions": {
+          "BB": {
+            "hands": 5000,
+            "net_bb100": -27.731
+          },
+          "BTN": {
+            "hands": 5000,
+            "net_bb100": -69.3618
+          }
+        }
+      },
+      "b": {
+        "counts": {
+          "all_in_actions": 84,
+          "flop:call": 203,
+          "flop:check": 1550,
+          "flop:fold": 495,
+          "flop:raise": 340,
+          "postflop_facing_bet": 1646,
+          "postflop_fold_facing_bet": 1156,
+          "preflop:call": 158,
+          "preflop:check": 1453,
+          "preflop:fold": 4959,
+          "preflop:raise": 1529,
+          "river:call": 79,
+          "river:check": 480,
+          "river:fold": 158,
+          "river:raise": 196,
+          "turn:call": 185,
+          "turn:check": 1000,
+          "turn:fold": 503,
+          "turn:raise": 229
+        },
+        "hand_counts": {
+          "bb_facing_bet": 998,
+          "bb_fold_facing_bet": 843,
+          "pfr": 1529,
+          "vpip": 1626
+        },
+        "policy": "tag",
+        "positions": {
+          "BB": {
+            "hands": 5000,
+            "net_bb100": 53.4578
+          },
+          "BTN": {
+            "hands": 5000,
+            "net_bb100": 23.059
+          }
+        }
+      }
+    },
+    "run": "cfr20000-v-tag-51001-diagnostic"
+  }
+]

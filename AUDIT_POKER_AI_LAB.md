@@ -165,3 +165,13 @@ rake 0/2/5/7 % (plafond 3 BB), sensibilité 64/256/1024 tirages et fréquences. 
 principal : EquityHeuristicAgent perd −187,83 bb/100 nets [−209,55 ; −166,11] contre
 TightAggressiveAgent. **643 tests Python et 26 tests frontend réussis.** Détails, commandes et
 limites : `MISSION_3.md`. Aucun CFR/self-play lancé.
+
+## Mission 4 (terminée)
+
+CFR, CFR+ et MCCFR validés sur Kuhn (exploitabilité 0,00001, valeur −1/18) et Leduc
+(0,00026, valeur −0,0856). Abstraction heads-up Hold'em vérifiée jeton par jeton contre
+PokerKit ; `CFRAgent` gelé intégré au benchmark (`--agent-a cfr --cfr-policy`). Après
+200 000 itérations de self-play, et sur 30 000 mains par adversaire avec des graines
+nouvelles (rake 5 %), il bat Random (+565,7 bb/100), Heuristic (+52,1) et Equity (+172,1).
+Contre TightAggressive, le résultat est non concluant : −9,6 [−27,3 ; +8,1]. **668 tests
+Python et 26 tests frontend réussis.** Détails : `MISSION_4.md`.

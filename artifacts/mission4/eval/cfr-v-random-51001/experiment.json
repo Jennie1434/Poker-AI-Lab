@@ -1,0 +1,169 @@
+{
+  "artifacts_sha256": {
+    "decisions.jsonl": "f54ee1b14b7fe8484f0387dbd3a16bba5cb3d8dc27473677d915cd4a698b59d5",
+    "hands.csv": "ad8c7846e10fd5c9fbb14cc5b6ec07a568c3f9b6e41d1c122eb76d84124b61e3"
+  },
+  "config": {
+    "agent_a": "cfr",
+    "agent_b": "random",
+    "cfr_policy": "artifacts/mission4/policy-71001-200000.json.gz",
+    "deck_seed": 51001,
+    "equity_samples": 64,
+    "hands": 10000,
+    "measure_time": true,
+    "no_flop_no_drop": true,
+    "policy_seed": 61001,
+    "rake_cap_bb": "3",
+    "rake_percent": "5",
+    "tag_samples": 64
+  },
+  "decision_bridge_timing": {
+    "a": {
+      "cpu_seconds": 22.54990218200016,
+      "decisions": 20929
+    },
+    "b": {
+      "cpu_seconds": 9.936553824999727,
+      "decisions": 16090
+    }
+  },
+  "provenance": {
+    "cfr_policy_sha256": "f036c7edbb27f347cbe066f6364330380afad0dbaf21af4b5177ee4e688a130e",
+    "dependencies": {
+      "pokerbench": "0.1.0",
+      "pokerkit": "0.7.6",
+      "treys": "0.1.8"
+    },
+    "git_commit": "64f2f08b056734064835b109e6cc4ebb6678cb07",
+    "python": "3.13.17",
+    "source_sha256": {
+      "backend/pokerbench/__init__.py": "46ab088256c3cd523216d5a83a41ed71d3f1c71cfb12d568017cb2225d027332",
+      "backend/pokerbench/accounts.py": "31036fc8d44bc9b8567636d4a4c001bc7486cfb67642c30e7dafd759ef891438",
+      "backend/pokerbench/advisor.py": "09c2ab559530f54f328a0a4b494314eda54663375ec4300658efec53f08d39b8",
+      "backend/pokerbench/agents.py": "b272ece6273840282c6e94757cb103240446566ed7f8946d12c8ee4c400d5094",
+      "backend/pokerbench/api.py": "0ed91f48cc034f6976c548d57fa099addd99a7f3b3e1b282fe761756034ff5a8",
+      "backend/pokerbench/benchmark.py": "6dc4ab2015a00d453ad0663c7a5057bfd103715d77a33dcb862f9e91146005f5",
+      "backend/pokerbench/benchmark_dashboard.py": "771e32d8086d6c0d2b0023058eae6c405e5ac1f88110f5c7a88706dc7cf76868",
+      "backend/pokerbench/cfr.py": "4e68cab4ed6a56601d2a5e656e63896ba9281f4c15d87c1e3ad55e4e69da15ae",
+      "backend/pokerbench/config.py": "fcc0c5fd6437d45668390645b038b6023e983523aabaec961b1ab6a8b2e0a0f2",
+      "backend/pokerbench/custom_endpoint.py": "b43cead0c084b941cc3de6627dbefa7e06d5bc883d2c6a3d20af50e071fb0d61",
+      "backend/pokerbench/custom_protocol.py": "5ce63b1ac17ad43b5adbcea38fe6a27de20eaec212b1f8e47e88478e5d73b78d",
+      "backend/pokerbench/engine.py": "8b6988b349dd93b1dc69fbb85330a2da9028953a220037437ff1b0cd0006eaad",
+      "backend/pokerbench/ev.py": "b6124a5c6d1b987937a7e1f2a8b60e5918022e78f43b131d31fc97ea5a81c000",
+      "backend/pokerbench/holdem_abstraction.py": "bf9d1313528f374b01c92f7a6e57940e5b5ed5c12580ae98688b716fb38a19c8",
+      "backend/pokerbench/local_play.py": "c94fd5d82956ef828cd92ab8726ba3453427276cdd0f4819c2c32e8e3aef4865",
+      "backend/pokerbench/mission3.py": "42ffb4b52d1d9494fb5a6d2ca4076d727b07a55352f1b8e1d1fd37646e1e9f86",
+      "backend/pokerbench/mission4.py": "494619147a433835b64125c31c20e1844c91d88c86caf5712338678e298a8093",
+      "backend/pokerbench/official_adapter.py": "ecf3b777d56dd38bdf5604bdabcc7a649ea64b5edb9ae4703b1839b3c2f542e2",
+      "backend/pokerbench/player_budget.py": "6eb62c16f76ae7fada329d88269b146e29dc7a9fd2962ccdf1612a3dd99ce6f7",
+      "backend/pokerbench/priority.py": "aa0de14166349288b00063f3196066914cc977482b945d8873d2b1de15aab1f5",
+      "backend/pokerbench/provider.py": "973cd64ff900ccc0ee78623ef9fe64aab30d0a71dc942241741ee51453b05f89",
+      "backend/pokerbench/public_access.py": "faf674f0c4b125215a2e3ae9a65eac3ce012701e73b51afe9d16b3665f43b1fd",
+      "backend/pokerbench/reporting.py": "5108c6e9e9ef04b57b9a1ff70b2d3bab04453730f06a2d30bd177a1715e5b197",
+      "backend/pokerbench/rooms.py": "094ecc11ddaa18c02a55bc51c740d8aa3106ac317f36801ea98bc737684d224f",
+      "backend/pokerbench/runner.py": "40b9eed0cb8072f1b7bd9f1ee5274bb9ae49a0ee755e7a62b4b53d17116c4938",
+      "backend/pokerbench/selfplay.py": "7f7c789e93e8e105421b797204d19ecfce74efc6c1f66e71620b8528724f09aa",
+      "backend/pokerbench/series.py": "73808a7db6c13db5e512f9fbcb723bcb29a66182e27ebcc02f262dd9de932ee7",
+      "backend/pokerbench/store.py": "8e19f57d248636ed15a8d7d414a70c8c9daae0669c5c41b4dd86c47edc9f9102",
+      "backend/pokerbench/toy_games.py": "0731fc0839ac98f83b811e3d812df332d364a16dd32ef047d0c36090e6a7fc24",
+      "frontend/package-lock.json": "9f0e85ac98d5f107d899642006a55bcbe42397e7ec9c02399a5fa9e1c41b289a",
+      "pyproject.toml": "a766bd45164a77399744ed399ef42f07e25277f378c7cd73c71c29a3a5d06881"
+    },
+    "working_tree_dirty": false
+  },
+  "rules": {
+    "ante": 0,
+    "big_blind_chips": 100,
+    "chip_unit": 50,
+    "duplicate_deals": false,
+    "rake_rounding": "floor to integer chip; proportional awards, largest remainder",
+    "rake_scope": "post-settlement fixed-policy counterfactual, no strategy adaptation",
+    "reset_stacks_each_hand": true,
+    "small_blind_chips": 50,
+    "stack_chips": 20000
+  },
+  "schema_version": 1,
+  "statistics": {
+    "method": "normal CLT 95% CI on independent two-hand balanced block means",
+    "small_sample": false,
+    "win_rate": "fraction of hands with strictly positive profit; ties separate"
+  },
+  "status": "complete",
+  "summary": {
+    "agents": {
+      "a": {
+        "big_blind_hands": 5000,
+        "button_hands": 5000,
+        "gross": {
+          "bb_per_100": 582.8199999999999,
+          "break_even_rate": 0.0027,
+          "ci95_bb_per_100": [
+            469.4390012936617,
+            696.2009987063382
+          ],
+          "loss_rate": 0.7732,
+          "profit_bb": 58282.0,
+          "profit_chips": 5828200,
+          "standard_error_bb_per_100": 57.84851129953056,
+          "stddev_block_mean_bb": 40.905074621444676,
+          "stddev_hand_bb": 57.86087903663657,
+          "win_rate": 0.2241
+        },
+        "net": {
+          "bb_per_100": 557.4372000000001,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            445.29372044377646,
+            669.5806795562237
+          ],
+          "loss_rate": 0.7759,
+          "profit_bb": 55743.72,
+          "profit_chips": 5574372,
+          "standard_error_bb_per_100": 57.21711237594012,
+          "stddev_block_mean_bb": 40.45860816093999,
+          "stddev_hand_bb": 57.217863719632874,
+          "win_rate": 0.2241
+        },
+        "policy": "cfr"
+      },
+      "b": {
+        "big_blind_hands": 5000,
+        "button_hands": 5000,
+        "gross": {
+          "bb_per_100": -582.8199999999999,
+          "break_even_rate": 0.0027,
+          "ci95_bb_per_100": [
+            -696.2009987063382,
+            -469.4390012936617
+          ],
+          "loss_rate": 0.2241,
+          "profit_bb": -58282.0,
+          "profit_chips": -5828200,
+          "standard_error_bb_per_100": 57.84851129953056,
+          "stddev_block_mean_bb": 40.905074621444676,
+          "stddev_hand_bb": 57.86087903663657,
+          "win_rate": 0.7732
+        },
+        "net": {
+          "bb_per_100": -609.0922,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            -721.803087876229,
+            -496.38131212377107
+          ],
+          "loss_rate": 0.2268,
+          "profit_bb": -60909.22,
+          "profit_chips": -6090922,
+          "standard_error_bb_per_100": 57.506611736377856,
+          "stddev_block_mean_bb": 40.66331512185469,
+          "stddev_hand_bb": 57.53282903066338,
+          "win_rate": 0.7732
+        },
+        "policy": "random"
+      }
+    },
+    "completed_hands": 10000,
+    "independent_blocks": 5000,
+    "rake_chips": 516550
+  }
+}
