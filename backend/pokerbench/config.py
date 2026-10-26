@@ -36,7 +36,7 @@ class Entry(BaseModel):
     id: str = Field(pattern=r"^[a-z0-9_-]{1,40}$")
     name: str
     color: str = "#176b54"
-    provider: Literal["deepseek", "openai_compatible", "jev", "systemone", "human"] = "deepseek"
+    provider: Literal["deepseek", "openai_compatible", "jev", "systemone", "human", "local_cfr"] = "deepseek"
     model: str = "deepseek-flash"
     base_url: str = "https://api.deepseek.com"
     key_env: str = "DEEPSEEK_API_KEY"

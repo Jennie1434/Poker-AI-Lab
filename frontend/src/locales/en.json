@@ -653,5 +653,16 @@
   "启用筹码阈值结码，替代定期结码": "Stack-threshold resets replace periodic cash-outs",
   "达到筹码上限，统一结码重新买入": "Stack threshold reached; table cashed out and rebought",
   "筹码阈值结码重新买入": "Cash out and rebuy at stack threshold",
-  "结码阈值必须大于买入且为 0.5 的整数倍": "The reset threshold must exceed the buy-in and be a multiple of 0.5."
+  "结码阈值必须大于买入且为 0.5 的整数倍": "The reset threshold must exceed the buy-in and be a multiple of 0.5.",
+  "手牌历史与统计": "Hand history and statistics",
+  "统计": "Statistics",
+  "手数": "Hands",
+  "赢下的手牌": "Hands won",
+  "摊牌": "Showdowns",
+  "样本较小时统计波动很大；bb/100 为每 100 手赢得的大盲数。": "Small samples vary widely; bb/100 is big blinds won per 100 hands.",
+  "最近的手牌": "Recent hands",
+  "CFR 对手：一对一现金桌，每人 200 BB 起始；有人达到 400 BB 时统一结码至 200 BB。策略来自自我对弈训练的抽象博弈，不是完整无限注德州扑克的 GTO 策略。": "CFR opponent: heads-up cash table, 200 BB each; when a player reaches 400 BB, both stacks reset to 200 BB. The strategy was trained by self-play in an abstracted game; it is not a GTO strategy for full no-limit Hold'em.",
+  "CFR 对手仅支持一对一现金桌": "CFR opponents support heads-up cash tables only",
+  "请只选择一个 CFR 席位": "select exactly one CFR seat",
+  "CFR 策略文件不存在": "CFR policy file is missing"
 }

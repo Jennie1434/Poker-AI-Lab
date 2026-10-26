@@ -23,7 +23,7 @@ from .official_adapter import ADAPTER_METHOD
 from .runner import Runner, public_run
 from .store import Store
 from .series import SeriesRunner, public_series
-from .rooms import RoomInput, HumanActionInput, selectable, create_room, check_owner, room_state, room_record
+from .rooms import RoomInput, HumanActionInput, selectable, create_room, check_owner, room_state, room_record, room_history
 
 
 def create_app(settings: Settings | None = None):
@@ -73,6 +73,12 @@ def create_app(settings: Settings | None = None):
 
     def entries():
         return [Entry.model_validate(e) for e in json.loads(entries_file.read_text())] if entries_file.exists() else default_entries()
+
+    def room_entries():
+        # Local CFR opponents exist for private rooms only, never the benchmark roster.
+        from .local_agents import local_entries
+        configured=entries()
+        return [*configured,*(e for e in local_entries() if e.id not in {c.id for c in configured})]
 
     def admin(request: Request):
         same_origin(request)
@@ -145,7 +151,7 @@ def create_app(settings: Settings | None = None):
 
     @app.get("/api/rooms/models")
     async def room_models():
-        return [public_entry(e,provider.available(e)) for e in entries() if selectable(e)]
+        return [public_entry(e,provider.available(e)) for e in room_entries() if selectable(e)]
 
     @app.post("/api/rooms")
     async def new_room(body: RoomInput, request: Request):
@@ -155,7 +161,7 @@ def create_app(settings: Settings | None = None):
         custom=[agent.entry() for agent in body.custom_agents]
         if len({e.id for e in custom})!=len(custom):raise HTTPException(422,'自定义 Agent ID 重复')
         if custom and body.billing_mode!='personal':raise HTTPException(422,'自定义 Agent 请使用自己的 API Key')
-        registry={e.id:e for e in [*entries(),*custom]}
+        registry={e.id:e for e in [*room_entries(),*custom]}
         for pid in body.model_ids:
             entry=registry.get(pid)
             if entry is None or not selectable(entry):raise HTTPException(422,'请选择可用模型')
@@ -222,6 +228,12 @@ def create_app(settings: Settings | None = None):
         from fastapi.responses import JSONResponse
         return JSONResponse({"run":public_run(run,store),**room_state(run,store)},
                             headers={"Cache-Control":"no-store"})
+
+    @app.get("/api/rooms/{run_id}/history")
+    async def history(run_id: str, request: Request, limit: int = 30):
+        run=store.run(run_id)
+        room_owner(run,request)
+        return private_json(room_history(run,store,max(1,min(limit,200))))
 
     @app.post("/api/rooms/{run_id}/action")
     async def player_action(run_id: str, body: HumanActionInput, request: Request):
