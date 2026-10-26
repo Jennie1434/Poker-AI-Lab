@@ -30,18 +30,19 @@ RAKE_RATES = (0, 2, 5, 7)
 STREETS = ("preflop", "flop", "turn", "river")
 
 
-def jobs(policies, seeds, opponents=OPPONENTS):
+def jobs(policies, seeds, opponents=OPPONENTS, public_stats=False):
     for deck, seed in seeds:
         for opponent in opponents:
             for name, path in policies.items():
                 yield f"{name}-v-{opponent}-{deck}", Config(hands=MAIN_HANDS, agent_a="cfr", agent_b=opponent,
                                                             deck_seed=deck, policy_seed=seed, measure_time=True,
-                                                            cfr_policy=path)
+                                                            cfr_policy=path, cfr_adaptive=name.endswith("+adapt"),
+                                                            public_stats=public_stats)
 
 
-def run_suite(root: Path, workers: int, policies, seeds, opponents=OPPONENTS):
+def run_suite(root: Path, workers: int, policies, seeds, opponents=OPPONENTS, public_stats=False):
     from concurrent.futures import ProcessPoolExecutor, as_completed
-    plan = list(jobs(policies, seeds, opponents))
+    plan = list(jobs(policies, seeds, opponents, public_stats))
     root.mkdir(parents=True, exist_ok=False, mode=0o700)
     write_json(root / "plan.json", {"workers": workers, "jobs": {n: asdict(c) for n, c in plan},
                                     "policy_sha256": {k: hashlib.sha256(resolve_policy(p).read_bytes()).hexdigest()
@@ -95,10 +96,10 @@ def frequencies(folder: Path, seat="a") -> dict:
     return result
 
 
-def analyze(root: Path, output: Path, policies, seeds, opponents=OPPONENTS, comparisons=()) -> dict:
+def analyze(root: Path, output: Path, policies, seeds, opponents=OPPONENTS, comparisons=(), public_stats=False) -> dict:
     rows_by = defaultdict(dict)
     runs = []
-    for name, cfg in jobs(policies, seeds, opponents):
+    for name, cfg in jobs(policies, seeds, opponents, public_stats):
         folder = root / name
         m = json.loads((folder / "experiment.json").read_text())
         if m["status"] != "complete" or Config(**m["config"]) != cfg:
@@ -158,14 +159,27 @@ def main():
             s.add_argument("source", type=Path); s.add_argument("--output", type=Path, required=True)
     a = p.parse_args()
     policies, seeds, comparisons = (BASELINE_POLICIES, BASELINE_SEEDS, ()) if a.plan == "baseline" else (FINAL_POLICIES, FINAL_SEEDS, FINAL_COMPARISONS)
+    final = a.plan == "final"
     if a.command == "run":
-        run_suite(a.output, a.workers, policies, seeds)
+        run_suite(a.output, a.workers, policies, seeds, public_stats=final)
     else:
-        analyze(a.source, a.output, policies, seeds, comparisons=comparisons)
+        analyze(a.source, a.output, policies, seeds, comparisons=comparisons, public_stats=final)
 
 
-FINAL_POLICIES: dict = {}  # declared with the V3 protocol, before the final run
-FINAL_COMPARISONS: tuple = ()
+# Final protocol, fixed before V3 training ends and before any final hand is played:
+# V2 and V3 (seed 73001, 300k iterations), each plain and with the public-stats
+# adaptation overlay ("+adapt"); V3 seed 73002 measures training-seed variance.
+# All final jobs expose public statistics so the overlay can see them (plain
+# CFR agents ignore them). Verdicts: as in the baseline; a paired difference is
+# "better" only if its 95 % CI is entirely above zero.
+FINAL_POLICIES = {
+    "v2": "artifacts/mission5/policy-v2-72001-300000.json.gz",
+    "v2+adapt": "artifacts/mission5/policy-v2-72001-300000.json.gz",
+    "v3": "artifacts/mission6/policy-v3-73001-300000.json.gz",
+    "v3+adapt": "artifacts/mission6/policy-v3-73001-300000.json.gz",
+    "v3-seed2": "artifacts/mission6/policy-v3-73002-300000.json.gz",
+}
+FINAL_COMPARISONS = (("v3", "v2"), ("v2+adapt", "v2"), ("v3+adapt", "v3"), ("v3+adapt", "v2"), ("v3-seed2", "v3"))
 
 if __name__ == "__main__":
     main()

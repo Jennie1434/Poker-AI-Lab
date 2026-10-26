@@ -31,3 +31,11 @@ def test_mission6_analysis_reports_positions_frequencies_and_pairs(tmp_path, mon
         assert abs((entry['position_net_bb100']['BTN'] + entry['position_net_bb100']['BB']) / 2 - total) < 1e-9
     freq = result['runs'][0]['frequencies']
     assert 'preflop' in freq['streets'] and 0 <= freq['vpip'] <= 1
+
+
+def test_final_plan_is_declared_with_adaptive_and_public_stats():
+    plan = dict(m6.jobs(m6.FINAL_POLICIES, m6.FINAL_SEEDS, public_stats=True))
+    assert len(plan) == 5 * 4 * 3
+    assert all(c.public_stats for c in plan.values())
+    assert all(c.cfr_adaptive == n.split('-v-')[0].endswith('+adapt') for n, c in plan.items())
+    assert {p for p, _ in m6.FINAL_COMPARISONS} <= set(m6.FINAL_POLICIES)
