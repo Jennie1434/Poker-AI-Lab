@@ -25,9 +25,8 @@ import json
 from pathlib import Path
 import statistics
 
-from .benchmark import Config, derive_seed, performance
-from .holdem_abstraction import cached_policy, resolve_policy
-from .holdem_v2 import agent_for
+from .benchmark import Config, derive_seed, make_agent, performance
+from .holdem_abstraction import resolve_policy
 from .mission3 import read_rows, rerake, run_job, write_json
 
 TRAIN_SEED, TRAIN_ITERATIONS, SNAPSHOT = 71001, 200000, 20000
@@ -76,11 +75,12 @@ async def audit_cfr(folder: Path) -> dict:
     for name, expected in m["artifacts_sha256"].items():
         if hashlib.sha256((folder / name).read_bytes()).hexdigest() != expected:
             raise ValueError("Artifact checksum mismatch")
-    policy = cached_policy(cfg.cfr_policy)
     counts, streets = Counter(), Counter()
     with (folder / "decisions.jsonl").open() as f:
         for number, entries in groupby((json.loads(line) for line in f), key=lambda e: e["hand"]):
-            agent = agent_for(derive_seed(cfg.policy_seed, "policy:a", number - 1), policy)
+            # Same construction as the benchmark, including the adaptive overlay.
+            agent = make_agent("cfr", derive_seed(cfg.policy_seed, "policy:a", number - 1), cfg.equity_samples,
+                               cfg.tag_samples, cfg.cfr_policy, cfg.cfr_adaptive)
             for entry in entries:
                 if entry["actor"] != "a":
                     continue

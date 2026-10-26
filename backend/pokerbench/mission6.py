@@ -96,10 +96,20 @@ def frequencies(folder: Path, seat="a") -> dict:
     return result
 
 
-def analyze(root: Path, output: Path, policies, seeds, opponents=OPPONENTS, comparisons=(), public_stats=False) -> dict:
+def _audit(folder):
+    return asyncio.run(audit_cfr(folder)), frequencies(folder)
+
+
+def analyze(root: Path, output: Path, policies, seeds, opponents=OPPONENTS, comparisons=(), public_stats=False,
+            workers: int = 1) -> dict:
+    from concurrent.futures import ProcessPoolExecutor
     rows_by = defaultdict(dict)
     runs = []
-    for name, cfg in jobs(policies, seeds, opponents, public_stats):
+    plan = list(jobs(policies, seeds, opponents, public_stats))
+    # Replaying every CFR decision dominates the cost; audit runs in parallel.
+    with ProcessPoolExecutor(max_workers=workers) as pool:
+        audits = dict(zip((n for n, _ in plan), pool.map(_audit, [root / n for n, _ in plan])))
+    for name, cfg in plan:
         folder = root / name
         m = json.loads((folder / "experiment.json").read_text())
         if m["status"] != "complete" or Config(**m["config"]) != cfg:
@@ -113,8 +123,8 @@ def analyze(root: Path, output: Path, policies, seeds, opponents=OPPONENTS, comp
         policy = name.split(f"-v-{cfg.agent_b}-")[0]
         rows_by[(policy, cfg.agent_b)][cfg.deck_seed] = rows
         timing = m["decision_bridge_timing"]
-        runs.append({"name": name, "policy": policy, "opponent": cfg.agent_b, "audit": asyncio.run(audit_cfr(folder)),
-                     "frequencies": frequencies(folder),
+        audit, freq = audits[name]
+        runs.append({"name": name, "policy": policy, "opponent": cfg.agent_b, "audit": audit, "frequencies": freq,
                      "cfr_ms_per_decision": 1000 * timing["a"]["cpu_seconds"] / timing["a"]["decisions"]})
     decks = [d for d, _ in seeds]
     results = []
@@ -157,13 +167,14 @@ def main():
             s.add_argument("--output", type=Path, required=True); s.add_argument("--workers", type=int, default=4)
         else:
             s.add_argument("source", type=Path); s.add_argument("--output", type=Path, required=True)
+            s.add_argument("--workers", type=int, default=4)
     a = p.parse_args()
     policies, seeds, comparisons = (BASELINE_POLICIES, BASELINE_SEEDS, ()) if a.plan == "baseline" else (FINAL_POLICIES, FINAL_SEEDS, FINAL_COMPARISONS)
     final = a.plan == "final"
     if a.command == "run":
         run_suite(a.output, a.workers, policies, seeds, public_stats=final)
     else:
-        analyze(a.source, a.output, policies, seeds, comparisons=comparisons, public_stats=final)
+        analyze(a.source, a.output, policies, seeds, comparisons=comparisons, public_stats=final, workers=a.workers)
 
 
 # Final protocol, fixed before V3 training ends and before any final hand is played:
