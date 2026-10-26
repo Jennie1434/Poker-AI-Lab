@@ -9,7 +9,8 @@ import hashlib
 import time
 
 from .config import Entry
-from .holdem_abstraction import CFRAgent, cached_policy, resolve_policy
+from .holdem_abstraction import cached_policy, resolve_policy
+from .holdem_v2 import agent_for
 
 # id -> (display name, repository-relative policy file, description)
 LOCAL_POLICIES = {
@@ -45,7 +46,7 @@ async def decide(entry: Entry, request: dict, decision_id: str, request_hash: st
     started = time.monotonic()
     policy = cached_policy(LOCAL_POLICIES[entry.model][1])
     seed = int.from_bytes(hashlib.sha256(f"local-cfr:{decision_id}".encode()).digest()[:8], "big")
-    agent = CFRAgent(seed, policy)
+    agent = agent_for(seed, policy)
     choice = await agent.choose_action(request["state"])
     if choice not in request["questions"]["action"]["criteria"]:
         raise ValueError("CFR policy returned an action that is not offered")

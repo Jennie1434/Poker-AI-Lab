@@ -26,7 +26,8 @@ from pathlib import Path
 import statistics
 
 from .benchmark import Config, derive_seed, performance
-from .holdem_abstraction import CFRAgent, cached_policy, resolve_policy
+from .holdem_abstraction import cached_policy, resolve_policy
+from .holdem_v2 import agent_for
 from .mission3 import read_rows, rerake, run_job, write_json
 
 TRAIN_SEED, TRAIN_ITERATIONS, SNAPSHOT = 71001, 200000, 20000
@@ -79,7 +80,7 @@ async def audit_cfr(folder: Path) -> dict:
     counts, streets = Counter(), Counter()
     with (folder / "decisions.jsonl").open() as f:
         for number, entries in groupby((json.loads(line) for line in f), key=lambda e: e["hand"]):
-            agent = CFRAgent(derive_seed(cfg.policy_seed, "policy:a", number - 1), policy)
+            agent = agent_for(derive_seed(cfg.policy_seed, "policy:a", number - 1), policy)
             for entry in entries:
                 if entry["actor"] != "a":
                     continue

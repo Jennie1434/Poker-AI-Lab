@@ -10,7 +10,8 @@ from pathlib import Path
 import time
 
 from .cfr import CFRTrainer, VARIANTS, exploitability, load_checkpoint
-from .holdem_abstraction import Abstraction, HoldemAbstractGame, export_policy
+from .holdem_abstraction import export_policy
+from .holdem_v2 import game_for
 from .toy_games import GAMES
 
 
@@ -45,7 +46,7 @@ def train_toy(game_name: str, variant: str, iterations: int, output: Path, seed:
 
 
 def train_holdem(iterations: int, output: Path, seed: int, every: int, config: dict | None = None,
-                 resume: Path | None = None, snapshots: tuple = ()) -> dict:
+                 resume: Path | None = None, snapshots: tuple = (), version: int = 1) -> dict:
     """External-sampling MCCFR on the abstract HU game.
 
     No exact exploitability exists here; the log records the number of
@@ -56,11 +57,12 @@ def train_holdem(iterations: int, output: Path, seed: int, every: int, config: d
     output.mkdir(parents=True, exist_ok=False, mode=0o700)
     if resume:
         meta = load_checkpoint(resume)["metadata"]
-        abstraction = Abstraction(meta["abstraction"]["config"], meta["abstraction"]["preflop_equity"])
-        trainer = CFRTrainer.load(HoldemAbstractGame(abstraction), resume)
+        saved = meta["abstraction"]["config"]
+        abstraction, game = game_for(saved.get("version", 1), saved, meta["abstraction"]["preflop_equity"])
+        trainer = CFRTrainer.load(game, resume)
     else:
-        abstraction = Abstraction(config)
-        trainer = CFRTrainer(HoldemAbstractGame(abstraction), "external", seed)
+        abstraction, game = game_for(version, config)
+        trainer = CFRTrainer(game, "external", seed)
     metadata = {"kind": "holdem", "abstraction": abstraction.describe(), "split": "train",
                 "resumed_from": str(resume) if resume else None}
     log = []
@@ -85,7 +87,7 @@ def train_holdem(iterations: int, output: Path, seed: int, every: int, config: d
         writer = csv.DictWriter(f, fieldnames=list(log[0]))
         writer.writeheader()
         writer.writerows(log)
-    summary = {"game": HoldemAbstractGame.name, "seed": trainer.seed, "iterations": trainer.iterations,
+    summary = {"game": trainer.game.name, "seed": trainer.seed, "iterations": trainer.iterations,
                "final": log[-1], "abstraction": abstraction.config}
     (output / "summary.json").write_text(json.dumps(summary, indent=2, sort_keys=True) + "\n")
     return summary
@@ -108,12 +110,13 @@ def main():
     holdem.add_argument("--every", type=int, default=10000, help="checkpoint and log every N iterations")
     holdem.add_argument("--snapshot", type=int, action="append", default=[], help="export a policy at iteration N")
     holdem.add_argument("--postflop-samples", type=int, default=32)
+    holdem.add_argument("--version", type=int, choices=(1, 2), default=1, help="abstraction version")
     holdem.add_argument("--resume", type=Path)
     holdem.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
     if args.command == "holdem":
         result = train_holdem(args.iterations, args.output, args.seed, args.every,
-                              {"postflop_samples": args.postflop_samples}, args.resume, tuple(args.snapshot))
+                              {"postflop_samples": args.postflop_samples}, args.resume, tuple(args.snapshot), args.version)
         print(json.dumps(result, indent=2, sort_keys=True))
     elif args.command == "toy":
         result = train_toy(args.game, args.variant, args.iterations, args.output, args.seed, args.every, args.resume)

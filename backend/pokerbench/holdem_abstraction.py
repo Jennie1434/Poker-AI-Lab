@@ -230,7 +230,7 @@ def infoset_key(player, street, bucket, history) -> str:
 # Frozen policy and agent ----------------------------------------------
 def export_policy(trainer, abstraction: Abstraction, path: Path, metadata: dict, digits: int = 4):
     strategy = {k: [round(p, digits) for p in v.values()] for k, v in trainer.average_strategy().items()}
-    payload = {"format": POLICY_FORMAT, "game": HoldemAbstractGame.name, "iterations": trainer.iterations,
+    payload = {"format": POLICY_FORMAT, "game": trainer.game.name, "iterations": trainer.iterations,
                "seed": trainer.seed, "abstraction": abstraction.describe(),
                "actions": {k: list(v) for k, v in sorted(trainer.actions.items())},
                "strategy": strategy, "metadata": metadata}
@@ -298,6 +298,9 @@ class CFRAgent:
         bucket = self.abs.bucket(hero["cards"], obs["board"], self.rng)
         return player, street, bucket, tuple(per_street), raises, pot_raises
 
+    def key(self, player, street, bucket, history):
+        return infoset_key(player, street, bucket, history)
+
     def map_action(self, abstract, obs):
         actions = obs["legal_actions"]
         by_kind = {a["kind"]: a for a in actions}
@@ -327,7 +330,7 @@ class CFRAgent:
 
     async def choose_action(self, observation: dict) -> str:
         player, street, bucket, history, raises, pot_raises = self.abstract_view(observation)
-        key = infoset_key(player, street, bucket, history)
+        key = self.key(player, street, bucket, history)
         self.stats["decisions"] += 1
         probabilities = self.policy["strategy"].get(key)
         if probabilities is None:
