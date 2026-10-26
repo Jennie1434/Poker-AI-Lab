@@ -23,6 +23,7 @@ from .official_adapter import ADAPTER_METHOD
 from .runner import Runner, public_run
 from .store import Store
 from .series import SeriesRunner, public_series
+from .spectator import Spectator
 from .rooms import RoomInput, HumanActionInput, selectable, create_room, check_owner, room_state, room_record, room_history
 
 
@@ -228,6 +229,28 @@ def create_app(settings: Settings | None = None):
         from fastapi.responses import JSONResponse
         return JSONResponse({"run":public_run(run,store),**room_state(run,store)},
                             headers={"Cache-Control":"no-store"})
+
+    spectator=Spectator()
+
+    class SpectateInput(BaseModel):
+        agent_a: str = Field(max_length=40)
+        agent_b: str = Field(max_length=40)
+
+    @app.get("/api/spectate/agents")
+    async def spectate_agents():
+        from .spectator import AGENTS
+        return [{"id":k,"name":v} for k,v in AGENTS.items()]
+
+    @app.post("/api/spectate")
+    async def spectate(body: SpectateInput, request: Request):
+        same_origin(request)
+        user=accounts.user(request,required=True)
+        return private_json(spectator.create(user['uid'],body.agent_a,body.agent_b))
+
+    @app.get("/api/spectate/{session_id}/hands/{number}")
+    async def spectate_hand(session_id: str, number: int, request: Request):
+        user=accounts.user(request,required=True)
+        return private_json(await spectator.hand(user['uid'],session_id,number))
 
     @app.get("/api/rooms/{run_id}/history")
     async def history(run_id: str, request: Request, limit: int = 30):

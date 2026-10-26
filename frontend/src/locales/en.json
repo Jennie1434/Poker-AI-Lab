@@ -664,5 +664,19 @@
   "CFR 对手：一对一现金桌，每人 200 BB 起始；有人达到 400 BB 时统一结码至 200 BB。策略来自自我对弈训练的抽象博弈，不是完整无限注德州扑克的 GTO 策略。": "CFR opponent: heads-up cash table, 200 BB each; when a player reaches 400 BB, both stacks reset to 200 BB. The strategy was trained by self-play in an abstracted game; it is not a GTO strategy for full no-limit Hold'em.",
   "CFR 对手仅支持一对一现金桌": "CFR opponents support heads-up cash tables only",
   "请只选择一个 CFR 席位": "select exactly one CFR seat",
-  "CFR 策略文件不存在": "CFR policy file is missing"
+  "CFR 策略文件不存在": "CFR policy file is missing",
+  "观战": "Spectate",
+  "AI VS AI · LIVE": "AI VS AI · LIVE",
+  "选择两个智能体，逐手观看它们对局。两人桌现金局，每手 200 BB，按钮轮流；每个智能体只看到自己的底牌，观众可以看到双方底牌。": "Pick two agents and watch them play hand by hand. Heads-up cash, 200 BB each hand, alternating button. Each agent sees only its own hole cards; as a spectator you see both.",
+  "智能体 A": "Agent A",
+  "智能体 B": "Agent B",
+  "开始观战": "Start watching",
+  "重新开始观战": "Start a new match",
+  "观战记录只保存在服务器内存中，不进入正式榜单。": "Exhibition hands live in server memory only and never enter the official rankings.",
+  "暂停自动发牌": "Pause auto-deal",
+  "继续自动发牌": "Resume auto-deal",
+  "正在发牌…": "Dealing…",
+  "智能体": "Agent",
+  "请选择列表中的智能体": "Choose agents from the list",
+  "只能观看已发的手牌或下一手": "Only dealt hands or the next hand can be viewed"
 }
