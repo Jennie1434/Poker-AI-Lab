@@ -11,9 +11,9 @@ import secrets
 import time
 
 from .agents import play_action
-from .benchmark import BB, derive_seed, make_agent
+from .benchmark import BB, derive_seed, make_agent, update_public_stats
 from .engine import Hand
-from .local_agents import LOCAL_POLICIES
+from .local_agents import ADAPTIVE, LOCAL_POLICIES
 
 AGENTS = {**{key: name for key, (name, _, _) in LOCAL_POLICIES.items()},
           "tag": "TightAggressive", "hyper": "HyperAggressive", "station": "CallingStation",
@@ -23,7 +23,7 @@ MAX_SESSIONS_PER_USER, MAX_HANDS = 5, 2000
 
 def agent(name: str, seed: int):
     if name in LOCAL_POLICIES:
-        return make_agent("cfr", seed, 64, cfr_policy=LOCAL_POLICIES[name][1])
+        return make_agent("cfr", seed, 64, cfr_policy=LOCAL_POLICIES[name][1], cfr_adaptive=name in ADAPTIVE)
     return make_agent(name, seed, 64)
 
 
@@ -39,7 +39,7 @@ class Spectator:
             self.sessions.pop(old["id"], None)
         session = {"id": secrets.token_urlsafe(12), "owner": owner, "created": time.time(),
                    "agents": {"a": a, "b": b}, "deck_seed": secrets.randbelow(2**62),
-                   "policy_seed": secrets.randbelow(2**62), "hands": [], "lock": asyncio.Lock(),
+                   "policy_seed": secrets.randbelow(2**62), "hands": [], "lock": asyncio.Lock(), "public": {},
                    "stats": {seat: {"hands": 0, "net_chips": 0, "won": 0} for seat in "ab"}}
         self.sessions[session["id"]] = session
         return self.public(session)
@@ -66,8 +66,10 @@ class Spectator:
                      for seat, name in session["agents"].items()}
             hand = Hand([{"id": "a", "stack": 200 * BB}, {"id": "b", "stack": 200 * BB}], index % 2, (BB // 2, BB, 0),
                         derive_seed(session["deck_seed"], "deck", index), number, chip_unit=50)
+            # Agents see the same public counters a room exposes (VPIP, PFR, 3-bet).
             while hand.state.status:
-                await play_action(hand, seats[hand.actor])
+                await play_action(hand, seats[hand.actor], session["public"])
+            update_public_stats(session["public"], hand)
             payoffs = {s["id"]: s["payoff"] for s in hand.snapshot()["seats"]}
             for seat, payoff in payoffs.items():
                 row = session["stats"][seat]

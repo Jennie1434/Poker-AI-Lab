@@ -21,6 +21,8 @@ LOCAL_POLICIES = {
     "cfr-v2": ("CFR V2 · 300k", "artifacts/mission5/policy-v2-72001-300000.json.gz",
                "MCCFR self-play, 300,000 iterations, abstraction v2 (three raise sizes, draw-aware)"),
 }
+# Entries played through the public-statistics overlay (adaptive.py).
+ADAPTIVE: set[str] = set()
 COLOR = "#2f7d6d"
 
 
@@ -49,6 +51,9 @@ async def decide(entry: Entry, request: dict, decision_id: str, request_hash: st
     policy = cached_policy(LOCAL_POLICIES[entry.model][1])
     seed = int.from_bytes(hashlib.sha256(f"local-cfr:{decision_id}".encode()).digest()[:8], "big")
     agent = agent_for(seed, policy)
+    if entry.model in ADAPTIVE:
+        from .adaptive import AdaptiveCFRAgent
+        agent = AdaptiveCFRAgent(agent)
     choice = await agent.choose_action(request["state"])
     if choice not in request["questions"]["action"]["criteria"]:
         raise ValueError("CFR policy returned an action that is not offered")
