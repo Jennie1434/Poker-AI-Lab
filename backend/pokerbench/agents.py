@@ -101,7 +101,7 @@ class EquityHeuristicAgent:
         raise ValueError("No supported legal action")
 
 
-async def play_action(hand: Hand, agent: Agent) -> str:
+async def play_action(hand: Hand, agent: Agent, stats: dict | None = None) -> str:
     """Server-side bridge; reject illegal or stale choices before state mutation.
 
     The caller owns exclusive access to the hand while a decision is pending.
@@ -111,7 +111,7 @@ async def play_action(hand: Hand, agent: Agent) -> str:
         raise ValueError("No acting player")
     turn = (hand.actor, len(hand.actions))
     legal = {action.id for action in hand.legal()}
-    action_id = await agent.choose_action(deepcopy(hand.observation()))
+    action_id = await agent.choose_action(deepcopy(hand.observation(stats)))
     if turn != (hand.actor, len(hand.actions)):
         raise ValueError("Stale agent decision")
     if not isinstance(action_id, str) or action_id not in legal:
