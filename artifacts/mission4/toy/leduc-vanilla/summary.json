@@ -1,0 +1,16 @@
+{
+  "final": {
+    "best_response_p0": -0.046111614850577826,
+    "best_response_p1": 0.12573822584932068,
+    "cpu_seconds": 55.078103429,
+    "exploitability": 0.039813305499371426,
+    "information_sets": 288,
+    "iteration": 1000,
+    "nash_conv": 0.07962661099874285,
+    "value_p0": -0.0912117796201165
+  },
+  "game": "leduc",
+  "iterations": 1000,
+  "seed": 7101,
+  "variant": "vanilla"
+}

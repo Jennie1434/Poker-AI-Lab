@@ -1,0 +1,16 @@
+{
+  "final": {
+    "best_response_p0": -0.05434510701682532,
+    "best_response_p1": 0.0589806796467742,
+    "cpu_seconds": 1.4178451349999999,
+    "exploitability": 0.0023177863149744377,
+    "information_sets": 12,
+    "iteration": 10000,
+    "nash_conv": 0.004635572629948875,
+    "value_p0": -0.055546395829271705
+  },
+  "game": "kuhn",
+  "iterations": 10000,
+  "seed": 7101,
+  "variant": "vanilla"
+}

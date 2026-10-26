@@ -1,0 +1,1284 @@
+{
+  "ci_method": "normal 95% on independent two-hand block means; per-seed results also reported",
+  "no_flop_no_drop": true,
+  "primary": [
+    {
+      "hands": 30000,
+      "opponent": "random",
+      "rake": {
+        "0": {
+          "a": {
+            "bb_per_100": 590.65,
+            "break_even_rate": 0.0023666666666666667,
+            "ci95_bb_per_100": [
+              525.647010965175,
+              655.6529890348249
+            ],
+            "loss_rate": 0.774,
+            "profit_bb": 177195.0,
+            "profit_chips": 17719500,
+            "standard_error_bb_per_100": 33.165399745893446,
+            "stddev_block_mean_bb": 40.61915324643491,
+            "stddev_hand_bb": 57.526478114628304,
+            "win_rate": 0.22363333333333332
+          },
+          "b": {
+            "bb_per_100": -590.65,
+            "break_even_rate": 0.0023666666666666667,
+            "ci95_bb_per_100": [
+              -655.6529890348249,
+              -525.647010965175
+            ],
+            "loss_rate": 0.22363333333333332,
+            "profit_bb": -177195.0,
+            "profit_chips": -17719500,
+            "standard_error_bb_per_100": 33.165399745893446,
+            "stddev_block_mean_bb": 40.61915324643491,
+            "stddev_hand_bb": 57.526478114628304,
+            "win_rate": 0.774
+          }
+        },
+        "2": {
+          "a": {
+            "bb_per_100": 568.122,
+            "break_even_rate": 0.0,
+            "ci95_bb_per_100": [
+              503.827089604616,
+              632.416910395384
+            ],
+            "loss_rate": 0.7763666666666666,
+            "profit_bb": 170436.6,
+            "profit_chips": 17043660,
+            "standard_error_bb_per_100": 32.80412849548973,
+            "stddev_block_mean_bb": 40.176688135321726,
+            "stddev_hand_bb": 56.89270506442736,
+            "win_rate": 0.22363333333333332
+          },
+          "b": {
+            "bb_per_100": -606.0540666666666,
+            "break_even_rate": 0.0,
+            "ci95_bb_per_100": [
+              -670.7256031616093,
+              -541.3825301717238
+            ],
+            "loss_rate": 0.226,
+            "profit_bb": -181816.22,
+            "profit_chips": -18181622,
+            "standard_error_bb_per_100": 32.99628819971364,
+            "stddev_block_mean_bb": 40.41203474755809,
+            "stddev_hand_bb": 57.240901466821526,
+            "win_rate": 0.774
+          }
+        },
+        "5": {
+          "a": {
+            "bb_per_100": 565.7244666666667,
+            "break_even_rate": 0.0,
+            "ci95_bb_per_100": [
+              501.4382808624539,
+              630.0106524708794
+            ],
+            "loss_rate": 0.7763666666666666,
+            "profit_bb": 169717.34,
+            "profit_chips": 16971734,
+            "standard_error_bb_per_100": 32.79967709166801,
+            "stddev_block_mean_bb": 40.17123630132058,
+            "stddev_hand_bb": 56.884983237688225,
+            "win_rate": 0.22363333333333332
+          },
+          "b": {
+            "bb_per_100": -616.0468,
+            "break_even_rate": 0.0,
+            "ci95_bb_per_100": [
+              -680.6773339215466,
+              -551.4162660784533
+            ],
+            "loss_rate": 0.226,
+            "profit_bb": -184814.04,
+            "profit_chips": -18481404,
+            "standard_error_bb_per_100": 32.97536813499845,
+            "stddev_block_mean_bb": 40.38641300558898,
+            "stddev_hand_bb": 57.20535009114338,
+            "win_rate": 0.774
+          }
+        },
+        "7": {
+          "a": {
+            "bb_per_100": 564.8686,
+            "break_even_rate": 0.0,
+            "ci95_bb_per_100": [
+              500.58423000827946,
+              629.1529699917206
+            ],
+            "loss_rate": 0.7763666666666666,
+            "profit_bb": 169460.58,
+            "profit_chips": 16946058,
+            "standard_error_bb_per_100": 32.798750639699236,
+            "stddev_block_mean_bb": 40.17010163402324,
+            "stddev_hand_bb": 56.88395192248526,
+            "win_rate": 0.22363333333333332
+          },
+          "b": {
+            "bb_per_100": -621.228,
+            "break_even_rate": 0.0,
+            "ci95_bb_per_100": [
+              -685.8429502474042,
+              -556.6130497525957
+            ],
+            "loss_rate": 0.226,
+            "profit_bb": -186368.4,
+            "profit_chips": -18636840,
+            "standard_error_bb_per_100": 32.96741713474267,
+            "stddev_block_mean_bb": 40.37667505880328,
+            "stddev_hand_bb": 57.19188167230766,
+            "win_rate": 0.774
+          }
+        }
+      },
+      "sd_seed_means_bb100": 35.45881796695057,
+      "seed_net_bb100": [
+        557.4372000000001,
+        604.5930000000001,
+        535.1432
+      ],
+      "seeds": 3,
+      "verdict": "beats"
+    },
+    {
+      "hands": 30000,
+      "opponent": "heuristic",
+      "rake": {
+        "0": {
+          "a": {
+            "bb_per_100": 56.46,
+            "break_even_rate": 0.010433333333333333,
+            "ci95_bb_per_100": [
+              55.598005181768116,
+              57.321994818231886
+            ],
+            "loss_rate": 0.2423,
+            "profit_bb": 16938.0,
+            "profit_chips": 1693800,
+            "standard_error_bb_per_100": 0.4398013560612306,
+            "stddev_block_mean_bb": 0.5386444552670583,
+            "stddev_hand_bb": 0.7624715636858297,
+            "win_rate": 0.7472666666666666
+          },
+          "b": {
+            "bb_per_100": -56.46,
+            "break_even_rate": 0.010433333333333333,
+            "ci95_bb_per_100": [
+              -57.321994818231886,
+              -55.598005181768116
+            ],
+            "loss_rate": 0.7472666666666666,
+            "profit_bb": -16938.0,
+            "profit_chips": -1693800,
+            "standard_error_bb_per_100": 0.4398013560612306,
+            "stddev_block_mean_bb": 0.5386444552670583,
+            "stddev_hand_bb": 0.7624715636858297,
+            "win_rate": 0.2423
+          }
+        },
+        "2": {
+          "a": {
+            "bb_per_100": 54.721266666666665,
+            "break_even_rate": 0.0,
+            "ci95_bb_per_100": [
+              53.870441504651076,
+              55.572091828682254
+            ],
+            "loss_rate": 0.2527333333333333,
+            "profit_bb": 16416.38,
+            "profit_chips": 1641638,
+            "standard_error_bb_per_100": 0.434102447150453,
+            "stddev_block_mean_bb": 0.5316647458060556,
+            "stddev_hand_bb": 0.7530125176258884,
+            "win_rate": 0.7472666666666666
+          },
+          "b": {
+            "bb_per_100": -56.973,
+            "break_even_rate": 0.0,
+            "ci95_bb_per_100": [
+              -57.823686827124824,
+              -56.122313172875174
+            ],
+            "loss_rate": 0.7577,
+            "profit_bb": -17091.9,
+            "profit_chips": -1709190,
+            "standard_error_bb_per_100": 0.4340318668276243,
+            "stddev_block_mean_bb": 0.53157830291765,
+            "stddev_hand_bb": 0.7522643266524773,
+            "win_rate": 0.2423
+          }
+        },
+        "5": {
+          "a": {
+            "bb_per_100": 52.113166666666665,
+            "break_even_rate": 0.0,
+            "ci95_bb_per_100": [
+              51.2782660150017,
+              52.94806731833163
+            ],
+            "loss_rate": 0.2527333333333333,
+            "profit_bb": 15633.95,
+            "profit_chips": 1563395,
+            "standard_error_bb_per_100": 0.42597754767462764,
+            "stddev_block_mean_bb": 0.5217138168424663,
+            "stddev_hand_bb": 0.7395837357148682,
+            "win_rate": 0.7472666666666666
+          },
+          "b": {
+            "bb_per_100": -57.7425,
+            "break_even_rate": 0.0,
+            "ci95_bb_per_100": [
+              -58.576384273218174,
+              -56.908615726781825
+            ],
+            "loss_rate": 0.7577,
+            "profit_bb": -17322.75,
+            "profit_chips": -1732275,
+            "standard_error_bb_per_100": 0.42545897771374575,
+            "stddev_block_mean_bb": 0.5210787009424185,
+            "stddev_hand_bb": 0.7371328904647656,
+            "win_rate": 0.2423
+          }
+        },
+        "7": {
+          "a": {
+            "bb_per_100": 50.374433333333336,
+            "break_even_rate": 0.0,
+            "ci95_bb_per_100": [
+              49.54957078058127,
+              51.1992958860854
+            ],
+            "loss_rate": 0.2527333333333333,
+            "profit_bb": 15112.33,
+            "profit_chips": 1511233,
+            "standard_error_bb_per_100": 0.42085597452732637,
+            "stddev_block_mean_bb": 0.5154411963968523,
+            "stddev_hand_bb": 0.7311594466592793,
+            "win_rate": 0.7472666666666666
+          },
+          "b": {
+            "bb_per_100": -58.255500000000005,
+            "break_even_rate": 0.0,
+            "ci95_bb_per_100": [
+              -59.07829392375696,
+              -57.43270607624305
+            ],
+            "loss_rate": 0.7577,
+            "profit_bb": -17476.65,
+            "profit_chips": -1747665,
+            "standard_error_bb_per_100": 0.4198005321766371,
+            "stddev_block_mean_bb": 0.5141485487907961,
+            "stddev_hand_bb": 0.7271706868967762,
+            "win_rate": 0.2423
+          }
+        }
+      },
+      "sd_seed_means_bb100": 0.5794157258250197,
+      "seed_net_bb100": [
+        51.73799999999999,
+        52.780499999999996,
+        51.821
+      ],
+      "seeds": 3,
+      "verdict": "beats"
+    },
+    {
+      "hands": 30000,
+      "opponent": "equity",
+      "rake": {
+        "0": {
+          "a": {
+            "bb_per_100": 196.79333333333332,
+            "break_even_rate": 0.022,
+            "ci95_bb_per_100": [
+              150.0857543062166,
+              243.50091236045006
+            ],
+            "loss_rate": 0.519,
+            "profit_bb": 59038.0,
+            "profit_chips": 5903800,
+            "standard_error_bb_per_100": 23.83083536000669,
+            "stddev_block_mean_bb": 29.186693388145528,
+            "stddev_hand_bb": 41.2758532509942,
+            "win_rate": 0.459
+          },
+          "b": {
+            "bb_per_100": -196.79333333333332,
+            "break_even_rate": 0.022,
+            "ci95_bb_per_100": [
+              -243.50091236045006,
+              -150.0857543062166
+            ],
+            "loss_rate": 0.459,
+            "profit_bb": -59038.0,
+            "profit_chips": -5903800,
+            "standard_error_bb_per_100": 23.83083536000669,
+            "stddev_block_mean_bb": 29.186693388145528,
+            "stddev_hand_bb": 41.2758532509942,
+            "win_rate": 0.519
+          }
+        },
+        "2": {
+          "a": {
+            "bb_per_100": 181.80146666666667,
+            "break_even_rate": 0.0,
+            "ci95_bb_per_100": [
+              135.52946897957224,
+              228.0734643537611
+            ],
+            "loss_rate": 0.541,
+            "profit_bb": 54540.44,
+            "profit_chips": 5454044,
+            "standard_error_bb_per_100": 23.60859589874204,
+            "stddev_block_mean_bb": 28.914506747740816,
+            "stddev_hand_bb": 40.8898449725501,
+            "win_rate": 0.459
+          },
+          "b": {
+            "bb_per_100": -208.05066666666664,
+            "break_even_rate": 0.0,
+            "ci95_bb_per_100": [
+              -254.46762547073425,
+              -161.63370786259904
+            ],
+            "loss_rate": 0.481,
+            "profit_bb": -62415.2,
+            "profit_chips": -6241520,
+            "standard_error_bb_per_100": 23.682557011352586,
+            "stddev_block_mean_bb": 29.005090241093,
+            "stddev_hand_bb": 41.017800753444156,
+            "win_rate": 0.519
+          }
+        },
+        "5": {
+          "a": {
+            "bb_per_100": 172.13266666666667,
+            "break_even_rate": 0.0,
+            "ci95_bb_per_100": [
+              125.88231825654452,
+              218.3830150767888
+            ],
+            "loss_rate": 0.541,
+            "profit_bb": 51639.8,
+            "profit_chips": 5163980,
+            "standard_error_bb_per_100": 23.59755014629809,
+            "stddev_block_mean_bb": 28.90097851908443,
+            "stddev_hand_bb": 40.86923326677681,
+            "win_rate": 0.459
+          },
+          "b": {
+            "bb_per_100": -216.72133333333332,
+            "break_even_rate": 0.0,
+            "ci95_bb_per_100": [
+              -263.11397818242864,
+              -170.328688484238
+            ],
+            "loss_rate": 0.481,
+            "profit_bb": -65016.4,
+            "profit_chips": -6501640,
+            "standard_error_bb_per_100": 23.670151704334668,
+            "stddev_block_mean_bb": 28.989896904944768,
+            "stddev_hand_bb": 40.99465972463592,
+            "win_rate": 0.519
+          }
+        },
+        "7": {
+          "a": {
+            "bb_per_100": 166.67123333333336,
+            "break_even_rate": 0.0,
+            "ci95_bb_per_100": [
+              120.42850468307077,
+              212.91396198359595
+            ],
+            "loss_rate": 0.541,
+            "profit_bb": 50001.37,
+            "profit_chips": 5000137,
+            "standard_error_bb_per_100": 23.593662442279214,
+            "stddev_block_mean_bb": 28.896217073525822,
+            "stddev_hand_bb": 40.86190314549977,
+            "win_rate": 0.459
+          },
+          "b": {
+            "bb_per_100": -222.04656666666668,
+            "break_even_rate": 0.0,
+            "ci95_bb_per_100": [
+              -268.4258956032742,
+              -175.66723773005913
+            ],
+            "loss_rate": 0.481,
+            "profit_bb": -66613.97,
+            "profit_chips": -6661397,
+            "standard_error_bb_per_100": 23.66335774659217,
+            "stddev_block_mean_bb": 28.98157604004319,
+            "stddev_hand_bb": 40.98287806604493,
+            "win_rate": 0.519
+          }
+        }
+      },
+      "sd_seed_means_bb100": 35.37254815649182,
+      "seed_net_bb100": [
+        183.5925,
+        200.3545,
+        132.45100000000002
+      ],
+      "seeds": 3,
+      "verdict": "beats"
+    },
+    {
+      "hands": 30000,
+      "opponent": "tag",
+      "rake": {
+        "0": {
+          "a": {
+            "bb_per_100": -3.485,
+            "break_even_rate": 0.0035666666666666668,
+            "ci95_bb_per_100": [
+              -21.360760968394167,
+              14.390760968394169
+            ],
+            "loss_rate": 0.28296666666666664,
+            "profit_bb": -1045.5,
+            "profit_chips": -104550,
+            "standard_error_bb_per_100": 9.120453798843188,
+            "stddev_block_mean_bb": 11.17022901489713,
+            "stddev_hand_bb": 15.87979636966182,
+            "win_rate": 0.7134666666666667
+          },
+          "b": {
+            "bb_per_100": 3.485,
+            "break_even_rate": 0.0035666666666666668,
+            "ci95_bb_per_100": [
+              -14.390760968394169,
+              21.360760968394167
+            ],
+            "loss_rate": 0.7134666666666667,
+            "profit_bb": 1045.5,
+            "profit_chips": 104550,
+            "standard_error_bb_per_100": 9.120453798843188,
+            "stddev_block_mean_bb": 11.17022901489713,
+            "stddev_hand_bb": 15.87979636966182,
+            "win_rate": 0.28296666666666664
+          }
+        },
+        "2": {
+          "a": {
+            "bb_per_100": -6.699633333333333,
+            "break_even_rate": 0.0,
+            "ci95_bb_per_100": [
+              -24.44538310077113,
+              11.046116434104468
+            ],
+            "loss_rate": 0.2865333333333333,
+            "profit_bb": -2009.89,
+            "profit_chips": -200989,
+            "standard_error_bb_per_100": 9.054120334564313,
+            "stddev_block_mean_bb": 11.088987444719942,
+            "stddev_hand_bb": 15.765325733324884,
+            "win_rate": 0.7134666666666667
+          },
+          "b": {
+            "bb_per_100": -0.13489999999999885,
+            "break_even_rate": 0.0,
+            "ci95_bb_per_100": [
+              -17.820636260049522,
+              17.550836260049525
+            ],
+            "loss_rate": 0.7170333333333333,
+            "profit_bb": -40.47,
+            "profit_chips": -4047,
+            "standard_error_bb_per_100": 9.023500635497568,
+            "stddev_block_mean_bb": 11.051486125324391,
+            "stddev_hand_bb": 15.710717906112263,
+            "win_rate": 0.28296666666666664
+          }
+        },
+        "5": {
+          "a": {
+            "bb_per_100": -9.5976,
+            "break_even_rate": 0.0,
+            "ci95_bb_per_100": [
+              -27.31667543929554,
+              8.12147543929554
+            ],
+            "loss_rate": 0.2865333333333333,
+            "profit_bb": -2879.28,
+            "profit_chips": -287928,
+            "standard_error_bb_per_100": 9.04051073339171,
+            "stddev_block_mean_bb": 11.07231915548211,
+            "stddev_hand_bb": 15.742770279759956,
+            "win_rate": 0.7134666666666667
+          },
+          "b": {
+            "bb_per_100": -3.234066666666667,
+            "break_even_rate": 0.0,
+            "ci95_bb_per_100": [
+              -20.890800492803855,
+              14.422667159470521
+            ],
+            "loss_rate": 0.7170333333333333,
+            "profit_bb": -970.22,
+            "profit_chips": -97022,
+            "standard_error_bb_per_100": 9.008703203431926,
+            "stddev_block_mean_bb": 11.03336304629223,
+            "stddev_hand_bb": 15.684768546589764,
+            "win_rate": 0.28296666666666664
+          }
+        },
+        "7": {
+          "a": {
+            "bb_per_100": -11.178099999999999,
+            "break_even_rate": 0.0,
+            "ci95_bb_per_100": [
+              -28.888973737505026,
+              6.5327737375050265
+            ],
+            "loss_rate": 0.2865333333333333,
+            "profit_bb": -3353.43,
+            "profit_chips": -335343,
+            "standard_error_bb_per_100": 9.036326114768505,
+            "stddev_block_mean_bb": 11.06719406528461,
+            "stddev_hand_bb": 15.735807387373235,
+            "win_rate": 0.7134666666666667
+          },
+          "b": {
+            "bb_per_100": -5.004433333333333,
+            "break_even_rate": 0.0,
+            "ci95_bb_per_100": [
+              -22.648546510816338,
+              12.63967984414967
+            ],
+            "loss_rate": 0.7170333333333333,
+            "profit_bb": -1501.33,
+            "profit_chips": -150133,
+            "standard_error_bb_per_100": 9.002263978653444,
+            "stddev_block_mean_bb": 11.025476638769048,
+            "stddev_hand_bb": 15.673660210328904,
+            "win_rate": 0.28296666666666664
+          }
+        }
+      },
+      "sd_seed_means_bb100": 9.386461912243613,
+      "seed_net_bb100": [
+        -14.308200000000001,
+        1.2112999999999996,
+        -15.695900000000002
+      ],
+      "seeds": 3,
+      "verdict": "inconclusive"
+    }
+  ],
+  "rake_cap_bb": 3,
+  "runs": [
+    {
+      "audit": {
+        "decisions": 20929,
+        "fallback": 1494,
+        "fallback_by_street": {
+          "flop": 541,
+          "preflop": 291,
+          "river": 311,
+          "turn": 351
+        },
+        "fallback_rate": 0.07138420373644226
+      },
+      "cfr_ms_per_decision": 1.077447665058061,
+      "config": {
+        "agent_a": "cfr",
+        "agent_b": "random",
+        "cfr_policy": "artifacts/mission4/policy-71001-200000.json.gz",
+        "deck_seed": 51001,
+        "equity_samples": 64,
+        "hands": 10000,
+        "measure_time": true,
+        "no_flop_no_drop": true,
+        "policy_seed": 61001,
+        "rake_cap_bb": "3",
+        "rake_percent": "5",
+        "tag_samples": 64
+      },
+      "name": "cfr-v-random-51001",
+      "net_5": {
+        "bb_per_100": 557.4372000000001,
+        "break_even_rate": 0.0,
+        "ci95_bb_per_100": [
+          445.29372044377646,
+          669.5806795562237
+        ],
+        "loss_rate": 0.7759,
+        "profit_bb": 55743.72,
+        "profit_chips": 5574372,
+        "standard_error_bb_per_100": 57.21711237594012,
+        "stddev_block_mean_bb": 40.45860816093999,
+        "stddev_hand_bb": 57.217863719632874,
+        "win_rate": 0.2241
+      },
+      "opponent_ms_per_decision": 0.6175608343691565
+    },
+    {
+      "audit": {
+        "decisions": 22405,
+        "fallback": 0,
+        "fallback_by_street": {},
+        "fallback_rate": 0.0
+      },
+      "cfr_ms_per_decision": 1.2943866790894736,
+      "config": {
+        "agent_a": "cfr",
+        "agent_b": "heuristic",
+        "cfr_policy": "artifacts/mission4/policy-71001-200000.json.gz",
+        "deck_seed": 51001,
+        "equity_samples": 64,
+        "hands": 10000,
+        "measure_time": true,
+        "no_flop_no_drop": true,
+        "policy_seed": 61001,
+        "rake_cap_bb": "3",
+        "rake_percent": "5",
+        "tag_samples": 64
+      },
+      "name": "cfr-v-heuristic-51001",
+      "net_5": {
+        "bb_per_100": 51.73799999999999,
+        "break_even_rate": 0.0,
+        "ci95_bb_per_100": [
+          50.29551283964638,
+          53.18048716035361
+        ],
+        "loss_rate": 0.2549,
+        "profit_bb": 5173.8,
+        "profit_chips": 517380,
+        "standard_error_bb_per_100": 0.735976360653444,
+        "stddev_block_mean_bb": 0.5204138754110463,
+        "stddev_hand_bb": 0.7406934577001663,
+        "win_rate": 0.7451
+      },
+      "opponent_ms_per_decision": 0.8563454121702935
+    },
+    {
+      "audit": {
+        "decisions": 31050,
+        "fallback": 931,
+        "fallback_by_street": {
+          "flop": 252,
+          "preflop": 34,
+          "river": 326,
+          "turn": 319
+        },
+        "fallback_rate": 0.02998389694041868
+      },
+      "cfr_ms_per_decision": 1.6330236997423468,
+      "config": {
+        "agent_a": "cfr",
+        "agent_b": "equity",
+        "cfr_policy": "artifacts/mission4/policy-71001-200000.json.gz",
+        "deck_seed": 51001,
+        "equity_samples": 64,
+        "hands": 10000,
+        "measure_time": true,
+        "no_flop_no_drop": true,
+        "policy_seed": 61001,
+        "rake_cap_bb": "3",
+        "rake_percent": "5",
+        "tag_samples": 64
+      },
+      "name": "cfr-v-equity-51001",
+      "net_5": {
+        "bb_per_100": 183.5925,
+        "break_even_rate": 0.0,
+        "ci95_bb_per_100": [
+          103.21327944450012,
+          263.97172055549987
+        ],
+        "loss_rate": 0.5465,
+        "profit_bb": 18359.25,
+        "profit_chips": 1835925,
+        "standard_error_bb_per_100": 41.0105599845308,
+        "stddev_block_mean_bb": 28.998845065319404,
+        "stddev_hand_bb": 40.85708744886076,
+        "win_rate": 0.4535
+      },
+      "opponent_ms_per_decision": 8.311490224819574
+    },
+    {
+      "audit": {
+        "decisions": 11915,
+        "fallback": 21,
+        "fallback_by_street": {
+          "river": 18,
+          "turn": 3
+        },
+        "fallback_rate": 0.0017624842635333613
+      },
+      "cfr_ms_per_decision": 1.2487392763743004,
+      "config": {
+        "agent_a": "cfr",
+        "agent_b": "tag",
+        "cfr_policy": "artifacts/mission4/policy-71001-200000.json.gz",
+        "deck_seed": 51001,
+        "equity_samples": 64,
+        "hands": 10000,
+        "measure_time": true,
+        "no_flop_no_drop": true,
+        "policy_seed": 61001,
+        "rake_cap_bb": "3",
+        "rake_percent": "5",
+        "tag_samples": 64
+      },
+      "name": "cfr-v-tag-51001",
+      "net_5": {
+        "bb_per_100": -14.308200000000001,
+        "break_even_rate": 0.0,
+        "ci95_bb_per_100": [
+          -45.80475401107004,
+          17.188354011070032
+        ],
+        "loss_rate": 0.2888,
+        "profit_bb": -1430.82,
+        "profit_chips": -143082,
+        "standard_error_bb_per_100": 16.06996570320212,
+        "stddev_block_mean_bb": 11.363181722169465,
+        "stddev_hand_bb": 16.10021746131108,
+        "win_rate": 0.7112
+      },
+      "opponent_ms_per_decision": 3.816200263689144
+    },
+    {
+      "audit": {
+        "decisions": 20332,
+        "fallback": 1394,
+        "fallback_by_street": {
+          "flop": 512,
+          "preflop": 247,
+          "river": 289,
+          "turn": 346
+        },
+        "fallback_rate": 0.06856187290969899
+      },
+      "cfr_ms_per_decision": 1.043771211292505,
+      "config": {
+        "agent_a": "cfr",
+        "agent_b": "random",
+        "cfr_policy": "artifacts/mission4/policy-71001-200000.json.gz",
+        "deck_seed": 51002,
+        "equity_samples": 64,
+        "hands": 10000,
+        "measure_time": true,
+        "no_flop_no_drop": true,
+        "policy_seed": 61002,
+        "rake_cap_bb": "3",
+        "rake_percent": "5",
+        "tag_samples": 64
+      },
+      "name": "cfr-v-random-51002",
+      "net_5": {
+        "bb_per_100": 604.5930000000001,
+        "break_even_rate": 0.0,
+        "ci95_bb_per_100": [
+          493.385400110619,
+          715.8005998893811
+        ],
+        "loss_rate": 0.7785,
+        "profit_bb": 60459.3,
+        "profit_chips": 6045930,
+        "standard_error_bb_per_100": 56.73961397585487,
+        "stddev_block_mean_bb": 40.12096580423399,
+        "stddev_hand_bb": 56.7029024420235,
+        "win_rate": 0.2215
+      },
+      "opponent_ms_per_decision": 0.6062824111373546
+    },
+    {
+      "audit": {
+        "decisions": 22240,
+        "fallback": 0,
+        "fallback_by_street": {},
+        "fallback_rate": 0.0
+      },
+      "cfr_ms_per_decision": 1.3044537270234409,
+      "config": {
+        "agent_a": "cfr",
+        "agent_b": "heuristic",
+        "cfr_policy": "artifacts/mission4/policy-71001-200000.json.gz",
+        "deck_seed": 51002,
+        "equity_samples": 64,
+        "hands": 10000,
+        "measure_time": true,
+        "no_flop_no_drop": true,
+        "policy_seed": 61002,
+        "rake_cap_bb": "3",
+        "rake_percent": "5",
+        "tag_samples": 64
+      },
+      "name": "cfr-v-heuristic-51002",
+      "net_5": {
+        "bb_per_100": 52.780499999999996,
+        "break_even_rate": 0.0,
+        "ci95_bb_per_100": [
+          51.340233147768245,
+          54.22076685223175
+        ],
+        "loss_rate": 0.2492,
+        "profit_bb": 5278.05,
+        "profit_chips": 527805,
+        "standard_error_bb_per_100": 0.7348435295711533,
+        "stddev_block_mean_bb": 0.5196128428708198,
+        "stddev_hand_bb": 0.7367756889424227,
+        "win_rate": 0.7508
+      },
+      "opponent_ms_per_decision": 0.8639246626653155
+    },
+    {
+      "audit": {
+        "decisions": 30957,
+        "fallback": 805,
+        "fallback_by_street": {
+          "flop": 218,
+          "preflop": 28,
+          "river": 283,
+          "turn": 276
+        },
+        "fallback_rate": 0.026003811738863587
+      },
+      "cfr_ms_per_decision": 1.6641641841262371,
+      "config": {
+        "agent_a": "cfr",
+        "agent_b": "equity",
+        "cfr_policy": "artifacts/mission4/policy-71001-200000.json.gz",
+        "deck_seed": 51002,
+        "equity_samples": 64,
+        "hands": 10000,
+        "measure_time": true,
+        "no_flop_no_drop": true,
+        "policy_seed": 61002,
+        "rake_cap_bb": "3",
+        "rake_percent": "5",
+        "tag_samples": 64
+      },
+      "name": "cfr-v-equity-51002",
+      "net_5": {
+        "bb_per_100": 200.3545,
+        "break_even_rate": 0.0,
+        "ci95_bb_per_100": [
+          120.25554545564665,
+          280.45345454435335
+        ],
+        "loss_rate": 0.5334,
+        "profit_bb": 20035.45,
+        "profit_chips": 2003545,
+        "standard_error_bb_per_100": 40.86756449412524,
+        "stddev_block_mean_bb": 28.897731984374538,
+        "stddev_hand_bb": 40.79770002605191,
+        "win_rate": 0.4666
+      },
+      "opponent_ms_per_decision": 8.47533697346199
+    },
+    {
+      "audit": {
+        "decisions": 11547,
+        "fallback": 18,
+        "fallback_by_street": {
+          "river": 17,
+          "turn": 1
+        },
+        "fallback_rate": 0.001558846453624318
+      },
+      "cfr_ms_per_decision": 1.2091455738287153,
+      "config": {
+        "agent_a": "cfr",
+        "agent_b": "tag",
+        "cfr_policy": "artifacts/mission4/policy-71001-200000.json.gz",
+        "deck_seed": 51002,
+        "equity_samples": 64,
+        "hands": 10000,
+        "measure_time": true,
+        "no_flop_no_drop": true,
+        "policy_seed": 61002,
+        "rake_cap_bb": "3",
+        "rake_percent": "5",
+        "tag_samples": 64
+      },
+      "name": "cfr-v-tag-51002",
+      "net_5": {
+        "bb_per_100": 1.2112999999999996,
+        "break_even_rate": 0.0,
+        "ci95_bb_per_100": [
+          -27.98315016673685,
+          30.405750166736844
+        ],
+        "loss_rate": 0.281,
+        "profit_bb": 121.13,
+        "profit_chips": 12113,
+        "standard_error_bb_per_100": 14.895401342585346,
+        "stddev_block_mean_bb": 10.532639297837303,
+        "stddev_hand_bb": 14.864213375391175,
+        "win_rate": 0.719
+      },
+      "opponent_ms_per_decision": 3.5950949868650115
+    },
+    {
+      "audit": {
+        "decisions": 20438,
+        "fallback": 1430,
+        "fallback_by_street": {
+          "flop": 517,
+          "preflop": 264,
+          "river": 291,
+          "turn": 358
+        },
+        "fallback_rate": 0.06996770721205597
+      },
+      "cfr_ms_per_decision": 1.1201161886192403,
+      "config": {
+        "agent_a": "cfr",
+        "agent_b": "random",
+        "cfr_policy": "artifacts/mission4/policy-71001-200000.json.gz",
+        "deck_seed": 51003,
+        "equity_samples": 64,
+        "hands": 10000,
+        "measure_time": true,
+        "no_flop_no_drop": true,
+        "policy_seed": 61003,
+        "rake_cap_bb": "3",
+        "rake_percent": "5",
+        "tag_samples": 64
+      },
+      "name": "cfr-v-random-51003",
+      "net_5": {
+        "bb_per_100": 535.1432,
+        "break_even_rate": 0.0,
+        "ci95_bb_per_100": [
+          424.444687092177,
+          645.841712907823
+        ],
+        "loss_rate": 0.7747,
+        "profit_bb": 53514.32,
+        "profit_chips": 5351432,
+        "standard_error_bb_per_100": 56.47987094711878,
+        "stddev_block_mean_bb": 39.937299747248765,
+        "stddev_hand_bb": 56.7362021477715,
+        "win_rate": 0.2253
+      },
+      "opponent_ms_per_decision": 0.6248447011076387
+    },
+    {
+      "audit": {
+        "decisions": 22232,
+        "fallback": 0,
+        "fallback_by_street": {},
+        "fallback_rate": 0.0
+      },
+      "cfr_ms_per_decision": 1.2075914215996644,
+      "config": {
+        "agent_a": "cfr",
+        "agent_b": "heuristic",
+        "cfr_policy": "artifacts/mission4/policy-71001-200000.json.gz",
+        "deck_seed": 51003,
+        "equity_samples": 64,
+        "hands": 10000,
+        "measure_time": true,
+        "no_flop_no_drop": true,
+        "policy_seed": 61003,
+        "rake_cap_bb": "3",
+        "rake_percent": "5",
+        "tag_samples": 64
+      },
+      "name": "cfr-v-heuristic-51003",
+      "net_5": {
+        "bb_per_100": 51.821,
+        "break_even_rate": 0.0,
+        "ci95_bb_per_100": [
+          50.36541944943172,
+          53.276580550568276
+        ],
+        "loss_rate": 0.2541,
+        "profit_bb": 5182.1,
+        "profit_chips": 518210,
+        "standard_error_bb_per_100": 0.7426567845377324,
+        "stddev_block_mean_bb": 0.5251376484408273,
+        "stddev_hand_bb": 0.7413024678462116,
+        "win_rate": 0.7459
+      },
+      "opponent_ms_per_decision": 0.8587257591350305
+    },
+    {
+      "audit": {
+        "decisions": 30899,
+        "fallback": 841,
+        "fallback_by_street": {
+          "flop": 223,
+          "preflop": 26,
+          "river": 301,
+          "turn": 291
+        },
+        "fallback_rate": 0.02721770931098094
+      },
+      "cfr_ms_per_decision": 1.82414397974057,
+      "config": {
+        "agent_a": "cfr",
+        "agent_b": "equity",
+        "cfr_policy": "artifacts/mission4/policy-71001-200000.json.gz",
+        "deck_seed": 51003,
+        "equity_samples": 64,
+        "hands": 10000,
+        "measure_time": true,
+        "no_flop_no_drop": true,
+        "policy_seed": 61003,
+        "rake_cap_bb": "3",
+        "rake_percent": "5",
+        "tag_samples": 64
+      },
+      "name": "cfr-v-equity-51003",
+      "net_5": {
+        "bb_per_100": 132.45100000000002,
+        "break_even_rate": 0.0,
+        "ci95_bb_per_100": [
+          52.602171710598924,
+          212.29982828940112
+        ],
+        "loss_rate": 0.5431,
+        "profit_bb": 13245.1,
+        "profit_chips": 1324510,
+        "standard_error_bb_per_100": 40.73994671291844,
+        "stddev_block_mean_bb": 28.807492585883228,
+        "stddev_hand_bb": 40.953785966848066,
+        "win_rate": 0.4569
+      },
+      "opponent_ms_per_decision": 9.830557469347731
+    },
+    {
+      "audit": {
+        "decisions": 11732,
+        "fallback": 18,
+        "fallback_by_street": {
+          "river": 17,
+          "turn": 1
+        },
+        "fallback_rate": 0.0015342652574156155
+      },
+      "cfr_ms_per_decision": 1.3025004611320763,
+      "config": {
+        "agent_a": "cfr",
+        "agent_b": "tag",
+        "cfr_policy": "artifacts/mission4/policy-71001-200000.json.gz",
+        "deck_seed": 51003,
+        "equity_samples": 64,
+        "hands": 10000,
+        "measure_time": true,
+        "no_flop_no_drop": true,
+        "policy_seed": 61003,
+        "rake_cap_bb": "3",
+        "rake_percent": "5",
+        "tag_samples": 64
+      },
+      "name": "cfr-v-tag-51003",
+      "net_5": {
+        "bb_per_100": -15.695900000000002,
+        "break_even_rate": 0.0,
+        "ci95_bb_per_100": [
+          -47.02612981131874,
+          15.634329811318736
+        ],
+        "loss_rate": 0.2898,
+        "profit_bb": -1569.59,
+        "profit_chips": -156959,
+        "standard_error_bb_per_100": 15.985104858276783,
+        "stddev_block_mean_bb": 11.30317604326554,
+        "stddev_hand_bb": 16.228818678446338,
+        "win_rate": 0.7102
+      },
+      "opponent_ms_per_decision": 3.8761565629033927
+    },
+    {
+      "audit": {
+        "decisions": 25786,
+        "fallback": 431,
+        "fallback_by_street": {
+          "flop": 91,
+          "preflop": 32,
+          "river": 173,
+          "turn": 135
+        },
+        "fallback_rate": 0.016714496238268827
+      },
+      "cfr_ms_per_decision": 1.5600360634840305,
+      "config": {
+        "agent_a": "cfr",
+        "agent_b": "equity",
+        "cfr_policy": "artifacts/mission4/policy-71001-20000.json.gz",
+        "deck_seed": 51001,
+        "equity_samples": 64,
+        "hands": 10000,
+        "measure_time": true,
+        "no_flop_no_drop": true,
+        "policy_seed": 61001,
+        "rake_cap_bb": "3",
+        "rake_percent": "5",
+        "tag_samples": 64
+      },
+      "name": "cfr20000-v-equity-51001-diagnostic",
+      "net_5": {
+        "bb_per_100": -15.617500000000001,
+        "break_even_rate": 0.0,
+        "ci95_bb_per_100": [
+          -144.31651048597854,
+          113.08151048597853
+        ],
+        "loss_rate": 0.5709,
+        "profit_bb": -1561.75,
+        "profit_chips": -156175,
+        "standard_error_bb_per_100": 65.66396704283339,
+        "stddev_block_mean_bb": 46.431436375597464,
+        "stddev_hand_bb": 66.41852838410865,
+        "win_rate": 0.4291
+      },
+      "opponent_ms_per_decision": 8.490861852208608
+    },
+    {
+      "audit": {
+        "decisions": 10533,
+        "fallback": 17,
+        "fallback_by_street": {
+          "river": 13,
+          "turn": 4
+        },
+        "fallback_rate": 0.0016139751257951201
+      },
+      "cfr_ms_per_decision": 1.2707319262317471,
+      "config": {
+        "agent_a": "cfr",
+        "agent_b": "tag",
+        "cfr_policy": "artifacts/mission4/policy-71001-20000.json.gz",
+        "deck_seed": 51001,
+        "equity_samples": 64,
+        "hands": 10000,
+        "measure_time": true,
+        "no_flop_no_drop": true,
+        "policy_seed": 61001,
+        "rake_cap_bb": "3",
+        "rake_percent": "5",
+        "tag_samples": 64
+      },
+      "name": "cfr20000-v-tag-51001-diagnostic",
+      "net_5": {
+        "bb_per_100": -48.5464,
+        "break_even_rate": 0.0,
+        "ci95_bb_per_100": [
+          -84.91371869993685,
+          -12.179081300063153
+        ],
+        "loss_rate": 0.3685,
+        "profit_bb": -4854.64,
+        "profit_chips": -485464,
+        "standard_error_bb_per_100": 18.55509539297539,
+        "stddev_block_mean_bb": 13.120433777936164,
+        "stddev_hand_bb": 18.392115349121905,
+        "win_rate": 0.6315
+      },
+      "opponent_ms_per_decision": 3.724182548124588
+    }
+  ],
+  "training_diagnostic": [
+    {
+      "final_net": {
+        "bb_per_100": 183.5925,
+        "break_even_rate": 0.0,
+        "ci95_bb_per_100": [
+          103.21327944450012,
+          263.97172055549987
+        ],
+        "loss_rate": 0.5465,
+        "profit_bb": 18359.25,
+        "profit_chips": 1835925,
+        "standard_error_bb_per_100": 41.0105599845308,
+        "stddev_block_mean_bb": 28.998845065319404,
+        "stddev_hand_bb": 40.85708744886076,
+        "win_rate": 0.4535
+      },
+      "opponent": "equity",
+      "paired_final_minus_snapshot": {
+        "bb_per_100": 199.21,
+        "break_even_rate": 0.5359,
+        "ci95_bb_per_100": [
+          84.59987596799053,
+          313.8201240320095
+        ],
+        "loss_rate": 0.2094,
+        "profit_bb": 19921.0,
+        "profit_chips": 1992100,
+        "standard_error_bb_per_100": 58.47562758093492,
+        "stddev_block_mean_bb": 41.348512796618195,
+        "stddev_hand_bb": 58.62676949909648,
+        "win_rate": 0.2547
+      },
+      "snapshot_iterations": 20000,
+      "snapshot_net": {
+        "bb_per_100": -15.617500000000001,
+        "break_even_rate": 0.0,
+        "ci95_bb_per_100": [
+          -144.31651048597854,
+          113.08151048597853
+        ],
+        "loss_rate": 0.5709,
+        "profit_bb": -1561.75,
+        "profit_chips": -156175,
+        "standard_error_bb_per_100": 65.66396704283339,
+        "stddev_block_mean_bb": 46.431436375597464,
+        "stddev_hand_bb": 66.41852838410865,
+        "win_rate": 0.4291
+      }
+    },
+    {
+      "final_net": {
+        "bb_per_100": -14.308200000000001,
+        "break_even_rate": 0.0,
+        "ci95_bb_per_100": [
+          -45.80475401107004,
+          17.188354011070032
+        ],
+        "loss_rate": 0.2888,
+        "profit_bb": -1430.82,
+        "profit_chips": -143082,
+        "standard_error_bb_per_100": 16.06996570320212,
+        "stddev_block_mean_bb": 11.363181722169465,
+        "stddev_hand_bb": 16.10021746131108,
+        "win_rate": 0.7112
+      },
+      "opponent": "tag",
+      "paired_final_minus_snapshot": {
+        "bb_per_100": 34.2382,
+        "break_even_rate": 0.7441,
+        "ci95_bb_per_100": [
+          -4.319280311061874,
+          72.79568031106187
+        ],
+        "loss_rate": 0.0909,
+        "profit_bb": 3423.82,
+        "profit_chips": 342382,
+        "standard_error_bb_per_100": 19.67254531981116,
+        "stddev_block_mean_bb": 13.91059019883815,
+        "stddev_hand_bb": 19.246566634566225,
+        "win_rate": 0.165
+      },
+      "snapshot_iterations": 20000,
+      "snapshot_net": {
+        "bb_per_100": -48.5464,
+        "break_even_rate": 0.0,
+        "ci95_bb_per_100": [
+          -84.91371869993685,
+          -12.179081300063153
+        ],
+        "loss_rate": 0.3685,
+        "profit_bb": -4854.64,
+        "profit_chips": -485464,
+        "standard_error_bb_per_100": 18.55509539297539,
+        "stddev_block_mean_bb": 13.120433777936164,
+        "stddev_hand_bb": 18.392115349121905,
+        "win_rate": 0.6315
+      }
+    }
+  ]
+}
