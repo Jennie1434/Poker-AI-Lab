@@ -134,9 +134,16 @@ def room_history(run, store, limit=30):
         live=[s for s in seats if not s["folded"]]
         actions=record["actions"]
         for seat in seats:
-            row=stats.setdefault(seat["id"],{"hands":0,"net_chips":0,"won":0,"vpip":0,"pfr":0,"showdowns":0})
+            row=stats.setdefault(seat["id"],{"hands":0,"net_chips":0,"won_chips":0,"lost_chips":0,"biggest_win":0,
+                                             "biggest_loss":0,"won":0,"vpip":0,"pfr":0,"showdowns":0})
+            payoff=seat["payoff"] or 0
             row["hands"]+=1
-            row["net_chips"]+=seat["payoff"] or 0
+            row["net_chips"]+=payoff
+            # Gross amounts explain a near-zero net after large swings.
+            row["won_chips"]+=max(payoff,0)
+            row["lost_chips"]+=max(-payoff,0)
+            row["biggest_win"]=max(row["biggest_win"],payoff)
+            row["biggest_loss"]=min(row["biggest_loss"],payoff)
             row["won"]+=(seat["payoff"] or 0)>0
             preflop=[a for a in actions if a["player"]==seat["id"] and a["street"]=="preflop"]
             row["vpip"]+=any(a["kind"] in ("call","raise") for a in preflop)

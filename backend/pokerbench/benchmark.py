@@ -14,12 +14,13 @@ import statistics
 import subprocess
 import time
 
-from .agents import EquityHeuristicAgent, HeuristicAgent, RandomAgent, TightAggressiveAgent, play_action
+from .agents import (CallingStationAgent, EquityHeuristicAgent, HeuristicAgent, HyperAggressiveAgent, RandomAgent,
+                     TightAggressiveAgent, play_action)
 from .engine import Hand
 
 ROOT = Path(__file__).resolve().parents[2]
 BB = 100
-POLICIES = ("random", "heuristic", "equity", "tag", "cfr")
+POLICIES = ("random", "heuristic", "equity", "tag", "cfr", "hyper", "station")
 
 
 def derive_seed(master: int, domain: str, hand: int) -> int:
@@ -64,6 +65,10 @@ def make_agent(name, seed, samples, tag_samples=64, cfr_policy=""):
         return EquityHeuristicAgent(seed, samples)
     if name == "tag":
         return TightAggressiveAgent(seed, tag_samples)
+    if name == "hyper":
+        return HyperAggressiveAgent(seed)
+    if name == "station":
+        return CallingStationAgent(seed, 32)
     if name == "cfr":
         from .holdem_abstraction import cached_policy
         from .holdem_v2 import agent_for

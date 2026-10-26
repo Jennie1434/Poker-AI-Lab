@@ -16,7 +16,8 @@ from .engine import Hand
 from .local_agents import LOCAL_POLICIES
 
 AGENTS = {**{key: name for key, (name, _, _) in LOCAL_POLICIES.items()},
-          "tag": "TightAggressive", "equity": "EquityHeuristic", "heuristic": "Heuristic", "random": "Random"}
+          "tag": "TightAggressive", "hyper": "HyperAggressive", "station": "CallingStation",
+          "equity": "EquityHeuristic", "heuristic": "Heuristic", "random": "Random"}
 MAX_SESSIONS_PER_USER, MAX_HANDS = 5, 2000
 
 

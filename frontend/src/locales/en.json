@@ -678,5 +678,7 @@
   "正在发牌…": "Dealing…",
   "智能体": "Agent",
   "请选择列表中的智能体": "Choose agents from the list",
-  "只能观看已发的手牌或下一手": "Only dealt hands or the next hand can be viewed"
+  "只能观看已发的手牌或下一手": "Only dealt hands or the next hand can be viewed",
+  "赢得 / 输掉": "Won / lost",
+  "最大单手": "Biggest hand"
 }
