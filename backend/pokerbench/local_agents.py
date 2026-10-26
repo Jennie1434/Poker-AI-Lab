@@ -18,6 +18,8 @@ LOCAL_POLICIES = {
                "MCCFR self-play, 200,000 iterations, abstraction v1"),
     "cfr-v1-20k": ("CFR V1 · 20k", "artifacts/mission4/policy-71001-20000.json.gz",
                    "Early snapshot of the same training, 20,000 iterations"),
+    "cfr-v2": ("CFR V2 · 300k", "artifacts/mission5/policy-v2-72001-300000.json.gz",
+               "MCCFR self-play, 300,000 iterations, abstraction v2 (three raise sizes, draw-aware)"),
 }
 COLOR = "#2f7d6d"
 

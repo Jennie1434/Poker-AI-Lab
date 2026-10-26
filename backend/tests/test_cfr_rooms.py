@@ -50,9 +50,10 @@ def wait(c, rid):
     pytest.fail('room did not reach a human decision or hand boundary')
 
 
-def test_human_plays_full_hands_against_cfr_without_seeing_hidden_cards(client):
+@pytest.mark.parametrize('policy', ['cfr-v1', 'cfr-v2'])
+def test_human_plays_full_hands_against_cfr_without_seeing_hidden_cards(client, policy):
     c, app = client
-    created = c.post('/api/rooms', json={'model_ids': ['cfr-v1'], 'max_hands': 4, 'name': 'CFR test'})
+    created = c.post('/api/rooms', json={'model_ids': [policy], 'max_hands': 4, 'name': 'CFR test'})
     assert created.status_code == 200
     rid = created.json()['run']['id']
     run = app.state.store.run(rid)
