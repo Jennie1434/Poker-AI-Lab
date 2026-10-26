@@ -19,7 +19,7 @@ def client(tmp_path):
 def test_spectator_plays_cfr_against_tag_hand_by_hand(client):
     c, app = client
     agents = {a['id'] for a in c.get('/api/spectate/agents').json()}
-    assert {'cfr-v1', 'cfr-v1-20k', 'tag', 'equity', 'heuristic', 'random'} <= agents
+    assert {'cfr-v1', 'cfr-v1-20k', 'cfr-v2', 'cfr-v2-adapt', 'cfr-v3', 'tag', 'hyper', 'station', 'equity', 'heuristic', 'random'} <= agents
     session = c.post('/api/spectate', json={'agent_a': 'cfr-v1', 'agent_b': 'tag'}).json()
     assert session['names'] == {'a': 'CFR V1 · 200k', 'b': 'TightAggressive'} and session['hands_played'] == 0
     assert c.get(f"/api/spectate/{session['id']}/hands/2").status_code == 422  # cannot skip ahead

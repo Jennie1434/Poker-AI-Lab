@@ -1,0 +1,5505 @@
+{
+  "ci_method": "normal 95% on independent two-hand block means; paired per-hand differences on identical deals",
+  "no_flop_no_drop": true,
+  "paired": [
+    {
+      "comparison": "v3 - v2",
+      "difference": {
+        "bb_per_100": -254.217,
+        "break_even_rate": 0.38866666666666666,
+        "ci95_bb_per_100": [
+          -317.4484723125659,
+          -190.98552768743414
+        ],
+        "loss_rate": 0.3257333333333333,
+        "profit_bb": -76265.1,
+        "profit_chips": -7626510,
+        "standard_error_bb_per_100": 32.26154807502978,
+        "stddev_block_mean_bb": 39.512165548045914,
+        "stddev_hand_bb": 56.0848017277164,
+        "win_rate": 0.2856
+      },
+      "opponent": "hyper",
+      "verdict": "worse"
+    },
+    {
+      "comparison": "v3 - v2",
+      "difference": {
+        "bb_per_100": -17.031066666666668,
+        "break_even_rate": 0.7148333333333333,
+        "ci95_bb_per_100": [
+          -35.01609115795566,
+          0.9539578246223179
+        ],
+        "loss_rate": 0.15303333333333333,
+        "profit_bb": -5109.32,
+        "profit_chips": -510932,
+        "standard_error_bb_per_100": 9.17620151857512,
+        "stddev_block_mean_bb": 11.238505748730589,
+        "stddev_hand_bb": 15.893059821669627,
+        "win_rate": 0.13213333333333332
+      },
+      "opponent": "tag",
+      "verdict": "inconclusive"
+    },
+    {
+      "comparison": "v3 - v2",
+      "difference": {
+        "bb_per_100": 76.41533333333334,
+        "break_even_rate": 0.2343,
+        "ci95_bb_per_100": [
+          32.90345430403553,
+          119.92721236263114
+        ],
+        "loss_rate": 0.38813333333333333,
+        "profit_bb": 22924.6,
+        "profit_chips": 2292460,
+        "standard_error_bb_per_100": 22.20034621682539,
+        "stddev_block_mean_bb": 27.189760172174566,
+        "stddev_hand_bb": 38.63934386062503,
+        "win_rate": 0.37756666666666666
+      },
+      "opponent": "station",
+      "verdict": "better"
+    },
+    {
+      "comparison": "v3 - v2",
+      "difference": {
+        "bb_per_100": -82.75333333333333,
+        "break_even_rate": 0.3097666666666667,
+        "ci95_bb_per_100": [
+          -126.47462330673955,
+          -39.03204335992711
+        ],
+        "loss_rate": 0.37843333333333334,
+        "profit_bb": -24826.0,
+        "profit_chips": -2482600,
+        "standard_error_bb_per_100": 22.3071904985368,
+        "stddev_block_mean_bb": 27.320617158238136,
+        "stddev_hand_bb": 38.71543404866688,
+        "win_rate": 0.3118
+      },
+      "opponent": "equity",
+      "verdict": "worse"
+    },
+    {
+      "comparison": "v2+adapt - v2",
+      "difference": {
+        "bb_per_100": 131.30613333333335,
+        "break_even_rate": 0.4067,
+        "ci95_bb_per_100": [
+          59.793302720009265,
+          202.81896394665745
+        ],
+        "loss_rate": 0.3784666666666667,
+        "profit_bb": 39391.84,
+        "profit_chips": 3939184,
+        "standard_error_bb_per_100": 36.4868085216913,
+        "stddev_block_mean_bb": 44.68703161038835,
+        "stddev_hand_bb": 62.976114296247005,
+        "win_rate": 0.21483333333333332
+      },
+      "opponent": "hyper",
+      "verdict": "better"
+    },
+    {
+      "comparison": "v2+adapt - v2",
+      "difference": {
+        "bb_per_100": 0.0,
+        "break_even_rate": 1.0,
+        "ci95_bb_per_100": [
+          0.0,
+          0.0
+        ],
+        "loss_rate": 0.0,
+        "profit_bb": 0.0,
+        "profit_chips": 0,
+        "standard_error_bb_per_100": 0.0,
+        "stddev_block_mean_bb": 0.0,
+        "stddev_hand_bb": 0.0,
+        "win_rate": 0.0
+      },
+      "opponent": "tag",
+      "verdict": "inconclusive"
+    },
+    {
+      "comparison": "v2+adapt - v2",
+      "difference": {
+        "bb_per_100": 0.0,
+        "break_even_rate": 1.0,
+        "ci95_bb_per_100": [
+          0.0,
+          0.0
+        ],
+        "loss_rate": 0.0,
+        "profit_bb": 0.0,
+        "profit_chips": 0,
+        "standard_error_bb_per_100": 0.0,
+        "stddev_block_mean_bb": 0.0,
+        "stddev_hand_bb": 0.0,
+        "win_rate": 0.0
+      },
+      "opponent": "station",
+      "verdict": "inconclusive"
+    },
+    {
+      "comparison": "v2+adapt - v2",
+      "difference": {
+        "bb_per_100": 0.0,
+        "break_even_rate": 1.0,
+        "ci95_bb_per_100": [
+          0.0,
+          0.0
+        ],
+        "loss_rate": 0.0,
+        "profit_bb": 0.0,
+        "profit_chips": 0,
+        "standard_error_bb_per_100": 0.0,
+        "stddev_block_mean_bb": 0.0,
+        "stddev_hand_bb": 0.0,
+        "win_rate": 0.0
+      },
+      "opponent": "equity",
+      "verdict": "inconclusive"
+    },
+    {
+      "comparison": "v3+adapt - v3",
+      "difference": {
+        "bb_per_100": 175.4404,
+        "break_even_rate": 0.5163,
+        "ci95_bb_per_100": [
+          111.07195662413388,
+          239.80884337586616
+        ],
+        "loss_rate": 0.31626666666666664,
+        "profit_bb": 52632.12,
+        "profit_chips": 5263212,
+        "standard_error_bb_per_100": 32.841646011659506,
+        "stddev_block_mean_bb": 40.22263752083801,
+        "stddev_hand_bb": 56.744639109379364,
+        "win_rate": 0.16743333333333332
+      },
+      "opponent": "hyper",
+      "verdict": "better"
+    },
+    {
+      "comparison": "v3+adapt - v3",
+      "difference": {
+        "bb_per_100": 0.0,
+        "break_even_rate": 1.0,
+        "ci95_bb_per_100": [
+          0.0,
+          0.0
+        ],
+        "loss_rate": 0.0,
+        "profit_bb": 0.0,
+        "profit_chips": 0,
+        "standard_error_bb_per_100": 0.0,
+        "stddev_block_mean_bb": 0.0,
+        "stddev_hand_bb": 0.0,
+        "win_rate": 0.0
+      },
+      "opponent": "tag",
+      "verdict": "inconclusive"
+    },
+    {
+      "comparison": "v3+adapt - v3",
+      "difference": {
+        "bb_per_100": 0.0,
+        "break_even_rate": 1.0,
+        "ci95_bb_per_100": [
+          0.0,
+          0.0
+        ],
+        "loss_rate": 0.0,
+        "profit_bb": 0.0,
+        "profit_chips": 0,
+        "standard_error_bb_per_100": 0.0,
+        "stddev_block_mean_bb": 0.0,
+        "stddev_hand_bb": 0.0,
+        "win_rate": 0.0
+      },
+      "opponent": "station",
+      "verdict": "inconclusive"
+    },
+    {
+      "comparison": "v3+adapt - v3",
+      "difference": {
+        "bb_per_100": 0.0,
+        "break_even_rate": 1.0,
+        "ci95_bb_per_100": [
+          0.0,
+          0.0
+        ],
+        "loss_rate": 0.0,
+        "profit_bb": 0.0,
+        "profit_chips": 0,
+        "standard_error_bb_per_100": 0.0,
+        "stddev_block_mean_bb": 0.0,
+        "stddev_hand_bb": 0.0,
+        "win_rate": 0.0
+      },
+      "opponent": "equity",
+      "verdict": "inconclusive"
+    },
+    {
+      "comparison": "v3+adapt - v2",
+      "difference": {
+        "bb_per_100": -78.7766,
+        "break_even_rate": 0.17646666666666666,
+        "ci95_bb_per_100": [
+          -161.36393755772772,
+          3.8107375577277196
+        ],
+        "loss_rate": 0.49366666666666664,
+        "profit_bb": -23632.98,
+        "profit_chips": -2363298,
+        "standard_error_bb_per_100": 42.13717099353157,
+        "stddev_block_mean_bb": 51.60728406927822,
+        "stddev_hand_bb": 73.3863535555409,
+        "win_rate": 0.32986666666666664
+      },
+      "opponent": "hyper",
+      "verdict": "inconclusive"
+    },
+    {
+      "comparison": "v3+adapt - v2",
+      "difference": {
+        "bb_per_100": -17.031066666666668,
+        "break_even_rate": 0.7148333333333333,
+        "ci95_bb_per_100": [
+          -35.01609115795566,
+          0.9539578246223179
+        ],
+        "loss_rate": 0.15303333333333333,
+        "profit_bb": -5109.32,
+        "profit_chips": -510932,
+        "standard_error_bb_per_100": 9.17620151857512,
+        "stddev_block_mean_bb": 11.238505748730589,
+        "stddev_hand_bb": 15.893059821669627,
+        "win_rate": 0.13213333333333332
+      },
+      "opponent": "tag",
+      "verdict": "inconclusive"
+    },
+    {
+      "comparison": "v3+adapt - v2",
+      "difference": {
+        "bb_per_100": 76.41533333333334,
+        "break_even_rate": 0.2343,
+        "ci95_bb_per_100": [
+          32.90345430403553,
+          119.92721236263114
+        ],
+        "loss_rate": 0.38813333333333333,
+        "profit_bb": 22924.6,
+        "profit_chips": 2292460,
+        "standard_error_bb_per_100": 22.20034621682539,
+        "stddev_block_mean_bb": 27.189760172174566,
+        "stddev_hand_bb": 38.63934386062503,
+        "win_rate": 0.37756666666666666
+      },
+      "opponent": "station",
+      "verdict": "better"
+    },
+    {
+      "comparison": "v3+adapt - v2",
+      "difference": {
+        "bb_per_100": -82.75333333333333,
+        "break_even_rate": 0.3097666666666667,
+        "ci95_bb_per_100": [
+          -126.47462330673955,
+          -39.03204335992711
+        ],
+        "loss_rate": 0.37843333333333334,
+        "profit_bb": -24826.0,
+        "profit_chips": -2482600,
+        "standard_error_bb_per_100": 22.3071904985368,
+        "stddev_block_mean_bb": 27.320617158238136,
+        "stddev_hand_bb": 38.71543404866688,
+        "win_rate": 0.3118
+      },
+      "opponent": "equity",
+      "verdict": "worse"
+    },
+    {
+      "comparison": "v3-seed2 - v3",
+      "difference": {
+        "bb_per_100": 81.85073333333334,
+        "break_even_rate": 0.4443666666666667,
+        "ci95_bb_per_100": [
+          20.896322279435708,
+          142.80514438723097
+        ],
+        "loss_rate": 0.2672,
+        "profit_bb": 24555.22,
+        "profit_chips": 2455522,
+        "standard_error_bb_per_100": 31.099760778615448,
+        "stddev_block_mean_bb": 38.089272515114565,
+        "stddev_hand_bb": 53.96974346735657,
+        "win_rate": 0.2884333333333333
+      },
+      "opponent": "hyper",
+      "verdict": "better"
+    },
+    {
+      "comparison": "v3-seed2 - v3",
+      "difference": {
+        "bb_per_100": -6.347533333333335,
+        "break_even_rate": 0.7234,
+        "ci95_bb_per_100": [
+          -23.68419424230242,
+          10.989127575635752
+        ],
+        "loss_rate": 0.13876666666666668,
+        "profit_bb": -1904.26,
+        "profit_chips": -190426,
+        "standard_error_bb_per_100": 8.845397693895631,
+        "stddev_block_mean_bb": 10.833355461017662,
+        "stddev_hand_bb": 15.299061083534706,
+        "win_rate": 0.13783333333333334
+      },
+      "opponent": "tag",
+      "verdict": "inconclusive"
+    },
+    {
+      "comparison": "v3-seed2 - v3",
+      "difference": {
+        "bb_per_100": 61.30316666666666,
+        "break_even_rate": 0.27166666666666667,
+        "ci95_bb_per_100": [
+          14.810441195839012,
+          107.79589213749432
+        ],
+        "loss_rate": 0.363,
+        "profit_bb": 18390.95,
+        "profit_chips": 1839095,
+        "standard_error_bb_per_100": 23.721214184319887,
+        "stddev_block_mean_bb": 29.052435415427198,
+        "stddev_hand_bb": 41.08080710846311,
+        "win_rate": 0.36533333333333334
+      },
+      "opponent": "station",
+      "verdict": "better"
+    },
+    {
+      "comparison": "v3-seed2 - v3",
+      "difference": {
+        "bb_per_100": -0.20499999999999918,
+        "break_even_rate": 0.3445,
+        "ci95_bb_per_100": [
+          -45.015824305344715,
+          44.60582430534472
+        ],
+        "loss_rate": 0.3293333333333333,
+        "profit_bb": -61.5,
+        "profit_chips": -6150,
+        "standard_error_bb_per_100": 22.86308557647323,
+        "stddev_block_mean_bb": 28.001446803972605,
+        "stddev_hand_bb": 39.87431509126687,
+        "win_rate": 0.32616666666666666
+      },
+      "opponent": "equity",
+      "verdict": "inconclusive"
+    }
+  ],
+  "rake_cap_bb": 3,
+  "results": [
+    {
+      "fallback_rate": 0.10785641485027445,
+      "hands": 30000,
+      "opponent": "hyper",
+      "policy": "v2",
+      "position_net_bb100": {
+        "BB": 189.24913333333333,
+        "BTN": 583.7242
+      },
+      "rake": {
+        "0": {
+          "bb_per_100": 419.73833333333334,
+          "break_even_rate": 0.005166666666666667,
+          "ci95_bb_per_100": [
+            357.7897727782705,
+            481.6868938883962
+          ],
+          "loss_rate": 0.8182,
+          "profit_bb": 125921.5,
+          "profit_chips": 12592150,
+          "standard_error_bb_per_100": 31.606989232304883,
+          "stddev_block_mean_bb": 38.710497962394584,
+          "stddev_hand_bb": 54.64579447296478,
+          "win_rate": 0.17663333333333334
+        },
+        "2": {
+          "bb_per_100": 393.9875666666667,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            332.7494923957123,
+            455.22564093762105
+          ],
+          "loss_rate": 0.8233666666666667,
+          "profit_bb": 118196.27,
+          "profit_chips": 11819627,
+          "standard_error_bb_per_100": 31.244489569192325,
+          "stddev_block_mean_bb": 38.2665283591163,
+          "stddev_hand_bb": 54.02098399052833,
+          "win_rate": 0.17663333333333334
+        },
+        "5": {
+          "bb_per_100": 386.4866666666666,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            325.28055850947396,
+            447.6927748238593
+          ],
+          "loss_rate": 0.8233666666666667,
+          "profit_bb": 115946.0,
+          "profit_chips": 11594600,
+          "standard_error_bb_per_100": 31.22818002778552,
+          "stddev_block_mean_bb": 38.246553331923565,
+          "stddev_hand_bb": 53.99401112645247,
+          "win_rate": 0.17663333333333334
+        },
+        "7": {
+          "bb_per_100": 383.8177,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            322.6168189925688,
+            445.0185810074312
+          ],
+          "loss_rate": 0.8233666666666667,
+          "profit_bb": 115145.31,
+          "profit_chips": 11514531,
+          "standard_error_bb_per_100": 31.225513065635845,
+          "stddev_block_mean_bb": 38.24328698370856,
+          "stddev_hand_bb": 53.98967597306971,
+          "win_rate": 0.17663333333333334
+        }
+      },
+      "sd_seed_means_bb100": 31.460814051186496,
+      "seed_net_bb100": [
+        352.7418,
+        391.7081,
+        415.0101
+      ],
+      "verdict": "beats"
+    },
+    {
+      "fallback_rate": 0.10653473073109725,
+      "hands": 30000,
+      "opponent": "hyper",
+      "policy": "v2+adapt",
+      "position_net_bb100": {
+        "BB": 358.0836,
+        "BTN": 677.502
+      },
+      "rake": {
+        "0": {
+          "bb_per_100": 587.4799999999999,
+          "break_even_rate": 0.0178,
+          "ci95_bb_per_100": [
+            495.2531760885589,
+            679.7068239114409
+          ],
+          "loss_rate": 0.6378666666666667,
+          "profit_bb": 176244.0,
+          "profit_chips": 17624400,
+          "standard_error_bb_per_100": 47.05536664903765,
+          "stddev_block_mean_bb": 57.630818974859686,
+          "stddev_hand_bb": 81.66569139566323,
+          "win_rate": 0.3443333333333333
+        },
+        "2": {
+          "bb_per_100": 534.8903333333334,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            443.5771269927212,
+            626.2035396739456
+          ],
+          "loss_rate": 0.6556666666666666,
+          "profit_bb": 160467.1,
+          "profit_chips": 16046710,
+          "standard_error_bb_per_100": 46.589226669917956,
+          "stddev_block_mean_bb": 57.05991642608226,
+          "stddev_hand_bb": 80.85540750571202,
+          "win_rate": 0.3443333333333333
+        },
+        "5": {
+          "bb_per_100": 517.7927999999999,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            426.51435168393004,
+            609.0712483160698
+          ],
+          "loss_rate": 0.6556666666666666,
+          "profit_bb": 155337.84,
+          "profit_chips": 15533784,
+          "standard_error_bb_per_100": 46.571492658060365,
+          "stddev_block_mean_bb": 57.03819678601048,
+          "stddev_hand_bb": 80.81923334497446,
+          "win_rate": 0.3443333333333333
+        },
+        "7": {
+          "bb_per_100": 511.4176333333333,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            420.1447237334937,
+            602.6905429331729
+          ],
+          "loss_rate": 0.6556666666666666,
+          "profit_bb": 153425.29,
+          "profit_chips": 15342529,
+          "standard_error_bb_per_100": 46.568666730505576,
+          "stddev_block_mean_bb": 57.03473574573083,
+          "stddev_hand_bb": 80.81339228391535,
+          "win_rate": 0.3443333333333333
+        }
+      },
+      "sd_seed_means_bb100": 71.82692005390456,
+      "seed_net_bb100": [
+        451.8414,
+        507.21489999999994,
+        594.3221
+      ],
+      "verdict": "beats"
+    },
+    {
+      "fallback_rate": 0.10142521312673856,
+      "hands": 30000,
+      "opponent": "hyper",
+      "policy": "v3",
+      "position_net_bb100": {
+        "BB": 95.74006666666666,
+        "BTN": 168.79926666666665
+      },
+      "rake": {
+        "0": {
+          "bb_per_100": 158.14333333333332,
+          "break_even_rate": 0.003766666666666667,
+          "ci95_bb_per_100": [
+            99.26967765094656,
+            217.01698901572007
+          ],
+          "loss_rate": 0.8393333333333334,
+          "profit_bb": 47443.0,
+          "profit_chips": 4744300,
+          "standard_error_bb_per_100": 30.038131387502347,
+          "stddev_block_mean_bb": 36.78904736303022,
+          "stddev_hand_bb": 51.866434452797286,
+          "win_rate": 0.1569
+        },
+        "2": {
+          "bb_per_100": 138.00256666666667,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            79.77033232616625,
+            196.23480100716708
+          ],
+          "loss_rate": 0.8431,
+          "profit_bb": 41400.77,
+          "profit_chips": 4140077,
+          "standard_error_bb_per_100": 29.710869587313265,
+          "stddev_block_mean_bb": 36.38823515164626,
+          "stddev_hand_bb": 51.30590476372866,
+          "win_rate": 0.1569
+        },
+        "5": {
+          "bb_per_100": 132.26966666666667,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            74.06515381548101,
+            190.47417951785232
+          ],
+          "loss_rate": 0.8431,
+          "profit_bb": 39680.9,
+          "profit_chips": 3968090,
+          "standard_error_bb_per_100": 29.69672571041888,
+          "stddev_block_mean_bb": 36.37091251095827,
+          "stddev_hand_bb": 51.28332560339816,
+          "win_rate": 0.1569
+        },
+        "7": {
+          "bb_per_100": 129.9766,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            71.77813373959899,
+            188.175066260401
+          ],
+          "loss_rate": 0.8431,
+          "profit_bb": 38992.98,
+          "profit_chips": 3899298,
+          "standard_error_bb_per_100": 29.693640658432034,
+          "stddev_block_mean_bb": 36.367134109359405,
+          "stddev_hand_bb": 51.278350763850426,
+          "win_rate": 0.1569
+        }
+      },
+      "sd_seed_means_bb100": 43.912706853635584,
+      "seed_net_bb100": [
+        97.2602,
+        118.0084,
+        181.5404
+      ],
+      "verdict": "beats"
+    },
+    {
+      "fallback_rate": 0.09332329964650717,
+      "hands": 30000,
+      "opponent": "hyper",
+      "policy": "v3+adapt",
+      "position_net_bb100": {
+        "BB": 285.43013333333334,
+        "BTN": 329.99
+      },
+      "rake": {
+        "0": {
+          "bb_per_100": 362.94666666666666,
+          "break_even_rate": 0.013133333333333334,
+          "ci95_bb_per_100": [
+            277.94234005716936,
+            447.95099327616396
+          ],
+          "loss_rate": 0.6965,
+          "profit_bb": 108884.0,
+          "profit_chips": 10888400,
+          "standard_error_bb_per_100": 43.37035133298397,
+          "stddev_block_mean_bb": 53.117615365523484,
+          "stddev_hand_bb": 74.96367580460927,
+          "win_rate": 0.29036666666666666
+        },
+        "2": {
+          "bb_per_100": 321.3522333333333,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            237.18816541319885,
+            405.51630125346776
+          ],
+          "loss_rate": 0.7096333333333333,
+          "profit_bb": 96405.67,
+          "profit_chips": 9640567,
+          "standard_error_bb_per_100": 42.941640042373166,
+          "stddev_block_mean_bb": 52.59255341104024,
+          "stddev_hand_bb": 74.22159411957517,
+          "win_rate": 0.29036666666666666
+        },
+        "5": {
+          "bb_per_100": 307.71006666666665,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            223.58243887168902,
+            391.8376944616443
+          ],
+          "loss_rate": 0.7096333333333333,
+          "profit_bb": 92313.02,
+          "profit_chips": 9231302,
+          "standard_error_bb_per_100": 42.92304780014613,
+          "stddev_block_mean_bb": 52.56978265772501,
+          "stddev_hand_bb": 74.1870808110539,
+          "win_rate": 0.29036666666666666
+        },
+        "7": {
+          "bb_per_100": 302.4570333333333,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            218.3374649432467,
+            386.5766017234199
+          ],
+          "loss_rate": 0.7096333333333333,
+          "profit_bb": 90737.11,
+          "profit_chips": 9073711,
+          "standard_error_bb_per_100": 42.918935783315945,
+          "stddev_block_mean_bb": 52.56474648620116,
+          "stddev_hand_bb": 74.18023849706539,
+          "win_rate": 0.29036666666666666
+        }
+      },
+      "sd_seed_means_bb100": 69.76927940894424,
+      "seed_net_bb100": [
+        264.9065,
+        270.0048,
+        388.21889999999996
+      ],
+      "verdict": "beats"
+    },
+    {
+      "fallback_rate": 0.09326332171511231,
+      "hands": 30000,
+      "opponent": "hyper",
+      "policy": "v3-seed2",
+      "position_net_bb100": {
+        "BB": 49.9988,
+        "BTN": 378.242
+      },
+      "rake": {
+        "0": {
+          "bb_per_100": 241.39333333333335,
+          "break_even_rate": 0.0048,
+          "ci95_bb_per_100": [
+            178.22886005810187,
+            304.5578066085648
+          ],
+          "loss_rate": 0.8404666666666667,
+          "profit_bb": 72418.0,
+          "profit_chips": 7241800,
+          "standard_error_bb_per_100": 32.227364264580764,
+          "stddev_block_mean_bb": 39.470299101513866,
+          "stddev_hand_bb": 55.92955059432546,
+          "win_rate": 0.15473333333333333
+        },
+        "2": {
+          "bb_per_100": 219.4908333333333,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            156.98719036911254,
+            281.99447629755406
+          ],
+          "loss_rate": 0.8452666666666667,
+          "profit_bb": 65847.25,
+          "profit_chips": 6584725,
+          "standard_error_bb_per_100": 31.890199747159404,
+          "stddev_block_mean_bb": 39.05735858798683,
+          "stddev_hand_bb": 55.34396085312014,
+          "win_rate": 0.15473333333333333
+        },
+        "5": {
+          "bb_per_100": 214.12040000000002,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            151.636294875079,
+            276.60450512492105
+          ],
+          "loss_rate": 0.8452666666666667,
+          "profit_bb": 64236.12,
+          "profit_chips": 6423612,
+          "standard_error_bb_per_100": 31.880231278629452,
+          "stddev_block_mean_bb": 39.04514975727914,
+          "stddev_hand_bb": 55.325293796612655,
+          "win_rate": 0.15473333333333333
+        },
+        "7": {
+          "bb_per_100": 211.98253333333335,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            149.50178429210362,
+            274.46328237456305
+          ],
+          "loss_rate": 0.8452666666666667,
+          "profit_bb": 63594.76,
+          "profit_chips": 6359476,
+          "standard_error_bb_per_100": 31.878518959567575,
+          "stddev_block_mean_bb": 39.04305260328992,
+          "stddev_hand_bb": 55.32138621818807,
+          "win_rate": 0.15473333333333333
+        }
+      },
+      "sd_seed_means_bb100": 120.51174271717258,
+      "seed_net_bb100": [
+        75.0505,
+        287.8687,
+        279.442
+      ],
+      "verdict": "beats"
+    },
+    {
+      "fallback_rate": 5.810237638719423e-05,
+      "hands": 30000,
+      "opponent": "tag",
+      "policy": "v2",
+      "position_net_bb100": {
+        "BB": 17.086133333333333,
+        "BTN": 29.8462
+      },
+      "rake": {
+        "0": {
+          "bb_per_100": 30.383333333333333,
+          "break_even_rate": 0.0041333333333333335,
+          "ci95_bb_per_100": [
+            13.647101762499044,
+            47.11956490416762
+          ],
+          "loss_rate": 0.22993333333333332,
+          "profit_bb": 9115.0,
+          "profit_chips": 911500,
+          "standard_error_bb_per_100": 8.539050565646894,
+          "stddev_block_mean_bb": 10.458158386829481,
+          "stddev_hand_bb": 14.804205735391685,
+          "win_rate": 0.7659333333333334
+        },
+        "2": {
+          "bb_per_100": 26.58086666666667,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            10.010716036019662,
+            43.15101729731367
+          ],
+          "loss_rate": 0.23406666666666667,
+          "profit_bb": 7974.26,
+          "profit_chips": 797426,
+          "standard_error_bb_per_100": 8.454313835024644,
+          "stddev_block_mean_bb": 10.35437751058139,
+          "stddev_hand_bb": 14.658133350981952,
+          "win_rate": 0.7659333333333334
+        },
+        "5": {
+          "bb_per_100": 23.466166666666666,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            6.92865383682917,
+            40.00367949650416
+          ],
+          "loss_rate": 0.23406666666666667,
+          "profit_bb": 7039.85,
+          "profit_chips": 703985,
+          "standard_error_bb_per_100": 8.437661589847206,
+          "stddev_block_mean_bb": 10.333982758703169,
+          "stddev_hand_bb": 14.630300026821951,
+          "win_rate": 0.7659333333333334
+        },
+        "7": {
+          "bb_per_100": 21.815900000000003,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            5.28755617632892,
+            38.344243823671086
+          ],
+          "loss_rate": 0.23406666666666667,
+          "profit_bb": 6544.77,
+          "profit_chips": 654477,
+          "standard_error_bb_per_100": 8.432983439514476,
+          "stddev_block_mean_bb": 10.328253218075558,
+          "stddev_hand_bb": 14.62270139659302,
+          "win_rate": 0.7659333333333334
+        }
+      },
+      "sd_seed_means_bb100": 5.0422189364736365,
+      "seed_net_bb100": [
+        18.8202,
+        22.7502,
+        28.8281
+      ],
+      "verdict": "beats"
+    },
+    {
+      "fallback_rate": 5.810237638719423e-05,
+      "hands": 30000,
+      "opponent": "tag",
+      "policy": "v2+adapt",
+      "position_net_bb100": {
+        "BB": 17.086133333333333,
+        "BTN": 29.8462
+      },
+      "rake": {
+        "0": {
+          "bb_per_100": 30.383333333333333,
+          "break_even_rate": 0.0041333333333333335,
+          "ci95_bb_per_100": [
+            13.647101762499044,
+            47.11956490416762
+          ],
+          "loss_rate": 0.22993333333333332,
+          "profit_bb": 9115.0,
+          "profit_chips": 911500,
+          "standard_error_bb_per_100": 8.539050565646894,
+          "stddev_block_mean_bb": 10.458158386829481,
+          "stddev_hand_bb": 14.804205735391685,
+          "win_rate": 0.7659333333333334
+        },
+        "2": {
+          "bb_per_100": 26.58086666666667,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            10.010716036019662,
+            43.15101729731367
+          ],
+          "loss_rate": 0.23406666666666667,
+          "profit_bb": 7974.26,
+          "profit_chips": 797426,
+          "standard_error_bb_per_100": 8.454313835024644,
+          "stddev_block_mean_bb": 10.35437751058139,
+          "stddev_hand_bb": 14.658133350981952,
+          "win_rate": 0.7659333333333334
+        },
+        "5": {
+          "bb_per_100": 23.466166666666666,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            6.92865383682917,
+            40.00367949650416
+          ],
+          "loss_rate": 0.23406666666666667,
+          "profit_bb": 7039.85,
+          "profit_chips": 703985,
+          "standard_error_bb_per_100": 8.437661589847206,
+          "stddev_block_mean_bb": 10.333982758703169,
+          "stddev_hand_bb": 14.630300026821951,
+          "win_rate": 0.7659333333333334
+        },
+        "7": {
+          "bb_per_100": 21.815900000000003,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            5.28755617632892,
+            38.344243823671086
+          ],
+          "loss_rate": 0.23406666666666667,
+          "profit_bb": 6544.77,
+          "profit_chips": 654477,
+          "standard_error_bb_per_100": 8.432983439514476,
+          "stddev_block_mean_bb": 10.328253218075558,
+          "stddev_hand_bb": 14.62270139659302,
+          "win_rate": 0.7659333333333334
+        }
+      },
+      "sd_seed_means_bb100": 5.0422189364736365,
+      "seed_net_bb100": [
+        18.8202,
+        22.7502,
+        28.8281
+      ],
+      "verdict": "beats"
+    },
+    {
+      "fallback_rate": 0.0,
+      "hands": 30000,
+      "opponent": "tag",
+      "policy": "v3",
+      "position_net_bb100": {
+        "BB": 5.531666666666666,
+        "BTN": 7.338533333333333
+      },
+      "rake": {
+        "0": {
+          "bb_per_100": 14.883333333333335,
+          "break_even_rate": 0.0039,
+          "ci95_bb_per_100": [
+            -4.465051772059622,
+            34.23171843872629
+          ],
+          "loss_rate": 0.23766666666666666,
+          "profit_bb": 4465.0,
+          "profit_chips": 446500,
+          "standard_error_bb_per_100": 9.871806450532025,
+          "stddev_block_mean_bb": 12.090444321659504,
+          "stddev_hand_bb": 17.105593685986676,
+          "win_rate": 0.7584333333333333
+        },
+        "2": {
+          "bb_per_100": 10.271633333333334,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            -8.897046974272293,
+            29.44031364093896
+          ],
+          "loss_rate": 0.24156666666666668,
+          "profit_bb": 3081.49,
+          "profit_chips": 308149,
+          "standard_error_bb_per_100": 9.780118644427006,
+          "stddev_block_mean_bb": 11.978150151363236,
+          "stddev_hand_bb": 16.947280058116863,
+          "win_rate": 0.7584333333333333
+        },
+        "5": {
+          "bb_per_100": 6.4351,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            -12.69608152657368,
+            25.566281526573682
+          ],
+          "loss_rate": 0.24156666666666668,
+          "profit_bb": 1930.53,
+          "profit_chips": 193053,
+          "standard_error_bb_per_100": 9.760986261726236,
+          "stddev_block_mean_bb": 11.954717863772967,
+          "stddev_hand_bb": 16.914621152494767,
+          "win_rate": 0.7584333333333333
+        },
+        "7": {
+          "bb_per_100": 4.517466666666668,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            -14.603807028127452,
+            23.638740361460787
+          ],
+          "loss_rate": 0.24156666666666668,
+          "profit_bb": 1355.24,
+          "profit_chips": 135524,
+          "standard_error_bb_per_100": 9.755931152623358,
+          "stddev_block_mean_bb": 11.948526644824891,
+          "stddev_hand_bb": 16.906155533985924,
+          "win_rate": 0.7584333333333333
+        }
+      },
+      "sd_seed_means_bb100": 21.5480515706177,
+      "seed_net_bb100": [
+        -18.4284,
+        19.6874,
+        18.046300000000002
+      ],
+      "verdict": "inconclusive"
+    },
+    {
+      "fallback_rate": 0.0,
+      "hands": 30000,
+      "opponent": "tag",
+      "policy": "v3+adapt",
+      "position_net_bb100": {
+        "BB": 5.531666666666666,
+        "BTN": 7.338533333333333
+      },
+      "rake": {
+        "0": {
+          "bb_per_100": 14.883333333333335,
+          "break_even_rate": 0.0039,
+          "ci95_bb_per_100": [
+            -4.465051772059622,
+            34.23171843872629
+          ],
+          "loss_rate": 0.23766666666666666,
+          "profit_bb": 4465.0,
+          "profit_chips": 446500,
+          "standard_error_bb_per_100": 9.871806450532025,
+          "stddev_block_mean_bb": 12.090444321659504,
+          "stddev_hand_bb": 17.105593685986676,
+          "win_rate": 0.7584333333333333
+        },
+        "2": {
+          "bb_per_100": 10.271633333333334,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            -8.897046974272293,
+            29.44031364093896
+          ],
+          "loss_rate": 0.24156666666666668,
+          "profit_bb": 3081.49,
+          "profit_chips": 308149,
+          "standard_error_bb_per_100": 9.780118644427006,
+          "stddev_block_mean_bb": 11.978150151363236,
+          "stddev_hand_bb": 16.947280058116863,
+          "win_rate": 0.7584333333333333
+        },
+        "5": {
+          "bb_per_100": 6.4351,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            -12.69608152657368,
+            25.566281526573682
+          ],
+          "loss_rate": 0.24156666666666668,
+          "profit_bb": 1930.53,
+          "profit_chips": 193053,
+          "standard_error_bb_per_100": 9.760986261726236,
+          "stddev_block_mean_bb": 11.954717863772967,
+          "stddev_hand_bb": 16.914621152494767,
+          "win_rate": 0.7584333333333333
+        },
+        "7": {
+          "bb_per_100": 4.517466666666668,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            -14.603807028127452,
+            23.638740361460787
+          ],
+          "loss_rate": 0.24156666666666668,
+          "profit_bb": 1355.24,
+          "profit_chips": 135524,
+          "standard_error_bb_per_100": 9.755931152623358,
+          "stddev_block_mean_bb": 11.948526644824891,
+          "stddev_hand_bb": 16.906155533985924,
+          "win_rate": 0.7584333333333333
+        }
+      },
+      "sd_seed_means_bb100": 21.5480515706177,
+      "seed_net_bb100": [
+        -18.4284,
+        19.6874,
+        18.046300000000002
+      ],
+      "verdict": "inconclusive"
+    },
+    {
+      "fallback_rate": 0.0,
+      "hands": 30000,
+      "opponent": "tag",
+      "policy": "v3-seed2",
+      "position_net_bb100": {
+        "BB": 6.707666666666666,
+        "BTN": -6.532533333333333
+      },
+      "rake": {
+        "0": {
+          "bb_per_100": 7.475,
+          "break_even_rate": 0.0036,
+          "ci95_bb_per_100": [
+            -11.664359853713757,
+            26.614359853713758
+          ],
+          "loss_rate": 0.2531333333333333,
+          "profit_bb": 2242.5,
+          "profit_chips": 224250,
+          "standard_error_bb_per_100": 9.765158954288236,
+          "stddev_block_mean_bb": 11.95982834758817,
+          "stddev_hand_bb": 16.816653375900692,
+          "win_rate": 0.7432666666666666
+        },
+        "2": {
+          "bb_per_100": 3.418566666666667,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            -15.554047312670619,
+            22.391180646003953
+          ],
+          "loss_rate": 0.2567333333333333,
+          "profit_bb": 1025.57,
+          "profit_chips": 102557,
+          "standard_error_bb_per_100": 9.680082965294693,
+          "stddev_block_mean_bb": 11.85563196638976,
+          "stddev_hand_bb": 16.670066464796292,
+          "win_rate": 0.7432666666666666
+        },
+        "5": {
+          "bb_per_100": 0.08756666666666668,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            -18.85321819151263,
+            19.028351524845966
+          ],
+          "loss_rate": 0.2567333333333333,
+          "profit_bb": 26.27,
+          "profit_chips": 2627,
+          "standard_error_bb_per_100": 9.663843319357802,
+          "stddev_block_mean_bb": 11.83574254331534,
+          "stddev_hand_bb": 16.64178182647379,
+          "win_rate": 0.7432666666666666
+        },
+        "7": {
+          "bb_per_100": -1.6021666666666652,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            -20.534805263313512,
+            17.33047192998018
+          ],
+          "loss_rate": 0.2567333333333333,
+          "profit_bb": -480.65,
+          "profit_chips": -48065,
+          "standard_error_bb_per_100": 9.659686987100317,
+          "stddev_block_mean_bb": 11.830652096699183,
+          "stddev_hand_bb": 16.6345519306491,
+          "win_rate": 0.7432666666666666
+        }
+      },
+      "sd_seed_means_bb100": 11.71446197242252,
+      "seed_net_bb100": [
+        -13.226799999999999,
+        8.812199999999999,
+        4.6773
+      ],
+      "verdict": "inconclusive"
+    },
+    {
+      "fallback_rate": 0.009879818867012636,
+      "hands": 30000,
+      "opponent": "station",
+      "policy": "v2",
+      "position_net_bb100": {
+        "BB": 115.69433333333333,
+        "BTN": 141.77066666666667
+      },
+      "rake": {
+        "0": {
+          "bb_per_100": 170.44,
+          "break_even_rate": 0.03286666666666667,
+          "ci95_bb_per_100": [
+            133.26025420342972,
+            207.61974579657027
+          ],
+          "loss_rate": 0.5008,
+          "profit_bb": 51132.0,
+          "profit_chips": 5113200,
+          "standard_error_bb_per_100": 18.969606630447995,
+          "stddev_block_mean_bb": 23.232928432957063,
+          "stddev_hand_bb": 32.86213527203948,
+          "win_rate": 0.4663333333333333
+        },
+        "2": {
+          "bb_per_100": 149.0458,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            112.28624204536968,
+            185.80535795463035
+          ],
+          "loss_rate": 0.5336666666666666,
+          "profit_bb": 44713.74,
+          "profit_chips": 4471374,
+          "standard_error_bb_per_100": 18.75522113905411,
+          "stddev_block_mean_bb": 22.970360901871643,
+          "stddev_hand_bb": 32.489539441836875,
+          "win_rate": 0.4663333333333333
+        },
+        "5": {
+          "bb_per_100": 128.73250000000002,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            92.06396857856942,
+            165.40103142143062
+          ],
+          "loss_rate": 0.5336666666666666,
+          "profit_bb": 38619.75,
+          "profit_chips": 3861975,
+          "standard_error_bb_per_100": 18.7087781768784,
+          "stddev_block_mean_bb": 22.913480122134704,
+          "stddev_hand_bb": 32.407555046344434,
+          "win_rate": 0.4663333333333333
+        },
+        "7": {
+          "bb_per_100": 118.05369999999999,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            81.41420097069143,
+            154.69319902930857
+          ],
+          "loss_rate": 0.5336666666666666,
+          "profit_bb": 35416.11,
+          "profit_chips": 3541611,
+          "standard_error_bb_per_100": 18.69396545973103,
+          "stddev_block_mean_bb": 22.89533832277709,
+          "stddev_hand_bb": 32.38107680059641,
+          "win_rate": 0.4663333333333333
+        }
+      },
+      "sd_seed_means_bb100": 26.803182399670376,
+      "seed_net_bb100": [
+        117.86350000000002,
+        159.263,
+        109.07100000000001
+      ],
+      "verdict": "beats"
+    },
+    {
+      "fallback_rate": 0.009879818867012636,
+      "hands": 30000,
+      "opponent": "station",
+      "policy": "v2+adapt",
+      "position_net_bb100": {
+        "BB": 115.69433333333333,
+        "BTN": 141.77066666666667
+      },
+      "rake": {
+        "0": {
+          "bb_per_100": 170.44,
+          "break_even_rate": 0.03286666666666667,
+          "ci95_bb_per_100": [
+            133.26025420342972,
+            207.61974579657027
+          ],
+          "loss_rate": 0.5008,
+          "profit_bb": 51132.0,
+          "profit_chips": 5113200,
+          "standard_error_bb_per_100": 18.969606630447995,
+          "stddev_block_mean_bb": 23.232928432957063,
+          "stddev_hand_bb": 32.86213527203948,
+          "win_rate": 0.4663333333333333
+        },
+        "2": {
+          "bb_per_100": 149.0458,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            112.28624204536968,
+            185.80535795463035
+          ],
+          "loss_rate": 0.5336666666666666,
+          "profit_bb": 44713.74,
+          "profit_chips": 4471374,
+          "standard_error_bb_per_100": 18.75522113905411,
+          "stddev_block_mean_bb": 22.970360901871643,
+          "stddev_hand_bb": 32.489539441836875,
+          "win_rate": 0.4663333333333333
+        },
+        "5": {
+          "bb_per_100": 128.73250000000002,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            92.06396857856942,
+            165.40103142143062
+          ],
+          "loss_rate": 0.5336666666666666,
+          "profit_bb": 38619.75,
+          "profit_chips": 3861975,
+          "standard_error_bb_per_100": 18.7087781768784,
+          "stddev_block_mean_bb": 22.913480122134704,
+          "stddev_hand_bb": 32.407555046344434,
+          "win_rate": 0.4663333333333333
+        },
+        "7": {
+          "bb_per_100": 118.05369999999999,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            81.41420097069143,
+            154.69319902930857
+          ],
+          "loss_rate": 0.5336666666666666,
+          "profit_bb": 35416.11,
+          "profit_chips": 3541611,
+          "standard_error_bb_per_100": 18.69396545973103,
+          "stddev_block_mean_bb": 22.89533832277709,
+          "stddev_hand_bb": 32.38107680059641,
+          "win_rate": 0.4663333333333333
+        }
+      },
+      "sd_seed_means_bb100": 26.803182399670376,
+      "seed_net_bb100": [
+        117.86350000000002,
+        159.263,
+        109.07100000000001
+      ],
+      "verdict": "beats"
+    },
+    {
+      "fallback_rate": 0.01267031078600429,
+      "hands": 30000,
+      "opponent": "station",
+      "policy": "v3",
+      "position_net_bb100": {
+        "BB": 122.109,
+        "BTN": 288.18666666666667
+      },
+      "rake": {
+        "0": {
+          "bb_per_100": 253.60666666666668,
+          "break_even_rate": 0.031566666666666666,
+          "ci95_bb_per_100": [
+            204.5933673747379,
+            302.61996595859546
+          ],
+          "loss_rate": 0.5063666666666666,
+          "profit_bb": 76082.0,
+          "profit_chips": 7608200,
+          "standard_error_bb_per_100": 25.007244867017675,
+          "stddev_block_mean_bb": 30.62749489851354,
+          "stddev_hand_bb": 43.56149105168054,
+          "win_rate": 0.4620666666666667
+        },
+        "2": {
+          "bb_per_100": 227.16006666666667,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            178.6557246000927,
+            275.66440873324063
+          ],
+          "loss_rate": 0.5379333333333334,
+          "profit_bb": 68148.02,
+          "profit_chips": 6814802,
+          "standard_error_bb_per_100": 24.747568041642626,
+          "stddev_block_mean_bb": 30.3094570384162,
+          "stddev_hand_bb": 43.111342962082105,
+          "win_rate": 0.4620666666666667
+        },
+        "5": {
+          "bb_per_100": 205.14783333333332,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            156.71645451038262,
+            253.57921215628403
+          ],
+          "loss_rate": 0.5379333333333334,
+          "profit_bb": 61544.35,
+          "profit_chips": 6154435,
+          "standard_error_bb_per_100": 24.710341212885158,
+          "stddev_block_mean_bb": 30.26386367081732,
+          "stddev_hand_bb": 43.04573148289882,
+          "win_rate": 0.4620666666666667
+        },
+        "7": {
+          "bb_per_100": 193.6642,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            145.25593268141017,
+            242.07246731858982
+          ],
+          "loss_rate": 0.5379333333333334,
+          "profit_bb": 58099.26,
+          "profit_chips": 5809926,
+          "standard_error_bb_per_100": 24.69854941235047,
+          "stddev_block_mean_bb": 30.249421723587986,
+          "stddev_hand_bb": 43.02484916687135,
+          "win_rate": 0.4620666666666667
+        }
+      },
+      "sd_seed_means_bb100": 25.016452358064953,
+      "seed_net_bb100": [
+        223.787,
+        176.7165,
+        214.94
+      ],
+      "verdict": "beats"
+    },
+    {
+      "fallback_rate": 0.01267031078600429,
+      "hands": 30000,
+      "opponent": "station",
+      "policy": "v3+adapt",
+      "position_net_bb100": {
+        "BB": 122.109,
+        "BTN": 288.18666666666667
+      },
+      "rake": {
+        "0": {
+          "bb_per_100": 253.60666666666668,
+          "break_even_rate": 0.031566666666666666,
+          "ci95_bb_per_100": [
+            204.5933673747379,
+            302.61996595859546
+          ],
+          "loss_rate": 0.5063666666666666,
+          "profit_bb": 76082.0,
+          "profit_chips": 7608200,
+          "standard_error_bb_per_100": 25.007244867017675,
+          "stddev_block_mean_bb": 30.62749489851354,
+          "stddev_hand_bb": 43.56149105168054,
+          "win_rate": 0.4620666666666667
+        },
+        "2": {
+          "bb_per_100": 227.16006666666667,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            178.6557246000927,
+            275.66440873324063
+          ],
+          "loss_rate": 0.5379333333333334,
+          "profit_bb": 68148.02,
+          "profit_chips": 6814802,
+          "standard_error_bb_per_100": 24.747568041642626,
+          "stddev_block_mean_bb": 30.3094570384162,
+          "stddev_hand_bb": 43.111342962082105,
+          "win_rate": 0.4620666666666667
+        },
+        "5": {
+          "bb_per_100": 205.14783333333332,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            156.71645451038262,
+            253.57921215628403
+          ],
+          "loss_rate": 0.5379333333333334,
+          "profit_bb": 61544.35,
+          "profit_chips": 6154435,
+          "standard_error_bb_per_100": 24.710341212885158,
+          "stddev_block_mean_bb": 30.26386367081732,
+          "stddev_hand_bb": 43.04573148289882,
+          "win_rate": 0.4620666666666667
+        },
+        "7": {
+          "bb_per_100": 193.6642,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            145.25593268141017,
+            242.07246731858982
+          ],
+          "loss_rate": 0.5379333333333334,
+          "profit_bb": 58099.26,
+          "profit_chips": 5809926,
+          "standard_error_bb_per_100": 24.69854941235047,
+          "stddev_block_mean_bb": 30.249421723587986,
+          "stddev_hand_bb": 43.02484916687135,
+          "win_rate": 0.4620666666666667
+        }
+      },
+      "sd_seed_means_bb100": 25.016452358064953,
+      "seed_net_bb100": [
+        223.787,
+        176.7165,
+        214.94
+      ],
+      "verdict": "beats"
+    },
+    {
+      "fallback_rate": 0.013109312237033361,
+      "hands": 30000,
+      "opponent": "station",
+      "policy": "v3-seed2",
+      "position_net_bb100": {
+        "BB": 179.237,
+        "BTN": 353.665
+      },
+      "rake": {
+        "0": {
+          "bb_per_100": 315.60333333333335,
+          "break_even_rate": 0.030266666666666667,
+          "ci95_bb_per_100": [
+            265.89312242062175,
+            365.31354424604496
+          ],
+          "loss_rate": 0.5179,
+          "profit_bb": 94681.0,
+          "profit_chips": 9468100,
+          "standard_error_bb_per_100": 25.362818554228244,
+          "stddev_block_mean_bb": 31.062981948326485,
+          "stddev_hand_bb": 43.709658788509614,
+          "win_rate": 0.4518333333333333
+        },
+        "2": {
+          "bb_per_100": 288.73966666666666,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            239.55658627466875,
+            337.9227470586646
+          ],
+          "loss_rate": 0.5481666666666667,
+          "profit_bb": 86621.9,
+          "profit_chips": 8662190,
+          "standard_error_bb_per_100": 25.09386946900442,
+          "stddev_block_mean_bb": 30.73358793553314,
+          "stddev_hand_bb": 43.246879279028924,
+          "win_rate": 0.4518333333333333
+        },
+        "5": {
+          "bb_per_100": 266.451,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            217.33917997457817,
+            315.5628200254219
+          ],
+          "loss_rate": 0.5481666666666667,
+          "profit_bb": 79935.3,
+          "profit_chips": 7993530,
+          "standard_error_bb_per_100": 25.057511471031933,
+          "stddev_block_mean_bb": 30.689058663982273,
+          "stddev_hand_bb": 43.181712593064006,
+          "win_rate": 0.4518333333333333
+        },
+        "7": {
+          "bb_per_100": 254.9733,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            205.8823053009201,
+            304.0642946990799
+          ],
+          "loss_rate": 0.5481666666666667,
+          "profit_bb": 76491.99,
+          "profit_chips": 7649199,
+          "standard_error_bb_per_100": 25.046886109287403,
+          "stddev_block_mean_bb": 30.67604530667898,
+          "stddev_hand_bb": 43.162133912093665,
+          "win_rate": 0.4518333333333333
+        }
+      },
+      "sd_seed_means_bb100": 18.71297603268921,
+      "seed_net_bb100": [
+        254.587,
+        288.023,
+        256.743
+      ],
+      "verdict": "beats"
+    },
+    {
+      "fallback_rate": 0.036091994714619775,
+      "hands": 30000,
+      "opponent": "equity",
+      "policy": "v2",
+      "position_net_bb100": {
+        "BB": 150.73466666666667,
+        "BTN": 126.58133333333333
+      },
+      "rake": {
+        "0": {
+          "bb_per_100": 167.30333333333334,
+          "break_even_rate": 0.0214,
+          "ci95_bb_per_100": [
+            129.2838602324958,
+            205.32280643417087
+          ],
+          "loss_rate": 0.4846666666666667,
+          "profit_bb": 50191.0,
+          "profit_chips": 5019100,
+          "standard_error_bb_per_100": 19.398046801232205,
+          "stddev_block_mean_bb": 23.757658334823162,
+          "stddev_hand_bb": 33.36218484019693,
+          "win_rate": 0.49393333333333334
+        },
+        "2": {
+          "bb_per_100": 151.86766666666668,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            114.25497508370823,
+            189.4803582496251
+          ],
+          "loss_rate": 0.5060666666666667,
+          "profit_bb": 45560.3,
+          "profit_chips": 4556030,
+          "standard_error_bb_per_100": 19.190501396782064,
+          "stddev_block_mean_bb": 23.50346816514196,
+          "stddev_hand_bb": 33.004983656820606,
+          "win_rate": 0.49393333333333334
+        },
+        "5": {
+          "bb_per_100": 138.658,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            101.0933208393484,
+            176.22267916065158
+          ],
+          "loss_rate": 0.5060666666666667,
+          "profit_bb": 41597.4,
+          "profit_chips": 4159740,
+          "standard_error_bb_per_100": 19.166004812821555,
+          "stddev_block_mean_bb": 23.473466099569713,
+          "stddev_hand_bb": 32.96292369539174,
+          "win_rate": 0.49393333333333334
+        },
+        "7": {
+          "bb_per_100": 131.27736666666667,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            93.72961148344454,
+            168.82512184988877
+          ],
+          "loss_rate": 0.5060666666666667,
+          "profit_bb": 39383.21,
+          "profit_chips": 3938321,
+          "standard_error_bb_per_100": 19.157369971792352,
+          "stddev_block_mean_bb": 23.462890622303913,
+          "stddev_hand_bb": 32.948369130065466,
+          "win_rate": 0.49393333333333334
+        }
+      },
+      "sd_seed_means_bb100": 17.97139220400021,
+      "seed_net_bb100": [
+        158.61849999999998,
+        123.763,
+        133.5925
+      ],
+      "verdict": "beats"
+    },
+    {
+      "fallback_rate": 0.036091994714619775,
+      "hands": 30000,
+      "opponent": "equity",
+      "policy": "v2+adapt",
+      "position_net_bb100": {
+        "BB": 150.73466666666667,
+        "BTN": 126.58133333333333
+      },
+      "rake": {
+        "0": {
+          "bb_per_100": 167.30333333333334,
+          "break_even_rate": 0.0214,
+          "ci95_bb_per_100": [
+            129.2838602324958,
+            205.32280643417087
+          ],
+          "loss_rate": 0.4846666666666667,
+          "profit_bb": 50191.0,
+          "profit_chips": 5019100,
+          "standard_error_bb_per_100": 19.398046801232205,
+          "stddev_block_mean_bb": 23.757658334823162,
+          "stddev_hand_bb": 33.36218484019693,
+          "win_rate": 0.49393333333333334
+        },
+        "2": {
+          "bb_per_100": 151.86766666666668,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            114.25497508370823,
+            189.4803582496251
+          ],
+          "loss_rate": 0.5060666666666667,
+          "profit_bb": 45560.3,
+          "profit_chips": 4556030,
+          "standard_error_bb_per_100": 19.190501396782064,
+          "stddev_block_mean_bb": 23.50346816514196,
+          "stddev_hand_bb": 33.004983656820606,
+          "win_rate": 0.49393333333333334
+        },
+        "5": {
+          "bb_per_100": 138.658,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            101.0933208393484,
+            176.22267916065158
+          ],
+          "loss_rate": 0.5060666666666667,
+          "profit_bb": 41597.4,
+          "profit_chips": 4159740,
+          "standard_error_bb_per_100": 19.166004812821555,
+          "stddev_block_mean_bb": 23.473466099569713,
+          "stddev_hand_bb": 32.96292369539174,
+          "win_rate": 0.49393333333333334
+        },
+        "7": {
+          "bb_per_100": 131.27736666666667,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            93.72961148344454,
+            168.82512184988877
+          ],
+          "loss_rate": 0.5060666666666667,
+          "profit_bb": 39383.21,
+          "profit_chips": 3938321,
+          "standard_error_bb_per_100": 19.157369971792352,
+          "stddev_block_mean_bb": 23.462890622303913,
+          "stddev_hand_bb": 32.948369130065466,
+          "win_rate": 0.49393333333333334
+        }
+      },
+      "sd_seed_means_bb100": 17.97139220400021,
+      "seed_net_bb100": [
+        158.61849999999998,
+        123.763,
+        133.5925
+      ],
+      "verdict": "beats"
+    },
+    {
+      "fallback_rate": 0.04682616240654661,
+      "hands": 30000,
+      "opponent": "equity",
+      "policy": "v3",
+      "position_net_bb100": {
+        "BB": 40.67966666666667,
+        "BTN": 71.12966666666667
+      },
+      "rake": {
+        "0": {
+          "bb_per_100": 85.11999999999999,
+          "break_even_rate": 0.019133333333333332,
+          "ci95_bb_per_100": [
+            38.905543856129185,
+            131.3344561438708
+          ],
+          "loss_rate": 0.49183333333333334,
+          "profit_bb": 25536.0,
+          "profit_chips": 2553600,
+          "standard_error_bb_per_100": 23.579237429057137,
+          "stddev_block_mean_bb": 28.878550112562326,
+          "stddev_hand_bb": 40.63232466998333,
+          "win_rate": 0.4890333333333333
+        },
+        "2": {
+          "bb_per_100": 68.34899999999999,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            22.568478989437814,
+            114.12952101056217
+          ],
+          "loss_rate": 0.5109666666666667,
+          "profit_bb": 20504.7,
+          "profit_chips": 2050470,
+          "standard_error_bb_per_100": 23.35783788461068,
+          "stddev_block_mean_bb": 28.607392155973095,
+          "stddev_hand_bb": 40.25246556422807,
+          "win_rate": 0.4890333333333333
+        },
+        "5": {
+          "bb_per_100": 55.90466666666667,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            10.161120179484648,
+            101.6482131538487
+          ],
+          "loss_rate": 0.5109666666666667,
+          "profit_bb": 16771.4,
+          "profit_chips": 1677140,
+          "standard_error_bb_per_100": 23.33897298521875,
+          "stddev_block_mean_bb": 28.584287467193512,
+          "stddev_hand_bb": 40.21943723411442,
+          "win_rate": 0.4890333333333333
+        },
+        "7": {
+          "bb_per_100": 48.75263333333334,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            3.023321894118993,
+            94.48194477254769
+          ],
+          "loss_rate": 0.5109666666666667,
+          "profit_bb": 14625.79,
+          "profit_chips": 1462579,
+          "standard_error_bb_per_100": 23.331710072185675,
+          "stddev_block_mean_bb": 28.57539225170489,
+          "stddev_hand_bb": 40.20676870568725,
+          "win_rate": 0.4890333333333333
+        }
+      },
+      "sd_seed_means_bb100": 39.61840026532285,
+      "seed_net_bb100": [
+        101.418,
+        37.1505,
+        29.145500000000002
+      ],
+      "verdict": "beats"
+    },
+    {
+      "fallback_rate": 0.04682616240654661,
+      "hands": 30000,
+      "opponent": "equity",
+      "policy": "v3+adapt",
+      "position_net_bb100": {
+        "BB": 40.67966666666667,
+        "BTN": 71.12966666666667
+      },
+      "rake": {
+        "0": {
+          "bb_per_100": 85.11999999999999,
+          "break_even_rate": 0.019133333333333332,
+          "ci95_bb_per_100": [
+            38.905543856129185,
+            131.3344561438708
+          ],
+          "loss_rate": 0.49183333333333334,
+          "profit_bb": 25536.0,
+          "profit_chips": 2553600,
+          "standard_error_bb_per_100": 23.579237429057137,
+          "stddev_block_mean_bb": 28.878550112562326,
+          "stddev_hand_bb": 40.63232466998333,
+          "win_rate": 0.4890333333333333
+        },
+        "2": {
+          "bb_per_100": 68.34899999999999,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            22.568478989437814,
+            114.12952101056217
+          ],
+          "loss_rate": 0.5109666666666667,
+          "profit_bb": 20504.7,
+          "profit_chips": 2050470,
+          "standard_error_bb_per_100": 23.35783788461068,
+          "stddev_block_mean_bb": 28.607392155973095,
+          "stddev_hand_bb": 40.25246556422807,
+          "win_rate": 0.4890333333333333
+        },
+        "5": {
+          "bb_per_100": 55.90466666666667,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            10.161120179484648,
+            101.6482131538487
+          ],
+          "loss_rate": 0.5109666666666667,
+          "profit_bb": 16771.4,
+          "profit_chips": 1677140,
+          "standard_error_bb_per_100": 23.33897298521875,
+          "stddev_block_mean_bb": 28.584287467193512,
+          "stddev_hand_bb": 40.21943723411442,
+          "win_rate": 0.4890333333333333
+        },
+        "7": {
+          "bb_per_100": 48.75263333333334,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            3.023321894118993,
+            94.48194477254769
+          ],
+          "loss_rate": 0.5109666666666667,
+          "profit_bb": 14625.79,
+          "profit_chips": 1462579,
+          "standard_error_bb_per_100": 23.331710072185675,
+          "stddev_block_mean_bb": 28.57539225170489,
+          "stddev_hand_bb": 40.20676870568725,
+          "win_rate": 0.4890333333333333
+        }
+      },
+      "sd_seed_means_bb100": 39.61840026532285,
+      "seed_net_bb100": [
+        101.418,
+        37.1505,
+        29.145500000000002
+      ],
+      "verdict": "beats"
+    },
+    {
+      "fallback_rate": 0.04829121928220637,
+      "hands": 30000,
+      "opponent": "equity",
+      "policy": "v3-seed2",
+      "position_net_bb100": {
+        "BB": 23.304,
+        "BTN": 88.09533333333333
+      },
+      "rake": {
+        "0": {
+          "bb_per_100": 84.58333333333333,
+          "break_even_rate": 0.017966666666666666,
+          "ci95_bb_per_100": [
+            37.96606859154318,
+            131.20059807512348
+          ],
+          "loss_rate": 0.5026666666666667,
+          "profit_bb": 25375.0,
+          "profit_chips": 2537500,
+          "standard_error_bb_per_100": 23.78475579628054,
+          "stddev_block_mean_bb": 29.13025767879596,
+          "stddev_hand_bb": 40.959075357817355,
+          "win_rate": 0.47936666666666666
+        },
+        "2": {
+          "bb_per_100": 68.00273333333334,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            21.819790229583454,
+            114.18567643708323
+          ],
+          "loss_rate": 0.5206333333333333,
+          "profit_bb": 20400.82,
+          "profit_chips": 2040082,
+          "standard_error_bb_per_100": 23.563159051918838,
+          "stddev_block_mean_bb": 28.858858202621892,
+          "stddev_hand_bb": 40.57892203024074,
+          "win_rate": 0.47936666666666666
+        },
+        "5": {
+          "bb_per_100": 55.69966666666667,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            9.552506949048798,
+            101.84682638428455
+          ],
+          "loss_rate": 0.5206333333333333,
+          "profit_bb": 16709.9,
+          "profit_chips": 1670990,
+          "standard_error_bb_per_100": 23.544901886779954,
+          "stddev_block_mean_bb": 28.836497833251897,
+          "stddev_hand_bb": 40.54664221263967,
+          "win_rate": 0.47936666666666666
+        },
+        "7": {
+          "bb_per_100": 48.58803333333334,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            2.4548288054115304,
+            94.72123786125516
+          ],
+          "loss_rate": 0.5206333333333333,
+          "profit_bb": 14576.41,
+          "profit_chips": 1457641,
+          "standard_error_bb_per_100": 23.537781761203085,
+          "stddev_block_mean_bb": 28.827777495967965,
+          "stddev_hand_bb": 40.53393156017894,
+          "win_rate": 0.47936666666666666
+        }
+      },
+      "sd_seed_means_bb100": 13.078429706326874,
+      "seed_net_bb100": [
+        68.8175,
+        42.661,
+        55.62050000000001
+      ],
+      "verdict": "beats"
+    }
+  ],
+  "runs": [
+    {
+      "audit": {
+        "decisions": 28184,
+        "fallback": 3046,
+        "fallback_by_street": {
+          "flop": 813,
+          "preflop": 830,
+          "river": 718,
+          "turn": 685
+        },
+        "fallback_rate": 0.10807550383196139
+      },
+      "cfr_ms_per_decision": 1.945647105698285,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.5234356961440776,
+        "pfr": 0.4259,
+        "streets": {
+          "flop": {
+            "call": 0.2635958395245171,
+            "check": 0.2537890044576523,
+            "decisions": 6730,
+            "fold": 0.25200594353640415,
+            "fold_facing_bet": 0.43420378904249873,
+            "raise": 0.23060921248142646,
+            "raise_facing_bet": 0.11162314388120839
+          },
+          "preflop": {
+            "call": 0.3563728165938865,
+            "check": 0.03793668122270742,
+            "decisions": 14656,
+            "fold": 0.3033569868995633,
+            "fold_facing_bet": null,
+            "raise": 0.3023335152838428,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.2195500387897595,
+            "check": 0.30449961210240495,
+            "decisions": 2578,
+            "fold": 0.27579519006982156,
+            "fold_facing_bet": 0.46807109940750496,
+            "raise": 0.20015515903801395,
+            "raise_facing_bet": 0.15931533903884135
+          },
+          "turn": {
+            "call": 0.2796208530805687,
+            "check": 0.2552132701421801,
+            "decisions": 4220,
+            "fold": 0.23151658767772512,
+            "fold_facing_bet": 0.38955342902711326,
+            "raise": 0.23364928909952606,
+            "raise_facing_bet": 0.13995215311004786
+          }
+        },
+        "vpip": 0.6582
+      },
+      "name": "v2-v-hyper-121001",
+      "opponent": "hyper",
+      "policy": "v2"
+    },
+    {
+      "audit": {
+        "decisions": 41841,
+        "fallback": 4450,
+        "fallback_by_street": {
+          "flop": 1086,
+          "preflop": 907,
+          "river": 1311,
+          "turn": 1146
+        },
+        "fallback_rate": 0.10635501063550107
+      },
+      "cfr_ms_per_decision": 2.3784665928155104,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.1075963980604941,
+        "pfr": 0.4374,
+        "streets": {
+          "flop": {
+            "call": 0.3455777460770328,
+            "check": 0.28548502139800286,
+            "decisions": 11216,
+            "fold": 0.11189372325249643,
+            "fold_facing_bet": 0.1994596312778131,
+            "raise": 0.2570435092724679,
+            "raise_facing_bet": 0.18452002542911633
+          },
+          "preflop": {
+            "call": 0.5791226008617313,
+            "check": 0.03629716673194934,
+            "decisions": 15318,
+            "fold": 0.08571615093354223,
+            "fold_facing_bet": null,
+            "raise": 0.2988640814727771,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.3058841603933016,
+            "check": 0.33323091104624364,
+            "decisions": 6509,
+            "fold": 0.18174834844062068,
+            "fold_facing_bet": 0.3174134692782399,
+            "raise": 0.17913658011983408,
+            "raise_facing_bet": 0.14837671049101153
+          },
+          "turn": {
+            "call": 0.3574676062741532,
+            "check": 0.2914298704250966,
+            "decisions": 8798,
+            "fold": 0.11559445328483746,
+            "fold_facing_bet": 0.2025089605734767,
+            "raise": 0.2355080700159127,
+            "raise_facing_bet": 0.17124651533253685
+          }
+        },
+        "vpip": 0.8979
+      },
+      "name": "v2+adapt-v-hyper-121001",
+      "opponent": "hyper",
+      "policy": "v2+adapt"
+    },
+    {
+      "audit": {
+        "decisions": 26514,
+        "fallback": 2734,
+        "fallback_by_street": {
+          "flop": 386,
+          "preflop": 1662,
+          "river": 332,
+          "turn": 354
+        },
+        "fallback_rate": 0.10311533529456136
+      },
+      "cfr_ms_per_decision": 1.8186238570566038,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.4781005071461503,
+        "pfr": 0.491,
+        "streets": {
+          "flop": {
+            "call": 0.19878154917319407,
+            "check": 0.18328981723237597,
+            "decisions": 5745,
+            "fold": 0.24717145343777197,
+            "fold_facing_bet": 0.40283687943262414,
+            "raise": 0.370757180156658,
+            "raise_facing_bet": 0.2731914893617021
+          },
+          "preflop": {
+            "call": 0.30068440082644626,
+            "check": 0.03583419421487603,
+            "decisions": 15488,
+            "fold": 0.34084452479338845,
+            "fold_facing_bet": null,
+            "raise": 0.32263688016528924,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.18130165289256198,
+            "check": 0.28667355371900827,
+            "decisions": 1936,
+            "fold": 0.30836776859504134,
+            "fold_facing_bet": 0.5124463519313305,
+            "raise": 0.22365702479338842,
+            "raise_facing_bet": 0.18626609442060085
+          },
+          "turn": {
+            "call": 0.24394618834080717,
+            "check": 0.23228699551569507,
+            "decisions": 3345,
+            "fold": 0.2304932735426009,
+            "fold_facing_bet": 0.3777560019598236,
+            "raise": 0.2932735426008969,
+            "raise_facing_bet": 0.22243998040176385
+          }
+        },
+        "vpip": 0.6702
+      },
+      "name": "v3-v-hyper-121001",
+      "opponent": "hyper",
+      "policy": "v3"
+    },
+    {
+      "audit": {
+        "decisions": 37885,
+        "fallback": 3562,
+        "fallback_by_street": {
+          "flop": 603,
+          "preflop": 1804,
+          "river": 552,
+          "turn": 603
+        },
+        "fallback_rate": 0.09402138049359905
+      },
+      "cfr_ms_per_decision": 2.2798605334830184,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.0996309963099631,
+        "pfr": 0.5114,
+        "streets": {
+          "flop": {
+            "call": 0.2887323943661972,
+            "check": 0.24164389321000632,
+            "decisions": 9514,
+            "fold": 0.12360731553500105,
+            "fold_facing_bet": 0.2154240703425536,
+            "raise": 0.3460163968887955,
+            "raise_facing_bet": 0.28137021432496795
+          },
+          "preflop": {
+            "call": 0.48215384615384616,
+            "check": 0.03433846153846154,
+            "decisions": 16250,
+            "fold": 0.16147692307692307,
+            "fold_facing_bet": null,
+            "raise": 0.32203076923076923,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.24317472698907958,
+            "check": 0.3486739469578783,
+            "decisions": 5128,
+            "fold": 0.24180967238689546,
+            "fold_facing_bet": 0.4239316239316239,
+            "raise": 0.16634165366614664,
+            "raise_facing_bet": 0.14974358974358976
+          },
+          "turn": {
+            "call": 0.3464893464893465,
+            "check": 0.29458029458029455,
+            "decisions": 6993,
+            "fold": 0.10453310453310453,
+            "fold_facing_bet": 0.18202191235059761,
+            "raise": 0.2543972543972544,
+            "raise_facing_bet": 0.2146414342629482
+          }
+        },
+        "vpip": 0.9019
+      },
+      "name": "v3+adapt-v-hyper-121001",
+      "opponent": "hyper",
+      "policy": "v3+adapt"
+    },
+    {
+      "audit": {
+        "decisions": 25121,
+        "fallback": 2390,
+        "fallback_by_street": {
+          "flop": 331,
+          "preflop": 1408,
+          "river": 312,
+          "turn": 339
+        },
+        "fallback_rate": 0.09513952470044983
+      },
+      "cfr_ms_per_decision": 1.759130204808729,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.533857175872429,
+        "pfr": 0.47,
+        "streets": {
+          "flop": {
+            "call": 0.20336713219820166,
+            "check": 0.17945284101779224,
+            "decisions": 5227,
+            "fold": 0.24048211211019704,
+            "fold_facing_bet": 0.3917108133374883,
+            "raise": 0.3766979146738091,
+            "raise_facing_bet": 0.2770333437207853
+          },
+          "preflop": {
+            "call": 0.2667377967457989,
+            "check": 0.03754334489197119,
+            "decisions": 14996,
+            "fold": 0.3676313683648973,
+            "fold_facing_bet": null,
+            "raise": 0.3280874899973326,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.1706771124790151,
+            "check": 0.2820369334079463,
+            "decisions": 1787,
+            "fold": 0.3324006715165081,
+            "fold_facing_bet": 0.5546218487394958,
+            "raise": 0.2148852825965305,
+            "raise_facing_bet": 0.16059757236227826
+          },
+          "turn": {
+            "call": 0.24043715846994534,
+            "check": 0.22243651558984248,
+            "decisions": 3111,
+            "fold": 0.22886531661845066,
+            "fold_facing_bet": 0.37671957671957673,
+            "raise": 0.3082610093217615,
+            "raise_facing_bet": 0.2275132275132275
+          }
+        },
+        "vpip": 0.6205
+      },
+      "name": "v3-seed2-v-hyper-121001",
+      "opponent": "hyper",
+      "policy": "v3-seed2"
+    },
+    {
+      "audit": {
+        "decisions": 11474,
+        "fallback": 2,
+        "fallback_by_street": {
+          "river": 2
+        },
+        "fallback_rate": 0.0001743071291615827
+      },
+      "cfr_ms_per_decision": 1.8109917946662972,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.5955249569707401,
+        "pfr": 0.5035702693930542,
+        "streets": {
+          "flop": {
+            "call": 0.0914139256727894,
+            "check": 0.3494233233660829,
+            "decisions": 2341,
+            "fold": 0.08586074327210594,
+            "fold_facing_bet": 0.4222689075630252,
+            "raise": 0.4733020076890218,
+            "raise_facing_bet": 0.12815126050420167
+          },
+          "preflop": {
+            "call": 0.30384325546345137,
+            "check": 0.0,
+            "decisions": 6635,
+            "fold": 0.22833458929917105,
+            "fold_facing_bet": null,
+            "raise": 0.4678221552373775,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.08571428571428572,
+            "check": 0.37777777777777777,
+            "decisions": 945,
+            "fold": 0.13968253968253969,
+            "fold_facing_bet": 0.4943820224719101,
+            "raise": 0.3968253968253968,
+            "raise_facing_bet": 0.20224719101123595
+          },
+          "turn": {
+            "call": 0.062459755312298776,
+            "check": 0.3271088216355441,
+            "decisions": 1553,
+            "fold": 0.11526078557630393,
+            "fold_facing_bet": 0.4837837837837838,
+            "raise": 0.4951706374758532,
+            "raise_facing_bet": 0.25405405405405407
+          }
+        },
+        "vpip": 0.7749107432651736
+      },
+      "name": "v2-v-tag-121001",
+      "opponent": "tag",
+      "policy": "v2"
+    },
+    {
+      "audit": {
+        "decisions": 11474,
+        "fallback": 2,
+        "fallback_by_street": {
+          "river": 2
+        },
+        "fallback_rate": 0.0001743071291615827
+      },
+      "cfr_ms_per_decision": 1.6914552834232361,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.5955249569707401,
+        "pfr": 0.5035702693930542,
+        "streets": {
+          "flop": {
+            "call": 0.0914139256727894,
+            "check": 0.3494233233660829,
+            "decisions": 2341,
+            "fold": 0.08586074327210594,
+            "fold_facing_bet": 0.4222689075630252,
+            "raise": 0.4733020076890218,
+            "raise_facing_bet": 0.12815126050420167
+          },
+          "preflop": {
+            "call": 0.30384325546345137,
+            "check": 0.0,
+            "decisions": 6635,
+            "fold": 0.22833458929917105,
+            "fold_facing_bet": null,
+            "raise": 0.4678221552373775,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.08571428571428572,
+            "check": 0.37777777777777777,
+            "decisions": 945,
+            "fold": 0.13968253968253969,
+            "fold_facing_bet": 0.4943820224719101,
+            "raise": 0.3968253968253968,
+            "raise_facing_bet": 0.20224719101123595
+          },
+          "turn": {
+            "call": 0.062459755312298776,
+            "check": 0.3271088216355441,
+            "decisions": 1553,
+            "fold": 0.11526078557630393,
+            "fold_facing_bet": 0.4837837837837838,
+            "raise": 0.4951706374758532,
+            "raise_facing_bet": 0.25405405405405407
+          }
+        },
+        "vpip": 0.7749107432651736
+      },
+      "name": "v2+adapt-v-tag-121001",
+      "opponent": "tag",
+      "policy": "v2+adapt"
+    },
+    {
+      "audit": {
+        "decisions": 12001,
+        "fallback": 0,
+        "fallback_by_street": {},
+        "fallback_rate": 0.0
+      },
+      "cfr_ms_per_decision": 1.7526011971506346,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.5197934595524957,
+        "pfr": 0.48393378773125606,
+        "streets": {
+          "flop": {
+            "call": 0.04914933837429111,
+            "check": 0.29867674858223064,
+            "decisions": 2645,
+            "fold": 0.08204158790170132,
+            "fold_facing_bet": 0.4297029702970297,
+            "raise": 0.5701323251417769,
+            "raise_facing_bet": 0.31287128712871287
+          },
+          "preflop": {
+            "call": 0.3288882229547498,
+            "check": 0.0,
+            "decisions": 6674,
+            "fold": 0.22400359604435122,
+            "fold_facing_bet": null,
+            "raise": 0.447108181000899,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.08341416100872939,
+            "check": 0.3947623666343356,
+            "decisions": 1031,
+            "fold": 0.15324927255092144,
+            "fold_facing_bet": 0.511326860841424,
+            "raise": 0.3685741998060136,
+            "raise_facing_bet": 0.21035598705501618
+          },
+          "turn": {
+            "call": 0.058146577831617204,
+            "check": 0.32707450030284674,
+            "decisions": 1651,
+            "fold": 0.10902483343428225,
+            "fold_facing_bet": 0.4358353510895884,
+            "raise": 0.5057540884312538,
+            "raise_facing_bet": 0.33171912832929784
+          }
+        },
+        "vpip": 0.7833495618305745
+      },
+      "name": "v3-v-tag-121001",
+      "opponent": "tag",
+      "policy": "v3"
+    },
+    {
+      "audit": {
+        "decisions": 12001,
+        "fallback": 0,
+        "fallback_by_street": {},
+        "fallback_rate": 0.0
+      },
+      "cfr_ms_per_decision": 1.7779757977671844,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.5197934595524957,
+        "pfr": 0.48393378773125606,
+        "streets": {
+          "flop": {
+            "call": 0.04914933837429111,
+            "check": 0.29867674858223064,
+            "decisions": 2645,
+            "fold": 0.08204158790170132,
+            "fold_facing_bet": 0.4297029702970297,
+            "raise": 0.5701323251417769,
+            "raise_facing_bet": 0.31287128712871287
+          },
+          "preflop": {
+            "call": 0.3288882229547498,
+            "check": 0.0,
+            "decisions": 6674,
+            "fold": 0.22400359604435122,
+            "fold_facing_bet": null,
+            "raise": 0.447108181000899,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.08341416100872939,
+            "check": 0.3947623666343356,
+            "decisions": 1031,
+            "fold": 0.15324927255092144,
+            "fold_facing_bet": 0.511326860841424,
+            "raise": 0.3685741998060136,
+            "raise_facing_bet": 0.21035598705501618
+          },
+          "turn": {
+            "call": 0.058146577831617204,
+            "check": 0.32707450030284674,
+            "decisions": 1651,
+            "fold": 0.10902483343428225,
+            "fold_facing_bet": 0.4358353510895884,
+            "raise": 0.5057540884312538,
+            "raise_facing_bet": 0.33171912832929784
+          }
+        },
+        "vpip": 0.7833495618305745
+      },
+      "name": "v3+adapt-v-tag-121001",
+      "opponent": "tag",
+      "policy": "v3+adapt"
+    },
+    {
+      "audit": {
+        "decisions": 10903,
+        "fallback": 0,
+        "fallback_by_street": {},
+        "fallback_rate": 0.0
+      },
+      "cfr_ms_per_decision": 1.6604184902321892,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.612736660929432,
+        "pfr": 0.4910743265173645,
+        "streets": {
+          "flop": {
+            "call": 0.05237020316027088,
+            "check": 0.27313769751693,
+            "decisions": 2215,
+            "fold": 0.08668171557562077,
+            "fold_facing_bet": 0.42857142857142855,
+            "raise": 0.5878103837471783,
+            "raise_facing_bet": 0.3125
+          },
+          "preflop": {
+            "call": 0.26434519303557913,
+            "check": 0.0,
+            "decisions": 6605,
+            "fold": 0.27660862982588946,
+            "fold_facing_bet": null,
+            "raise": 0.4590461771385314,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.10336239103362391,
+            "check": 0.39476961394769616,
+            "decisions": 803,
+            "fold": 0.12826899128268993,
+            "fold_facing_bet": 0.4309623430962343,
+            "raise": 0.37359900373599003,
+            "raise_facing_bet": 0.2217573221757322
+          },
+          "turn": {
+            "call": 0.0625,
+            "check": 0.29453125,
+            "decisions": 1280,
+            "fold": 0.1,
+            "fold_facing_bet": 0.4155844155844156,
+            "raise": 0.54296875,
+            "raise_facing_bet": 0.3246753246753247
+          }
+        },
+        "vpip": 0.7234664070107109
+      },
+      "name": "v3-seed2-v-tag-121001",
+      "opponent": "tag",
+      "policy": "v3-seed2"
+    },
+    {
+      "audit": {
+        "decisions": 37715,
+        "fallback": 393,
+        "fallback_by_street": {
+          "flop": 56,
+          "river": 213,
+          "turn": 124
+        },
+        "fallback_rate": 0.010420257192098634
+      },
+      "cfr_ms_per_decision": 2.292512844915776,
+      "frequencies": {
+        "bb_fold_vs_raise": null,
+        "pfr": 0.4432,
+        "streets": {
+          "flop": {
+            "call": 0.0313337456194599,
+            "check": 0.448155019583591,
+            "decisions": 9702,
+            "fold": 0.02906617192331478,
+            "fold_facing_bet": 0.4034334763948498,
+            "raise": 0.4914450628736343,
+            "raise_facing_bet": 0.16165951359084407
+          },
+          "preflop": {
+            "call": 0.1497,
+            "check": 0.3376,
+            "decisions": 10000,
+            "fold": 0.0695,
+            "fold_facing_bet": null,
+            "raise": 0.4432,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.050488786658999425,
+            "check": 0.5100632547441059,
+            "decisions": 8695,
+            "fold": 0.06612995974698102,
+            "fold_facing_bet": 0.46634225466342255,
+            "raise": 0.37331799884991373,
+            "raise_facing_bet": 0.17761557177615572
+          },
+          "turn": {
+            "call": 0.0437862202189311,
+            "check": 0.4448379480575231,
+            "decisions": 9318,
+            "fold": 0.03820562352436145,
+            "fold_facing_bet": 0.3832077502691066,
+            "raise": 0.47317020819918437,
+            "raise_facing_bet": 0.17761033369214208
+          }
+        },
+        "vpip": 0.5929
+      },
+      "name": "v2-v-station-121001",
+      "opponent": "station",
+      "policy": "v2"
+    },
+    {
+      "audit": {
+        "decisions": 37715,
+        "fallback": 393,
+        "fallback_by_street": {
+          "flop": 56,
+          "river": 213,
+          "turn": 124
+        },
+        "fallback_rate": 0.010420257192098634
+      },
+      "cfr_ms_per_decision": 2.3121211083921827,
+      "frequencies": {
+        "bb_fold_vs_raise": null,
+        "pfr": 0.4432,
+        "streets": {
+          "flop": {
+            "call": 0.0313337456194599,
+            "check": 0.448155019583591,
+            "decisions": 9702,
+            "fold": 0.02906617192331478,
+            "fold_facing_bet": 0.4034334763948498,
+            "raise": 0.4914450628736343,
+            "raise_facing_bet": 0.16165951359084407
+          },
+          "preflop": {
+            "call": 0.1497,
+            "check": 0.3376,
+            "decisions": 10000,
+            "fold": 0.0695,
+            "fold_facing_bet": null,
+            "raise": 0.4432,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.050488786658999425,
+            "check": 0.5100632547441059,
+            "decisions": 8695,
+            "fold": 0.06612995974698102,
+            "fold_facing_bet": 0.46634225466342255,
+            "raise": 0.37331799884991373,
+            "raise_facing_bet": 0.17761557177615572
+          },
+          "turn": {
+            "call": 0.0437862202189311,
+            "check": 0.4448379480575231,
+            "decisions": 9318,
+            "fold": 0.03820562352436145,
+            "fold_facing_bet": 0.3832077502691066,
+            "raise": 0.47317020819918437,
+            "raise_facing_bet": 0.17761033369214208
+          }
+        },
+        "vpip": 0.5929
+      },
+      "name": "v2+adapt-v-station-121001",
+      "opponent": "station",
+      "policy": "v2+adapt"
+    },
+    {
+      "audit": {
+        "decisions": 37430,
+        "fallback": 495,
+        "fallback_by_street": {
+          "flop": 111,
+          "river": 202,
+          "turn": 182
+        },
+        "fallback_rate": 0.013224686080683943
+      },
+      "cfr_ms_per_decision": 2.2792636753672997,
+      "frequencies": {
+        "bb_fold_vs_raise": null,
+        "pfr": 0.4101,
+        "streets": {
+          "flop": {
+            "call": 0.027138157894736843,
+            "check": 0.3598889802631579,
+            "decisions": 9728,
+            "fold": 0.027035361842105265,
+            "fold_facing_bet": 0.34880636604774534,
+            "raise": 0.5859375,
+            "raise_facing_bet": 0.3010610079575597
+          },
+          "preflop": {
+            "call": 0.1807,
+            "check": 0.3361,
+            "decisions": 10000,
+            "fold": 0.0731,
+            "fold_facing_bet": null,
+            "raise": 0.4101,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.045454545454545456,
+            "check": 0.4971590909090909,
+            "decisions": 8448,
+            "fold": 0.06806344696969698,
+            "fold_facing_bet": 0.49740484429065746,
+            "raise": 0.3893229166666667,
+            "raise_facing_bet": 0.1704152249134948
+          },
+          "turn": {
+            "call": 0.038685973633023556,
+            "check": 0.3842662632375189,
+            "decisions": 9254,
+            "fold": 0.036200561919170086,
+            "fold_facing_bet": 0.3500522466039707,
+            "raise": 0.5408472012102874,
+            "raise_facing_bet": 0.27586206896551724
+          }
+        },
+        "vpip": 0.5908
+      },
+      "name": "v3-v-station-121001",
+      "opponent": "station",
+      "policy": "v3"
+    },
+    {
+      "audit": {
+        "decisions": 37430,
+        "fallback": 495,
+        "fallback_by_street": {
+          "flop": 111,
+          "river": 202,
+          "turn": 182
+        },
+        "fallback_rate": 0.013224686080683943
+      },
+      "cfr_ms_per_decision": 2.2946573119959717,
+      "frequencies": {
+        "bb_fold_vs_raise": null,
+        "pfr": 0.4101,
+        "streets": {
+          "flop": {
+            "call": 0.027138157894736843,
+            "check": 0.3598889802631579,
+            "decisions": 9728,
+            "fold": 0.027035361842105265,
+            "fold_facing_bet": 0.34880636604774534,
+            "raise": 0.5859375,
+            "raise_facing_bet": 0.3010610079575597
+          },
+          "preflop": {
+            "call": 0.1807,
+            "check": 0.3361,
+            "decisions": 10000,
+            "fold": 0.0731,
+            "fold_facing_bet": null,
+            "raise": 0.4101,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.045454545454545456,
+            "check": 0.4971590909090909,
+            "decisions": 8448,
+            "fold": 0.06806344696969698,
+            "fold_facing_bet": 0.49740484429065746,
+            "raise": 0.3893229166666667,
+            "raise_facing_bet": 0.1704152249134948
+          },
+          "turn": {
+            "call": 0.038685973633023556,
+            "check": 0.3842662632375189,
+            "decisions": 9254,
+            "fold": 0.036200561919170086,
+            "fold_facing_bet": 0.3500522466039707,
+            "raise": 0.5408472012102874,
+            "raise_facing_bet": 0.27586206896551724
+          }
+        },
+        "vpip": 0.5908
+      },
+      "name": "v3+adapt-v-station-121001",
+      "opponent": "station",
+      "policy": "v3+adapt"
+    },
+    {
+      "audit": {
+        "decisions": 36517,
+        "fallback": 503,
+        "fallback_by_street": {
+          "flop": 113,
+          "river": 211,
+          "turn": 179
+        },
+        "fallback_rate": 0.013774406440835775
+      },
+      "cfr_ms_per_decision": 2.291036117561171,
+      "frequencies": {
+        "bb_fold_vs_raise": null,
+        "pfr": 0.4215,
+        "streets": {
+          "flop": {
+            "call": 0.023928004235044997,
+            "check": 0.3390153520381154,
+            "decisions": 9445,
+            "fold": 0.02784542085759661,
+            "fold_facing_bet": 0.3627586206896552,
+            "raise": 0.609211222869243,
+            "raise_facing_bet": 0.3255172413793103
+          },
+          "preflop": {
+            "call": 0.1402,
+            "check": 0.3391,
+            "decisions": 10000,
+            "fold": 0.0992,
+            "fold_facing_bet": null,
+            "raise": 0.4215,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.04179985247110893,
+            "check": 0.5073764445537251,
+            "decisions": 8134,
+            "fold": 0.07056798623063683,
+            "fold_facing_bet": 0.5222929936305732,
+            "raise": 0.3802557167445291,
+            "raise_facing_bet": 0.16833484986351227
+          },
+          "turn": {
+            "call": 0.036361602148131576,
+            "check": 0.38498545535914075,
+            "decisions": 8938,
+            "fold": 0.03748042067576639,
+            "fold_facing_bet": 0.3645266594124048,
+            "raise": 0.5411725218169613,
+            "raise_facing_bet": 0.28182807399347115
+          }
+        },
+        "vpip": 0.5617
+      },
+      "name": "v3-seed2-v-station-121001",
+      "opponent": "station",
+      "policy": "v3-seed2"
+    },
+    {
+      "audit": {
+        "decisions": 33905,
+        "fallback": 1242,
+        "fallback_by_street": {
+          "flop": 307,
+          "preflop": 63,
+          "river": 487,
+          "turn": 385
+        },
+        "fallback_rate": 0.03663176522636779
+      },
+      "cfr_ms_per_decision": 2.277903157380936,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.33904761904761904,
+        "pfr": 0.44235223038968885,
+        "streets": {
+          "flop": {
+            "call": 0.10396237742645588,
+            "check": 0.3749249549729838,
+            "decisions": 9994,
+            "fold": 0.10046027616569941,
+            "fold_facing_bet": 0.4193817878028404,
+            "raise": 0.42065239143486094,
+            "raise_facing_bet": 0.14661654135338345
+          },
+          "preflop": {
+            "call": 0.1923481587757054,
+            "check": 0.2894308943089431,
+            "decisions": 10455,
+            "fold": 0.09497847919655668,
+            "fold_facing_bet": null,
+            "raise": 0.4232424677187948,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.10986353428916912,
+            "check": 0.449127655899119,
+            "decisions": 5789,
+            "fold": 0.1185006045949214,
+            "fold_facing_bet": 0.43666454487587525,
+            "raise": 0.32250820521679047,
+            "raise_facing_bet": 0.158497772119669
+          },
+          "turn": {
+            "call": 0.11516890569975219,
+            "check": 0.3850267379679144,
+            "decisions": 7667,
+            "fold": 0.08595278466153645,
+            "fold_facing_bet": 0.35278372591006424,
+            "raise": 0.41385157167079695,
+            "raise_facing_bet": 0.1745182012847966
+          }
+        },
+        "vpip": 0.6118215688248918
+      },
+      "name": "v2-v-equity-121001",
+      "opponent": "equity",
+      "policy": "v2"
+    },
+    {
+      "audit": {
+        "decisions": 33905,
+        "fallback": 1242,
+        "fallback_by_street": {
+          "flop": 307,
+          "preflop": 63,
+          "river": 487,
+          "turn": 385
+        },
+        "fallback_rate": 0.03663176522636779
+      },
+      "cfr_ms_per_decision": 2.274021240643062,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.33904761904761904,
+        "pfr": 0.44235223038968885,
+        "streets": {
+          "flop": {
+            "call": 0.10396237742645588,
+            "check": 0.3749249549729838,
+            "decisions": 9994,
+            "fold": 0.10046027616569941,
+            "fold_facing_bet": 0.4193817878028404,
+            "raise": 0.42065239143486094,
+            "raise_facing_bet": 0.14661654135338345
+          },
+          "preflop": {
+            "call": 0.1923481587757054,
+            "check": 0.2894308943089431,
+            "decisions": 10455,
+            "fold": 0.09497847919655668,
+            "fold_facing_bet": null,
+            "raise": 0.4232424677187948,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.10986353428916912,
+            "check": 0.449127655899119,
+            "decisions": 5789,
+            "fold": 0.1185006045949214,
+            "fold_facing_bet": 0.43666454487587525,
+            "raise": 0.32250820521679047,
+            "raise_facing_bet": 0.158497772119669
+          },
+          "turn": {
+            "call": 0.11516890569975219,
+            "check": 0.3850267379679144,
+            "decisions": 7667,
+            "fold": 0.08595278466153645,
+            "fold_facing_bet": 0.35278372591006424,
+            "raise": 0.41385157167079695,
+            "raise_facing_bet": 0.1745182012847966
+          }
+        },
+        "vpip": 0.6118215688248918
+      },
+      "name": "v2+adapt-v-equity-121001",
+      "opponent": "equity",
+      "policy": "v2+adapt"
+    },
+    {
+      "audit": {
+        "decisions": 33084,
+        "fallback": 1546,
+        "fallback_by_street": {
+          "flop": 507,
+          "preflop": 139,
+          "river": 424,
+          "turn": 476
+        },
+        "fallback_rate": 0.0467295369362834
+      },
+      "cfr_ms_per_decision": 2.2760140249368392,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.3709981167608286,
+        "pfr": 0.4264424529251838,
+        "streets": {
+          "flop": {
+            "call": 0.08744682955781977,
+            "check": 0.29617172816302306,
+            "decisions": 10109,
+            "fold": 0.09813037887031358,
+            "fold_facing_bet": 0.383752417794971,
+            "raise": 0.5182510634088436,
+            "raise_facing_bet": 0.27427466150870405
+          },
+          "preflop": {
+            "call": 0.20882771713336498,
+            "check": 0.28476506881822494,
+            "decisions": 10535,
+            "fold": 0.10299003322259136,
+            "fold_facing_bet": null,
+            "raise": 0.4034171808258187,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.0823053199691596,
+            "check": 0.4456437933693138,
+            "decisions": 5188,
+            "fold": 0.13993831919814959,
+            "fold_facing_bet": 0.5434131736526946,
+            "raise": 0.33211256746337703,
+            "raise_facing_bet": 0.13697604790419163
+          },
+          "turn": {
+            "call": 0.1046607832322118,
+            "check": 0.33177054605626033,
+            "decisions": 7252,
+            "fold": 0.07887479316050745,
+            "fold_facing_bet": 0.3233465234595817,
+            "raise": 0.4846938775510204,
+            "raise_facing_bet": 0.2475975127190503
+          }
+        },
+        "vpip": 0.606484744738697
+      },
+      "name": "v3-v-equity-121001",
+      "opponent": "equity",
+      "policy": "v3"
+    },
+    {
+      "audit": {
+        "decisions": 33084,
+        "fallback": 1546,
+        "fallback_by_street": {
+          "flop": 507,
+          "preflop": 139,
+          "river": 424,
+          "turn": 476
+        },
+        "fallback_rate": 0.0467295369362834
+      },
+      "cfr_ms_per_decision": 2.2016339729179,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.3709981167608286,
+        "pfr": 0.4264424529251838,
+        "streets": {
+          "flop": {
+            "call": 0.08744682955781977,
+            "check": 0.29617172816302306,
+            "decisions": 10109,
+            "fold": 0.09813037887031358,
+            "fold_facing_bet": 0.383752417794971,
+            "raise": 0.5182510634088436,
+            "raise_facing_bet": 0.27427466150870405
+          },
+          "preflop": {
+            "call": 0.20882771713336498,
+            "check": 0.28476506881822494,
+            "decisions": 10535,
+            "fold": 0.10299003322259136,
+            "fold_facing_bet": null,
+            "raise": 0.4034171808258187,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.0823053199691596,
+            "check": 0.4456437933693138,
+            "decisions": 5188,
+            "fold": 0.13993831919814959,
+            "fold_facing_bet": 0.5434131736526946,
+            "raise": 0.33211256746337703,
+            "raise_facing_bet": 0.13697604790419163
+          },
+          "turn": {
+            "call": 0.1046607832322118,
+            "check": 0.33177054605626033,
+            "decisions": 7252,
+            "fold": 0.07887479316050745,
+            "fold_facing_bet": 0.3233465234595817,
+            "raise": 0.4846938775510204,
+            "raise_facing_bet": 0.2475975127190503
+          }
+        },
+        "vpip": 0.606484744738697
+      },
+      "name": "v3+adapt-v-equity-121001",
+      "opponent": "equity",
+      "policy": "v3+adapt"
+    },
+    {
+      "audit": {
+        "decisions": 32323,
+        "fallback": 1590,
+        "fallback_by_street": {
+          "flop": 522,
+          "preflop": 146,
+          "river": 456,
+          "turn": 466
+        },
+        "fallback_rate": 0.0491909785601584
+      },
+      "cfr_ms_per_decision": 2.1852820727966784,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.2895238095238095,
+        "pfr": 0.43993555533178935,
+        "streets": {
+          "flop": {
+            "call": 0.08213925327951564,
+            "check": 0.2812310797174571,
+            "decisions": 9910,
+            "fold": 0.09868819374369324,
+            "fold_facing_bet": 0.38824930527987295,
+            "raise": 0.5379414732593341,
+            "raise_facing_bet": 0.28860658991663357
+          },
+          "preflop": {
+            "call": 0.1698220911426125,
+            "check": 0.28627152506897535,
+            "decisions": 10511,
+            "fold": 0.125392446008943,
+            "fold_facing_bet": null,
+            "raise": 0.4185139377794691,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.07560483870967742,
+            "check": 0.455241935483871,
+            "decisions": 4960,
+            "fold": 0.14596774193548387,
+            "fold_facing_bet": 0.5691823899371069,
+            "raise": 0.32318548387096774,
+            "raise_facing_bet": 0.1360062893081761
+          },
+          "turn": {
+            "call": 0.10414866032843562,
+            "check": 0.33607029674445404,
+            "decisions": 6942,
+            "fold": 0.08210890233362143,
+            "fold_facing_bet": 0.3345070422535211,
+            "raise": 0.4776721405934889,
+            "raise_facing_bet": 0.24119718309859156
+          }
+        },
+        "vpip": 0.5841305004531265
+      },
+      "name": "v3-seed2-v-equity-121001",
+      "opponent": "equity",
+      "policy": "v3-seed2"
+    },
+    {
+      "audit": {
+        "decisions": 28182,
+        "fallback": 3065,
+        "fallback_by_street": {
+          "flop": 801,
+          "preflop": 860,
+          "river": 701,
+          "turn": 703
+        },
+        "fallback_rate": 0.10875736285572352
+      },
+      "cfr_ms_per_decision": 1.7971718533453593,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.5182027649769585,
+        "pfr": 0.4338,
+        "streets": {
+          "flop": {
+            "call": 0.2706463195691203,
+            "check": 0.25538599640933574,
+            "decisions": 6684,
+            "fold": 0.2488031119090365,
+            "fold_facing_bet": 0.42772633744855965,
+            "raise": 0.22516457211250748,
+            "raise_facing_bet": 0.10699588477366255
+          },
+          "preflop": {
+            "call": 0.34907147262386073,
+            "check": 0.03734667306242719,
+            "decisions": 14593,
+            "fold": 0.305763037072569,
+            "fold_facing_bet": null,
+            "raise": 0.307818817241143,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.23420355656451003,
+            "check": 0.3026863412788498,
+            "decisions": 2643,
+            "fold": 0.2727960650775634,
+            "fold_facing_bet": 0.4500624219725343,
+            "raise": 0.19031403707907682,
+            "raise_facing_bet": 0.16354556803995007
+          },
+          "turn": {
+            "call": 0.28108869075551385,
+            "check": 0.25926794931956826,
+            "decisions": 4262,
+            "fold": 0.2334584702017832,
+            "fold_facing_bet": 0.39421553090332806,
+            "raise": 0.2261848897231347,
+            "raise_facing_bet": 0.13114104595879555
+          }
+        },
+        "vpip": 0.6592
+      },
+      "name": "v2-v-hyper-121002",
+      "opponent": "hyper",
+      "policy": "v2"
+    },
+    {
+      "audit": {
+        "decisions": 41726,
+        "fallback": 4480,
+        "fallback_by_street": {
+          "flop": 1076,
+          "preflop": 931,
+          "river": 1314,
+          "turn": 1159
+        },
+        "fallback_rate": 0.1073671092364473
+      },
+      "cfr_ms_per_decision": 2.2135374755792325,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.10350391885661595,
+        "pfr": 0.4438,
+        "streets": {
+          "flop": {
+            "call": 0.353734810578985,
+            "check": 0.2858291636883488,
+            "decisions": 11192,
+            "fold": 0.11293781272337383,
+            "fold_facing_bet": 0.19996835943679797,
+            "raise": 0.24749821300929234,
+            "raise_facing_bet": 0.17370669197911723
+          },
+          "preflop": {
+            "call": 0.5754797301722444,
+            "check": 0.03588971117951405,
+            "decisions": 15269,
+            "fold": 0.08579474752767044,
+            "fold_facing_bet": null,
+            "raise": 0.3028358111205711,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.30269607843137253,
+            "check": 0.3321078431372549,
+            "decisions": 6528,
+            "fold": 0.18520220588235295,
+            "fold_facing_bet": 0.3210302708443972,
+            "raise": 0.1799938725490196,
+            "raise_facing_bet": 0.15427509293680297
+          },
+          "turn": {
+            "call": 0.36477051619549045,
+            "check": 0.2916332837358361,
+            "decisions": 8737,
+            "fold": 0.11147991301362023,
+            "fold_facing_bet": 0.19526864474739375,
+            "raise": 0.23211628705505322,
+            "raise_facing_bet": 0.16579791499599036
+          }
+        },
+        "vpip": 0.9004
+      },
+      "name": "v2+adapt-v-hyper-121002",
+      "opponent": "hyper",
+      "policy": "v2+adapt"
+    },
+    {
+      "audit": {
+        "decisions": 26371,
+        "fallback": 2660,
+        "fallback_by_street": {
+          "flop": 386,
+          "preflop": 1589,
+          "river": 319,
+          "turn": 366
+        },
+        "fallback_rate": 0.1008683781426567
+      },
+      "cfr_ms_per_decision": 1.6618708992443227,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.4891505078485688,
+        "pfr": 0.4862,
+        "streets": {
+          "flop": {
+            "call": 0.2109306792386939,
+            "check": 0.1857866247599092,
+            "decisions": 5727,
+            "fold": 0.23956696350619872,
+            "fold_facing_bet": 0.3871331828442438,
+            "raise": 0.3637157324951982,
+            "raise_facing_bet": 0.27200902934537247
+          },
+          "preflop": {
+            "call": 0.29709576138147564,
+            "check": 0.036172161172161175,
+            "decisions": 15288,
+            "fold": 0.3435374149659864,
+            "fold_facing_bet": null,
+            "raise": 0.32319466248037676,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.1789203084832905,
+            "check": 0.26066838046272495,
+            "decisions": 1945,
+            "fold": 0.32339331619537276,
+            "fold_facing_bet": 0.521558872305141,
+            "raise": 0.23701799485861183,
+            "raise_facing_bet": 0.18988391376451078
+          },
+          "turn": {
+            "call": 0.2436235708003518,
+            "check": 0.2260334212840809,
+            "decisions": 3411,
+            "fold": 0.2456757549105834,
+            "fold_facing_bet": 0.3932426091037072,
+            "raise": 0.28466725300498386,
+            "raise_facing_bet": 0.21679962458939464
+          }
+        },
+        "vpip": 0.6603
+      },
+      "name": "v3-v-hyper-121002",
+      "opponent": "hyper",
+      "policy": "v3"
+    },
+    {
+      "audit": {
+        "decisions": 38023,
+        "fallback": 3541,
+        "fallback_by_street": {
+          "flop": 616,
+          "preflop": 1771,
+          "river": 557,
+          "turn": 597
+        },
+        "fallback_rate": 0.093127843673566
+      },
+      "cfr_ms_per_decision": 2.0387400862903604,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.09475387104229258,
+        "pfr": 0.5092,
+        "streets": {
+          "flop": {
+            "call": 0.29033604675433106,
+            "check": 0.24629513671467335,
+            "decisions": 9582,
+            "fold": 0.12356501774159884,
+            "fold_facing_bet": 0.21457049655672344,
+            "raise": 0.33980379878939676,
+            "raise_facing_bet": 0.28126132656759695
+          },
+          "preflop": {
+            "call": 0.48385897515335524,
+            "check": 0.03463659458454675,
+            "decisions": 16139,
+            "fold": 0.15930355040584918,
+            "fold_facing_bet": null,
+            "raise": 0.32220087985624885,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.26133991269690643,
+            "check": 0.3391535395710761,
+            "decisions": 5269,
+            "fold": 0.23761624596697667,
+            "fold_facing_bet": 0.40928407976462894,
+            "raise": 0.1618903017650408,
+            "raise_facing_bet": 0.14056881333769206
+          },
+          "turn": {
+            "call": 0.35802644675103085,
+            "check": 0.29688610834636714,
+            "decisions": 7033,
+            "fold": 0.0996729702829518,
+            "fold_facing_bet": 0.17240531234628628,
+            "raise": 0.2454144746196502,
+            "raise_facing_bet": 0.20831283817019183
+          }
+        },
+        "vpip": 0.9032
+      },
+      "name": "v3+adapt-v-hyper-121002",
+      "opponent": "hyper",
+      "policy": "v3+adapt"
+    },
+    {
+      "audit": {
+        "decisions": 25470,
+        "fallback": 2311,
+        "fallback_by_street": {
+          "flop": 352,
+          "preflop": 1379,
+          "river": 269,
+          "turn": 311
+        },
+        "fallback_rate": 0.09073419709462112
+      },
+      "cfr_ms_per_decision": 1.6407150972521756,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.5196304849884527,
+        "pfr": 0.4721,
+        "streets": {
+          "flop": {
+            "call": 0.20946810455127032,
+            "check": 0.18899652714311826,
+            "decisions": 5471,
+            "fold": 0.24364832754523852,
+            "fold_facing_bet": 0.40042054671072397,
+            "raise": 0.35788704076037287,
+            "raise_facing_bet": 0.2553319315109642
+          },
+          "preflop": {
+            "call": 0.2734275571036238,
+            "check": 0.037041998794292985,
+            "decisions": 14929,
+            "fold": 0.3595016411012124,
+            "fold_facing_bet": null,
+            "raise": 0.3300288030008708,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.1791044776119403,
+            "check": 0.2894456289978678,
+            "decisions": 1876,
+            "fold": 0.31396588486140725,
+            "fold_facing_bet": 0.5184859154929577,
+            "raise": 0.21748400852878466,
+            "raise_facing_bet": 0.1857394366197183
+          },
+          "turn": {
+            "call": 0.23888541014402004,
+            "check": 0.2147777082028804,
+            "decisions": 3194,
+            "fold": 0.23512836568566062,
+            "fold_facing_bet": 0.38160569105691056,
+            "raise": 0.3112085159674389,
+            "raise_facing_bet": 0.2306910569105691
+          }
+        },
+        "vpip": 0.6301
+      },
+      "name": "v3-seed2-v-hyper-121002",
+      "opponent": "hyper",
+      "policy": "v3-seed2"
+    },
+    {
+      "audit": {
+        "decisions": 11268,
+        "fallback": 0,
+        "fallback_by_street": {},
+        "fallback_rate": 0.0
+      },
+      "cfr_ms_per_decision": 1.6172595286644906,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.5886019590382903,
+        "pfr": 0.5169034786869182,
+        "streets": {
+          "flop": {
+            "call": 0.09592111160914388,
+            "check": 0.3720304796055581,
+            "decisions": 2231,
+            "fold": 0.08830121021963246,
+            "fold_facing_bet": 0.42184154175588867,
+            "raise": 0.44374719856566563,
+            "raise_facing_bet": 0.11991434689507495
+          },
+          "preflop": {
+            "call": 0.29021937842778794,
+            "check": 0.0,
+            "decisions": 6564,
+            "fold": 0.226691042047532,
+            "fold_facing_bet": null,
+            "raise": 0.48308957952468007,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.09452201933404941,
+            "check": 0.34371643394199786,
+            "decisions": 931,
+            "fold": 0.13963480128893663,
+            "fold_facing_bet": 0.45614035087719296,
+            "raise": 0.4221267454350161,
+            "raise_facing_bet": 0.23508771929824562
+          },
+          "turn": {
+            "call": 0.07717250324254216,
+            "check": 0.31776913099870296,
+            "decisions": 1542,
+            "fold": 0.1245136186770428,
+            "fold_facing_bet": 0.4987012987012987,
+            "raise": 0.4805447470817121,
+            "raise_facing_bet": 0.19220779220779222
+          }
+        },
+        "vpip": 0.7757635146170178
+      },
+      "name": "v2-v-tag-121002",
+      "opponent": "tag",
+      "policy": "v2"
+    },
+    {
+      "audit": {
+        "decisions": 11268,
+        "fallback": 0,
+        "fallback_by_street": {},
+        "fallback_rate": 0.0
+      },
+      "cfr_ms_per_decision": 1.6217503135430993,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.5886019590382903,
+        "pfr": 0.5169034786869182,
+        "streets": {
+          "flop": {
+            "call": 0.09592111160914388,
+            "check": 0.3720304796055581,
+            "decisions": 2231,
+            "fold": 0.08830121021963246,
+            "fold_facing_bet": 0.42184154175588867,
+            "raise": 0.44374719856566563,
+            "raise_facing_bet": 0.11991434689507495
+          },
+          "preflop": {
+            "call": 0.29021937842778794,
+            "check": 0.0,
+            "decisions": 6564,
+            "fold": 0.226691042047532,
+            "fold_facing_bet": null,
+            "raise": 0.48308957952468007,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.09452201933404941,
+            "check": 0.34371643394199786,
+            "decisions": 931,
+            "fold": 0.13963480128893663,
+            "fold_facing_bet": 0.45614035087719296,
+            "raise": 0.4221267454350161,
+            "raise_facing_bet": 0.23508771929824562
+          },
+          "turn": {
+            "call": 0.07717250324254216,
+            "check": 0.31776913099870296,
+            "decisions": 1542,
+            "fold": 0.1245136186770428,
+            "fold_facing_bet": 0.4987012987012987,
+            "raise": 0.4805447470817121,
+            "raise_facing_bet": 0.19220779220779222
+          }
+        },
+        "vpip": 0.7757635146170178
+      },
+      "name": "v2+adapt-v-tag-121002",
+      "opponent": "tag",
+      "policy": "v2+adapt"
+    },
+    {
+      "audit": {
+        "decisions": 11759,
+        "fallback": 0,
+        "fallback_by_street": {},
+        "fallback_rate": 0.0
+      },
+      "cfr_ms_per_decision": 1.6730546055773627,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.5396260017809439,
+        "pfr": 0.4928956393924547,
+        "streets": {
+          "flop": {
+            "call": 0.04847040127135479,
+            "check": 0.31068732618196265,
+            "decisions": 2517,
+            "fold": 0.07508939213349225,
+            "fold_facing_bet": 0.3787575150300601,
+            "raise": 0.5657528804131903,
+            "raise_facing_bet": 0.37675350701402804
+          },
+          "preflop": {
+            "call": 0.312726723095526,
+            "check": 0.0,
+            "decisions": 6616,
+            "fold": 0.23110640870616686,
+            "fold_facing_bet": null,
+            "raise": 0.45616686819830715,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.10531496062992125,
+            "check": 0.4045275590551181,
+            "decisions": 1016,
+            "fold": 0.12401574803149606,
+            "fold_facing_bet": 0.4064516129032258,
+            "raise": 0.3661417322834646,
+            "raise_facing_bet": 0.24838709677419354
+          },
+          "turn": {
+            "call": 0.07763975155279502,
+            "check": 0.3360248447204969,
+            "decisions": 1610,
+            "fold": 0.1093167701863354,
+            "fold_facing_bet": 0.4282238442822384,
+            "raise": 0.47701863354037266,
+            "raise_facing_bet": 0.26763990267639903
+          }
+        },
+        "vpip": 0.772170504654581
+      },
+      "name": "v3-v-tag-121002",
+      "opponent": "tag",
+      "policy": "v3"
+    },
+    {
+      "audit": {
+        "decisions": 11759,
+        "fallback": 0,
+        "fallback_by_street": {},
+        "fallback_rate": 0.0
+      },
+      "cfr_ms_per_decision": 1.6784548271134383,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.5396260017809439,
+        "pfr": 0.4928956393924547,
+        "streets": {
+          "flop": {
+            "call": 0.04847040127135479,
+            "check": 0.31068732618196265,
+            "decisions": 2517,
+            "fold": 0.07508939213349225,
+            "fold_facing_bet": 0.3787575150300601,
+            "raise": 0.5657528804131903,
+            "raise_facing_bet": 0.37675350701402804
+          },
+          "preflop": {
+            "call": 0.312726723095526,
+            "check": 0.0,
+            "decisions": 6616,
+            "fold": 0.23110640870616686,
+            "fold_facing_bet": null,
+            "raise": 0.45616686819830715,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.10531496062992125,
+            "check": 0.4045275590551181,
+            "decisions": 1016,
+            "fold": 0.12401574803149606,
+            "fold_facing_bet": 0.4064516129032258,
+            "raise": 0.3661417322834646,
+            "raise_facing_bet": 0.24838709677419354
+          },
+          "turn": {
+            "call": 0.07763975155279502,
+            "check": 0.3360248447204969,
+            "decisions": 1610,
+            "fold": 0.1093167701863354,
+            "fold_facing_bet": 0.4282238442822384,
+            "raise": 0.47701863354037266,
+            "raise_facing_bet": 0.26763990267639903
+          }
+        },
+        "vpip": 0.772170504654581
+      },
+      "name": "v3+adapt-v-tag-121002",
+      "opponent": "tag",
+      "policy": "v3+adapt"
+    },
+    {
+      "audit": {
+        "decisions": 10842,
+        "fallback": 0,
+        "fallback_by_street": {},
+        "fallback_rate": 0.0
+      },
+      "cfr_ms_per_decision": 1.5534832700627361,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.6028495102404274,
+        "pfr": 0.5022048015678588,
+        "streets": {
+          "flop": {
+            "call": 0.059626763768775605,
+            "check": 0.2753755120619026,
+            "decisions": 2197,
+            "fold": 0.09103322712790168,
+            "fold_facing_bet": 0.4319654427645788,
+            "raise": 0.5739644970414202,
+            "raise_facing_bet": 0.28509719222462204
+          },
+          "preflop": {
+            "call": 0.26097598286675844,
+            "check": 0.0,
+            "decisions": 6537,
+            "fold": 0.2674009484473,
+            "fold_facing_bet": null,
+            "raise": 0.47162306868594156,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.10434782608695652,
+            "check": 0.3652173913043478,
+            "decisions": 805,
+            "fold": 0.12049689440993788,
+            "fold_facing_bet": 0.383399209486166,
+            "raise": 0.40993788819875776,
+            "raise_facing_bet": 0.2845849802371542
+          },
+          "turn": {
+            "call": 0.059094397544128936,
+            "check": 0.31542594013814274,
+            "decisions": 1303,
+            "fold": 0.1273983115886416,
+            "fold_facing_bet": 0.4649859943977591,
+            "raise": 0.4980813507290867,
+            "raise_facing_bet": 0.31932773109243695
+          }
+        },
+        "vpip": 0.7328107137024334
+      },
+      "name": "v3-seed2-v-tag-121002",
+      "opponent": "tag",
+      "policy": "v3-seed2"
+    },
+    {
+      "audit": {
+        "decisions": 37424,
+        "fallback": 346,
+        "fallback_by_street": {
+          "flop": 61,
+          "river": 180,
+          "turn": 105
+        },
+        "fallback_rate": 0.009245404018811458
+      },
+      "cfr_ms_per_decision": 2.2839426200831814,
+      "frequencies": {
+        "bb_fold_vs_raise": null,
+        "pfr": 0.4525,
+        "streets": {
+          "flop": {
+            "call": 0.027429872683987166,
+            "check": 0.4503674567850119,
+            "decisions": 9661,
+            "fold": 0.033640409895455956,
+            "fold_facing_bet": 0.46494992846924177,
+            "raise": 0.488562260635545,
+            "raise_facing_bet": 0.15593705293276108
+          },
+          "preflop": {
+            "call": 0.1411,
+            "check": 0.3352,
+            "decisions": 10000,
+            "fold": 0.0712,
+            "fold_facing_bet": null,
+            "raise": 0.4525,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.058967772069126574,
+            "check": 0.5179822512844465,
+            "decisions": 8564,
+            "fold": 0.05990191499299393,
+            "fold_facing_bet": 0.42572614107883816,
+            "raise": 0.363148061653433,
+            "raise_facing_bet": 0.15518672199170125
+          },
+          "turn": {
+            "call": 0.04152625285357104,
+            "check": 0.447766061528427,
+            "decisions": 9199,
+            "fold": 0.04152625285357104,
+            "fold_facing_bet": 0.4147665580890337,
+            "raise": 0.4691814327644309,
+            "raise_facing_bet": 0.17046688382193267
+          }
+        },
+        "vpip": 0.5936
+      },
+      "name": "v2-v-station-121002",
+      "opponent": "station",
+      "policy": "v2"
+    },
+    {
+      "audit": {
+        "decisions": 37424,
+        "fallback": 346,
+        "fallback_by_street": {
+          "flop": 61,
+          "river": 180,
+          "turn": 105
+        },
+        "fallback_rate": 0.009245404018811458
+      },
+      "cfr_ms_per_decision": 2.324818913051322,
+      "frequencies": {
+        "bb_fold_vs_raise": null,
+        "pfr": 0.4525,
+        "streets": {
+          "flop": {
+            "call": 0.027429872683987166,
+            "check": 0.4503674567850119,
+            "decisions": 9661,
+            "fold": 0.033640409895455956,
+            "fold_facing_bet": 0.46494992846924177,
+            "raise": 0.488562260635545,
+            "raise_facing_bet": 0.15593705293276108
+          },
+          "preflop": {
+            "call": 0.1411,
+            "check": 0.3352,
+            "decisions": 10000,
+            "fold": 0.0712,
+            "fold_facing_bet": null,
+            "raise": 0.4525,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.058967772069126574,
+            "check": 0.5179822512844465,
+            "decisions": 8564,
+            "fold": 0.05990191499299393,
+            "fold_facing_bet": 0.42572614107883816,
+            "raise": 0.363148061653433,
+            "raise_facing_bet": 0.15518672199170125
+          },
+          "turn": {
+            "call": 0.04152625285357104,
+            "check": 0.447766061528427,
+            "decisions": 9199,
+            "fold": 0.04152625285357104,
+            "fold_facing_bet": 0.4147665580890337,
+            "raise": 0.4691814327644309,
+            "raise_facing_bet": 0.17046688382193267
+          }
+        },
+        "vpip": 0.5936
+      },
+      "name": "v2+adapt-v-station-121002",
+      "opponent": "station",
+      "policy": "v2+adapt"
+    },
+    {
+      "audit": {
+        "decisions": 37075,
+        "fallback": 461,
+        "fallback_by_street": {
+          "flop": 117,
+          "river": 193,
+          "turn": 151
+        },
+        "fallback_rate": 0.012434254888739043
+      },
+      "cfr_ms_per_decision": 2.344248795899471,
+      "frequencies": {
+        "bb_fold_vs_raise": null,
+        "pfr": 0.4132,
+        "streets": {
+          "flop": {
+            "call": 0.024221095124728288,
+            "check": 0.367560293965428,
+            "decisions": 9661,
+            "fold": 0.03219128454611324,
+            "fold_facing_bet": 0.40921052631578947,
+            "raise": 0.5760273263637304,
+            "raise_facing_bet": 0.28289473684210525
+          },
+          "preflop": {
+            "call": 0.1717,
+            "check": 0.3362,
+            "decisions": 10000,
+            "fold": 0.0789,
+            "fold_facing_bet": null,
+            "raise": 0.4132,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.04783599088838269,
+            "check": 0.4969428126123966,
+            "decisions": 8341,
+            "fold": 0.06701834312432563,
+            "fold_facing_bet": 0.47696245733788395,
+            "raise": 0.3882028533748951,
+            "raise_facing_bet": 0.1825938566552901
+          },
+          "turn": {
+            "call": 0.039127080348286124,
+            "check": 0.3857599470957787,
+            "decisions": 9073,
+            "fold": 0.0364818692824865,
+            "fold_facing_bet": 0.3661504424778761,
+            "raise": 0.5386311032734487,
+            "raise_facing_bet": 0.2411504424778761
+          }
+        },
+        "vpip": 0.5849
+      },
+      "name": "v3-v-station-121002",
+      "opponent": "station",
+      "policy": "v3"
+    },
+    {
+      "audit": {
+        "decisions": 37075,
+        "fallback": 461,
+        "fallback_by_street": {
+          "flop": 117,
+          "river": 193,
+          "turn": 151
+        },
+        "fallback_rate": 0.012434254888739043
+      },
+      "cfr_ms_per_decision": 2.352151284879195,
+      "frequencies": {
+        "bb_fold_vs_raise": null,
+        "pfr": 0.4132,
+        "streets": {
+          "flop": {
+            "call": 0.024221095124728288,
+            "check": 0.367560293965428,
+            "decisions": 9661,
+            "fold": 0.03219128454611324,
+            "fold_facing_bet": 0.40921052631578947,
+            "raise": 0.5760273263637304,
+            "raise_facing_bet": 0.28289473684210525
+          },
+          "preflop": {
+            "call": 0.1717,
+            "check": 0.3362,
+            "decisions": 10000,
+            "fold": 0.0789,
+            "fold_facing_bet": null,
+            "raise": 0.4132,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.04783599088838269,
+            "check": 0.4969428126123966,
+            "decisions": 8341,
+            "fold": 0.06701834312432563,
+            "fold_facing_bet": 0.47696245733788395,
+            "raise": 0.3882028533748951,
+            "raise_facing_bet": 0.1825938566552901
+          },
+          "turn": {
+            "call": 0.039127080348286124,
+            "check": 0.3857599470957787,
+            "decisions": 9073,
+            "fold": 0.0364818692824865,
+            "fold_facing_bet": 0.3661504424778761,
+            "raise": 0.5386311032734487,
+            "raise_facing_bet": 0.2411504424778761
+          }
+        },
+        "vpip": 0.5849
+      },
+      "name": "v3+adapt-v-station-121002",
+      "opponent": "station",
+      "policy": "v3+adapt"
+    },
+    {
+      "audit": {
+        "decisions": 36529,
+        "fallback": 482,
+        "fallback_by_street": {
+          "flop": 124,
+          "river": 207,
+          "turn": 151
+        },
+        "fallback_rate": 0.01319499575679597
+      },
+      "cfr_ms_per_decision": 2.337064536450183,
+      "frequencies": {
+        "bb_fold_vs_raise": null,
+        "pfr": 0.4292,
+        "streets": {
+          "flop": {
+            "call": 0.024005053695514846,
+            "check": 0.3432301537165719,
+            "decisions": 9498,
+            "fold": 0.03200673826068646,
+            "fold_facing_bet": 0.3989501312335958,
+            "raise": 0.6007580543272267,
+            "raise_facing_bet": 0.30183727034120733
+          },
+          "preflop": {
+            "call": 0.1387,
+            "check": 0.3362,
+            "decisions": 10000,
+            "fold": 0.0959,
+            "fold_facing_bet": null,
+            "raise": 0.4292,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.046129309287204025,
+            "check": 0.4967488651699178,
+            "decisions": 8151,
+            "fold": 0.07103422892896577,
+            "fold_facing_bet": 0.5052356020942408,
+            "raise": 0.3860875966139124,
+            "raise_facing_bet": 0.16666666666666666
+          },
+          "turn": {
+            "call": 0.037162162162162164,
+            "check": 0.388963963963964,
+            "decisions": 8880,
+            "fold": 0.039527027027027026,
+            "fold_facing_bet": 0.39571589627959414,
+            "raise": 0.5343468468468469,
+            "raise_facing_bet": 0.2322435174746336
+          }
+        },
+        "vpip": 0.5679
+      },
+      "name": "v3-seed2-v-station-121002",
+      "opponent": "station",
+      "policy": "v3-seed2"
+    },
+    {
+      "audit": {
+        "decisions": 33589,
+        "fallback": 1148,
+        "fallback_by_street": {
+          "flop": 310,
+          "preflop": 53,
+          "river": 430,
+          "turn": 355
+        },
+        "fallback_rate": 0.03417785584566376
+      },
+      "cfr_ms_per_decision": 2.2763544700053338,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.3359223300970874,
+        "pfr": 0.45306368849984907,
+        "streets": {
+          "flop": {
+            "call": 0.10474013713604292,
+            "check": 0.3696710722448574,
+            "decisions": 10063,
+            "fold": 0.11020570406439431,
+            "fold_facing_bet": 0.4386867088607595,
+            "raise": 0.41538308655470535,
+            "raise_facing_bet": 0.14438291139240506
+          },
+          "preflop": {
+            "call": 0.18179207352096496,
+            "check": 0.28709553896228224,
+            "decisions": 10446,
+            "fold": 0.09649626651349799,
+            "fold_facing_bet": null,
+            "raise": 0.4346161210032548,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.11186440677966102,
+            "check": 0.4513826940231936,
+            "decisions": 5605,
+            "fold": 0.11828724353256022,
+            "fold_facing_bet": 0.4339005235602094,
+            "raise": 0.3184656556645852,
+            "raise_facing_bet": 0.15575916230366493
+          },
+          "turn": {
+            "call": 0.10983277591973244,
+            "check": 0.3824749163879599,
+            "decisions": 7475,
+            "fold": 0.09123745819397994,
+            "fold_facing_bet": 0.3778393351800554,
+            "raise": 0.4164548494983278,
+            "raise_facing_bet": 0.1673130193905817
+          }
+        },
+        "vpip": 0.6135426099205151
+      },
+      "name": "v2-v-equity-121002",
+      "opponent": "equity",
+      "policy": "v2"
+    },
+    {
+      "audit": {
+        "decisions": 33589,
+        "fallback": 1148,
+        "fallback_by_street": {
+          "flop": 310,
+          "preflop": 53,
+          "river": 430,
+          "turn": 355
+        },
+        "fallback_rate": 0.03417785584566376
+      },
+      "cfr_ms_per_decision": 2.263344988774474,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.3359223300970874,
+        "pfr": 0.45306368849984907,
+        "streets": {
+          "flop": {
+            "call": 0.10474013713604292,
+            "check": 0.3696710722448574,
+            "decisions": 10063,
+            "fold": 0.11020570406439431,
+            "fold_facing_bet": 0.4386867088607595,
+            "raise": 0.41538308655470535,
+            "raise_facing_bet": 0.14438291139240506
+          },
+          "preflop": {
+            "call": 0.18179207352096496,
+            "check": 0.28709553896228224,
+            "decisions": 10446,
+            "fold": 0.09649626651349799,
+            "fold_facing_bet": null,
+            "raise": 0.4346161210032548,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.11186440677966102,
+            "check": 0.4513826940231936,
+            "decisions": 5605,
+            "fold": 0.11828724353256022,
+            "fold_facing_bet": 0.4339005235602094,
+            "raise": 0.3184656556645852,
+            "raise_facing_bet": 0.15575916230366493
+          },
+          "turn": {
+            "call": 0.10983277591973244,
+            "check": 0.3824749163879599,
+            "decisions": 7475,
+            "fold": 0.09123745819397994,
+            "fold_facing_bet": 0.3778393351800554,
+            "raise": 0.4164548494983278,
+            "raise_facing_bet": 0.1673130193905817
+          }
+        },
+        "vpip": 0.6135426099205151
+      },
+      "name": "v2+adapt-v-equity-121002",
+      "opponent": "equity",
+      "policy": "v2+adapt"
+    },
+    {
+      "audit": {
+        "decisions": 32910,
+        "fallback": 1517,
+        "fallback_by_street": {
+          "flop": 533,
+          "preflop": 135,
+          "river": 398,
+          "turn": 451
+        },
+        "fallback_rate": 0.046095411728957765
+      },
+      "cfr_ms_per_decision": 2.235297208538533,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.39921722113502933,
+        "pfr": 0.42841332125968407,
+        "streets": {
+          "flop": {
+            "call": 0.09327036599763873,
+            "check": 0.2970287288469107,
+            "decisions": 10164,
+            "fold": 0.10153482880755609,
+            "fold_facing_bet": 0.37595628415300547,
+            "raise": 0.5081660763478946,
+            "raise_facing_bet": 0.2786885245901639
+          },
+          "preflop": {
+            "call": 0.19878373242113265,
+            "check": 0.28658304827061953,
+            "decisions": 10524,
+            "fold": 0.10851387305207146,
+            "fold_facing_bet": null,
+            "raise": 0.40611934625617635,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.08349705304518663,
+            "check": 0.4430255402750491,
+            "decisions": 5090,
+            "fold": 0.14263261296660118,
+            "fold_facing_bet": 0.5361890694239291,
+            "raise": 0.33084479371316305,
+            "raise_facing_bet": 0.1499261447562777
+          },
+          "turn": {
+            "call": 0.10291643297812675,
+            "check": 0.3311833987661245,
+            "decisions": 7132,
+            "fold": 0.08454851374088615,
+            "fold_facing_bet": 0.3401015228426396,
+            "raise": 0.4813516545148626,
+            "raise_facing_bet": 0.24591088550479415
+          }
+        },
+        "vpip": 0.598953617064091
+      },
+      "name": "v3-v-equity-121002",
+      "opponent": "equity",
+      "policy": "v3"
+    },
+    {
+      "audit": {
+        "decisions": 32910,
+        "fallback": 1517,
+        "fallback_by_street": {
+          "flop": 533,
+          "preflop": 135,
+          "river": 398,
+          "turn": 451
+        },
+        "fallback_rate": 0.046095411728957765
+      },
+      "cfr_ms_per_decision": 2.226405554480474,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.39921722113502933,
+        "pfr": 0.42841332125968407,
+        "streets": {
+          "flop": {
+            "call": 0.09327036599763873,
+            "check": 0.2970287288469107,
+            "decisions": 10164,
+            "fold": 0.10153482880755609,
+            "fold_facing_bet": 0.37595628415300547,
+            "raise": 0.5081660763478946,
+            "raise_facing_bet": 0.2786885245901639
+          },
+          "preflop": {
+            "call": 0.19878373242113265,
+            "check": 0.28658304827061953,
+            "decisions": 10524,
+            "fold": 0.10851387305207146,
+            "fold_facing_bet": null,
+            "raise": 0.40611934625617635,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.08349705304518663,
+            "check": 0.4430255402750491,
+            "decisions": 5090,
+            "fold": 0.14263261296660118,
+            "fold_facing_bet": 0.5361890694239291,
+            "raise": 0.33084479371316305,
+            "raise_facing_bet": 0.1499261447562777
+          },
+          "turn": {
+            "call": 0.10291643297812675,
+            "check": 0.3311833987661245,
+            "decisions": 7132,
+            "fold": 0.08454851374088615,
+            "fold_facing_bet": 0.3401015228426396,
+            "raise": 0.4813516545148626,
+            "raise_facing_bet": 0.24591088550479415
+          }
+        },
+        "vpip": 0.598953617064091
+      },
+      "name": "v3+adapt-v-equity-121002",
+      "opponent": "equity",
+      "policy": "v3+adapt"
+    },
+    {
+      "audit": {
+        "decisions": 32404,
+        "fallback": 1526,
+        "fallback_by_street": {
+          "flop": 565,
+          "preflop": 118,
+          "river": 416,
+          "turn": 427
+        },
+        "fallback_rate": 0.04709295148747068
+      },
+      "cfr_ms_per_decision": 2.217618313448773,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.30544747081712065,
+        "pfr": 0.442197404165409,
+        "streets": {
+          "flop": {
+            "call": 0.08487121286884437,
+            "check": 0.277410441132932,
+            "decisions": 10133,
+            "fold": 0.10786539030889174,
+            "fold_facing_bet": 0.3958710612097066,
+            "raise": 0.5298529556893319,
+            "raise_facing_bet": 0.29264759145237235
+          },
+          "preflop": {
+            "call": 0.17121327737504768,
+            "check": 0.28758107592521936,
+            "decisions": 10484,
+            "fold": 0.1192293017932087,
+            "fold_facing_bet": null,
+            "raise": 0.42197634490652425,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.08179043743641913,
+            "check": 0.4390640895218718,
+            "decisions": 4915,
+            "fold": 0.14506612410986774,
+            "fold_facing_bet": 0.5413819286256644,
+            "raise": 0.3340793489318413,
+            "raise_facing_bet": 0.1533788914198937
+          },
+          "turn": {
+            "call": 0.10317229336437718,
+            "check": 0.33425494761350405,
+            "decisions": 6872,
+            "fold": 0.08323632130384168,
+            "fold_facing_bet": 0.34210526315789475,
+            "raise": 0.47933643771827705,
+            "raise_facing_bet": 0.23385167464114834
+          }
+        },
+        "vpip": 0.5859744441090653
+      },
+      "name": "v3-seed2-v-equity-121002",
+      "opponent": "equity",
+      "policy": "v3-seed2"
+    },
+    {
+      "audit": {
+        "decisions": 28116,
+        "fallback": 3001,
+        "fallback_by_street": {
+          "flop": 839,
+          "preflop": 821,
+          "river": 666,
+          "turn": 675
+        },
+        "fallback_rate": 0.10673637786313843
+      },
+      "cfr_ms_per_decision": 1.8123911255880198,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.5207902595910866,
+        "pfr": 0.421,
+        "streets": {
+          "flop": {
+            "call": 0.26626506024096386,
+            "check": 0.26024096385542167,
+            "decisions": 6640,
+            "fold": 0.2394578313253012,
+            "fold_facing_bet": 0.4228723404255319,
+            "raise": 0.23403614457831326,
+            "raise_facing_bet": 0.10691489361702128
+          },
+          "preflop": {
+            "call": 0.3520594100254418,
+            "check": 0.03671869627999725,
+            "decisions": 14543,
+            "fold": 0.3103211166884412,
+            "fold_facing_bet": null,
+            "raise": 0.3009007770061198,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.24832962138084633,
+            "check": 0.3051224944320713,
+            "decisions": 2694,
+            "fold": 0.2383073496659243,
+            "fold_facing_bet": 0.40428211586901763,
+            "raise": 0.20824053452115812,
+            "raise_facing_bet": 0.17443324937027707
+          },
+          "turn": {
+            "call": 0.2790752535975466,
+            "check": 0.25690021231422505,
+            "decisions": 4239,
+            "fold": 0.23071479122434538,
+            "fold_facing_bet": 0.39324487334137515,
+            "raise": 0.23330974286388298,
+            "raise_facing_bet": 0.13108162444712504
+          }
+        },
+        "vpip": 0.6543
+      },
+      "name": "v2-v-hyper-121003",
+      "opponent": "hyper",
+      "policy": "v2"
+    },
+    {
+      "audit": {
+        "decisions": 41924,
+        "fallback": 4439,
+        "fallback_by_street": {
+          "flop": 1116,
+          "preflop": 899,
+          "river": 1296,
+          "turn": 1128
+        },
+        "fallback_rate": 0.10588207232134339
+      },
+      "cfr_ms_per_decision": 2.2561480100412443,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.10340073529411764,
+        "pfr": 0.4324,
+        "streets": {
+          "flop": {
+            "call": 0.3469785575048733,
+            "check": 0.2814105972000709,
+            "decisions": 11286,
+            "fold": 0.113946482367535,
+            "fold_facing_bet": 0.20454906950850962,
+            "raise": 0.2576643629275208,
+            "raise_facing_bet": 0.17257833624940352
+          },
+          "preflop": {
+            "call": 0.5866482867270579,
+            "check": 0.0351844558225023,
+            "decisions": 15234,
+            "fold": 0.08106866220296705,
+            "fold_facing_bet": null,
+            "raise": 0.2970985952474728,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.30749432248296743,
+            "check": 0.33292959878879635,
+            "decisions": 6605,
+            "fold": 0.17638152914458743,
+            "fold_facing_bet": 0.3078752642706131,
+            "raise": 0.18319454958364875,
+            "raise_facing_bet": 0.1553911205073996
+          },
+          "turn": {
+            "call": 0.35413115126718947,
+            "check": 0.2962836685987044,
+            "decisions": 8799,
+            "fold": 0.11489942038868053,
+            "fold_facing_bet": 0.20301204819277108,
+            "raise": 0.2346857597454256,
+            "raise_facing_bet": 0.171285140562249
+          }
+        },
+        "vpip": 0.9013
+      },
+      "name": "v2+adapt-v-hyper-121003",
+      "opponent": "hyper",
+      "policy": "v2+adapt"
+    },
+    {
+      "audit": {
+        "decisions": 26034,
+        "fallback": 2611,
+        "fallback_by_street": {
+          "flop": 381,
+          "preflop": 1604,
+          "river": 309,
+          "turn": 317
+        },
+        "fallback_rate": 0.10029192594299761
+      },
+      "cfr_ms_per_decision": 1.6910191770388137,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.5005767012687428,
+        "pfr": 0.4837,
+        "streets": {
+          "flop": {
+            "call": 0.20754376466341815,
+            "check": 0.18444324129218553,
+            "decisions": 5541,
+            "fold": 0.23930698429886302,
+            "fold_facing_bet": 0.3927725118483412,
+            "raise": 0.3687060097455333,
+            "raise_facing_bet": 0.2665876777251185
+          },
+          "preflop": {
+            "call": 0.29202846510413266,
+            "check": 0.03656068420709016,
+            "decisions": 15317,
+            "fold": 0.3507867075798133,
+            "fold_facing_bet": null,
+            "raise": 0.3206241431089639,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.20883116883116884,
+            "check": 0.24883116883116882,
+            "decisions": 1925,
+            "fold": 0.30493506493506495,
+            "fold_facing_bet": 0.48273026315789475,
+            "raise": 0.2374025974025974,
+            "raise_facing_bet": 0.18667763157894737
+          },
+          "turn": {
+            "call": 0.24484773915718241,
+            "check": 0.22669947708397417,
+            "decisions": 3251,
+            "fold": 0.22946785604429407,
+            "fold_facing_bet": 0.37374749498997994,
+            "raise": 0.2989849277145494,
+            "raise_facing_bet": 0.22745490981963928
+          }
+        },
+        "vpip": 0.6549
+      },
+      "name": "v3-v-hyper-121003",
+      "opponent": "hyper",
+      "policy": "v3"
+    },
+    {
+      "audit": {
+        "decisions": 37998,
+        "fallback": 3527,
+        "fallback_by_street": {
+          "flop": 635,
+          "preflop": 1753,
+          "river": 551,
+          "turn": 588
+        },
+        "fallback_rate": 0.09282067477235643
+      },
+      "cfr_ms_per_decision": 2.1497534590221723,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.09690816797415783,
+        "pfr": 0.5048,
+        "streets": {
+          "flop": {
+            "call": 0.2881214024071167,
+            "check": 0.24406070120355836,
+            "decisions": 9555,
+            "fold": 0.12276295133437991,
+            "fold_facing_bet": 0.21491388787101504,
+            "raise": 0.34505494505494505,
+            "raise_facing_bet": 0.2806888970318798
+          },
+          "preflop": {
+            "call": 0.48622486969471335,
+            "check": 0.03487217671878878,
+            "decisions": 16116,
+            "fold": 0.15872424919334824,
+            "fold_facing_bet": null,
+            "raise": 0.32017870439314966,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.25444234404536864,
+            "check": 0.3376181474480151,
+            "decisions": 5290,
+            "fold": 0.23950850661625708,
+            "fold_facing_bet": 0.41459424083769636,
+            "raise": 0.16843100189035917,
+            "raise_facing_bet": 0.14496073298429318
+          },
+          "turn": {
+            "call": 0.35085974136705983,
+            "check": 0.3066647719198522,
+            "decisions": 7037,
+            "fold": 0.09975841978115674,
+            "fold_facing_bet": 0.17467031599900473,
+            "raise": 0.2427170669319312,
+            "raise_facing_bet": 0.21099776063697437
+          }
+        },
+        "vpip": 0.9021
+      },
+      "name": "v3+adapt-v-hyper-121003",
+      "opponent": "hyper",
+      "policy": "v3+adapt"
+    },
+    {
+      "audit": {
+        "decisions": 25001,
+        "fallback": 2348,
+        "fallback_by_street": {
+          "flop": 342,
+          "preflop": 1435,
+          "river": 271,
+          "turn": 300
+        },
+        "fallback_rate": 0.093916243350266
+      },
+      "cfr_ms_per_decision": 1.6954952033104609,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.5314364387333639,
+        "pfr": 0.4691,
+        "streets": {
+          "flop": {
+            "call": 0.1989298681444678,
+            "check": 0.18058475062105867,
+            "decisions": 5233,
+            "fold": 0.2415440473915536,
+            "fold_facing_bet": 0.3994943109987358,
+            "raise": 0.37894133384291995,
+            "raise_facing_bet": 0.27149178255372947
+          },
+          "preflop": {
+            "call": 0.2682209900460953,
+            "check": 0.03600774934865388,
+            "decisions": 14969,
+            "fold": 0.3683612799786225,
+            "fold_facing_bet": null,
+            "raise": 0.32740998062662835,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.18354430379746836,
+            "check": 0.2756041426927503,
+            "decisions": 1738,
+            "fold": 0.30322209436133485,
+            "fold_facing_bet": 0.498109640831758,
+            "raise": 0.2376294591484465,
+            "raise_facing_bet": 0.2003780718336484
+          },
+          "turn": {
+            "call": 0.238484155504737,
+            "check": 0.2185560274420124,
+            "decisions": 3061,
+            "fold": 0.23260372427311335,
+            "fold_facing_bet": 0.3745397159389795,
+            "raise": 0.3103560927801372,
+            "raise_facing_bet": 0.24145186743819042
+          }
+        },
+        "vpip": 0.6228
+      },
+      "name": "v3-seed2-v-hyper-121003",
+      "opponent": "hyper",
+      "policy": "v3-seed2"
+    },
+    {
+      "audit": {
+        "decisions": 11328,
+        "fallback": 0,
+        "fallback_by_street": {},
+        "fallback_rate": 0.0
+      },
+      "cfr_ms_per_decision": 1.7020747996123002,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.5846560846560847,
+        "pfr": 0.5034235409194653,
+        "streets": {
+          "flop": {
+            "call": 0.08029837648091268,
+            "check": 0.3668275559455902,
+            "decisions": 2279,
+            "fold": 0.09170688898639755,
+            "fold_facing_bet": 0.44946236559139785,
+            "raise": 0.4611671785870996,
+            "raise_facing_bet": 0.15698924731182795
+          },
+          "preflop": {
+            "call": 0.29780801209372637,
+            "check": 0.0,
+            "decisions": 6615,
+            "fold": 0.23356009070294784,
+            "fold_facing_bet": null,
+            "raise": 0.46863189720332576,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.09468085106382979,
+            "check": 0.3819148936170213,
+            "decisions": 940,
+            "fold": 0.13085106382978723,
+            "fold_facing_bet": 0.44565217391304346,
+            "raise": 0.3925531914893617,
+            "raise_facing_bet": 0.2318840579710145
+          },
+          "turn": {
+            "call": 0.07697456492637215,
+            "check": 0.321954484605087,
+            "decisions": 1494,
+            "fold": 0.11044176706827309,
+            "fold_facing_bet": 0.4647887323943662,
+            "raise": 0.49062918340026773,
+            "raise_facing_bet": 0.2112676056338028
+          }
+        },
+        "vpip": 0.7701336811216172
+      },
+      "name": "v2-v-tag-121003",
+      "opponent": "tag",
+      "policy": "v2"
+    },
+    {
+      "audit": {
+        "decisions": 11328,
+        "fallback": 0,
+        "fallback_by_street": {},
+        "fallback_rate": 0.0
+      },
+      "cfr_ms_per_decision": 1.7329020693855557,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.5846560846560847,
+        "pfr": 0.5034235409194653,
+        "streets": {
+          "flop": {
+            "call": 0.08029837648091268,
+            "check": 0.3668275559455902,
+            "decisions": 2279,
+            "fold": 0.09170688898639755,
+            "fold_facing_bet": 0.44946236559139785,
+            "raise": 0.4611671785870996,
+            "raise_facing_bet": 0.15698924731182795
+          },
+          "preflop": {
+            "call": 0.29780801209372637,
+            "check": 0.0,
+            "decisions": 6615,
+            "fold": 0.23356009070294784,
+            "fold_facing_bet": null,
+            "raise": 0.46863189720332576,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.09468085106382979,
+            "check": 0.3819148936170213,
+            "decisions": 940,
+            "fold": 0.13085106382978723,
+            "fold_facing_bet": 0.44565217391304346,
+            "raise": 0.3925531914893617,
+            "raise_facing_bet": 0.2318840579710145
+          },
+          "turn": {
+            "call": 0.07697456492637215,
+            "check": 0.321954484605087,
+            "decisions": 1494,
+            "fold": 0.11044176706827309,
+            "fold_facing_bet": 0.4647887323943662,
+            "raise": 0.49062918340026773,
+            "raise_facing_bet": 0.2112676056338028
+          }
+        },
+        "vpip": 0.7701336811216172
+      },
+      "name": "v2+adapt-v-tag-121003",
+      "opponent": "tag",
+      "policy": "v2+adapt"
+    },
+    {
+      "audit": {
+        "decisions": 11740,
+        "fallback": 0,
+        "fallback_by_street": {},
+        "fallback_rate": 0.0
+      },
+      "cfr_ms_per_decision": 1.7234246935265654,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.5326278659611993,
+        "pfr": 0.4838604499510923,
+        "streets": {
+          "flop": {
+            "call": 0.05048543689320388,
+            "check": 0.2928155339805825,
+            "decisions": 2575,
+            "fold": 0.08466019417475729,
+            "fold_facing_bet": 0.41762452107279696,
+            "raise": 0.5720388349514564,
+            "raise_facing_bet": 0.3333333333333333
+          },
+          "preflop": {
+            "call": 0.32175090252707583,
+            "check": 0.0,
+            "decisions": 6648,
+            "fold": 0.23149819494584836,
+            "fold_facing_bet": null,
+            "raise": 0.44675090252707583,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.09499489274770173,
+            "check": 0.4514811031664964,
+            "decisions": 979,
+            "fold": 0.13074565883554648,
+            "fold_facing_bet": 0.445993031358885,
+            "raise": 0.32277834525025534,
+            "raise_facing_bet": 0.22996515679442509
+          },
+          "turn": {
+            "call": 0.06697009102730819,
+            "check": 0.31014304291287387,
+            "decisions": 1538,
+            "fold": 0.11573472041612484,
+            "fold_facing_bet": 0.43842364532019706,
+            "raise": 0.5071521456436932,
+            "raise_facing_bet": 0.3078817733990148
+          }
+        },
+        "vpip": 0.7753505053798501
+      },
+      "name": "v3-v-tag-121003",
+      "opponent": "tag",
+      "policy": "v3"
+    },
+    {
+      "audit": {
+        "decisions": 11740,
+        "fallback": 0,
+        "fallback_by_street": {},
+        "fallback_rate": 0.0
+      },
+      "cfr_ms_per_decision": 1.7246489311759157,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.5326278659611993,
+        "pfr": 0.4838604499510923,
+        "streets": {
+          "flop": {
+            "call": 0.05048543689320388,
+            "check": 0.2928155339805825,
+            "decisions": 2575,
+            "fold": 0.08466019417475729,
+            "fold_facing_bet": 0.41762452107279696,
+            "raise": 0.5720388349514564,
+            "raise_facing_bet": 0.3333333333333333
+          },
+          "preflop": {
+            "call": 0.32175090252707583,
+            "check": 0.0,
+            "decisions": 6648,
+            "fold": 0.23149819494584836,
+            "fold_facing_bet": null,
+            "raise": 0.44675090252707583,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.09499489274770173,
+            "check": 0.4514811031664964,
+            "decisions": 979,
+            "fold": 0.13074565883554648,
+            "fold_facing_bet": 0.445993031358885,
+            "raise": 0.32277834525025534,
+            "raise_facing_bet": 0.22996515679442509
+          },
+          "turn": {
+            "call": 0.06697009102730819,
+            "check": 0.31014304291287387,
+            "decisions": 1538,
+            "fold": 0.11573472041612484,
+            "fold_facing_bet": 0.43842364532019706,
+            "raise": 0.5071521456436932,
+            "raise_facing_bet": 0.3078817733990148
+          }
+        },
+        "vpip": 0.7753505053798501
+      },
+      "name": "v3+adapt-v-tag-121003",
+      "opponent": "tag",
+      "policy": "v3+adapt"
+    },
+    {
+      "audit": {
+        "decisions": 10978,
+        "fallback": 0,
+        "fallback_by_street": {},
+        "fallback_rate": 0.0
+      },
+      "cfr_ms_per_decision": 1.639675975771521,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.6119929453262787,
+        "pfr": 0.4892402999673949,
+        "streets": {
+          "flop": {
+            "call": 0.0516243880729862,
+            "check": 0.28215398308856254,
+            "decisions": 2247,
+            "fold": 0.09034267912772585,
+            "fold_facing_bet": 0.4491150442477876,
+            "raise": 0.5758789497107254,
+            "raise_facing_bet": 0.2942477876106195
+          },
+          "preflop": {
+            "call": 0.27093146938155294,
+            "check": 0.0,
+            "decisions": 6581,
+            "fold": 0.27169123233551135,
+            "fold_facing_bet": null,
+            "raise": 0.4573772982829357,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.09917355371900827,
+            "check": 0.3990554899645809,
+            "decisions": 847,
+            "fold": 0.14994096812278632,
+            "fold_facing_bet": 0.47388059701492535,
+            "raise": 0.35182998819362454,
+            "raise_facing_bet": 0.2126865671641791
+          },
+          "turn": {
+            "call": 0.06216423637759018,
+            "check": 0.29470452801227937,
+            "decisions": 1303,
+            "fold": 0.10514198004604758,
+            "fold_facing_bet": 0.39481268011527376,
+            "raise": 0.5379892555640828,
+            "raise_facing_bet": 0.37175792507204614
+          }
+        },
+        "vpip": 0.7269318552331269
+      },
+      "name": "v3-seed2-v-tag-121003",
+      "opponent": "tag",
+      "policy": "v3-seed2"
+    },
+    {
+      "audit": {
+        "decisions": 37398,
+        "fallback": 373,
+        "fallback_by_street": {
+          "flop": 67,
+          "river": 188,
+          "turn": 118
+        },
+        "fallback_rate": 0.009973795390127814
+      },
+      "cfr_ms_per_decision": 2.23794957168667,
+      "frequencies": {
+        "bb_fold_vs_raise": null,
+        "pfr": 0.4443,
+        "streets": {
+          "flop": {
+            "call": 0.028749351323300466,
+            "check": 0.44992215879605607,
+            "decisions": 9635,
+            "fold": 0.030928905033731188,
+            "fold_facing_bet": 0.43001443001443,
+            "raise": 0.4903995848469123,
+            "raise_facing_bet": 0.17027417027417027
+          },
+          "preflop": {
+            "call": 0.1461,
+            "check": 0.3349,
+            "decisions": 10000,
+            "fold": 0.0747,
+            "fold_facing_bet": null,
+            "raise": 0.4443,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.051675977653631286,
+            "check": 0.5122206703910615,
+            "decisions": 8592,
+            "fold": 0.06482774674115456,
+            "fold_facing_bet": 0.4653299916457811,
+            "raise": 0.3712756052141527,
+            "raise_facing_bet": 0.16374269005847952
+          },
+          "turn": {
+            "call": 0.03925417075564279,
+            "check": 0.447715625340748,
+            "decisions": 9171,
+            "fold": 0.03870897393959219,
+            "fold_facing_bet": 0.4066437571592211,
+            "raise": 0.474321229964017,
+            "raise_facing_bet": 0.18098510882016036
+          }
+        },
+        "vpip": 0.5904
+      },
+      "name": "v2-v-station-121003",
+      "opponent": "station",
+      "policy": "v2"
+    },
+    {
+      "audit": {
+        "decisions": 37398,
+        "fallback": 373,
+        "fallback_by_street": {
+          "flop": 67,
+          "river": 188,
+          "turn": 118
+        },
+        "fallback_rate": 0.009973795390127814
+      },
+      "cfr_ms_per_decision": 2.251020241056087,
+      "frequencies": {
+        "bb_fold_vs_raise": null,
+        "pfr": 0.4443,
+        "streets": {
+          "flop": {
+            "call": 0.028749351323300466,
+            "check": 0.44992215879605607,
+            "decisions": 9635,
+            "fold": 0.030928905033731188,
+            "fold_facing_bet": 0.43001443001443,
+            "raise": 0.4903995848469123,
+            "raise_facing_bet": 0.17027417027417027
+          },
+          "preflop": {
+            "call": 0.1461,
+            "check": 0.3349,
+            "decisions": 10000,
+            "fold": 0.0747,
+            "fold_facing_bet": null,
+            "raise": 0.4443,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.051675977653631286,
+            "check": 0.5122206703910615,
+            "decisions": 8592,
+            "fold": 0.06482774674115456,
+            "fold_facing_bet": 0.4653299916457811,
+            "raise": 0.3712756052141527,
+            "raise_facing_bet": 0.16374269005847952
+          },
+          "turn": {
+            "call": 0.03925417075564279,
+            "check": 0.447715625340748,
+            "decisions": 9171,
+            "fold": 0.03870897393959219,
+            "fold_facing_bet": 0.4066437571592211,
+            "raise": 0.474321229964017,
+            "raise_facing_bet": 0.18098510882016036
+          }
+        },
+        "vpip": 0.5904
+      },
+      "name": "v2+adapt-v-station-121003",
+      "opponent": "station",
+      "policy": "v2+adapt"
+    },
+    {
+      "audit": {
+        "decisions": 37160,
+        "fallback": 459,
+        "fallback_by_street": {
+          "flop": 113,
+          "river": 187,
+          "turn": 159
+        },
+        "fallback_rate": 0.012351991388589882
+      },
+      "cfr_ms_per_decision": 2.2509940687561842,
+      "frequencies": {
+        "bb_fold_vs_raise": null,
+        "pfr": 0.4064,
+        "streets": {
+          "flop": {
+            "call": 0.02546583850931677,
+            "check": 0.36231884057971014,
+            "decisions": 9660,
+            "fold": 0.028985507246376812,
+            "fold_facing_bet": 0.3708609271523179,
+            "raise": 0.5832298136645963,
+            "raise_facing_bet": 0.3033112582781457
+          },
+          "preflop": {
+            "call": 0.1761,
+            "check": 0.3401,
+            "decisions": 10000,
+            "fold": 0.0774,
+            "fold_facing_bet": null,
+            "raise": 0.4064,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.04522732682694597,
+            "check": 0.4990478457510117,
+            "decisions": 8402,
+            "fold": 0.06962627945727208,
+            "fold_facing_bet": 0.5017152658662093,
+            "raise": 0.3860985479647703,
+            "raise_facing_bet": 0.17238421955403088
+          },
+          "turn": {
+            "call": 0.03912947900637503,
+            "check": 0.3919542756649813,
+            "decisions": 9098,
+            "fold": 0.03385359419652671,
+            "fold_facing_bet": 0.33587786259541985,
+            "raise": 0.5350626511321169,
+            "raise_facing_bet": 0.27589967284623773
+          }
+        },
+        "vpip": 0.5825
+      },
+      "name": "v3-v-station-121003",
+      "opponent": "station",
+      "policy": "v3"
+    },
+    {
+      "audit": {
+        "decisions": 37160,
+        "fallback": 459,
+        "fallback_by_street": {
+          "flop": 113,
+          "river": 187,
+          "turn": 159
+        },
+        "fallback_rate": 0.012351991388589882
+      },
+      "cfr_ms_per_decision": 2.2720911409843247,
+      "frequencies": {
+        "bb_fold_vs_raise": null,
+        "pfr": 0.4064,
+        "streets": {
+          "flop": {
+            "call": 0.02546583850931677,
+            "check": 0.36231884057971014,
+            "decisions": 9660,
+            "fold": 0.028985507246376812,
+            "fold_facing_bet": 0.3708609271523179,
+            "raise": 0.5832298136645963,
+            "raise_facing_bet": 0.3033112582781457
+          },
+          "preflop": {
+            "call": 0.1761,
+            "check": 0.3401,
+            "decisions": 10000,
+            "fold": 0.0774,
+            "fold_facing_bet": null,
+            "raise": 0.4064,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.04522732682694597,
+            "check": 0.4990478457510117,
+            "decisions": 8402,
+            "fold": 0.06962627945727208,
+            "fold_facing_bet": 0.5017152658662093,
+            "raise": 0.3860985479647703,
+            "raise_facing_bet": 0.17238421955403088
+          },
+          "turn": {
+            "call": 0.03912947900637503,
+            "check": 0.3919542756649813,
+            "decisions": 9098,
+            "fold": 0.03385359419652671,
+            "fold_facing_bet": 0.33587786259541985,
+            "raise": 0.5350626511321169,
+            "raise_facing_bet": 0.27589967284623773
+          }
+        },
+        "vpip": 0.5825
+      },
+      "name": "v3+adapt-v-station-121003",
+      "opponent": "station",
+      "policy": "v3+adapt"
+    },
+    {
+      "audit": {
+        "decisions": 36493,
+        "fallback": 451,
+        "fallback_by_street": {
+          "flop": 115,
+          "river": 191,
+          "turn": 145
+        },
+        "fallback_rate": 0.012358534513468336
+      },
+      "cfr_ms_per_decision": 2.1749736992016016,
+      "frequencies": {
+        "bb_fold_vs_raise": null,
+        "pfr": 0.4202,
+        "streets": {
+          "flop": {
+            "call": 0.02364864864864865,
+            "check": 0.34216638513513514,
+            "decisions": 9472,
+            "fold": 0.03051097972972973,
+            "fold_facing_bet": 0.38844086021505375,
+            "raise": 0.6036739864864865,
+            "raise_facing_bet": 0.31048387096774194
+          },
+          "preflop": {
+            "call": 0.145,
+            "check": 0.3367,
+            "decisions": 10000,
+            "fold": 0.0981,
+            "fold_facing_bet": null,
+            "raise": 0.4202,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.04232415902140673,
+            "check": 0.4948012232415902,
+            "decisions": 8175,
+            "fold": 0.07107033639143731,
+            "fold_facing_bet": 0.5169039145907474,
+            "raise": 0.3918042813455658,
+            "raise_facing_bet": 0.17526690391459074
+          },
+          "turn": {
+            "call": 0.036174542165950715,
+            "check": 0.3953199186072801,
+            "decisions": 8846,
+            "fold": 0.034931042278996155,
+            "fold_facing_bet": 0.3576388888888889,
+            "raise": 0.533574496947773,
+            "raise_facing_bet": 0.27199074074074076
+          }
+        },
+        "vpip": 0.5652
+      },
+      "name": "v3-seed2-v-station-121003",
+      "opponent": "station",
+      "policy": "v3-seed2"
+    },
+    {
+      "audit": {
+        "decisions": 33817,
+        "fallback": 1267,
+        "fallback_by_street": {
+          "flop": 323,
+          "preflop": 72,
+          "river": 483,
+          "turn": 389
+        },
+        "fallback_rate": 0.03746636307182778
+      },
+      "cfr_ms_per_decision": 2.14789153919575,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.3512014787430684,
+        "pfr": 0.44451133855107366,
+        "streets": {
+          "flop": {
+            "call": 0.10393258426966293,
+            "check": 0.372491974317817,
+            "decisions": 9968,
+            "fold": 0.10202648475120385,
+            "fold_facing_bet": 0.41765913757700207,
+            "raise": 0.4215489566613162,
+            "raise_facing_bet": 0.15687885010266941
+          },
+          "preflop": {
+            "call": 0.18595591030026606,
+            "check": 0.28677309007981755,
+            "decisions": 10524,
+            "fold": 0.1024325351577347,
+            "fold_facing_bet": null,
+            "raise": 0.42483846446218165,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.11643598615916954,
+            "check": 0.4411764705882353,
+            "decisions": 5780,
+            "fold": 0.11626297577854672,
+            "fold_facing_bet": 0.419737663960025,
+            "raise": 0.32612456747404844,
+            "raise_facing_bet": 0.1599000624609619
+          },
+          "turn": {
+            "call": 0.11371769383697813,
+            "check": 0.39363817097415504,
+            "decisions": 7545,
+            "fold": 0.08919814446653412,
+            "fold_facing_bet": 0.3697802197802198,
+            "raise": 0.40344599072233267,
+            "raise_facing_bet": 0.15879120879120878
+          }
+        },
+        "vpip": 0.6084687938992575
+      },
+      "name": "v2-v-equity-121003",
+      "opponent": "equity",
+      "policy": "v2"
+    },
+    {
+      "audit": {
+        "decisions": 33817,
+        "fallback": 1267,
+        "fallback_by_street": {
+          "flop": 323,
+          "preflop": 72,
+          "river": 483,
+          "turn": 389
+        },
+        "fallback_rate": 0.03746636307182778
+      },
+      "cfr_ms_per_decision": 2.1339387607699636,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.3512014787430684,
+        "pfr": 0.44451133855107366,
+        "streets": {
+          "flop": {
+            "call": 0.10393258426966293,
+            "check": 0.372491974317817,
+            "decisions": 9968,
+            "fold": 0.10202648475120385,
+            "fold_facing_bet": 0.41765913757700207,
+            "raise": 0.4215489566613162,
+            "raise_facing_bet": 0.15687885010266941
+          },
+          "preflop": {
+            "call": 0.18595591030026606,
+            "check": 0.28677309007981755,
+            "decisions": 10524,
+            "fold": 0.1024325351577347,
+            "fold_facing_bet": null,
+            "raise": 0.42483846446218165,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.11643598615916954,
+            "check": 0.4411764705882353,
+            "decisions": 5780,
+            "fold": 0.11626297577854672,
+            "fold_facing_bet": 0.419737663960025,
+            "raise": 0.32612456747404844,
+            "raise_facing_bet": 0.1599000624609619
+          },
+          "turn": {
+            "call": 0.11371769383697813,
+            "check": 0.39363817097415504,
+            "decisions": 7545,
+            "fold": 0.08919814446653412,
+            "fold_facing_bet": 0.3697802197802198,
+            "raise": 0.40344599072233267,
+            "raise_facing_bet": 0.15879120879120878
+          }
+        },
+        "vpip": 0.6084687938992575
+      },
+      "name": "v2+adapt-v-equity-121003",
+      "opponent": "equity",
+      "policy": "v2+adapt"
+    },
+    {
+      "audit": {
+        "decisions": 33135,
+        "fallback": 1579,
+        "fallback_by_street": {
+          "flop": 535,
+          "preflop": 136,
+          "river": 433,
+          "turn": 475
+        },
+        "fallback_rate": 0.047653538554398675
+      },
+      "cfr_ms_per_decision": 2.122716239776477,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.3675373134328358,
+        "pfr": 0.4224362833634357,
+        "streets": {
+          "flop": {
+            "call": 0.08689668730954488,
+            "check": 0.294799960680232,
+            "decisions": 10173,
+            "fold": 0.10449228349552737,
+            "fold_facing_bet": 0.3948736998514116,
+            "raise": 0.5138110685146957,
+            "raise_facing_bet": 0.27674591381872216
+          },
+          "preflop": {
+            "call": 0.2047065494754749,
+            "check": 0.2892921273981665,
+            "decisions": 10581,
+            "fold": 0.1061336357622153,
+            "fold_facing_bet": null,
+            "raise": 0.3998676873641433,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.08536816202915011,
+            "check": 0.43763013439333714,
+            "decisions": 5283,
+            "fold": 0.14745409805035017,
+            "fold_facing_bet": 0.5455182072829131,
+            "raise": 0.3295476055271626,
+            "raise_facing_bet": 0.13865546218487396
+          },
+          "turn": {
+            "call": 0.10876303183995492,
+            "check": 0.34559030712876865,
+            "decisions": 7098,
+            "fold": 0.0765004226542688,
+            "fold_facing_bet": 0.31332948643969993,
+            "raise": 0.4691462383770076,
+            "raise_facing_bet": 0.241200230813618
+          }
+        },
+        "vpip": 0.5979329721051575
+      },
+      "name": "v3-v-equity-121003",
+      "opponent": "equity",
+      "policy": "v3"
+    },
+    {
+      "audit": {
+        "decisions": 33135,
+        "fallback": 1579,
+        "fallback_by_street": {
+          "flop": 535,
+          "preflop": 136,
+          "river": 433,
+          "turn": 475
+        },
+        "fallback_rate": 0.047653538554398675
+      },
+      "cfr_ms_per_decision": 2.165331519509801,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.3675373134328358,
+        "pfr": 0.4224362833634357,
+        "streets": {
+          "flop": {
+            "call": 0.08689668730954488,
+            "check": 0.294799960680232,
+            "decisions": 10173,
+            "fold": 0.10449228349552737,
+            "fold_facing_bet": 0.3948736998514116,
+            "raise": 0.5138110685146957,
+            "raise_facing_bet": 0.27674591381872216
+          },
+          "preflop": {
+            "call": 0.2047065494754749,
+            "check": 0.2892921273981665,
+            "decisions": 10581,
+            "fold": 0.1061336357622153,
+            "fold_facing_bet": null,
+            "raise": 0.3998676873641433,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.08536816202915011,
+            "check": 0.43763013439333714,
+            "decisions": 5283,
+            "fold": 0.14745409805035017,
+            "fold_facing_bet": 0.5455182072829131,
+            "raise": 0.3295476055271626,
+            "raise_facing_bet": 0.13865546218487396
+          },
+          "turn": {
+            "call": 0.10876303183995492,
+            "check": 0.34559030712876865,
+            "decisions": 7098,
+            "fold": 0.0765004226542688,
+            "fold_facing_bet": 0.31332948643969993,
+            "raise": 0.4691462383770076,
+            "raise_facing_bet": 0.241200230813618
+          }
+        },
+        "vpip": 0.5979329721051575
+      },
+      "name": "v3+adapt-v-equity-121003",
+      "opponent": "equity",
+      "policy": "v3+adapt"
+    },
+    {
+      "audit": {
+        "decisions": 32476,
+        "fallback": 1578,
+        "fallback_by_street": {
+          "flop": 549,
+          "preflop": 151,
+          "river": 427,
+          "turn": 451
+        },
+        "fallback_rate": 0.048589727798990026
+      },
+      "cfr_ms_per_decision": 2.148978721180979,
+      "frequencies": {
+        "bb_fold_vs_raise": 0.3358208955223881,
+        "pfr": 0.43558097531607465,
+        "streets": {
+          "flop": {
+            "call": 0.0831918505942275,
+            "check": 0.2779386797163687,
+            "decisions": 10013,
+            "fold": 0.1041645860381504,
+            "fold_facing_bet": 0.3928436911487759,
+            "raise": 0.5347048836512533,
+            "raise_facing_bet": 0.2934086629001883
+          },
+          "preflop": {
+            "call": 0.17272039349224366,
+            "check": 0.28688989784335983,
+            "decisions": 10572,
+            "fold": 0.1261823685206205,
+            "fold_facing_bet": null,
+            "raise": 0.414207340143776,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.08160828025477707,
+            "check": 0.43570859872611467,
+            "decisions": 5024,
+            "fold": 0.1526671974522293,
+            "fold_facing_bet": 0.56480117820324,
+            "raise": 0.330015923566879,
+            "raise_facing_bet": 0.1332842415316642
+          },
+          "turn": {
+            "call": 0.10674239114606088,
+            "check": 0.34440075724479396,
+            "decisions": 6867,
+            "fold": 0.07616135139070919,
+            "fold_facing_bet": 0.31544028950542824,
+            "raise": 0.472695500218436,
+            "raise_facing_bet": 0.24246079613992763
+          }
+        },
+        "vpip": 0.582480433473811
+      },
+      "name": "v3-seed2-v-equity-121003",
+      "opponent": "equity",
+      "policy": "v3-seed2"
+    }
+  ]
+}

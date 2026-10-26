@@ -16,10 +16,10 @@ await page.getByLabel('Password', {exact: true}).fill('password123');
 await page.getByLabel('Confirm password', {exact: true}).fill('password123');
 await page.locator('.account-form').getByRole('button', {name: 'Create account', exact: true}).click();
 await page.getByRole('heading', {name: 'Spectate', exact: true}).waitFor();
-assert.equal(await page.getByLabel('Agent A').inputValue(), 'cfr-v1');
+assert.equal(await page.getByLabel('Agent A').inputValue(), 'cfr-v2-adapt');
 assert.equal(await page.getByLabel('Agent B').inputValue(), 'tag');
 await page.getByRole('button', {name: 'Start watching', exact: true}).click();
-await page.getByRole('heading', {name: 'CFR V1 · 200k vs TightAggressive'}).waitFor();
+await page.getByRole('heading', {name: 'CFR V2 · adaptive vs TightAggressive'}).waitFor();
 // Normal speed reveals one action per second, starting from the deal.
 await page.locator('.room-table').waitFor();
 await page.waitForTimeout(2500);

@@ -18,7 +18,7 @@ export function Spectate(){
 
 function Exhibition(){
     const [agents,setAgents]=useState<{id:string;name:string}[]>([]);
-    const [a,setA]=useState('cfr-v1'),[b,setB]=useState('tag');
+    const [a,setA]=useState('cfr-v2-adapt'),[b,setB]=useState('tag');
     const [session,setSession]=useState<Session|null>(null),[hand,setHand]=useState<HandData['hand']|null>(null);
     const [auto,setAuto]=useState(true),[busy,setBusy]=useState(false),[error,setError]=useState('');
     useEffect(()=>{api<{id:string;name:string}[]>('/api/spectate/agents').then(setAgents).catch(e=>setError(e.message));},[]);

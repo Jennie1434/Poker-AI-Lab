@@ -5,9 +5,21 @@ actions légales et les gains. **V1 et V2 sont conservées intégralement** : le
 politique ne sont pas modifiés, et leurs décisions enregistrées lors des Missions 4 et 5 se
 rejouent à l'identique avec le code de cette mission. Aucune intégration à un site tiers.
 
-> **Rapport en cours** : diagnostic, profils de test, adaptation et V3 sont livrés ; l'évaluation finale V2/V3 est en cours.
+## Synthèse
 
-@@SYNTHESE@@
+| Demande | Résultat |
+| --- | --- |
+| Audit des 49 mains | **Données non accessibles ici** (base locale de votre ordinateur) ; outil d'audit en lecture seule prêt, avec la procédure d'export. Rien n'a été inventé. |
+| Comptabilité et bb/100 | **Pas d'erreur** : classement, gains PokerKit et panneau concordent (9 parties testées, dont une à 0 / 0 exact). Ajout des gains et pertes bruts et d'un test de non-régression. |
+| HyperAggressiveAgent | VPIP 92,6 %, PFR 85,3 % (cible 92 / 88). |
+| V2 contre profils agressifs | V2 **bat largement** l'hyper-agressif (+376,9 puis +386,5 bb/100) en ne gagnant que 18 % des mains. Contre TAG, V2 300k fait **+9,8 [+1,7 ; +17,9]** sur 120 000 mains regroupées (a posteriori). |
+| Causes de la passivité | **Politique apprise**, pas les replis : la grosse blinde abandonne la moitié la plus faible de ses mains face à 3 BB ; nombreux abandons à la river. S'y ajoutent 10 % de replis hors arbre contre l'hyper-agressif. |
+| Stratégie améliorée | **Couche d'adaptation fondée sur les statistiques publiques** : **+131,3 bb/100 [+59,8 ; +202,8]** contre l'hyper-agressif, **jeu identique main pour main** contre TAG, calling station et Equity. |
+| CFR V3 | Entraînée (2 graines × 300 000 itérations, environ 3 h CPU chacune). **Moins bonne que V2** contre l'hyper-agressif (−254) et Equity (−83), meilleure contre la calling station (+76), non concluante contre TAG. Probablement sous-entraînée. |
+| Intégration | **CFR V2 · adaptive** (adversaire par défaut) et **CFR V3 · 300k (experimental)** ajoutées aux salles et au Spectate après les tests fonctionnels ; V1 et V2 conservées. |
+
+Ces résultats sont des simulations contre des bots de test ; ils ne garantissent aucun gain
+contre des humains.
 
 ## 1. Les 49 mains observées : accès et audit
 
@@ -197,4 +209,175 @@ avec instantanés à 100 000 et 200 000.
 
 Politique V3 : 682 Ko compressée (V2 : 111 Ko).
 
-@@RESULTATS@@
+## 8. Évaluation finale : V2 et V3, avec et sans adaptation
+
+Protocole fixé et commité **avant** la fin de l'entraînement de V3 et avant toute main finale
+(`df0b464`) :
+- graines neuves (121001–121003 / 131001–131003) ;
+- 10 000 mains par graine, politique et adversaire, bouton alterné ;
+- statistiques publiques exposées à tous, les agents non adaptatifs les ignorant ;
+- 60 expériences, soit 600 000 mains.
+
+L'audit a rejoué **chaque décision CFR** avec le même agent que le benchmark, adaptation
+comprise, et toutes ont été reproduites à l'identique.
+
+### bb/100 net (rake 5 %, plafond 3 BB, no-flop-no-drop), IC à 95 %
+
+| Contre… | V2 | V2 + adaptation | V3 (73001) | V3 + adaptation | V3 graine 2 |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| **HyperAggressive** | +386,5 [+325,3 ; +447,7] | **+517,8 [+426,5 ; +609,1]** | +132,3 [+74,1 ; +190,5] | +307,7 [+223,6 ; +391,8] | +214,1 [+151,6 ; +276,6] |
+| **TightAggressive** | **+23,5 [+6,9 ; +40,0]** | +23,5 (identique) | +6,4 [−12,7 ; +25,6] | +6,4 (identique) | +0,1 [−18,9 ; +19,0] |
+| **CallingStation** | +128,7 [+92,1 ; +165,4] | +128,7 (identique) | +205,1 [+156,7 ; +253,6] | +205,1 (identique) | **+266,5 [+217,3 ; +315,6]** |
+| **EquityHeuristic** | **+138,7 [+101,1 ; +176,2]** | +138,7 (identique) | +55,9 [+10,2 ; +101,6] | +55,9 (identique) | +55,7 [+9,6 ; +101,8] |
+
+Verdicts préenregistrés : toutes les politiques **battent** hyper, calling station et Equity
+(IC entièrement positif et trois graines positives). Contre TAG, **V2 bat TAG sur ces graines**
+(+18,8 / +22,8 / +28,8), mais V3 est non concluante.
+
+### Différences appariées (mêmes donnes, main par main)
+
+| Comparaison | Hyper | TAG | Station | Equity |
+| --- | ---: | ---: | ---: | ---: |
+| **V2 + adaptation − V2** | **+131,3 [+59,8 ; +202,8]** | 0,0 | 0,0 | 0,0 |
+| V3 + adaptation − V3 | **+175,4 [+111,1 ; +239,8]** | 0,0 | 0,0 | 0,0 |
+| **V3 − V2** | **−254,2 [−317,4 ; −191,0]** | −17,0 [−35,0 ; +1,0] | **+76,4 [+32,9 ; +119,9]** | **−82,8 [−126,5 ; −39,0]** |
+| V3 + adaptation − V2 | −78,8 [−161,4 ; +3,8] | −17,0 [−35,0 ; +1,0] | +76,4 [+32,9 ; +119,9] | −82,8 [−126,5 ; −39,0] |
+| V3 graine 2 − V3 graine 1 | **+81,9 [+20,9 ; +142,8]** | −6,3 [−23,7 ; +11,0] | **+61,3 [+14,8 ; +107,8]** | −0,2 [−45,0 ; +44,6] |
+
+### Par position (bb/100, rake 5 %)
+
+| Contre… | V2 bouton / BB | V2 + adaptation bouton / BB | V3 bouton / BB |
+| --- | --- | --- | --- |
+| Hyper | +583,7 / +189,2 | +677,5 / **+358,1** | +168,8 / +95,7 |
+| TAG | +29,8 / +17,1 | identique | +7,3 / +5,5 |
+| Station | +141,8 / +115,7 | identique | +288,2 / +122,1 |
+| Equity | +126,6 / +150,7 | identique | +71,1 / +40,7 |
+
+L'adaptation profite surtout à la **grosse blinde** contre l'hyper-agressif (+189 → +358).
+
+### Fréquences d'action (moyenne de 3 graines)
+
+| Contre… | Politique | VPIP | PFR | Fold BB vs relance | Relance flop | Fold face à mise flop / turn / river | Sorties d'arbre |
+| --- | --- | ---: | ---: | ---: | ---: | --- | ---: |
+| Hyper | V2 | 66 % | 43 % | 52 % | 23 % | 43 / 39 / 44 % | 10,8 % |
+| Hyper | **V2 + adaptation** | **90 %** | 44 % | **10 %** | 25 % | **20 / 20 / 32 %** | 10,7 % |
+| Hyper | V3 | 66 % | 49 % | 49 % | 37 % | 39 / 38 / 51 % | 10,1 % |
+| Hyper | V3 + adaptation | 90 % | 51 % | 10 % | 34 % | 21 / 18 / 42 % | 9,3 % |
+| TAG | V2 | 77 % | 51 % | 59 % | 46 % | 43 / 48 / 47 % | 0,0 % |
+| TAG | V3 | 78 % | 49 % | 53 % | 57 % | 41 / 43 / 45 % | 0,0 % |
+| Station | V3 | 59 % | 41 % | — | 58 % | 38 / 35 / 49 % | 1,3 % |
+| Equity | V3 | 60 % | 43 % | 38 % | 51 % | 38 / 33 / 54 % | 4,7 % |
+
+Le coût par décision reste de 1,6 à 2,3 ms pour toutes les variantes.
+
+### Lecture
+
+- **L'adaptation fonctionne et ne coûte rien ailleurs.** Contre un ouvreur très agressif, elle
+  divise par 5 les abandons de la grosse blinde (52 % → 10 %), paie davantage et gagne +131 bb/100
+  de plus. Contre
+  les autres profils, elle ne s'active pas : la robustesse contre TAG est préservée **par
+  construction**.
+- **V3 ne remplace pas V2.** Elle est plus agressive postflop (relances au flop 37 % contre 23 %
+  face à hyper) mais **paie moins à la river** (51 % de folds) et perd beaucoup de valeur contre les
+  profils qui misent. Avec 6,3 fois plus d'ensembles d'information pour le même nombre d'itérations,
+  chaque situation est moins entraînée. L'écart significatif entre les deux graines de V3 (+82 contre
+  hyper, +61 contre station) confirme que **V3 n'a pas convergé**.
+- **Les replis hors arbre persistent contre l'hyper-agressif** (environ 10 % avec 4 relances par
+  street). Ils viennent surtout de séquences de relances préflop et postflop dont les tailles
+  s'éloignent de l'abstraction : une piste pour la suite.
+- **V2 contre TAG** : regrouper a posteriori les quatre jeux de graines indépendants (Missions 5 et 6,
+  120 000 mains) donne **+9,8 bb/100 [+1,7 ; +17,9]**. C'est un indice favorable, mais il ne s'agit
+  pas d'un test préenregistré, et un seul des quatre jeux est significatif à lui seul (+8,7 / +6,2 /
+  +0,9 / +23,5).
+
+## 9. Intégration aux salles et au Spectate
+
+Après les tests fonctionnels :
+- **CFR V2 · adaptive** devient l'adversaire présélectionné dans *Play with models* et *Spectate*.
+  Les salles transmettaient déjà les statistiques publiques aux agents ; le Spectate les transmet
+  désormais aussi.
+- **CFR V3 · 300k (experimental)** est sélectionnable, avec la mention de ses performances plus
+  faibles contre les profils agressifs.
+- V1 200k, V1 20k et V2 300k restent disponibles et inchangées.
+- `HyperAggressive` et `CallingStation` sont jouables en Spectate.
+
+Tests d'intégration :
+- partie complète via l'API contre `cfr-v1`, `cfr-v2`, `cfr-v2-adapt` et `cfr-v3` ;
+- l'entrée adaptative lit bien les statistiques publiques de la requête : avec 9-6 en grosse
+  blinde face à un ouvreur à 90 % de PFR, elle se couche dans au plus 8 cas sur 40, contre au moins
+  30 sur 40 pour V2 ;
+- tests navigateur réels : 6 mains jouées en cliquant contre l'adversaire par défaut, et un match
+  Spectate CFR V2 · adaptive contre TAG.
+
+## Tests exécutés
+
+```bash
+.venv/bin/python -m pytest -q
+cd frontend && npm test && npm run build
+PB_BASE_URL=http://127.0.0.1:8097 node tests/cfr-room.mjs
+PB_BASE_URL=http://127.0.0.1:8097 node tests/spectate.mjs
+```
+
+- **704 tests Python réussis** (685 hérités de la mission 5 et 19 nouveaux), **26 tests frontend
+  réussis**, compilation réussie, **2 tests navigateur réels réussis**.
+- Nouveaux tests :
+  - concordance des trois comptabilités de salle sur une partie agressive avec remises à zéro ;
+  - audit en lecture seule ;
+  - calibrage et confidentialité des profils hyper et calling station ;
+  - overlay : redistribution, inertie sans preuve, défense de la grosse blinde, cartes cachées
+    ignorées, statistiques publiques du benchmark ;
+  - V3 : synchronisation jeton par jeton après export, niveau préflop dans les clés ;
+  - protocoles : graines neuves et disjointes, plan final, analyse par position et par street ;
+  - entrée de salle adaptative.
+- Trois tests existants ont été ajustés volontairement :
+  - la liste des modèles de salle inclut les nouvelles entrées CFR ;
+  - le test d'audit de salle ne suppose plus une relance à chaque main (impossible face à un tapis) ;
+  - les tests navigateur suivent le nouvel adversaire par défaut.
+- Non-régression : des décisions V1 et V2 enregistrées en missions 4 et 5 se rejouent à l'identique
+  après les modifications.
+
+## Reproduction
+
+```bash
+cd backend
+../.venv/bin/python -m pokerbench.mission6 run --plan baseline --output ../artifacts/repro/baseline
+../.venv/bin/python -m pokerbench.mission6 analyze --plan baseline ../artifacts/repro/baseline --output ../artifacts/repro/baseline/analysis.json
+for s in 73001 73002; do
+  ../.venv/bin/python -m pokerbench.selfplay holdem --version 3 --iterations 300000 --seed $s \
+    --every 10000 --snapshot 100000 --snapshot 200000 --output ../artifacts/repro/v3-$s
+done
+../.venv/bin/python -m pokerbench.mission6 run --plan final --output ../artifacts/repro/final
+../.venv/bin/python -m pokerbench.mission6 analyze --plan final ../artifacts/repro/final --output ../artifacts/repro/final/analysis.json
+```
+
+**Versionné** :
+- code et tests ;
+- politiques V3 (`artifacts/mission6/policy-v3-*.json.gz`, avec les instantanés 100k et 200k de la
+  graine 73001) et courbes d'entraînement ;
+- plans, manifestes, `hands.csv` et `analysis.json` de la mesure de référence et de l'évaluation
+  finale.
+
+**Non versionné** : les journaux privés `decisions.jsonl` et le pilote exploratoire. Aucun secret.
+
+## Limites
+
+- Les 49 mains réelles n'ont pas pu être auditées, faute d'accès aux données.
+- `HyperAggressiveAgent` est un modèle simplifié d'un joueur humain ; un humain agressif mais
+  intelligent peut exploiter V2 autrement.
+- L'adaptation n'utilise que le PFR public ; elle ne détecte ni les joueurs qui se couchent trop, ni
+  les bluffeurs postflop.
+- V3 est sous-entraînée ; aucune exploitabilité n'est mesurée dans le jeu réel ; rien de tout cela
+  n'est une stratégie GTO du no-limit complet.
+
+## Suite proposée
+
+1. Auditer la vraie partie dès que son export est disponible (`room_audit.py`).
+2. Entraîner V3 bien plus longtemps (au moins 1,5 million d'itérations, environ 12 h CPU), ou réduire
+   son arbre, puis comparer à nouveau, avec une courbe d'apprentissage.
+3. Étendre l'adaptation à d'autres statistiques publiques (fold face aux mises, agression postflop),
+   ce qui suppose de les ajouter aux compteurs publics.
+4. Réduire les replis hors arbre contre les relanceurs compulsifs (traduction des tailles préflop,
+   plafond de relances).
+5. Préenregistrer un test confirmatoire V2 contre TAG de 200 000 mains, ou avec donnes dupliquées.
+
+Aucune automatisation sur un site de poker tiers n'a été ajoutée.

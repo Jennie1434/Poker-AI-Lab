@@ -50,7 +50,7 @@ def wait(c, rid):
     pytest.fail('room did not reach a human decision or hand boundary')
 
 
-@pytest.mark.parametrize('policy', ['cfr-v1', 'cfr-v2'])
+@pytest.mark.parametrize('policy', ['cfr-v1', 'cfr-v2', 'cfr-v2-adapt', 'cfr-v3'])
 def test_human_plays_full_hands_against_cfr_without_seeing_hidden_cards(client, policy):
     c, app = client
     created = c.post('/api/rooms', json={'model_ids': [policy], 'max_hands': 4, 'name': 'CFR test'})
@@ -183,3 +183,17 @@ def test_room_audit_reads_owner_export_without_changing_results(client):
     assert human['pfr'] >= 0.5 and human['vpip'] >= human['pfr'] and human['net_bb'] + bot['net_bb'] == 0
     assert set(bot['streets']) <= {'preflop', 'flop', 'turn', 'river'}
     assert json.dumps([h['events'] for h in app.state.store.hands(rid)]) == before
+
+
+def test_adaptive_room_entry_uses_public_statistics_from_the_request():
+    entries = {e.id: e for e in local_entries()}
+    hand = Hand([{'id': 'a', 'stack': 20000}, {'id': 'b', 'stack': 20000}], 0, (50, 100, 0), 21, chip_unit=50)
+    hand.apply('raise_to_300')
+    folds = {}
+    for name in ('cfr-v2', 'cfr-v2-adapt'):
+        request = hand.request(entries[name].model, {'a': {'hands': 200, 'vpip': 190, 'pfr': 180, 'three_bet': 0}})
+        hero = next(s for s in request['state']['seats'] if s['id'] == request['state']['actor'])
+        hero['cards'] = ['9d', '6c']
+        folds[name] = sum(asyncio.run(decide(entries[name], request, f'r:1:{i}', 'h'))['answers']['action']['choice'] == 'fold'
+                          for i in range(40))
+    assert folds['cfr-v2'] >= 30 and folds['cfr-v2-adapt'] <= 8

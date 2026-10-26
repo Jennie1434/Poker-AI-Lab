@@ -63,7 +63,7 @@ function PlayerRooms({user,access,runs,onUpdate}:{user:Player;access:PersonalAcc
     const customEntries:Entry[]=access.agents.filter(a=>!!access.agentKeys[a.id]).map(a=>({id:a.id,name:a.name,model:a.model,provider:'openai_compatible',credential_id:a.id,color:'#9a753a',ready:true}));
     const available=[...models.filter(e=>modelAvailable(e,billingMode,access.budget,access.keys)),...(billingMode==='personal'?customEntries:[])];
     const availableIds=available.map(e=>e.id).join(',');
-    useEffect(()=>{setSelected(old=>{const valid=old.filter(id=>available.some(e=>e.id===id));return valid.length?valid:available.length?[available.find(e=>e.provider==='local_cfr')?.id||available.find(e=>e.provider==='jev')?.id||available[0].id]:[];});},[availableIds]);
+    useEffect(()=>{setSelected(old=>{const valid=old.filter(id=>available.some(e=>e.id===id));return valid.length?valid:available.length?[available.find(e=>e.id==='cfr-v2-adapt')?.id||available.find(e=>e.provider==='local_cfr')?.id||available.find(e=>e.provider==='jev')?.id||available[0].id]:[];});},[availableIds]);
     const refreshRooms=async()=>{const rows=await api<Run[]>('/api/rooms/mine');setRecentRooms(rows);};
     const updateRoom=(run:Run)=>{updateRef.current(run);setRecentRooms(old=>old.map(r=>r.id===run.id?run:r));};
     useEffect(()=>{void refreshRooms().catch(e=>setError(e.message));},[]);
