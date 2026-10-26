@@ -40,8 +40,10 @@ class AbstractionV2(Abstraction):
     def sizes(self, street, opening=True):
         if not opening:
             return [("r", Fraction(self.config["sizes"]["r"]))]
-        return [(s, Fraction(f)) for s, f in self.config["sizes"].items()
-                if street > 0 or s not in self.config["postflop_only"]]
+        # Canonical order (smallest fraction first): it must not depend on dict
+        # order, which a JSON round trip with sorted keys changes.
+        return sorted(((s, Fraction(f)) for s, f in self.config["sizes"].items()
+                       if street > 0 or s not in self.config["postflop_only"]), key=lambda item: (item[1], item[0]))
 
     def bucket(self, hole, board, rng) -> int:
         if not board:

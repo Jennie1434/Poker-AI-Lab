@@ -15,6 +15,13 @@ Protocol fixed before any V2 evaluation hand is played (committed with this file
   200k minus V1) is entirely above zero; a policy "beats TAG" only if its pooled
   CI is entirely above zero and all three seeds are positive;
 - every experiment is reported; no early stopping or seed replacement.
+
+Amendment, declared before running it: the preregistered run exposed a V2 bug
+(exported policies sort config keys, so the agent's legal-action key order
+differed from training and 37 % of V2 decisions fell back off-tree). After the
+fix, the same plan is run again unchanged (``eval-fixed``) and confirmed on
+fresh seeds (``CONFIRM_SEEDS``) with the same verdict rules. The original run
+stays reported as is.
 """
 import argparse
 import asyncio
@@ -37,21 +44,22 @@ POLICIES = {
     "v2-seed2": "artifacts/mission5/policy-v2-72002-200000.json.gz",
 }
 EVAL_SEEDS = ((81001, 91001), (81002, 91002), (81003, 91003))
+CONFIRM_SEEDS = ((83001, 93001), (83002, 93002), (83003, 93003))
 MAIN_HANDS = 10000
 RAKE_RATES = (0, 2, 5, 7)
 COMPARISONS = (("v2", "v1"), ("v2-300k", "v2"), ("v2-seed2", "v2"))
 
 
-def jobs(policies=POLICIES):
-    for deck, seed in EVAL_SEEDS:
+def jobs(policies=POLICIES, seeds=EVAL_SEEDS):
+    for deck, seed in seeds:
         for name, path in policies.items():
             yield f"{name}-v-tag-{deck}", Config(hands=MAIN_HANDS, agent_a="cfr", agent_b="tag", deck_seed=deck,
                                                  policy_seed=seed, measure_time=True, cfr_policy=path)
 
 
-def run_suite(root: Path, workers: int, policies=POLICIES):
+def run_suite(root: Path, workers: int, policies=POLICIES, seeds=EVAL_SEEDS):
     from concurrent.futures import ProcessPoolExecutor, as_completed
-    plan = list(jobs(policies))
+    plan = list(jobs(policies, seeds))
     root.mkdir(parents=True, exist_ok=False, mode=0o700)
     write_json(root / "plan.json", {"workers": workers, "jobs": {n: asdict(c) for n, c in plan},
                                     "policy_sha256": {k: hashlib.sha256(resolve_policy(p).read_bytes()).hexdigest()
@@ -65,9 +73,9 @@ def run_suite(root: Path, workers: int, policies=POLICIES):
                               "cpu_seconds": timing["cpu_seconds"]}), flush=True)
 
 
-def analyze(root: Path, output: Path, policies=POLICIES) -> dict:
+def analyze(root: Path, output: Path, policies=POLICIES, seeds=EVAL_SEEDS) -> dict:
     rows_by, runs = defaultdict(dict), []
-    for name, cfg in jobs(policies):
+    for name, cfg in jobs(policies, seeds):
         folder = root / name
         m = json.loads((folder / "experiment.json").read_text())
         if m["status"] != "complete" or Config(**m["config"]) != cfg:
@@ -84,7 +92,7 @@ def analyze(root: Path, output: Path, policies=POLICIES) -> dict:
         runs.append({"name": name, "audit": asyncio.run(audit_cfr(folder)),
                      "cfr_ms_per_decision": 1000 * timing["a"]["cpu_seconds"] / timing["a"]["decisions"],
                      "net_5": performance([r["a_net_chips"] for r in rows])})
-    decks = [deck for deck, _ in EVAL_SEEDS]
+    decks = [deck for deck, _ in seeds]
     results = {}
     for policy, by_seed in rows_by.items():
         pooled = [r for deck in decks for r in by_seed[deck]]
@@ -117,12 +125,15 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     sub = p.add_subparsers(dest="command", required=True)
     s = sub.add_parser("run"); s.add_argument("--output", type=Path, required=True); s.add_argument("--workers", type=int, default=4)
+    s.add_argument("--confirm", action="store_true", help="use the fresh confirmation seeds")
     s = sub.add_parser("analyze"); s.add_argument("source", type=Path); s.add_argument("--output", type=Path, required=True)
+    s.add_argument("--confirm", action="store_true")
     a = p.parse_args()
+    seeds = CONFIRM_SEEDS if a.confirm else EVAL_SEEDS
     if a.command == "run":
-        run_suite(a.output, a.workers)
+        run_suite(a.output, a.workers, seeds=seeds)
     else:
-        analyze(a.source, a.output)
+        analyze(a.source, a.output, seeds=seeds)
 
 
 if __name__ == "__main__":

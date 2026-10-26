@@ -50,6 +50,26 @@ def test_v2_tree_matches_pokerkit_chip_for_chip_with_all_sizes(abstraction):
     assert (False, "o") not in used  # 1.5x pot is postflop only
 
 
+def test_exported_policy_reproduces_training_keys(tmp_path, abstraction):
+    """Regression: a JSON round trip sorts config keys; keys and legal orders must not change."""
+    game, rng = HoldemAbstractGameV2(abstraction), random.Random(5)
+    trainer = CFRTrainer(game, "external", seed=1).train(10)
+    export_policy(trainer, abstraction, tmp_path / "p.json.gz", {})
+    loaded = agent_for(0, load_policy(tmp_path / "p.json.gz"))
+    assert list(loaded.abs.config["sizes"]) != list(abstraction.config["sizes"])  # order really differs
+    for number in range(80):
+        hand = Hand([{"id": "a", "stack": STACK}, {"id": "b", "stack": STACK}], number % 2, (50, 100, 0), 300 + number, chip_unit=50)
+        h = game.sample_chance(None, rng)
+        while not game.is_terminal(h):
+            obs = hand.observation()
+            player, street, _, history, _, _ = loaded.abstract_view(obs)
+            assert loaded.legal == game.actions(h)
+            assert loaded.key(player, street, h.deal[0][h.player][h.street], history) == game.infoset(h)
+            abstract = rng.choice(game.actions(h))
+            hand.apply(loaded.map_action(abstract, obs))
+            h = game.child(h, abstract)
+
+
 def test_v2_draw_buckets_and_ranges(abstraction):
     rng = random.Random(4)
     flush_draw = abstraction.bucket(["Ah", "Kh"], ["2h", "9h", "3c"], rng)

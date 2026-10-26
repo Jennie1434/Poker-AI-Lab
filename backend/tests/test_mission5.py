@@ -14,7 +14,8 @@ def test_preregistered_plan_new_seeds_identical_deals():
     assert len(plan) == 12 and sum(c.hands for _, c in plan) == 120000
     assert all(c.agent_b == "tag" and c.agent_a == "cfr" for _, c in plan)
     earlier = {1234, 5678, 31001, 31002, 31003, 41001, 41002, 41003, 51001, 51002, 51003, 61001, 61002, 61003, 71001, 72001, 72002}
-    assert not earlier & {s for pair in m5.EVAL_SEEDS for s in pair}
+    assert not earlier & {s for pair in m5.EVAL_SEEDS + m5.CONFIRM_SEEDS for s in pair}
+    assert not {s for pair in m5.EVAL_SEEDS for s in pair} & {s for pair in m5.CONFIRM_SEEDS for s in pair}
     by_seed = {}
     for _, c in plan:
         by_seed.setdefault(c.deck_seed, set()).add(c.policy_seed)
