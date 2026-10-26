@@ -175,3 +175,14 @@ PokerKit ; `CFRAgent` gelé intégré au benchmark (`--agent-a cfr --cfr-policy`
 nouvelles (rake 5 %), il bat Random (+565,7 bb/100), Heuristic (+52,1) et Equity (+172,1).
 Contre TightAggressive, le résultat est non concluant : −9,6 [−27,3 ; +8,1]. **668 tests
 Python et 26 tests frontend réussis.** Détails : `MISSION_4.md`.
+
+## Mission 5 (terminée)
+
+Table privée humain contre CFR jouable dans le navigateur (fournisseur local `local_cfr`, choix de la
+politique, historique et statistiques), plus un mode spectateur IA contre IA. Abstraction CFR V2
+(trois tailles de relance, groupes tenant compte des tirages) vérifiée jeton par jeton contre PokerKit.
+Contre TAG, sur données indépendantes, V2 fait mieux que V1 de +19,5 [+2,3 ; +36,7] puis
++17,8 [+0,1 ; +35,6] bb/100. Aucune politique ne bat encore TAG de façon démontrée. Un bug
+d'ordre des tailles dans la politique V2 exportée a été trouvé par l'évaluation préenregistrée,
+corrigé, et réévalué selon un amendement déclaré à l'avance. **685 tests Python, 26 tests frontend
+et 2 tests navigateur réels réussis.** Détails : `MISSION_5.md`.

@@ -1,0 +1,31 @@
+{
+  "abstraction": {
+    "equity_buckets": 6,
+    "max_pot_raises": 2,
+    "max_raises": 3,
+    "postflop_buckets": 12,
+    "postflop_only": [
+      "o"
+    ],
+    "postflop_samples": 32,
+    "preflop_buckets": 8,
+    "preflop_table_samples": 4000,
+    "preflop_table_seed": 20261101,
+    "river_buckets": 8,
+    "sizes": {
+      "h": "1/2",
+      "o": "3/2",
+      "r": "1"
+    },
+    "version": 2
+  },
+  "final": {
+    "avg_positive_regret_per_iteration": 0.0016474002822962676,
+    "cpu_seconds": 7771.969,
+    "information_sets": 9847,
+    "iteration": 300000
+  },
+  "game": "holdem-hu-abstract-v2",
+  "iterations": 300000,
+  "seed": 72001
+}

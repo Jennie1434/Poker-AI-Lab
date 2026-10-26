@@ -105,6 +105,9 @@ class Provider:
                                           "JEV_API_KEY":self.settings.jev_api_key}.get(entry.key_env,"") or self.env_keys.get(entry.key_env,"")
 
     def available(self, entry: Entry):
+        if entry.provider=="local_cfr":
+            from . import local_agents
+            return local_agents.available(entry)
         return bool(self.key(entry)) or entry.provider in ("systemone","openai_compatible") and not entry.key_env
 
     async def call(self, entry: Entry, request: dict, *, decision_id: str, run_id: str,
@@ -120,6 +123,16 @@ class Provider:
             mismatch=identity_error(entry,{"model":existing.get("model"),"revision":existing.get("model_revision")})
             if mismatch:raise ProviderError(mismatch)
             return existing
+        if entry.provider=="local_cfr":
+            from . import local_agents
+            if not local_agents.available(entry):
+                raise ProviderError("CFR 策略文件不存在")
+            try:
+                result=await local_agents.decide(entry,request,decision_id,request_hash)
+            except (ValueError,KeyError) as exc:
+                raise ProviderError(f"CFR 策略无法决策: {exc}") from None
+            self.store.save_decision(decision_id,result)
+            return result
         if key_override is not None:
             from .public_access import personal_entry
             entry=personal_entry(entry)

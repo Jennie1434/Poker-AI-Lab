@@ -65,8 +65,9 @@ def make_agent(name, seed, samples, tag_samples=64, cfr_policy=""):
     if name == "tag":
         return TightAggressiveAgent(seed, tag_samples)
     if name == "cfr":
-        from .holdem_abstraction import CFRAgent, cached_policy
-        return CFRAgent(seed, cached_policy(cfr_policy))
+        from .holdem_abstraction import cached_policy
+        from .holdem_v2 import agent_for
+        return agent_for(seed, cached_policy(cfr_policy))
     raise ValueError("Unknown policy")
 
 

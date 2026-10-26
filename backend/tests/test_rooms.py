@@ -60,7 +60,7 @@ def wait_state(c,rid,headers):
 def test_room_roster_excludes_gpt_and_freezes_deepseek_override(client):
     c,app,entries=client
     assert c.post('/api/auth/register',json={'id':'roster','password':'test-password'}).status_code==200
-    assert [e['id'] for e in c.get('/api/rooms/models').json()]==['bot','deepseek']
+    assert [e['id'] for e in c.get('/api/rooms/models').json()]==['bot','deepseek','cfr-v1','cfr-v1-20k','cfr-v2']
     for ids in [['luna'],['alias'],['missing'],[],['bot']*10]:
         assert c.post('/api/rooms',json={'model_ids':ids}).status_code==422
     for thinking in ['low','non-thinking']:

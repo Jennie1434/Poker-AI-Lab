@@ -8,6 +8,8 @@ export function providerOf(entry:Entry):Provider|null {
     return ['jev','deepseek','systemone'].includes(entry.provider)?entry.provider as Provider:null;
 }
 export function modelAvailable(entry:Entry,mode:BillingMode,budget:Budget|null,keys:PersonalKeys) {
+    // In-process CFR policies need no key, invitation or provider account.
+    if(entry.provider==='local_cfr')return entry.ready===true&&entry.enabled!==false;
     const provider=providerOf(entry);
     if(!provider||entry.enabled===false)return false;
     if(mode==='personal')return provider!=='systemone'&&!!keys[provider];

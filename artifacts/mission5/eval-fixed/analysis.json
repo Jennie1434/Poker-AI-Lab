@@ -1,0 +1,684 @@
+{
+  "ci_method": "normal 95% on independent two-hand block means; paired per-hand differences on identical deals",
+  "no_flop_no_drop": true,
+  "paired": [
+    {
+      "comparison": "v2 - v1",
+      "difference": {
+        "bb_per_100": 19.463166666666666,
+        "break_even_rate": 0.6996333333333333,
+        "ci95_bb_per_100": [
+          2.245669567020098,
+          36.68066376631323
+        ],
+        "loss_rate": 0.124,
+        "profit_bb": 5838.95,
+        "profit_chips": 583895,
+        "standard_error_bb_per_100": 8.784598714800879,
+        "stddev_block_mean_bb": 10.758892223185521,
+        "stddev_hand_bb": 15.217028465598707,
+        "win_rate": 0.17636666666666667
+      },
+      "per_seed": [
+        19.0577,
+        17.1813,
+        22.1505
+      ],
+      "verdict": "better"
+    },
+    {
+      "comparison": "v2-300k - v2",
+      "difference": {
+        "bb_per_100": 5.279066666666667,
+        "break_even_rate": 0.9044333333333333,
+        "ci95_bb_per_100": [
+          -4.0065438829781,
+          14.564677216311434
+        ],
+        "loss_rate": 0.0375,
+        "profit_bb": 1583.72,
+        "profit_chips": 158372,
+        "standard_error_bb_per_100": 4.737643458190293,
+        "stddev_block_mean_bb": 5.802404527900474,
+        "stddev_hand_bb": 8.208346096729901,
+        "win_rate": 0.05806666666666667
+      },
+      "per_seed": [
+        -1.9785000000000001,
+        8.668,
+        9.1477
+      ],
+      "verdict": "inconclusive"
+    },
+    {
+      "comparison": "v2-seed2 - v2",
+      "difference": {
+        "bb_per_100": 4.306166666666666,
+        "break_even_rate": 0.7741,
+        "ci95_bb_per_100": [
+          -10.514411847379165,
+          19.126745180712497
+        ],
+        "loss_rate": 0.09713333333333334,
+        "profit_bb": 1291.85,
+        "profit_chips": 129185,
+        "standard_error_bb_per_100": 7.561658597274574,
+        "stddev_block_mean_bb": 9.261102586226153,
+        "stddev_hand_bb": 13.101607784304504,
+        "win_rate": 0.12876666666666667
+      },
+      "per_seed": [
+        -1.4508999999999999,
+        -2.1422,
+        16.511599999999998
+      ],
+      "verdict": "inconclusive"
+    }
+  ],
+  "policies": {
+    "v1": {
+      "hands": 30000,
+      "policy": "artifacts/mission4/policy-71001-200000.json.gz",
+      "rake": {
+        "0": {
+          "bb_per_100": -10.288333333333332,
+          "break_even_rate": 0.0028,
+          "ci95_bb_per_100": [
+            -28.272845968379983,
+            7.69617930171332
+          ],
+          "loss_rate": 0.28833333333333333,
+          "profit_bb": -3086.5,
+          "profit_chips": -308650,
+          "standard_error_bb_per_100": 9.17594036263227,
+          "stddev_block_mean_bb": 11.238185899328952,
+          "stddev_hand_bb": 15.88054931085832,
+          "win_rate": 0.7088666666666666
+        },
+        "2": {
+          "bb_per_100": -13.292866666666667,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            -31.15417387280639,
+            4.568440539473057
+          ],
+          "loss_rate": 0.29113333333333336,
+          "profit_bb": -3987.86,
+          "profit_chips": -398786,
+          "standard_error_bb_per_100": 9.113079294837782,
+          "stddev_block_mean_bb": 11.161197128937452,
+          "stddev_hand_bb": 15.771399561792737,
+          "win_rate": 0.7088666666666666
+        },
+        "5": {
+          "bb_per_100": -16.081233333333333,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            -33.91986913366154,
+            1.7574024669948756
+          ],
+          "loss_rate": 0.29113333333333336,
+          "profit_bb": -4824.37,
+          "profit_chips": -482437,
+          "standard_error_bb_per_100": 9.101512038505346,
+          "stddev_block_mean_bb": 11.147030191068229,
+          "stddev_hand_bb": 15.750751785322544,
+          "win_rate": 0.7088666666666666
+        },
+        "7": {
+          "bb_per_100": -17.624633333333332,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            -35.4555306651239,
+            0.20626399845723853
+          ],
+          "loss_rate": 0.29113333333333336,
+          "profit_bb": -5287.39,
+          "profit_chips": -528739,
+          "standard_error_bb_per_100": 9.097563767721455,
+          "stddev_block_mean_bb": 11.142194566674796,
+          "stddev_hand_bb": 15.743942920944015,
+          "win_rate": 0.7088666666666666
+        }
+      },
+      "sd_seed_means_bb100": 15.22739691882146,
+      "seed_net_bb100": [
+        -25.6806,
+        1.4762999999999995,
+        -24.0394
+      ],
+      "verdict_vs_tag": "inconclusive"
+    },
+    "v2": {
+      "hands": 30000,
+      "policy": "artifacts/mission5/policy-v2-72001-200000.json.gz",
+      "rake": {
+        "0": {
+          "bb_per_100": 10.066666666666666,
+          "break_even_rate": 0.0023666666666666667,
+          "ci95_bb_per_100": [
+            -7.16188820186337,
+            27.295221535196703
+          ],
+          "loss_rate": 0.25466666666666665,
+          "profit_bb": 3020.0,
+          "profit_chips": 302000,
+          "standard_error_bb_per_100": 8.790240537288787,
+          "stddev_block_mean_bb": 10.765802016342887,
+          "stddev_hand_bb": 15.211710272896221,
+          "win_rate": 0.7429666666666667
+        },
+        "2": {
+          "bb_per_100": 6.488966666666666,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            -10.592570619674934,
+            23.570503953008267
+          ],
+          "loss_rate": 0.25703333333333334,
+          "profit_bb": 1946.69,
+          "profit_chips": 194669,
+          "standard_error_bb_per_100": 8.71523018845172,
+          "stddev_block_mean_bb": 10.673933476303397,
+          "stddev_hand_bb": 15.082296621432443,
+          "win_rate": 0.7429666666666667
+        },
+        "5": {
+          "bb_per_100": 3.3819333333333326,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            -13.66517034886541,
+            20.429037015532074
+          ],
+          "loss_rate": 0.25703333333333334,
+          "profit_bb": 1014.58,
+          "profit_chips": 101458,
+          "standard_error_bb_per_100": 8.697661700247618,
+          "stddev_block_mean_bb": 10.652416560477318,
+          "stddev_hand_bb": 15.05258405442678,
+          "win_rate": 0.7429666666666667
+        },
+        "7": {
+          "bb_per_100": 1.7889666666666681,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            -15.249470146800624,
+            18.82740348013396
+          ],
+          "loss_rate": 0.25703333333333334,
+          "profit_bb": 536.69,
+          "profit_chips": 53669,
+          "standard_error_bb_per_100": 8.693239747191432,
+          "stddev_block_mean_bb": 10.647000796150222,
+          "stddev_hand_bb": 15.044759138730381,
+          "win_rate": 0.7429666666666667
+        }
+      },
+      "sd_seed_means_bb100": 13.439203216088865,
+      "seed_net_bb100": [
+        -6.6229,
+        18.6576,
+        -1.8889000000000007
+      ],
+      "verdict_vs_tag": "inconclusive"
+    },
+    "v2-300k": {
+      "hands": 30000,
+      "policy": "artifacts/mission5/policy-v2-72001-300000.json.gz",
+      "rake": {
+        "0": {
+          "bb_per_100": 15.155,
+          "break_even_rate": 0.002533333333333333,
+          "ci95_bb_per_100": [
+            -1.1169671238936996,
+            31.426967123893697
+          ],
+          "loss_rate": 0.23433333333333334,
+          "profit_bb": 4546.5,
+          "profit_chips": 454650,
+          "standard_error_bb_per_100": 8.302176597246124,
+          "stddev_block_mean_bb": 10.168048208864464,
+          "stddev_hand_bb": 14.399185236742253,
+          "win_rate": 0.7631333333333333
+        },
+        "2": {
+          "bb_per_100": 11.702433333333333,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            -4.425821504722231,
+            27.8306881713889
+          ],
+          "loss_rate": 0.23686666666666667,
+          "profit_bb": 3510.73,
+          "profit_chips": 351073,
+          "standard_error_bb_per_100": 8.228852655086104,
+          "stddev_block_mean_bb": 10.078245086753768,
+          "stddev_hand_bb": 14.271669687669007,
+          "win_rate": 0.7631333333333333
+        },
+        "5": {
+          "bb_per_100": 8.661,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            -7.434543509282248,
+            24.756543509282245
+          ],
+          "loss_rate": 0.23686666666666667,
+          "profit_bb": 2598.3,
+          "profit_chips": 259830,
+          "standard_error_bb_per_100": 8.21216289495207,
+          "stddev_block_mean_bb": 10.057804388624852,
+          "stddev_hand_bb": 14.24264967308484,
+          "win_rate": 0.7631333333333333
+        },
+        "7": {
+          "bb_per_100": 7.053200000000001,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            -9.033431655276019,
+            23.13983165527602
+          ],
+          "loss_rate": 0.23686666666666667,
+          "profit_bb": 2115.96,
+          "profit_chips": 211596,
+          "standard_error_bb_per_100": 8.207615947111947,
+          "stddev_block_mean_bb": 10.052235537577177,
+          "stddev_hand_bb": 14.234579440879335,
+          "win_rate": 0.7631333333333333
+        }
+      },
+      "sd_seed_means_bb100": 18.00449821239126,
+      "seed_net_bb100": [
+        -8.6014,
+        27.3256,
+        7.2588
+      ],
+      "verdict_vs_tag": "inconclusive"
+    },
+    "v2-seed2": {
+      "hands": 30000,
+      "policy": "artifacts/mission5/policy-v2-72002-200000.json.gz",
+      "rake": {
+        "0": {
+          "bb_per_100": 14.96,
+          "break_even_rate": 0.0029333333333333334,
+          "ci95_bb_per_100": [
+            -2.351799472642746,
+            32.27179947264275
+          ],
+          "loss_rate": 0.2108,
+          "profit_bb": 4488.0,
+          "profit_chips": 448800,
+          "standard_error_bb_per_100": 8.832713054523458,
+          "stddev_block_mean_bb": 10.817820014001143,
+          "stddev_hand_bb": 15.287873532397219,
+          "win_rate": 0.7862666666666667
+        },
+        "2": {
+          "bb_per_100": 11.0612,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            -6.095448021540278,
+            28.217848021540277
+          ],
+          "loss_rate": 0.21373333333333333,
+          "profit_bb": 3318.36,
+          "profit_chips": 331836,
+          "standard_error_bb_per_100": 8.75355269630959,
+          "stddev_block_mean_bb": 10.720868771261188,
+          "stddev_hand_bb": 15.15011674432582,
+          "win_rate": 0.7862666666666667
+        },
+        "5": {
+          "bb_per_100": 7.6881,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            -9.436902876210047,
+            24.813102876210046
+          ],
+          "loss_rate": 0.21373333333333333,
+          "profit_bb": 2306.43,
+          "profit_chips": 230643,
+          "standard_error_bb_per_100": 8.73740691731577,
+          "stddev_block_mean_bb": 10.701094311243883,
+          "stddev_hand_bb": 15.121400674996506,
+          "win_rate": 0.7862666666666667
+        },
+        "7": {
+          "bb_per_100": 5.874166666666667,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            -11.241984046260214,
+            22.99031737959355
+          ],
+          "loss_rate": 0.21373333333333333,
+          "profit_bb": 1762.25,
+          "profit_chips": 176225,
+          "standard_error_bb_per_100": 8.732890424485804,
+          "stddev_block_mean_bb": 10.695562759813708,
+          "stddev_hand_bb": 15.113105609987528,
+          "win_rate": 0.7862666666666667
+        }
+      },
+      "sd_seed_means_bb100": 13.68297106004394,
+      "seed_net_bb100": [
+        -8.0738,
+        16.5154,
+        14.6227
+      ],
+      "verdict_vs_tag": "inconclusive"
+    }
+  },
+  "rake_cap_bb": 3,
+  "runs": [
+    {
+      "audit": {
+        "decisions": 11681,
+        "fallback": 23,
+        "fallback_by_street": {
+          "river": 19,
+          "turn": 4
+        },
+        "fallback_rate": 0.0019690095026110776
+      },
+      "cfr_ms_per_decision": 1.7896867931683815,
+      "name": "v1-v-tag-81001",
+      "net_5": {
+        "bb_per_100": -25.6806,
+        "break_even_rate": 0.0,
+        "ci95_bb_per_100": [
+          -54.93748466291285,
+          3.5762846629128546
+        ],
+        "loss_rate": 0.2951,
+        "profit_bb": -2568.06,
+        "profit_chips": -256806,
+        "standard_error_bb_per_100": 14.927256262710657,
+        "stddev_block_mean_bb": 10.555164127872066,
+        "stddev_hand_bb": 14.951378720068831,
+        "win_rate": 0.7049
+      }
+    },
+    {
+      "audit": {
+        "decisions": 11182,
+        "fallback": 0,
+        "fallback_by_street": {},
+        "fallback_rate": 0.0
+      },
+      "cfr_ms_per_decision": 1.8372763877660374,
+      "name": "v2-v-tag-81001",
+      "net_5": {
+        "bb_per_100": -6.6229,
+        "break_even_rate": 0.0,
+        "ci95_bb_per_100": [
+          -35.7195384614487,
+          22.473738461448704
+        ],
+        "loss_rate": 0.2552,
+        "profit_bb": -662.29,
+        "profit_chips": -66229,
+        "standard_error_bb_per_100": 14.845496494302587,
+        "stddev_block_mean_bb": 10.497351241202479,
+        "stddev_hand_bb": 14.83878524827162,
+        "win_rate": 0.7448
+      }
+    },
+    {
+      "audit": {
+        "decisions": 11280,
+        "fallback": 0,
+        "fallback_by_street": {},
+        "fallback_rate": 0.0
+      },
+      "cfr_ms_per_decision": 1.9895776290782496,
+      "name": "v2-300k-v-tag-81001",
+      "net_5": {
+        "bb_per_100": -8.6014,
+        "break_even_rate": 0.0,
+        "ci95_bb_per_100": [
+          -37.05692057110433,
+          19.854120571104332
+        ],
+        "loss_rate": 0.239,
+        "profit_bb": -860.14,
+        "profit_chips": -86014,
+        "standard_error_bb_per_100": 14.518389519173743,
+        "stddev_block_mean_bb": 10.266051680915455,
+        "stddev_hand_bb": 14.517613372094125,
+        "win_rate": 0.761
+      }
+    },
+    {
+      "audit": {
+        "decisions": 11553,
+        "fallback": 0,
+        "fallback_by_street": {},
+        "fallback_rate": 0.0
+      },
+      "cfr_ms_per_decision": 2.0552412150957142,
+      "name": "v2-seed2-v-tag-81001",
+      "net_5": {
+        "bb_per_100": -8.0738,
+        "break_even_rate": 0.0,
+        "ci95_bb_per_100": [
+          -38.79786626902141,
+          22.650266269021408
+        ],
+        "loss_rate": 0.2156,
+        "profit_bb": -807.38,
+        "profit_chips": -80738,
+        "standard_error_bb_per_100": 15.67583206189957,
+        "stddev_block_mean_bb": 11.084487151710686,
+        "stddev_hand_bb": 15.711744110876316,
+        "win_rate": 0.7844
+      }
+    },
+    {
+      "audit": {
+        "decisions": 11861,
+        "fallback": 15,
+        "fallback_by_street": {
+          "river": 13,
+          "turn": 2
+        },
+        "fallback_rate": 0.0012646488491695473
+      },
+      "cfr_ms_per_decision": 1.8011113471882623,
+      "name": "v1-v-tag-81002",
+      "net_5": {
+        "bb_per_100": 1.4762999999999995,
+        "break_even_rate": 0.0,
+        "ci95_bb_per_100": [
+          -30.5753264209558,
+          33.5279264209558
+        ],
+        "loss_rate": 0.2939,
+        "profit_bb": 147.63,
+        "profit_chips": 14763,
+        "standard_error_bb_per_100": 16.35317111629343,
+        "stddev_block_mean_bb": 11.563438190235068,
+        "stddev_hand_bb": 16.342750772563118,
+        "win_rate": 0.7061
+      }
+    },
+    {
+      "audit": {
+        "decisions": 11062,
+        "fallback": 0,
+        "fallback_by_street": {},
+        "fallback_rate": 0.0
+      },
+      "cfr_ms_per_decision": 1.8835816900199465,
+      "name": "v2-v-tag-81002",
+      "net_5": {
+        "bb_per_100": 18.6576,
+        "break_even_rate": 0.0,
+        "ci95_bb_per_100": [
+          -10.315719398446891,
+          47.63091939844689
+        ],
+        "loss_rate": 0.2625,
+        "profit_bb": 1865.76,
+        "profit_chips": 186576,
+        "standard_error_bb_per_100": 14.782577448863723,
+        "stddev_block_mean_bb": 10.452860757506873,
+        "stddev_hand_bb": 14.782662426879222,
+        "win_rate": 0.7375
+      }
+    },
+    {
+      "audit": {
+        "decisions": 11225,
+        "fallback": 0,
+        "fallback_by_street": {},
+        "fallback_rate": 0.0
+      },
+      "cfr_ms_per_decision": 1.8582000869487667,
+      "name": "v2-300k-v-tag-81002",
+      "net_5": {
+        "bb_per_100": 27.3256,
+        "break_even_rate": 0.0,
+        "ci95_bb_per_100": [
+          0.0231374216074407,
+          54.62806257839256
+        ],
+        "loss_rate": 0.2393,
+        "profit_bb": 2732.56,
+        "profit_chips": 273256,
+        "standard_error_bb_per_100": 13.930083814677669,
+        "stddev_block_mean_bb": 9.85005672785555,
+        "stddev_hand_bb": 14.01059328332955,
+        "win_rate": 0.7607
+      }
+    },
+    {
+      "audit": {
+        "decisions": 11756,
+        "fallback": 0,
+        "fallback_by_street": {},
+        "fallback_rate": 0.0
+      },
+      "cfr_ms_per_decision": 1.8640310987582054,
+      "name": "v2-seed2-v-tag-81002",
+      "net_5": {
+        "bb_per_100": 16.5154,
+        "break_even_rate": 0.0,
+        "ci95_bb_per_100": [
+          -12.922229514778735,
+          45.953029514778734
+        ],
+        "loss_rate": 0.2185,
+        "profit_bb": 1651.54,
+        "profit_chips": 165154,
+        "standard_error_bb_per_100": 15.019474718402481,
+        "stddev_block_mean_bb": 10.620372423242307,
+        "stddev_hand_bb": 14.961515512504977,
+        "win_rate": 0.7815
+      }
+    },
+    {
+      "audit": {
+        "decisions": 11717,
+        "fallback": 27,
+        "fallback_by_street": {
+          "river": 23,
+          "turn": 4
+        },
+        "fallback_rate": 0.002304344115387898
+      },
+      "cfr_ms_per_decision": 1.7962540998552115,
+      "name": "v1-v-tag-81003",
+      "net_5": {
+        "bb_per_100": -24.0394,
+        "break_even_rate": 0.0,
+        "ci95_bb_per_100": [
+          -55.3556236035887,
+          7.276823603588699
+        ],
+        "loss_rate": 0.2844,
+        "profit_bb": -2403.94,
+        "profit_chips": -240394,
+        "standard_error_bb_per_100": 15.977958702612435,
+        "stddev_block_mean_bb": 11.298122948135864,
+        "stddev_hand_bb": 15.925845654179374,
+        "win_rate": 0.7156
+      }
+    },
+    {
+      "audit": {
+        "decisions": 10975,
+        "fallback": 0,
+        "fallback_by_street": {},
+        "fallback_rate": 0.0
+      },
+      "cfr_ms_per_decision": 1.825942417585565,
+      "name": "v2-v-tag-81003",
+      "net_5": {
+        "bb_per_100": -1.8889000000000007,
+        "break_even_rate": 0.0,
+        "ci95_bb_per_100": [
+          -32.375574168788006,
+          28.597774168788007
+        ],
+        "loss_rate": 0.2534,
+        "profit_bb": -188.89,
+        "profit_chips": -18889,
+        "standard_error_bb_per_100": 15.55471141779288,
+        "stddev_block_mean_bb": 10.998841922921162,
+        "stddev_hand_bb": 15.525250355969805,
+        "win_rate": 0.7466
+      }
+    },
+    {
+      "audit": {
+        "decisions": 11177,
+        "fallback": 0,
+        "fallback_by_street": {},
+        "fallback_rate": 0.0
+      },
+      "cfr_ms_per_decision": 1.7863749454244515,
+      "name": "v2-300k-v-tag-81003",
+      "net_5": {
+        "bb_per_100": 7.2588,
+        "break_even_rate": 0.0,
+        "ci95_bb_per_100": [
+          -20.602827992041906,
+          35.120427992041904
+        ],
+        "loss_rate": 0.2323,
+        "profit_bb": 725.88,
+        "profit_chips": 72588,
+        "standard_error_bb_per_100": 14.215377533368406,
+        "stddev_block_mean_bb": 10.051789850971698,
+        "stddev_hand_bb": 14.194263727102278,
+        "win_rate": 0.7677
+      }
+    },
+    {
+      "audit": {
+        "decisions": 11453,
+        "fallback": 0,
+        "fallback_by_street": {},
+        "fallback_rate": 0.0
+      },
+      "cfr_ms_per_decision": 1.8519311305336976,
+      "name": "v2-seed2-v-tag-81003",
+      "net_5": {
+        "bb_per_100": 14.6227,
+        "break_even_rate": 0.0,
+        "ci95_bb_per_100": [
+          -14.168157557701475,
+          43.41355755770147
+        ],
+        "loss_rate": 0.2071,
+        "profit_bb": 1462.27,
+        "profit_chips": 146227,
+        "standard_error_bb_per_100": 14.68948296234017,
+        "stddev_block_mean_bb": 10.387033014794989,
+        "stddev_hand_bb": 14.672174791958538,
+        "win_rate": 0.7929
+      }
+    }
+  ]
+}
