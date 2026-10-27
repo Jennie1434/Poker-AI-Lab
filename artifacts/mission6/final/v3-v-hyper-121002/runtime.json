@@ -1,0 +1,20 @@
+{
+  "config": {
+    "agent_a": "cfr",
+    "agent_b": "hyper",
+    "cfr_adaptive": false,
+    "cfr_policy": "artifacts/mission6/policy-v3-73001-300000.json.gz",
+    "deck_seed": 121002,
+    "equity_samples": 64,
+    "hands": 10000,
+    "measure_time": true,
+    "no_flop_no_drop": true,
+    "policy_seed": 131002,
+    "public_stats": true,
+    "rake_cap_bb": "3",
+    "rake_percent": "5",
+    "tag_samples": 64
+  },
+  "cpu_seconds": 180.39507708600013,
+  "wall_seconds": 184.53237613500096
+}

@@ -14,12 +14,13 @@ import statistics
 import subprocess
 import time
 
-from .agents import EquityHeuristicAgent, HeuristicAgent, RandomAgent, TightAggressiveAgent, play_action
+from .agents import (CallingStationAgent, EquityHeuristicAgent, HeuristicAgent, HyperAggressiveAgent, RandomAgent,
+                     TightAggressiveAgent, play_action)
 from .engine import Hand
 
 ROOT = Path(__file__).resolve().parents[2]
 BB = 100
-POLICIES = ("random", "heuristic", "equity", "tag", "cfr")
+POLICIES = ("random", "heuristic", "equity", "tag", "cfr", "hyper", "station")
 
 
 def derive_seed(master: int, domain: str, hand: int) -> int:
@@ -40,6 +41,8 @@ class Config:
     rake_cap_bb: str = "3"
     no_flop_no_drop: bool = True
     cfr_policy: str = ""
+    cfr_adaptive: bool = False
+    public_stats: bool = False
 
     def validate(self):
         if self.hands < 4 or self.hands % 2:
@@ -55,7 +58,7 @@ class Config:
             raise ValueError("cfr policy requires --cfr-policy")
 
 
-def make_agent(name, seed, samples, tag_samples=64, cfr_policy=""):
+def make_agent(name, seed, samples, tag_samples=64, cfr_policy="", cfr_adaptive=False):
     if name == "random":
         return RandomAgent(seed)
     if name == "heuristic":
@@ -64,11 +67,30 @@ def make_agent(name, seed, samples, tag_samples=64, cfr_policy=""):
         return EquityHeuristicAgent(seed, samples)
     if name == "tag":
         return TightAggressiveAgent(seed, tag_samples)
+    if name == "hyper":
+        return HyperAggressiveAgent(seed)
+    if name == "station":
+        return CallingStationAgent(seed, 32)
     if name == "cfr":
         from .holdem_abstraction import cached_policy
         from .holdem_v2 import agent_for
-        return agent_for(seed, cached_policy(cfr_policy))
+        agent = agent_for(seed, cached_policy(cfr_policy))
+        if cfr_adaptive:
+            from .adaptive import AdaptiveCFRAgent
+            return AdaptiveCFRAgent(agent)
+        return agent
     raise ValueError("Unknown policy")
+
+
+def update_public_stats(stats: dict, hand: Hand):
+    """Same public counters as the room runner: hands, VPIP, PFR, 3-bet."""
+    for pid in hand.ids:
+        row = stats.setdefault(pid, {"hands": 0, "vpip": 0, "pfr": 0, "three_bet": 0})
+        pre = [a for a in hand.actions if a["player"] == pid and a["street"] == "preflop"]
+        row["hands"] += 1
+        row["vpip"] += int(any(a["pay"] > 0 for a in pre))
+        row["pfr"] += int(any(a["kind"] == "raise" for a in pre))
+        row["three_bet"] += int(any(a.get("raise_number") == 3 for a in pre))
 
 
 def settle_rake(hand: Hand, cfg: Config) -> dict:
@@ -169,13 +191,15 @@ async def experiment(cfg: Config, output: Path) -> dict:
         temporary.replace(manifest_path)
     save()
     rows = []
+    public = {}
     timing = {seat: {"decisions": 0, "cpu_seconds": 0.0} for seat in ("a", "b")}
     try:
         with (output / "hands.csv").open("x", newline="") as hf, (output / "decisions.jsonl").open("x") as df:
             writer = csv.DictWriter(hf, fieldnames=["hand", "block", "button", "decisions", "saw_flop", "contested_pot_chips", "rake_chips", "a_gross_chips", "b_gross_chips", "a_net_chips", "b_net_chips"])
             writer.writeheader()
             for number in range(cfg.hands):
-                agents = {seat: make_agent(policy, derive_seed(cfg.policy_seed, f"policy:{seat}", number), cfg.equity_samples, cfg.tag_samples, cfg.cfr_policy)
+                agents = {seat: make_agent(policy, derive_seed(cfg.policy_seed, f"policy:{seat}", number), cfg.equity_samples,
+                                           cfg.tag_samples, cfg.cfr_policy, cfg.cfr_adaptive)
                           for seat, policy in (("a", cfg.agent_a), ("b", cfg.agent_b))}
                 hand = Hand([{"id": "a", "stack": 20000}, {"id": "b", "stack": 20000}],
                             button=number % 2, blinds=(50, BB, 0),
@@ -186,15 +210,18 @@ async def experiment(cfg: Config, output: Path) -> dict:
                     actor = hand.actor
                     # Only the actor's sanitized view is logged. This private trace
                     # is never embedded in the comparison dashboard or sent to agents.
-                    observation = hand.observation()
+                    shown = public if cfg.public_stats else None
+                    observation = hand.observation(shown)
                     started = time.process_time() if cfg.measure_time else 0
-                    action = await play_action(hand, agents[actor])
+                    action = await play_action(hand, agents[actor], shown)
                     if cfg.measure_time:
                         timing[actor]["cpu_seconds"] += time.process_time() - started
                         timing[actor]["decisions"] += 1
                     df.write(json.dumps({"hand": number+1, "decision": len(hand.actions),
                                          "actor": actor, "action": action, "observation": observation},
                                         separators=(",", ":")) + "\n")
+                if cfg.public_stats:
+                    update_public_stats(public, hand)
                 settled = settle_rake(hand, cfg)
                 if sum(hand.state.stacks) != 40000:
                     raise RuntimeError("Chip conservation failed")

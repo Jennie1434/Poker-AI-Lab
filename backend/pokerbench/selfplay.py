@@ -110,7 +110,7 @@ def main():
     holdem.add_argument("--every", type=int, default=10000, help="checkpoint and log every N iterations")
     holdem.add_argument("--snapshot", type=int, action="append", default=[], help="export a policy at iteration N")
     holdem.add_argument("--postflop-samples", type=int, default=32)
-    holdem.add_argument("--version", type=int, choices=(1, 2), default=1, help="abstraction version")
+    holdem.add_argument("--version", type=int, choices=(1, 2, 3), default=1, help="abstraction version")
     holdem.add_argument("--resume", type=Path)
     holdem.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()

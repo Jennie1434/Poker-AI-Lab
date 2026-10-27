@@ -101,7 +101,7 @@ class EquityHeuristicAgent:
         raise ValueError("No supported legal action")
 
 
-async def play_action(hand: Hand, agent: Agent) -> str:
+async def play_action(hand: Hand, agent: Agent, stats: dict | None = None) -> str:
     """Server-side bridge; reject illegal or stale choices before state mutation.
 
     The caller owns exclusive access to the hand while a decision is pending.
@@ -111,7 +111,7 @@ async def play_action(hand: Hand, agent: Agent) -> str:
         raise ValueError("No acting player")
     turn = (hand.actor, len(hand.actions))
     legal = {action.id for action in hand.legal()}
-    action_id = await agent.choose_action(deepcopy(hand.observation()))
+    action_id = await agent.choose_action(deepcopy(hand.observation(stats)))
     if turn != (hand.actor, len(hand.actions)):
         raise ValueError("Stale agent decision")
     if not isinstance(action_id, str) or action_id not in legal:
@@ -223,3 +223,65 @@ class TightAggressiveAgent(EquityHeuristicAgent):
                 if action:
                     return action
         return passive(equity >= required)
+
+
+class HyperAggressiveAgent(EquityHeuristicAgent):
+    """Test opponent modeled on an observed human: VPIP ~92 %, PFR ~88 %.
+
+    Raises almost every preflop hand with mixed sizes, bets most flops when
+    checked to, keeps firing with weak hands at fixed frequencies and folds
+    only weak hands facing large bets. A stress test, not a winning strategy.
+    """
+
+    def __init__(self, seed: int, samples: int = 32, open_rate: float = 0.95, barrel_rate: float = 0.7):
+        super().__init__(seed, samples)
+        self.open_rate, self.barrel_rate = open_rate, barrel_rate
+
+    def pick_raise(self, raises, shove_rate):
+        normal = [a for a in raises if not a["all_in"]]
+        if not normal or self.rng.random() < shove_rate:
+            return max(raises, key=lambda a: a["to"])["id"]
+        return self.rng.choice(normal[:4])["id"]
+
+    async def choose_action(self, observation: dict) -> str:
+        obs = observation
+        hero = next(s for s in obs["seats"] if s["id"] == obs["actor"])
+        by_kind = {a["kind"]: a for a in obs["legal_actions"]}
+        raises = [a for a in obs["legal_actions"] if a["kind"] == "raise"]
+        call = by_kind.get("call", {}).get("pay", 0)
+        if obs["street"] == "preflop":
+            trash = TightAggressiveAgent.preflop_tier(hero["cards"]) == 0 and \
+                max("23456789TJQKA".index(c[0]) for c in hero["cards"]) < 7
+            if trash and call > 2 * obs["big_blind"] and "fold" in by_kind:
+                return by_kind["fold"]["id"]
+            if raises and self.rng.random() < self.open_rate and not (trash and self.rng.random() < 0.5):
+                return self.pick_raise(raises, 0.04)
+            return (by_kind.get("check") or by_kind.get("call") or by_kind["fold"])["id"]
+        equity = self.estimate_equity(obs)
+        if raises and (equity > 0.75 or self.rng.random() < self.barrel_rate * (0.6 if call else 1)):
+            return self.pick_raise(raises, 0.15 if equity > 0.8 else 0.03)
+        if "check" in by_kind:
+            return by_kind["check"]["id"]
+        price = call / (obs["pot"] + call)
+        if equity >= price or self.rng.random() < 0.5:
+            return by_kind["call"]["id"]
+        return by_kind["fold"]["id"]
+
+
+class CallingStationAgent(EquityHeuristicAgent):
+    """Loose-passive test opponent: limps and calls almost everything, rarely raises."""
+
+    async def choose_action(self, observation: dict) -> str:
+        obs = observation
+        by_kind = {a["kind"]: a for a in obs["legal_actions"]}
+        raises = [a for a in obs["legal_actions"] if a["kind"] == "raise" and not a["all_in"]]
+        if obs["street"] == "preflop":
+            return (by_kind.get("check") or by_kind.get("call") or by_kind["fold"])["id"]
+        equity = self.estimate_equity(obs)
+        if equity > 0.85 and raises:
+            return min(raises, key=lambda a: a["to"])["id"]
+        if "check" in by_kind:
+            return by_kind["check"]["id"]
+        if equity > 0.2 or self.rng.random() < 0.3:
+            return by_kind["call"]["id"]
+        return by_kind["fold"]["id"]

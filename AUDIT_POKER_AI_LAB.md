@@ -186,3 +186,14 @@ Contre TAG, sur données indépendantes, V2 fait mieux que V1 de +19,5 [+2,3 ; +
 d'ordre des tailles dans la politique V2 exportée a été trouvé par l'évaluation préenregistrée,
 corrigé, et réévalué selon un amendement déclaré à l'avance. **685 tests Python, 26 tests frontend
 et 2 tests navigateur réels réussis.** Détails : `MISSION_5.md`.
+
+## Mission 6 (terminée)
+
+Comptabilité des salles vérifiée : classement, gains PokerKit et panneau concordent ; les gains et
+pertes bruts sont désormais affichés. Ajout de HyperAggressiveAgent (VPIP 92,6 %, PFR 85,3 %) et de
+CallingStationAgent. V2 bat largement le profil hyper-agressif (+386,5 bb/100). Sa passivité venait
+de la politique apprise. La couche d'adaptation fondée sur les statistiques publiques ajoute
++131,3 [+59,8 ; +202,8] bb/100 contre ce profil, à jeu identique contre les autres. V3 (2 × 300 000
+itérations) est entraînée mais moins bonne que V2 et probablement sous-entraînée. CFR V2 · adaptive
+est l'adversaire par défaut des salles et du Spectate. **704 tests Python, 26 tests frontend et
+2 tests navigateur réussis.** Les 49 mains réelles n'étaient pas accessibles. Détails : `MISSION_6.md`.

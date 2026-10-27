@@ -328,13 +328,21 @@ class CFRAgent:
             return actions["call"]["id"]
         return actions["fold"]["id"]
 
-    async def choose_action(self, observation: dict) -> str:
+    def distribution(self, observation: dict):
+        """(abstract actions, probabilities, bucket); actions is None off-tree."""
         player, street, bucket, history, raises, pot_raises = self.abstract_view(observation)
         key = self.key(player, street, bucket, history)
-        self.stats["decisions"] += 1
         probabilities = self.policy["strategy"].get(key)
         if probabilities is None:
+            return None, None, bucket
+        return self.policy["actions"][key], probabilities, bucket
+
+    def sample(self, actions, probabilities, bucket, observation):
+        self.stats["decisions"] += 1
+        if actions is None:
             self.stats["fallback"] += 1
             return self.fallback(bucket, observation)
-        abstract = self.rng.choices(self.policy["actions"][key], probabilities)[0]
-        return self.map_action(abstract, observation)
+        return self.map_action(self.rng.choices(actions, probabilities)[0], observation)
+
+    async def choose_action(self, observation: dict) -> str:
+        return self.sample(*self.distribution(observation), observation)

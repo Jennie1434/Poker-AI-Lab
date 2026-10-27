@@ -20,7 +20,13 @@ LOCAL_POLICIES = {
                    "Early snapshot of the same training, 20,000 iterations"),
     "cfr-v2": ("CFR V2 · 300k", "artifacts/mission5/policy-v2-72001-300000.json.gz",
                "MCCFR self-play, 300,000 iterations, abstraction v2 (three raise sizes, draw-aware)"),
+    "cfr-v2-adapt": ("CFR V2 · adaptive", "artifacts/mission5/policy-v2-72001-300000.json.gz",
+                     "CFR V2 with the public-statistics overlay against very aggressive openers"),
+    "cfr-v3": ("CFR V3 · 300k (experimental)", "artifacts/mission6/policy-v3-73001-300000.json.gz",
+               "Abstraction v3; weaker than V2 against aggressive profiles in Mission 6"),
 }
+# Entries played through the public-statistics overlay (adaptive.py).
+ADAPTIVE = {"cfr-v2-adapt"}
 COLOR = "#2f7d6d"
 
 
@@ -49,6 +55,9 @@ async def decide(entry: Entry, request: dict, decision_id: str, request_hash: st
     policy = cached_policy(LOCAL_POLICIES[entry.model][1])
     seed = int.from_bytes(hashlib.sha256(f"local-cfr:{decision_id}".encode()).digest()[:8], "big")
     agent = agent_for(seed, policy)
+    if entry.model in ADAPTIVE:
+        from .adaptive import AdaptiveCFRAgent
+        agent = AdaptiveCFRAgent(agent)
     choice = await agent.choose_action(request["state"])
     if choice not in request["questions"]["action"]["criteria"]:
         raise ValueError("CFR policy returned an action that is not offered")

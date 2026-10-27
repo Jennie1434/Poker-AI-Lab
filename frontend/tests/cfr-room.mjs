@@ -21,7 +21,7 @@ await page.getByLabel('Confirm password', {exact: true}).fill('password123');
 await page.locator('.account-form').getByRole('button', {name: 'Create account', exact: true}).click();
 
 // The CFR policy is the default opponent; it needs no key or invitation.
-await page.waitForFunction(() => document.querySelector('output[aria-label="CFR V1 · 200k seat count"]')?.textContent === '1');
+await page.waitForFunction(() => document.querySelector('output[aria-label="CFR V2 · adaptive seat count"]')?.textContent === '1');
 await page.getByText(/CFR opponent: heads-up cash table/).waitFor();
 assert.equal(await page.locator('output[aria-label="CFR V1 · 20k seat count"]').textContent(), '0');
 if (shots) await page.screenshot({path: `${shots}/cfr-setup.png`, fullPage: true});

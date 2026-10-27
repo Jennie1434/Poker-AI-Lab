@@ -175,10 +175,17 @@ class CFRAgentV2(CFRAgent):
 
 def agent_for(seed: int, policy: dict):
     """Pick the agent matching the policy's abstraction."""
+    from .holdem_v3 import CFRAgentV3, HoldemAbstractGameV3
+    if policy["game"] == HoldemAbstractGameV3.name:
+        return CFRAgentV3(seed, policy)
     return CFRAgentV2(seed, policy) if policy["game"] == HoldemAbstractGameV2.name else CFRAgent(seed, policy)
 
 
 def game_for(version: int, config: dict | None = None, preflop=None):
+    if version == 3:
+        from .holdem_v3 import AbstractionV3, HoldemAbstractGameV3
+        abstraction = AbstractionV3(config, preflop)
+        return abstraction, HoldemAbstractGameV3(abstraction)
     if version == 2:
         abstraction = AbstractionV2(config, preflop)
         return abstraction, HoldemAbstractGameV2(abstraction)
