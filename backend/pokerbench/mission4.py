@@ -80,7 +80,7 @@ async def audit_cfr(folder: Path) -> dict:
         for number, entries in groupby((json.loads(line) for line in f), key=lambda e: e["hand"]):
             # Same construction as the benchmark, including the adaptive overlay.
             agent = make_agent("cfr", derive_seed(cfg.policy_seed, "policy:a", number - 1), cfg.equity_samples,
-                               cfg.tag_samples, cfg.cfr_policy, cfg.cfr_adaptive)
+                               cfg.tag_samples, cfg.cfr_policy, cfg.cfr_adaptive, cfg.cfr_allin)
             for entry in entries:
                 if entry["actor"] != "a":
                     continue
