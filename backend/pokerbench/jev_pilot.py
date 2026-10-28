@@ -141,6 +141,73 @@ async def run(plan: list[dict], output: Path, max_usd: float, approve_paid_calls
             "spent_cny": provider.store.spend(), "spent_usd": provider.store.spend() / settings.pokerbench_usd_cny_rate}
 
 
+VERIFY_CALLS = 10
+
+
+def verification_sample(plan: list[dict], n: int = VERIFY_CALLS) -> list[dict]:
+    """Evenly spaced planned requests (every street is represented), asked first."""
+    return plan[:: max(1, len(plan) // n)][:n]
+
+
+def check_calls(output: Path, plan: list[dict], usd_cny_rate: float) -> dict:
+    """Authentication, model identity, answer structure, usage and billing of every call so far.
+
+    Reads the recorded answers and the call ledger; writes nothing that holds a key.
+    """
+    import sqlite3
+    rows = [json.loads(line) for line in (output / "answers.jsonl").read_text().splitlines()]
+    planned = {request_hash(body(r)): body(r) for r in plan}
+    failures = []
+    for row in rows:
+        tag = row["request_hash"][:12]
+        if row["error"]:
+            failures.append(f"{tag}: call failed: {row['error'][:120]}")
+            continue
+        response, request = row["response"], planned[row["request_hash"]]
+        if response.get("model") != MODEL:
+            failures.append(f"{tag}: model {str(response.get('model'))[:40]}")
+        answer = (response.get("answers") or {}).get("action") or {}
+        legal = set(request["questions"]["action"]["criteria"])
+        if set(answer.get("probabilities") or {}) != legal or answer.get("choice") not in legal \
+                or not isinstance(answer.get("confidence"), (int, float)):
+            failures.append(f"{tag}: answer structure")
+        usage = response.get("usage") or {}
+        if not (isinstance(usage.get("input_tokens"), int) and usage["input_tokens"] > 0
+                and isinstance(usage.get("output_tokens"), int) and usage["output_tokens"] >= 0):
+            failures.append(f"{tag}: usage {usage}")
+    db = sqlite3.connect(output / "calls.db")
+    ledger = [(status, charged, json.loads(body_)) for status, charged, body_ in
+              db.execute("SELECT status, charged, body FROM calls WHERE run_id='pilot7b'")]
+    db.close()
+    for status, charged, meta in ledger:
+        tokens = meta.get("input_tokens")
+        if status != "reported" or not isinstance(tokens, int):
+            failures.append(f"billing: call not metered ({status})")
+            continue
+        expected_usd = tokens * jev_entry().input_usd_per_million / 1e6
+        if abs(meta.get("charge_usd", -1) - expected_usd) > 1e-12 or abs(charged - expected_usd * usd_cny_rate) > 1e-9:
+            failures.append("billing: charge does not match input tokens x 0.042 USD/M")
+    return {"calls": len(ledger), "answers": len(rows), "failures": failures, "passed": not failures and bool(rows)}
+
+
+async def pilot(plan: list[dict], output: Path, max_usd: float, approve_paid_calls: bool = False,
+                settings=None, concurrency: int = 4) -> dict:
+    """Ten verification calls, then the rest of the plan only if every check passed.
+
+    Both stages share one call ledger and run id: ``max_usd`` caps their total.
+    """
+    from .config import Settings
+    settings = settings or Settings()
+    first = verification_sample(plan)
+    stage1 = await run(first, output, max_usd, approve_paid_calls, settings, concurrency=1)
+    verification = check_calls(output, first, settings.pokerbench_usd_cny_rate)
+    (output / "verification.json").write_text(json.dumps(verification, indent=1))
+    if not verification["passed"] or stage1["stopped_early"]:
+        return {"verification": verification, "stage1": stage1, "stage2": None, "stopped": True}
+    stage2 = await run(plan, output, max_usd, approve_paid_calls, settings, concurrency)
+    return {"verification": verification, "stage1": stage1, "stage2": stage2, "stopped": stage2["stopped_early"]}
+
+
 def _describe(state: dict) -> dict:
     hero = next(s for s in state["seats"] if s["id"] == state["actor"])
     return {"street": state["street"], "position": hero["position"], "cards": hero["cards"], "board": state["board"],
@@ -225,6 +292,9 @@ def main():
     s = sub.add_parser("run", help="PAID: ask Jev every planned request")
     s.add_argument("--plan", type=Path, default=PLAN); s.add_argument("--output", type=Path, required=True)
     s.add_argument("--max-usd", type=float, required=True); s.add_argument("--approve-paid-calls", action="store_true")
+    s = sub.add_parser("pilot", help="PAID: 10 verification calls, then the rest if every check passes")
+    s.add_argument("--plan", type=Path, default=PLAN); s.add_argument("--output", type=Path, required=True)
+    s.add_argument("--max-usd", type=float, required=True); s.add_argument("--approve-paid-calls", action="store_true")
     s = sub.add_parser("analyze", help="disagreement report from recorded answers (free)")
     s.add_argument("--plan", type=Path, default=PLAN); s.add_argument("answers", type=Path)
     s.add_argument("--output", type=Path, required=True)
@@ -237,6 +307,11 @@ def main():
         print(json.dumps(estimate(read_plan(a.plan), Settings().pokerbench_usd_cny_rate), indent=1))
     elif a.command == "run":
         print(json.dumps(asyncio.run(run(read_plan(a.plan), a.output, a.max_usd, a.approve_paid_calls)), indent=1))
+    elif a.command == "pilot":
+        result = asyncio.run(pilot(read_plan(a.plan), a.output, a.max_usd, a.approve_paid_calls))
+        print(json.dumps(result, indent=1))
+        if result["stopped"]:
+            raise SystemExit("Pilot stopped: see verification.json")
     else:
         plan = read_plan(a.plan)
         result = asyncio.run(analyze(plan, a.answers))
