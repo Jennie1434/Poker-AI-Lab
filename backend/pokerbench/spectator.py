@@ -11,19 +11,20 @@ import secrets
 import time
 
 from .agents import play_action
-from .benchmark import BB, derive_seed, make_agent, update_public_stats
+from .benchmark import BB, derive_seed, make_agent, update_allin_stats, update_public_stats, with_all_ins
 from .engine import Hand
-from .local_agents import ADAPTIVE, LOCAL_POLICIES
+from .local_agents import ADAPTIVE, ALLIN, LOCAL_POLICIES
 
 AGENTS = {**{key: name for key, (name, _, _) in LOCAL_POLICIES.items()},
-          "tag": "TightAggressive", "hyper": "HyperAggressive", "station": "CallingStation",
+          "tag": "TightAggressive", "hyper": "HyperAggressive", "shover": "Shover", "station": "CallingStation",
           "equity": "EquityHeuristic", "heuristic": "Heuristic", "random": "Random"}
 MAX_SESSIONS_PER_USER, MAX_HANDS = 5, 2000
 
 
 def agent(name: str, seed: int):
     if name in LOCAL_POLICIES:
-        return make_agent("cfr", seed, 64, cfr_policy=LOCAL_POLICIES[name][1], cfr_adaptive=name in ADAPTIVE)
+        return make_agent("cfr", seed, 64, cfr_policy=LOCAL_POLICIES[name][1],
+                          cfr_adaptive=name in ADAPTIVE, cfr_allin=ALLIN.get(name, ""))
     return make_agent(name, seed, 64)
 
 
@@ -39,7 +40,7 @@ class Spectator:
             self.sessions.pop(old["id"], None)
         session = {"id": secrets.token_urlsafe(12), "owner": owner, "created": time.time(),
                    "agents": {"a": a, "b": b}, "deck_seed": secrets.randbelow(2**62),
-                   "policy_seed": secrets.randbelow(2**62), "hands": [], "lock": asyncio.Lock(), "public": {},
+                   "policy_seed": secrets.randbelow(2**62), "hands": [], "lock": asyncio.Lock(), "public": {}, "allins": {},
                    "stats": {seat: {"hands": 0, "net_chips": 0, "won": 0} for seat in "ab"}}
         self.sessions[session["id"]] = session
         return self.public(session)
@@ -67,9 +68,11 @@ class Spectator:
             hand = Hand([{"id": "a", "stack": 200 * BB}, {"id": "b", "stack": 200 * BB}], index % 2, (BB // 2, BB, 0),
                         derive_seed(session["deck_seed"], "deck", index), number, chip_unit=50)
             # Agents see the same public counters a room exposes (VPIP, PFR, 3-bet).
+            shown = with_all_ins(session["public"], session["allins"])
             while hand.state.status:
-                await play_action(hand, seats[hand.actor], session["public"])
+                await play_action(hand, seats[hand.actor], shown)
             update_public_stats(session["public"], hand)
+            update_allin_stats(session["allins"], hand)
             payoffs = {s["id"]: s["payoff"] for s in hand.snapshot()["seats"]}
             for seat, payoff in payoffs.items():
                 row = session["stats"][seat]

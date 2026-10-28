@@ -27,6 +27,9 @@ LOCAL_POLICIES = {
 }
 # Entries played through the public-statistics overlay (adaptive.py).
 ADAPTIVE = {"cfr-v2-adapt"}
+# Entries that also receive the separate public all-in counters (allin.py).
+# entry id -> shoving-range hypothesis.
+ALLIN: dict[str, str] = {}
 COLOR = "#2f7d6d"
 
 
@@ -55,7 +58,10 @@ async def decide(entry: Entry, request: dict, decision_id: str, request_hash: st
     policy = cached_policy(LOCAL_POLICIES[entry.model][1])
     seed = int.from_bytes(hashlib.sha256(f"local-cfr:{decision_id}".encode()).digest()[:8], "big")
     agent = agent_for(seed, policy)
-    if entry.model in ADAPTIVE:
+    if entry.model in ALLIN:
+        from .allin import AllInAwareAgent
+        agent = AllInAwareAgent(agent, ALLIN[entry.model])
+    elif entry.model in ADAPTIVE:
         from .adaptive import AdaptiveCFRAgent
         agent = AdaptiveCFRAgent(agent)
     choice = await agent.choose_action(request["state"])

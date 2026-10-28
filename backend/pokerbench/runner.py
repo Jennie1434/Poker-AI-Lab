@@ -6,6 +6,7 @@ import time
 import uuid
 
 from .config import RunConfig
+from .benchmark import update_allin_stats, with_all_ins
 from .engine import Hand
 from .ev import attach_ev
 from .provider import Provider, ProviderError
@@ -186,7 +187,7 @@ class Runner:
                     did=f"{run_id}:{hand.number}:{len(hand.actions)}"
                     run["message"]=f"第 {hand.number} 手 · {entry.name} 决策中"
                     self.store.save_run(run)
-                    request=hand.request(entry.model,run["statistics"])
+                    request=hand.request(entry.model,self.public_stats(run,entry))
                     if cfg.mode=="sng":
                         request["state"]["tournament"]={"level":min(run["hands_played"]//cfg.level_every+1,len(cfg.blind_levels)),
                             "hands_until_next_level":cfg.level_every-run["hands_played"]%cfg.level_every if run["hands_played"]//cfg.level_every<len(cfg.blind_levels)-1 else None,
@@ -258,6 +259,12 @@ class Runner:
 
         finally:
             self.personal_keys.pop(run_id,None)
+
+    def public_stats(self, run, entry):
+        from .local_agents import ALLIN
+        if entry.provider=="local_cfr" and entry.model in ALLIN:
+            return with_all_ins(run["statistics"],run.get("allin_statistics",{}))
+        return run["statistics"]
 
     def finish_limit(self, run):
         if run["config"]["mode"]=="sng":
@@ -340,6 +347,8 @@ class Runner:
             stat["vpip"]+=int(any(a["pay"]>0 for a in pre))
             stat["pfr"]+=int(any(a["kind"]=="raise" for a in pre))
             stat["three_bet"]+=int(any(a.get("raise_number")==3 for a in pre))
+        # Kept apart from the counters every model sees, so their inputs are unchanged.
+        update_allin_stats(run.setdefault("allin_statistics",{}),hand)
         swings=sorted(((pid,result[pid]["stack"]-old[pid]) for pid in involved),key=lambda p:abs(p[1]),reverse=True)
         run["events"].append({"type":"swing","hand":hand.number,"player":swings[0][0],
                               "amount":swings[0][1],"label":"本手最大筹码变动"})

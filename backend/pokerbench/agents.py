@@ -233,9 +233,10 @@ class HyperAggressiveAgent(EquityHeuristicAgent):
     only weak hands facing large bets. A stress test, not a winning strategy.
     """
 
-    def __init__(self, seed: int, samples: int = 32, open_rate: float = 0.95, barrel_rate: float = 0.7):
+    def __init__(self, seed: int, samples: int = 32, open_rate: float = 0.95, barrel_rate: float = 0.7,
+                 preflop_shove: float = 0.04):
         super().__init__(seed, samples)
-        self.open_rate, self.barrel_rate = open_rate, barrel_rate
+        self.open_rate, self.barrel_rate, self.preflop_shove = open_rate, barrel_rate, preflop_shove
 
     def pick_raise(self, raises, shove_rate):
         normal = [a for a in raises if not a["all_in"]]
@@ -255,7 +256,7 @@ class HyperAggressiveAgent(EquityHeuristicAgent):
             if trash and call > 2 * obs["big_blind"] and "fold" in by_kind:
                 return by_kind["fold"]["id"]
             if raises and self.rng.random() < self.open_rate and not (trash and self.rng.random() < 0.5):
-                return self.pick_raise(raises, 0.04)
+                return self.pick_raise(raises, self.preflop_shove)
             return (by_kind.get("check") or by_kind.get("call") or by_kind["fold"])["id"]
         equity = self.estimate_equity(obs)
         if raises and (equity > 0.75 or self.rng.random() < self.barrel_rate * (0.6 if call else 1)):
@@ -266,6 +267,17 @@ class HyperAggressiveAgent(EquityHeuristicAgent):
         if equity >= price or self.rng.random() < 0.5:
             return by_kind["call"]["id"]
         return by_kind["fold"]["id"]
+
+
+class ShoverAgent(HyperAggressiveAgent):
+    """Hyper-aggressive test opponent that moves all-in preflop most of the time.
+
+    Calibrated on the observed 49-hand session, where the human shoved in 34
+    hands (~70 %), mostly preflop and with almost any two cards.
+    """
+
+    def __init__(self, seed: int, samples: int = 32):
+        super().__init__(seed, samples, preflop_shove=0.78)
 
 
 class CallingStationAgent(EquityHeuristicAgent):

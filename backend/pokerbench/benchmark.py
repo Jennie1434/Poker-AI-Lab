@@ -15,12 +15,12 @@ import subprocess
 import time
 
 from .agents import (CallingStationAgent, EquityHeuristicAgent, HeuristicAgent, HyperAggressiveAgent, RandomAgent,
-                     TightAggressiveAgent, play_action)
+                     ShoverAgent, TightAggressiveAgent, play_action)
 from .engine import Hand
 
 ROOT = Path(__file__).resolve().parents[2]
 BB = 100
-POLICIES = ("random", "heuristic", "equity", "tag", "cfr", "hyper", "station")
+POLICIES = ("random", "heuristic", "equity", "tag", "cfr", "hyper", "station", "shover")
 
 
 def derive_seed(master: int, domain: str, hand: int) -> int:
@@ -43,6 +43,8 @@ class Config:
     cfr_policy: str = ""
     cfr_adaptive: bool = False
     public_stats: bool = False
+    cfr_allin: str = ""
+    allin_stats: bool = False
 
     def validate(self):
         if self.hands < 4 or self.hands % 2:
@@ -58,7 +60,7 @@ class Config:
             raise ValueError("cfr policy requires --cfr-policy")
 
 
-def make_agent(name, seed, samples, tag_samples=64, cfr_policy="", cfr_adaptive=False):
+def make_agent(name, seed, samples, tag_samples=64, cfr_policy="", cfr_adaptive=False, cfr_allin=""):
     if name == "random":
         return RandomAgent(seed)
     if name == "heuristic":
@@ -69,12 +71,17 @@ def make_agent(name, seed, samples, tag_samples=64, cfr_policy="", cfr_adaptive=
         return TightAggressiveAgent(seed, tag_samples)
     if name == "hyper":
         return HyperAggressiveAgent(seed)
+    if name == "shover":
+        return ShoverAgent(seed)
     if name == "station":
         return CallingStationAgent(seed, 32)
     if name == "cfr":
         from .holdem_abstraction import cached_policy
         from .holdem_v2 import agent_for
         agent = agent_for(seed, cached_policy(cfr_policy))
+        if cfr_allin:
+            from .allin import AllInAwareAgent
+            return AllInAwareAgent(agent, cfr_allin)
         if cfr_adaptive:
             from .adaptive import AdaptiveCFRAgent
             return AdaptiveCFRAgent(agent)
@@ -91,6 +98,20 @@ def update_public_stats(stats: dict, hand: Hand):
         row["vpip"] += int(any(a["pay"] > 0 for a in pre))
         row["pfr"] += int(any(a["kind"] == "raise" for a in pre))
         row["three_bet"] += int(any(a.get("raise_number") == 3 for a in pre))
+
+
+def update_allin_stats(stats: dict, hand: Hand):
+    """Public count of hands in which each player made an all-in raise."""
+    for pid in hand.ids:
+        row = stats.setdefault(pid, {"all_in": 0, "all_in_preflop": 0})
+        shoves = [a for a in hand.actions if a["player"] == pid and a["kind"] == "raise" and a["all_in"]]
+        row["all_in"] += int(bool(shoves))
+        row["all_in_preflop"] += int(any(a["street"] == "preflop" for a in shoves))
+
+
+def with_all_ins(public: dict, allins: dict) -> dict:
+    """Separate counters merged only for agents that ask for them."""
+    return {pid: {**row, **allins.get(pid, {})} for pid, row in public.items()}
 
 
 def settle_rake(hand: Hand, cfg: Config) -> dict:
@@ -191,7 +212,7 @@ async def experiment(cfg: Config, output: Path) -> dict:
         temporary.replace(manifest_path)
     save()
     rows = []
-    public = {}
+    public, allins = {}, {}
     timing = {seat: {"decisions": 0, "cpu_seconds": 0.0} for seat in ("a", "b")}
     try:
         with (output / "hands.csv").open("x", newline="") as hf, (output / "decisions.jsonl").open("x") as df:
@@ -199,7 +220,7 @@ async def experiment(cfg: Config, output: Path) -> dict:
             writer.writeheader()
             for number in range(cfg.hands):
                 agents = {seat: make_agent(policy, derive_seed(cfg.policy_seed, f"policy:{seat}", number), cfg.equity_samples,
-                                           cfg.tag_samples, cfg.cfr_policy, cfg.cfr_adaptive)
+                                           cfg.tag_samples, cfg.cfr_policy, cfg.cfr_adaptive, cfg.cfr_allin)
                           for seat, policy in (("a", cfg.agent_a), ("b", cfg.agent_b))}
                 hand = Hand([{"id": "a", "stack": 20000}, {"id": "b", "stack": 20000}],
                             button=number % 2, blinds=(50, BB, 0),
@@ -210,7 +231,7 @@ async def experiment(cfg: Config, output: Path) -> dict:
                     actor = hand.actor
                     # Only the actor's sanitized view is logged. This private trace
                     # is never embedded in the comparison dashboard or sent to agents.
-                    shown = public if cfg.public_stats else None
+                    shown = (with_all_ins(public, allins) if cfg.allin_stats else public) if cfg.public_stats else None
                     observation = hand.observation(shown)
                     started = time.process_time() if cfg.measure_time else 0
                     action = await play_action(hand, agents[actor], shown)
@@ -222,6 +243,7 @@ async def experiment(cfg: Config, output: Path) -> dict:
                                         separators=(",", ":")) + "\n")
                 if cfg.public_stats:
                     update_public_stats(public, hand)
+                    update_allin_stats(allins, hand)
                 settled = settle_rake(hand, cfg)
                 if sum(hand.state.stacks) != 40000:
                     raise RuntimeError("Chip conservation failed")
