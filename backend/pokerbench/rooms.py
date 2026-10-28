@@ -149,8 +149,11 @@ def room_history(run, store, limit=30):
             row["vpip"]+=any(a["kind"] in ("call","raise") for a in preflop)
             row["pfr"]+=any(a["kind"]=="raise" for a in preflop)
             row["showdowns"]+=len(live)>1 and not seat["folded"]
+        # "pot" is the largest pot shown during the hand (an uncalled all-in included);
+        # "contested_pot" is what was actually at stake: twice the smaller commitment.
         hands.append({"number":final["hand_number"],"board":final["board"],
                       "pot":max(e["snapshot"]["pot"] for e in view["events"]),
+                      "contested_pot":2*min(s["committed"] for s in seats),
                       "players":[{"id":s["id"],"position":s["position"],"cards":s["cards"],"payoff":s["payoff"]} for s in seats],
                       "actions":[{k:a[k] for k in ("player","street","kind","label","to","pay","all_in")} for a in actions]})
     for row in stats.values():

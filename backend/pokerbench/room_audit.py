@@ -23,17 +23,44 @@ def made_hand(cards, board):
     return _EVAL.get_rank_class(_EVAL.evaluate([Card.new(c) for c in board], [Card.new(c) for c in cards]))
 
 
+def contested_pot(hand: dict, big_blind: int = 100) -> int:
+    """Matched chips only: blinds plus every payment, capped at the smaller total.
+
+    The export's ``pot`` is the largest pot shown during the hand, which
+    includes an all-in that was never called; it is not the pot at stake.
+    """
+    committed = {p["id"]: big_blind // 2 if "SB" in p["position"] else big_blind for p in hand["players"]}
+    for action in hand["actions"]:
+        committed[action["player"]] += action["pay"]
+    return 2 * min(committed.values())
+
+
 def audit(history: dict, big_blind: int = 100) -> dict:
     hands = sorted(history["hands"], key=lambda h: h["number"])
     players = sorted({p["id"] for h in hands for p in h["players"]})
     seat = {pid: defaultdict(Counter) for pid in players}
     pots = Counter()
     for h in hands:
-        pot_bb = h["pot"] / big_blind
+        pot_bb = contested_pot(h, big_blind) / big_blind
         pots["<5 BB" if pot_bb < 5 else "5-20 BB" if pot_bb < 20 else "20-60 BB" if pot_bb < 60 else ">=60 BB"] += 1
         positions = {p["id"]: p["position"] for p in h["players"]}
         cards = {p["id"]: p["cards"] for p in h["players"]}
         payoff = {p["id"]: p["payoff"] or 0 for p in h["players"]}
+        revealed = all("??" not in c for c in cards.values())
+        for pid in players:
+            stats = seat[pid]["hand"]
+            stats["won_chips"] += max(payoff.get(pid, 0), 0)
+            stats["lost_chips"] += max(-payoff.get(pid, 0), 0)
+            if revealed:
+                stats["revealed_showdowns"] += 1
+                stats["revealed_showdowns_won"] += payoff.get(pid, 0) > 0
+        shove = next((a for a in h["actions"] if a["kind"] == "raise" and a["all_in"]), None)
+        if shove:
+            seat[shove["player"]]["hand"][f"all_in_{shove['street']}"] += 1
+            after = h["actions"][h["actions"].index(shove) + 1:]
+            reply = next((a for a in after if a["player"] != shove["player"]), None)
+            if reply:
+                seat[reply["player"]]["hand"][f"vs_all_in_{reply['kind']}"] += 1
         for a in h["actions"]:
             pid = a["player"]
             row = seat[pid][a["street"]]
@@ -67,7 +94,7 @@ def audit(history: dict, big_blind: int = 100) -> dict:
                     stats["aggression_with_weak_showdown_hand"] += 1
             if payoff.get(pid, 0) < 0 and any(a["kind"] == "fold" for a in mine):
                 stats["folded_after_investing"] += 1
-    result = {"hands": len(hands), "pot_sizes": dict(pots), "players": {}}
+    result = {"hands": len(hands), "contested_pot_sizes": dict(pots), "players": {}}
     for pid in players:
         s = seat[pid]["hand"]
         n = max(1, s["hands"])
@@ -82,6 +109,10 @@ def audit(history: dict, big_blind: int = 100) -> dict:
                                "raise_when_facing_bet": r["raise_facing_bet"] / r["facing_bet"] if r["facing_bet"] else None}
         result["players"][pid] = {
             "hands": s["hands"], "net_bb": s["net_chips"] / big_blind,
+            "gross_won_bb": s["won_chips"] / big_blind, "gross_lost_bb": s["lost_chips"] / big_blind,
+            "all_in_hands": {st: s[f"all_in_{st}"] for st in STREETS if s[f"all_in_{st}"]},
+            "facing_all_in": {k: s[f"vs_all_in_{k}"] for k in ("fold", "call") if s[f"vs_all_in_{k}"]},
+            "revealed_showdowns": s["revealed_showdowns"], "revealed_showdowns_won": s["revealed_showdowns_won"],
             "bb_per_100": 100 * s["net_chips"] / big_blind / n, "won_rate": s["won"] / n,
             "vpip": s["vpip"] / n, "pfr": s["pfr"] / n,
             "bb_fold_to_open": s["bb_fold_to_open"] / s["bb_facing_open"] if s["bb_facing_open"] else None,

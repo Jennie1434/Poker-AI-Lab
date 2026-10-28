@@ -197,3 +197,25 @@ def test_adaptive_room_entry_uses_public_statistics_from_the_request():
         folds[name] = sum(asyncio.run(decide(entries[name], request, f'r:1:{i}', 'h'))['answers']['action']['choice'] == 'fold'
                           for i in range(40))
     assert folds['cfr-v2'] >= 30 and folds['cfr-v2-adapt'] <= 8
+
+
+def test_audit_counts_the_contested_pot_not_an_uncalled_all_in():
+    from pokerbench.room_audit import audit, contested_pot
+    shove_fold = {'number': 1, 'board': [], 'pot': 20450, 'players': [
+        {'id': 'human-player', 'position': 'BTN/SB', 'cards': ['Qd', '7c'], 'payoff': 100},
+        {'id': 'opponent-1', 'position': 'BB', 'cards': ['??', '??'], 'payoff': -100}], 'actions': [
+        {'player': 'human-player', 'street': 'preflop', 'kind': 'raise', 'label': 'all in', 'to': 20350, 'pay': 20300, 'all_in': True},
+        {'player': 'opponent-1', 'street': 'preflop', 'kind': 'fold', 'label': 'fold', 'to': 100, 'pay': 0, 'all_in': False}]}
+    called = {'number': 2, 'board': ['2c', '3d', '4h', '9s', 'Kd'], 'pot': 40000, 'players': [
+        {'id': 'human-player', 'position': 'BB', 'cards': ['7s', '2d'], 'payoff': -20000},
+        {'id': 'opponent-1', 'position': 'BTN/SB', 'cards': ['Ah', 'Kh'], 'payoff': 20000}], 'actions': [
+        {'player': 'opponent-1', 'street': 'preflop', 'kind': 'call', 'label': 'call', 'to': 100, 'pay': 50, 'all_in': False},
+        {'player': 'human-player', 'street': 'preflop', 'kind': 'raise', 'label': 'all in', 'to': 20000, 'pay': 19900, 'all_in': True},
+        {'player': 'opponent-1', 'street': 'preflop', 'kind': 'call', 'label': 'call', 'to': 20000, 'pay': 19900, 'all_in': True}]}
+    assert contested_pot(shove_fold) == 200 and contested_pot(called) == 40000
+    report = audit({'hands': [shove_fold, called]})
+    assert report['contested_pot_sizes'] == {'<5 BB': 1, '>=60 BB': 1}
+    human, bot = report['players']['human-player'], report['players']['opponent-1']
+    assert human['all_in_hands'] == {'preflop': 2} and bot['facing_all_in'] == {'fold': 1, 'call': 1}
+    assert human['gross_won_bb'] == 1 and human['gross_lost_bb'] == 200
+    assert bot['revealed_showdowns'] == 1 and bot['revealed_showdowns_won'] == 1
