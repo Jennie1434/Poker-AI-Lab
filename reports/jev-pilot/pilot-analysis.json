@@ -1,0 +1,709 @@
+{
+ "planned": 500,
+ "answered": 500,
+ "errors": 0,
+ "error_reasons": {},
+ "models": {
+  "jev-1.14.0": 500
+ },
+ "latency_seconds": {
+  "median": 0.5178196509999964,
+  "p90": 0.6760894159999964
+ },
+ "input_tokens": {
+  "mean": 1978.99,
+  "total": 989495
+ },
+ "jev_confidence_mean": 0.37162,
+ "agreement": {
+  "overall": {
+   "decisions": 500,
+   "same_action": 0.572,
+   "same_kind": 0.598,
+   "mean_tv": 0.4785224249998143,
+   "mean_kind_tv": 0.35405332558093666
+  },
+  "by_street": {
+   "flop": {
+    "decisions": 150,
+    "same_action": 0.5866666666666667,
+    "same_kind": 0.5866666666666667,
+    "mean_tv": 0.4451990844763633,
+    "mean_kind_tv": 0.3298367408996113
+   },
+   "preflop": {
+    "decisions": 150,
+    "same_action": 0.4666666666666667,
+    "same_kind": 0.5533333333333333,
+    "mean_tv": 0.5112356868675787,
+    "mean_kind_tv": 0.37251645880144646
+   },
+   "river": {
+    "decisions": 100,
+    "same_action": 0.66,
+    "same_kind": 0.66,
+    "mean_tv": 0.46895841082059997,
+    "mean_kind_tv": 0.35606951626608
+   },
+   "turn": {
+    "decisions": 100,
+    "same_action": 0.62,
+    "same_kind": 0.62,
+    "mean_tv": 0.48900155716255844,
+    "mean_kind_tv": 0.3606673120870165
+   }
+  },
+  "by_opponent": {
+   "equity": {
+    "decisions": 156,
+    "same_action": 0.6602564102564102,
+    "same_kind": 0.6858974358974359,
+    "mean_tv": 0.45091506041314416,
+    "mean_kind_tv": 0.3212186453734557
+   },
+   "hyper": {
+    "decisions": 147,
+    "same_action": 0.4489795918367347,
+    "same_kind": 0.46938775510204084,
+    "mean_tv": 0.5683187481578267,
+    "mean_kind_tv": 0.4689518072136832
+   },
+   "station": {
+    "decisions": 164,
+    "same_action": 0.6097560975609756,
+    "same_kind": 0.6219512195121951,
+    "mean_tv": 0.4248174613803457,
+    "mean_kind_tv": 0.28818997047649375
+   },
+   "tag": {
+    "decisions": 33,
+    "same_action": 0.5151515151515151,
+    "same_kind": 0.6363636363636364,
+    "mean_tv": 0.47592555848119494,
+    "mean_kind_tv": 0.3247722210197828
+   }
+  },
+  "by_facing_bet": {
+   "False": {
+    "decisions": 284,
+    "same_action": 0.6795774647887324,
+    "same_kind": 0.6795774647887324,
+    "mean_tv": 0.3937955018804487,
+    "mean_kind_tv": 0.25990592569794174
+   },
+   "True": {
+    "decisions": 216,
+    "same_action": 0.4305555555555556,
+    "same_kind": 0.49074074074074076,
+    "mean_tv": 0.589922638730832,
+    "mean_kind_tv": 0.47783972172339295
+   }
+  },
+  "largest_disagreements": []
+ },
+ "kind_confusion_cfr_to_jev": {
+  "aggressive\u2192passive": 119,
+  "aggressive\u2192fold": 8,
+  "passive\u2192fold": 60,
+  "aggressive\u2192aggressive": 13,
+  "fold\u2192fold": 42,
+  "passive\u2192passive": 244,
+  "passive\u2192aggressive": 1,
+  "fold\u2192passive": 13
+ },
+ "jev_mass_on_cfr_top_action": 0.3459842424242424,
+ "largest_disagreements": [
+  {
+   "street": "river",
+   "position": "BB",
+   "cards": [
+    "4c",
+    "8d"
+   ],
+   "board": [
+    "2d",
+    "8h",
+    "7d",
+    "Qc",
+    "8c"
+   ],
+   "pot": 500,
+   "to_call": 100,
+   "stack": 19800,
+   "history": "2:call 1:check 1:check 2:check 1:check 2:raise100 1:call 1:check 2:raise100",
+   "opponent": "equity",
+   "cfr": {
+    "call": 0.0,
+    "fold": 0.0,
+    "raise_to_1000": 0.0,
+    "raise_to_19800": 0.0068,
+    "raise_to_200": 0.0,
+    "raise_to_300": 0.0,
+    "raise_to_400": 0.0,
+    "raise_to_550": 0.0,
+    "raise_to_700": 0.9932
+   },
+   "jev": {
+    "call": 0.43,
+    "fold": 0.34,
+    "raise_to_1000": 0.03,
+    "raise_to_19800": 0.03,
+    "raise_to_200": 0.04,
+    "raise_to_300": 0.03,
+    "raise_to_400": 0.05,
+    "raise_to_550": 0.01,
+    "raise_to_700": 0.04
+   },
+   "tv": 0.9531999999999999,
+   "hash": "bafe4b808872"
+  },
+  {
+   "street": "river",
+   "position": "BB",
+   "cards": [
+    "Qs",
+    "Js"
+   ],
+   "board": [
+    "Ks",
+    "5d",
+    "Ad",
+    "Tc",
+    "4d"
+   ],
+   "pot": 2500,
+   "to_call": 500,
+   "stack": 19000,
+   "history": "2:call 1:check 1:check 2:check 1:raise200 2:raise400 1:call 1:raise500 2:raise1000",
+   "opponent": "station",
+   "cfr": {
+    "call": 0.0,
+    "fold": 0.0,
+    "raise_to_1500": 0.0,
+    "raise_to_19500": 1.0,
+    "raise_to_2000": 0.0,
+    "raise_to_2500": 0.0,
+    "raise_to_3250": 0.0,
+    "raise_to_4000": 0.0,
+    "raise_to_5500": 0.0
+   },
+   "jev": {
+    "call": 0.41,
+    "fold": 0.27,
+    "raise_to_1500": 0.11,
+    "raise_to_19500": 0.1,
+    "raise_to_2000": 0.02,
+    "raise_to_2500": 0.03,
+    "raise_to_3250": 0.03,
+    "raise_to_4000": 0.02,
+    "raise_to_5500": 0.01
+   },
+   "tv": 0.9,
+   "hash": "a97c5badf2aa"
+  },
+  {
+   "street": "preflop",
+   "position": "BB",
+   "cards": [
+    "9c",
+    "6d"
+   ],
+   "board": [],
+   "pot": 400,
+   "to_call": 200,
+   "stack": 19900,
+   "history": "2:raise300",
+   "opponent": "hyper",
+   "cfr": {
+    "call": 0.9984000000000001,
+    "fold": 0.0,
+    "raise_to_1200": 0.0,
+    "raise_to_20000": 0.0002,
+    "raise_to_500": 0.0,
+    "raise_to_600": 0.0,
+    "raise_to_750": 0.0,
+    "raise_to_900": 0.0014
+   },
+   "jev": {
+    "call": 0.14,
+    "fold": 0.57,
+    "raise_to_1200": 0.02,
+    "raise_to_20000": 0.03,
+    "raise_to_500": 0.1,
+    "raise_to_600": 0.08,
+    "raise_to_750": 0.03,
+    "raise_to_900": 0.03
+   },
+   "tv": 0.8584,
+   "hash": "b745ff337c41"
+  },
+  {
+   "street": "preflop",
+   "position": "BB",
+   "cards": [
+    "8s",
+    "8d"
+   ],
+   "board": [],
+   "pot": 500,
+   "to_call": 300,
+   "stack": 19900,
+   "history": "2:raise400",
+   "opponent": "hyper",
+   "cfr": {
+    "call": 0.0124,
+    "fold": 0.0,
+    "raise_to_1000": 0.0,
+    "raise_to_1200": 0.9204,
+    "raise_to_1600": 0.0,
+    "raise_to_20000": 0.0672,
+    "raise_to_700": 0.0,
+    "raise_to_800": 0.0
+   },
+   "jev": {
+    "call": 0.24,
+    "fold": 0.12,
+    "raise_to_1000": 0.08,
+    "raise_to_1200": 0.07,
+    "raise_to_1600": 0.05,
+    "raise_to_20000": 0.07,
+    "raise_to_700": 0.22,
+    "raise_to_800": 0.15
+   },
+   "tv": 0.8504,
+   "hash": "b406bbcb986b"
+  },
+  {
+   "street": "preflop",
+   "position": "BTN/SB",
+   "cards": [
+    "Qs",
+    "5c"
+   ],
+   "board": [],
+   "pot": 900,
+   "to_call": 300,
+   "stack": 19700,
+   "history": "1:raise300 2:raise600",
+   "opponent": "hyper",
+   "cfr": {
+    "call": 0.9998936034115139,
+    "fold": 6.396588486140662e-06,
+    "raise_to_1200": 0.0,
+    "raise_to_1500": 0.0,
+    "raise_to_1800": 0.0,
+    "raise_to_20000": 0.00010000000000000002,
+    "raise_to_2400": 0.0,
+    "raise_to_900": 0.0
+   },
+   "jev": {
+    "call": 0.15,
+    "fold": 0.47,
+    "raise_to_1200": 0.1,
+    "raise_to_1500": 0.05,
+    "raise_to_1800": 0.05,
+    "raise_to_20000": 0.04,
+    "raise_to_2400": 0.02,
+    "raise_to_900": 0.12
+   },
+   "tv": 0.8498936034115139,
+   "hash": "89a1fa8f8358"
+  },
+  {
+   "street": "turn",
+   "position": "BTN/SB",
+   "cards": [
+    "5s",
+    "5c"
+   ],
+   "board": [
+    "6s",
+    "Qd",
+    "4d",
+    "3h"
+   ],
+   "pot": 800,
+   "to_call": 200,
+   "stack": 19700,
+   "history": "1:raise300 2:call 2:check 1:check 2:raise200",
+   "opponent": "hyper",
+   "cfr": {
+    "call": 0.10798920107989203,
+    "fold": 0.0,
+    "raise_to_1200": 0.8833116688331167,
+    "raise_to_1700": 0.0,
+    "raise_to_19700": 0.008699130086991302,
+    "raise_to_400": 0.0,
+    "raise_to_550": 0.0,
+    "raise_to_700": 0.0,
+    "raise_to_950": 0.0
+   },
+   "jev": {
+    "call": 0.38,
+    "fold": 0.27,
+    "raise_to_1200": 0.04,
+    "raise_to_1700": 0.02,
+    "raise_to_19700": 0.01,
+    "raise_to_400": 0.11,
+    "raise_to_550": 0.09,
+    "raise_to_700": 0.05,
+    "raise_to_950": 0.03
+   },
+   "tv": 0.8433116688331167,
+   "hash": "d08e33dac717"
+  },
+  {
+   "street": "flop",
+   "position": "BB",
+   "cards": [
+    "Ad",
+    "Js"
+   ],
+   "board": [
+    "6s",
+    "9c",
+    "7h"
+   ],
+   "pot": 8400,
+   "to_call": 3600,
+   "stack": 17600,
+   "history": "2:raise400 1:raise1200 2:raise2400 1:call 1:check 2:raise3600",
+   "opponent": "hyper",
+   "cfr": {
+    "call": 0.0,
+    "fold": 1.0,
+    "raise_to_12600": 0.0,
+    "raise_to_15600": 0.0,
+    "raise_to_17600": 0.0,
+    "raise_to_7200": 0.0,
+    "raise_to_7600": 0.0,
+    "raise_to_9600": 0.0
+   },
+   "jev": {
+    "call": 0.31,
+    "fold": 0.16,
+    "raise_to_12600": 0.08,
+    "raise_to_15600": 0.06,
+    "raise_to_17600": 0.07,
+    "raise_to_7200": 0.15,
+    "raise_to_7600": 0.1,
+    "raise_to_9600": 0.07
+   },
+   "tv": 0.84,
+   "hash": "e4d42b1beda3"
+  },
+  {
+   "street": "preflop",
+   "position": "BTN/SB",
+   "cards": [
+    "Jh",
+    "3s"
+   ],
+   "board": [],
+   "pot": 300,
+   "to_call": 100,
+   "stack": 19900,
+   "history": "1:call 2:raise200",
+   "opponent": "hyper",
+   "cfr": {
+    "call": 0.9432,
+    "fold": 0.0,
+    "raise_to_20000": 0.0011,
+    "raise_to_300": 0.0,
+    "raise_to_400": 0.0,
+    "raise_to_500": 0.0,
+    "raise_to_600": 0.0557,
+    "raise_to_800": 0.0
+   },
+   "jev": {
+    "call": 0.14,
+    "fold": 0.64,
+    "raise_to_20000": 0.02,
+    "raise_to_300": 0.09,
+    "raise_to_400": 0.05,
+    "raise_to_500": 0.03,
+    "raise_to_600": 0.02,
+    "raise_to_800": 0.01
+   },
+   "tv": 0.8389,
+   "hash": "f09e709f2d3f"
+  },
+  {
+   "street": "turn",
+   "position": "BTN/SB",
+   "cards": [
+    "9h",
+    "Kc"
+   ],
+   "board": [
+    "4c",
+    "6h",
+    "3s",
+    "Js"
+   ],
+   "pot": 1800,
+   "to_call": 600,
+   "stack": 19400,
+   "history": "1:raise200 2:raise500 1:call 2:raise100 1:call 2:raise600",
+   "opponent": "hyper",
+   "cfr": {
+    "call": 0.029997000299970003,
+    "fold": 0.9688031196880312,
+    "raise_to_1200": 0.0,
+    "raise_to_1400": 0.0,
+    "raise_to_1800": 0.0,
+    "raise_to_19400": 0.000999900009999,
+    "raise_to_2400": 0.0,
+    "raise_to_3000": 0.00019998000199980003,
+    "raise_to_4200": 0.0
+   },
+   "jev": {
+    "call": 0.39,
+    "fold": 0.13,
+    "raise_to_1200": 0.13,
+    "raise_to_1400": 0.07,
+    "raise_to_1800": 0.11,
+    "raise_to_19400": 0.06,
+    "raise_to_2400": 0.04,
+    "raise_to_3000": 0.04,
+    "raise_to_4200": 0.03
+   },
+   "tv": 0.8388031196880312,
+   "hash": "a5069193f063"
+  },
+  {
+   "street": "preflop",
+   "position": "BB",
+   "cards": [
+    "Th",
+    "As"
+   ],
+   "board": [],
+   "pot": 400,
+   "to_call": 200,
+   "stack": 19900,
+   "history": "2:raise300",
+   "opponent": "hyper",
+   "cfr": {
+    "call": 0.011843925233644859,
+    "fold": 0.000556074766355141,
+    "raise_to_1200": 0.0,
+    "raise_to_20000": 0.0672,
+    "raise_to_500": 0.0,
+    "raise_to_600": 0.0,
+    "raise_to_750": 0.0,
+    "raise_to_900": 0.9204
+   },
+   "jev": {
+    "call": 0.25,
+    "fold": 0.13,
+    "raise_to_1200": 0.04,
+    "raise_to_20000": 0.08,
+    "raise_to_500": 0.17,
+    "raise_to_600": 0.16,
+    "raise_to_750": 0.08,
+    "raise_to_900": 0.09
+   },
+   "tv": 0.8304,
+   "hash": "aca54f590f09"
+  },
+  {
+   "street": "preflop",
+   "position": "BB",
+   "cards": [
+    "Kh",
+    "9d"
+   ],
+   "board": [],
+   "pot": 300,
+   "to_call": 100,
+   "stack": 19900,
+   "history": "2:raise200",
+   "opponent": "equity",
+   "cfr": {
+    "call": 0.1185,
+    "fold": 0.0085,
+    "raise_to_20000": 0.0011,
+    "raise_to_300": 0.0,
+    "raise_to_400": 0.0,
+    "raise_to_500": 0.0,
+    "raise_to_600": 0.8719,
+    "raise_to_800": 0.0
+   },
+   "jev": {
+    "call": 0.27,
+    "fold": 0.24,
+    "raise_to_20000": 0.04,
+    "raise_to_300": 0.18,
+    "raise_to_400": 0.11,
+    "raise_to_500": 0.07,
+    "raise_to_600": 0.05,
+    "raise_to_800": 0.04
+   },
+   "tv": 0.8219,
+   "hash": "df3c486a5e4a"
+  },
+  {
+   "street": "river",
+   "position": "BTN/SB",
+   "cards": [
+    "Qs",
+    "5c"
+   ],
+   "board": [
+    "Jd",
+    "Ah",
+    "8h",
+    "9s",
+    "Td"
+   ],
+   "pot": 1000,
+   "to_call": 0,
+   "stack": 19500,
+   "history": "1:raise300 2:call 2:raise100 1:call 2:raise100 1:call 2:check",
+   "opponent": "equity",
+   "cfr": {
+    "check": 0.0,
+    "raise_to_100": 0.0,
+    "raise_to_1000": 0.2388,
+    "raise_to_1500": 0.5606,
+    "raise_to_19500": 0.0068,
+    "raise_to_350": 0.0,
+    "raise_to_500": 0.1938,
+    "raise_to_750": 0.0
+   },
+   "jev": {
+    "check": 0.56,
+    "raise_to_100": 0.11,
+    "raise_to_1000": 0.08,
+    "raise_to_1500": 0.02,
+    "raise_to_19500": 0.03,
+    "raise_to_350": 0.07,
+    "raise_to_500": 0.09,
+    "raise_to_750": 0.04
+   },
+   "tv": 0.8032,
+   "hash": "5fde2dd37725"
+  },
+  {
+   "street": "river",
+   "position": "BTN/SB",
+   "cards": [
+    "2c",
+    "6s"
+   ],
+   "board": [
+    "2d",
+    "5h",
+    "Qs",
+    "6d",
+    "Ad"
+   ],
+   "pot": 400,
+   "to_call": 0,
+   "stack": 19800,
+   "history": "1:call 2:check 2:check 1:check 2:check 1:raise100 2:call 2:check",
+   "opponent": "tag",
+   "cfr": {
+    "check": 0.0001,
+    "raise_to_100": 0.0,
+    "raise_to_150": 0.0,
+    "raise_to_19800": 0.0286,
+    "raise_to_200": 0.1798,
+    "raise_to_300": 0.0,
+    "raise_to_400": 0.2141,
+    "raise_to_600": 0.5774
+   },
+   "jev": {
+    "check": 0.6,
+    "raise_to_100": 0.11,
+    "raise_to_150": 0.03,
+    "raise_to_19800": 0.03,
+    "raise_to_200": 0.06,
+    "raise_to_300": 0.06,
+    "raise_to_400": 0.08,
+    "raise_to_600": 0.03
+   },
+   "tv": 0.8013,
+   "hash": "7a21a9c16b9f"
+  },
+  {
+   "street": "river",
+   "position": "BTN/SB",
+   "cards": [
+    "Qc",
+    "6c"
+   ],
+   "board": [
+    "Td",
+    "2s",
+    "5h",
+    "3s",
+    "7c"
+   ],
+   "pot": 400,
+   "to_call": 0,
+   "stack": 19800,
+   "history": "1:raise200 2:call 2:check 1:check 2:check 1:check 2:check",
+   "opponent": "station",
+   "cfr": {
+    "check": 0.0393,
+    "raise_to_100": 0.0,
+    "raise_to_150": 0.0,
+    "raise_to_19800": 0.0001,
+    "raise_to_200": 0.2509,
+    "raise_to_300": 0.0,
+    "raise_to_400": 0.2193,
+    "raise_to_600": 0.4904
+   },
+   "jev": {
+    "check": 0.61,
+    "raise_to_100": 0.12,
+    "raise_to_150": 0.05,
+    "raise_to_19800": 0.03,
+    "raise_to_200": 0.08,
+    "raise_to_300": 0.03,
+    "raise_to_400": 0.06,
+    "raise_to_600": 0.02
+   },
+   "tv": 0.8006,
+   "hash": "a93b6db216aa"
+  },
+  {
+   "street": "preflop",
+   "position": "BB",
+   "cards": [
+    "8s",
+    "5d"
+   ],
+   "board": [],
+   "pot": 300,
+   "to_call": 100,
+   "stack": 19900,
+   "history": "2:raise200",
+   "opponent": "hyper",
+   "cfr": {
+    "call": 0.9857535303079857,
+    "fold": 0.009545999645009554,
+    "raise_to_20000": 0.00040004000400040005,
+    "raise_to_300": 0.0,
+    "raise_to_400": 0.0,
+    "raise_to_500": 0.0,
+    "raise_to_600": 0.004300430043004301,
+    "raise_to_800": 0.0
+   },
+   "jev": {
+    "call": 0.19,
+    "fold": 0.58,
+    "raise_to_20000": 0.01,
+    "raise_to_300": 0.1,
+    "raise_to_400": 0.06,
+    "raise_to_500": 0.03,
+    "raise_to_600": 0.02,
+    "raise_to_800": 0.01
+   },
+   "tv": 0.7957535303079857,
+   "hash": "7458e334f4a0"
+  }
+ ]
+}
