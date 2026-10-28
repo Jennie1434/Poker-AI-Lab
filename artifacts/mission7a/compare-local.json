@@ -1,0 +1,172 @@
+{
+ "cmp-adapt-v2": {
+  "overall": {
+   "decisions": 2360,
+   "same_action": 0.923728813559322,
+   "same_kind": 0.923728813559322,
+   "mean_tv": 0.060382182781512576,
+   "mean_kind_tv": 0.06038217327822563
+  },
+  "by_street": {
+   "flop": {
+    "decisions": 637,
+    "same_action": 0.9293563579277865,
+    "same_kind": 0.9293563579277865,
+    "mean_tv": 0.05759361646776141,
+    "mean_kind_tv": 0.057593616295094234
+   },
+   "preflop": {
+    "decisions": 843,
+    "same_action": 0.9051008303677343,
+    "same_kind": 0.9051008303677343,
+    "mean_tv": 0.07170722847193874,
+    "mean_kind_tv": 0.07170720199771782
+   },
+   "river": {
+    "decisions": 390,
+    "same_action": 0.9384615384615385,
+    "same_kind": 0.9384615384615385,
+    "mean_tv": 0.04868444142774751,
+    "mean_kind_tv": 0.04868444142774751
+   },
+   "turn": {
+    "decisions": 490,
+    "same_action": 0.936734693877551,
+    "same_kind": 0.936734693877551,
+    "mean_tv": 0.05383406513416283,
+    "mean_kind_tv": 0.05383406513416283
+   }
+  },
+  "by_opponent": {
+   "equity": {
+    "decisions": 667,
+    "same_action": 1.0,
+    "same_kind": 1.0,
+    "mean_tv": 0.0,
+    "mean_kind_tv": 0.0
+   },
+   "hyper": {
+    "decisions": 745,
+    "same_action": 0.7583892617449665,
+    "same_kind": 0.7583892617449665,
+    "mean_tv": 0.19127778706626805,
+    "mean_kind_tv": 0.19127775696189595
+   },
+   "station": {
+    "decisions": 751,
+    "same_action": 1.0,
+    "same_kind": 1.0,
+    "mean_tv": 0.0,
+    "mean_kind_tv": 0.0
+   },
+   "tag": {
+    "decisions": 197,
+    "same_action": 1.0,
+    "same_kind": 1.0,
+    "mean_tv": 0.0,
+    "mean_kind_tv": 0.0
+   }
+  },
+  "by_facing_bet": {
+   "False": {
+    "decisions": 1262,
+    "same_action": 0.991283676703645,
+    "same_kind": 0.991283676703645,
+    "mean_tv": 0.005700197749635276,
+    "mean_kind_tv": 0.005700197749635276
+   },
+   "True": {
+    "decisions": 1098,
+    "same_action": 0.8460837887067395,
+    "same_kind": 0.8460837887067395,
+    "mean_tv": 0.12323160455767757,
+    "mean_kind_tv": 0.12323158413166918
+   }
+  }
+ },
+ "cmp-adapt-v3": {
+  "overall": {
+   "decisions": 2360,
+   "same_action": 0.5432203389830509,
+   "same_kind": 0.601271186440678,
+   "mean_tv": 0.37398230432292284,
+   "mean_kind_tv": 0.29773363816844123
+  },
+  "by_street": {
+   "flop": {
+    "decisions": 637,
+    "same_action": 0.5478806907378336,
+    "same_kind": 0.6357927786499215,
+    "mean_tv": 0.3667090368642765,
+    "mean_kind_tv": 0.2811736480855298
+   },
+   "preflop": {
+    "decisions": 843,
+    "same_action": 0.49228944246737844,
+    "same_kind": 0.4958481613285884,
+    "mean_tv": 0.40293913425341366,
+    "mean_kind_tv": 0.33878707673835506
+   },
+   "river": {
+    "decisions": 390,
+    "same_action": 0.6692307692307692,
+    "same_kind": 0.7487179487179487,
+    "mean_tv": 0.311136402723886,
+    "mean_kind_tv": 0.2500781693482676
+   },
+   "turn": {
+    "decisions": 490,
+    "same_action": 0.5244897959183673,
+    "same_kind": 0.6204081632653061,
+    "mean_tv": 0.3836401928196134,
+    "mean_kind_tv": 0.2865628173689412
+   }
+  },
+  "by_opponent": {
+   "equity": {
+    "decisions": 667,
+    "same_action": 0.5757121439280359,
+    "same_kind": 0.638680659670165,
+    "mean_tv": 0.35368110944527736,
+    "mean_kind_tv": 0.2750025487256372
+   },
+   "hyper": {
+    "decisions": 745,
+    "same_action": 0.5395973154362416,
+    "same_kind": 0.5651006711409396,
+    "mean_tv": 0.39874186335852074,
+    "mean_kind_tv": 0.34556582023828364
+   },
+   "station": {
+    "decisions": 751,
+    "same_action": 0.5299600532623169,
+    "same_kind": 0.6205059920106525,
+    "mean_tv": 0.35943375499334224,
+    "mean_kind_tv": 0.2676047270306258
+   },
+   "tag": {
+    "decisions": 197,
+    "same_action": 0.49746192893401014,
+    "same_kind": 0.5380710659898477,
+    "mean_tv": 0.40454568527918777,
+    "mean_kind_tv": 0.3086649746192894
+   }
+  },
+  "by_facing_bet": {
+   "False": {
+    "decisions": 1262,
+    "same_action": 0.5887480190174327,
+    "same_kind": 0.6814580031695721,
+    "mean_tv": 0.32874103229892215,
+    "mean_kind_tv": 0.24273801071364173
+   },
+   "True": {
+    "decisions": 1098,
+    "same_action": 0.49089253187613846,
+    "same_kind": 0.5091074681238615,
+    "mean_tv": 0.42598092480952476,
+    "mean_kind_tv": 0.3609435487767809
+   }
+  }
+ }
+}
