@@ -288,3 +288,57 @@ def test_jev_arm_is_never_played_without_approval(tmp_path):
         mission7.make_advisor("jev", 1)
     with pytest.raises(PermissionError):
         run(mission7.run_jev(10, tmp_path / "x", 1.0))
+
+
+# Two-stage pilot: ten verification calls before the rest --------------------------------
+
+def _serve(monkeypatch, sent, model="jev-1.14.0", usage=True, status=200):
+    async def post(client, url, **kw):
+        sent.append(kw["json"])
+        if status != 200:
+            return httpx.Response(status, json={"error": "denied"})
+        body = answer(kw["json"], model=model, tokens=950)
+        if not usage:
+            body.pop("usage")
+        return httpx.Response(200, json=body)
+    monkeypatch.setattr(httpx.AsyncClient, "post", post)
+
+
+def _pilot(tmp_path, plan, max_usd=0.25):
+    return run(jev_pilot.pilot(plan, tmp_path / "pilot", max_usd, approve_paid_calls=True,
+                               settings=Settings(_env_file=None, pokerbench_usd_cny_rate=7.0)))
+
+
+def test_pilot_verifies_ten_calls_then_runs_the_rest(tmp_path, monkeypatch):
+    monkeypatch.setenv("JEV_API_KEY", KEY)
+    plan, sent = jev_pilot.read_plan(jev_pilot.PLAN)[:40], []
+    _serve(monkeypatch, sent)
+    result = _pilot(tmp_path, plan)
+    assert result["verification"]["passed"] and result["verification"]["calls"] == 10
+    assert not result["stopped"] and result["stage2"]["answered"] == 40 and len(sent) == 40
+    assert {r["state"]["street"] for r in jev_pilot.verification_sample(jev_pilot.read_plan(jev_pilot.PLAN))} == \
+        set(jev_pilot.QUOTAS)
+    assert result["stage2"]["spent_usd"] == pytest.approx(40 * 950 * 0.042 / 1e6)
+    assert not leaked(tmp_path)
+
+
+@pytest.mark.parametrize("fault", ["model", "usage", "auth"])
+def test_pilot_stops_when_a_verification_fails(tmp_path, monkeypatch, fault):
+    monkeypatch.setenv("JEV_API_KEY", KEY)
+    plan, sent = jev_pilot.read_plan(jev_pilot.PLAN)[:40], []
+    _serve(monkeypatch, sent, model="jev-latest" if fault == "model" else "jev-1.14.0",
+           usage=fault != "usage", status=401 if fault == "auth" else 200)
+    result = _pilot(tmp_path, plan)
+    assert result["stopped"] and result["stage2"] is None and not result["verification"]["passed"]
+    assert len(sent) <= 10
+    assert not leaked(tmp_path)
+
+
+def test_pilot_total_spend_never_exceeds_the_ceiling(tmp_path, monkeypatch):
+    monkeypatch.setenv("JEV_API_KEY", KEY)
+    plan, sent = jev_pilot.read_plan(jev_pilot.PLAN)[:40], []
+    _serve(monkeypatch, sent)
+    # A ceiling below the plan's cost: the budget hold stops new calls before it is crossed.
+    result = _pilot(tmp_path, plan, max_usd=0.0015)
+    spent = result["stage2"]["spent_usd"] if result["stage2"] else result["stage1"]["spent_usd"]
+    assert spent <= 0.0015 and len(sent) < 40
