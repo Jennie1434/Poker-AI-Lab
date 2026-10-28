@@ -50,30 +50,42 @@ INSTRUCTIONS = ("Choose the legal poker action with the best expected strategic 
                 "are action preferences, not hand winning probabilities.")
 
 
-def cfr_distribution(agent, observation: dict, adaptive: bool = False) -> tuple[dict, dict]:
-    """CFR's probabilities over the concrete legal action ids, and how they were obtained.
-
-    Same steps as ``CFRAgent.choose_action`` (and the adaptive overlay), but
-    the abstract distribution is mapped onto action ids instead of sampled.
-    """
+def cfr_abstract(agent, observation: dict, adaptive: bool = False):
+    """(abstract actions, probabilities, bucket, overlay weight), exactly as the agent plays them."""
     actions, probabilities, bucket = agent.distribution(observation)
-    if actions is None:
-        return {agent.fallback(bucket, observation): 1.0}, {"source": "fallback", "bucket": bucket}
     weight = 0.0
-    if adaptive:
+    if adaptive and actions is not None:
         pfr, _ = opponent_pfr(observation)
         weight = min(1.0, max(0.0, (pfr - LOW) / (HIGH - LOW)))
         if weight > 0:
             call = observation["to_call"]
             price = call / (observation["pot"] + call) if call else 0.0
             probabilities = adjust(actions, probabilities, weight, equity_estimate(agent, observation, bucket), price)
+    return actions, probabilities, bucket, weight
+
+
+def concrete(agent, observation: dict, actions, probabilities, bucket) -> tuple[dict, dict]:
+    """Abstract distribution mapped onto the concrete legal action ids."""
+    if actions is None:
+        return {agent.fallback(bucket, observation): 1.0}, {"source": "fallback", "bucket": bucket}
     result = defaultdict(float)
     for abstract, p in zip(actions, probabilities):
         if p > 0:
             result[agent.map_action(abstract, observation)] += p
     # Stored strategies are rounded to four decimals; sampling uses them as weights.
     total = sum(result.values())
-    return {k: v / total for k, v in result.items()}, {"source": "policy", "bucket": bucket, "overlay_weight": weight}
+    return {k: v / total for k, v in result.items()}, {"source": "policy", "bucket": bucket}
+
+
+def cfr_distribution(agent, observation: dict, adaptive: bool = False) -> tuple[dict, dict]:
+    """CFR's probabilities over the concrete legal action ids, and how they were obtained.
+
+    Same steps as ``CFRAgent.choose_action`` (and the adaptive overlay), but
+    the abstract distribution is mapped onto action ids instead of sampled.
+    """
+    actions, probabilities, bucket, weight = cfr_abstract(agent, observation, adaptive)
+    dist, meta = concrete(agent, observation, actions, probabilities, bucket)
+    return dist, {**meta, "overlay_weight": weight}
 
 
 class CFRAdvisor:
@@ -109,6 +121,12 @@ class RecordedAdvisor:
             for line in f:
                 row = json.loads(line)
                 self.answers[row["request_hash"]] = row["response"]
+
+    @classmethod
+    def from_answers(cls, answers: dict) -> "RecordedAdvisor":
+        advisor = cls.__new__(cls)
+        advisor.answers = dict(answers)
+        return advisor
 
     async def __call__(self, request: dict) -> dict:
         try:

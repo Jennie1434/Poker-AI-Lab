@@ -16,9 +16,8 @@ The advisor sees the same request a room would send it. An advisor failure
 falls back to CFR's distribution and is counted, never hidden.
 """
 from dataclasses import dataclass
-import random
 
-from .compare import cfr_distribution, request_for
+from .compare import cfr_abstract, cfr_distribution, concrete, request_for
 
 
 @dataclass(frozen=True)
@@ -56,18 +55,27 @@ def normalized(probabilities: dict, legal: list[str]) -> dict:
 
 
 class HybridAgent:
-    def __init__(self, cfr, advisor, rule: Rule, seed: int, adaptive: bool = True):
+    """Plays exactly like CFR (same random stream) except where the rule consults the advisor.
+
+    Sampling uses the CFR agent's own generator, one draw per decision as in
+    ``CFRAgent.sample``: when the advisor is not consulted (or fails), the
+    action is the one CFR V2 adaptive would have played with the same seed.
+    A paired benchmark therefore isolates the advisor's effect.
+    """
+
+    def __init__(self, cfr, advisor, rule: Rule, seed=None, adaptive: bool = True):
+        # ``seed`` is accepted for compatibility; the CFR agent's seed drives every draw.
         self.cfr, self.advisor, self.rule, self.adaptive = cfr, advisor, rule, adaptive
-        self.rng = random.Random(seed)
         self.stats = {"decisions": 0, "consulted": 0, "advisor_errors": 0, "fallback": 0, "cost_cny": 0.0}
 
     async def distribution(self, observation: dict) -> tuple[dict, dict]:
         legal = [a["id"] for a in observation["legal_actions"]]
-        cfr, meta = cfr_distribution(self.cfr, observation, self.adaptive)
+        actions, probabilities, bucket, _ = cfr_abstract(self.cfr, observation, self.adaptive)
+        cfr, meta = concrete(self.cfr, observation, actions, probabilities, bucket)
         cfr = normalized(cfr, legal)
         self.stats["decisions"] += 1
         self.stats["fallback"] += meta["source"] == "fallback"
-        info = {"cfr": cfr, "consulted": False, "advisor": None}
+        info = {"cfr": cfr, "consulted": False, "advisor": None, "abstract": (actions, probabilities, bucket)}
         if not self.rule.consult(cfr, meta):
             return cfr, info
         self.stats["consulted"] += 1
@@ -83,9 +91,12 @@ class HybridAgent:
         return normalized(self.rule.combine(cfr, advice), legal), info
 
     async def choose_action(self, observation: dict) -> str:
-        final, _ = await self.distribution(observation)
+        final, info = await self.distribution(observation)
+        if info["advisor"] is None:
+            return self.cfr.sample(*info["abstract"], observation)
+        self.cfr.stats["decisions"] += 1
         actions = sorted(final)
-        return self.rng.choices(actions, [final[a] for a in actions])[0]
+        return self.cfr.rng.choices(actions, [final[a] for a in actions])[0]
 
 
 def consult_rate(requests, rule: Rule, policy: str = "cfr-v2-adapt") -> dict:

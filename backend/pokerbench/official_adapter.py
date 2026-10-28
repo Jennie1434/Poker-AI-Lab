@@ -78,7 +78,11 @@ class MeteredChatProvider:
             from .custom_protocol import build_request
             url,headers,payload=build_request(self.entry,payload,self.key)
         # Includes the official schema and any previous answer/correction messages.
-        reserve=(len(json.dumps(payload).encode())+512)*self.entry.input_cny_per_million/1e6+self.max_tokens*self.entry.output_cny_per_million/1e6
+        try:
+            self.prices=self.entry.prices_cny(self.settings.pokerbench_usd_cny_rate)
+        except ValueError as exc:
+            raise TypeSafeError(str(exc)) from None
+        reserve=(len(json.dumps(payload).encode())+512)*self.prices[0]/1e6+self.max_tokens*self.prices[1]/1e6
         call_id=self.store.reserve(self.run_id,reserve,self.settings.pokerbench_budget_cny,self.run_budget,provider=self.entry.provider,self_funded=self.self_funded)
         item={"call_id":call_id,"decision_id":self.decision_id,"attempt":len(self.attempts)+1,
               "adapter":ADAPTER_METHOD,"request":payload,"charge":None,"outcome":"pending"}
@@ -105,7 +109,7 @@ class MeteredChatProvider:
             inp,out=usage.get("prompt_tokens"),usage.get("completion_tokens")
             known=all(isinstance(v,int) and not isinstance(v,bool) and v>=0 for v in (inp,out))
             item.update(input_tokens=inp if known else None,output_tokens=out if known else None)
-            if known:item["charge"]=(inp*self.entry.input_cny_per_million+out*self.entry.output_cny_per_million)/1e6
+            if known:item["charge"]=(inp*self.prices[0]+out*self.prices[1])/1e6
             self.served_model=raw.get("model") or self.model_name
             item.update(model=self.served_model,raw_response=original_raw)
             mismatch=identity_error(self.entry,raw)

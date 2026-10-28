@@ -20,6 +20,12 @@ ROSTER = [
 ]
 
 
+# TypeSafe's published Jev 1.14 rate: input billed, output currently free.
+JEV_USD_PER_MILLION = (0.042, 0.0)
+JEV_DEFAULTS = {"base_url": "https://api.typesafe.ai", "key_env": "JEV_API_KEY", "model": "jev-1.14.0"}
+PRICE_FIELDS = {"input_cny_per_million", "output_cny_per_million", "input_usd_per_million", "output_usd_per_million"}
+
+
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=ROOT / ".env", extra="ignore")
     deepseek_api_key: str = ""
@@ -30,6 +36,10 @@ class Settings(BaseSettings):
     pokerbench_invite_code: str = ""
     pokerbench_custom_proxy_url: str = ""
     pokerbench_data_dir: str = str(ROOT / "data")
+    # CNY per USD for USD-priced entries (Jev). Reference default: mid-market 6.708 on
+    # 2026-09-09 (currencybeacon.com), rounded up; set POKERBENCH_USD_CNY_RATE to update it.
+    # 0 refuses every USD-priced call.
+    pokerbench_usd_cny_rate: float = Field(default=6.71, ge=0)
 
 
 class Entry(BaseModel):
@@ -47,6 +57,9 @@ class Entry(BaseModel):
     proxy: bool = True
     input_cny_per_million: float = Field(default=2.16, ge=0)
     output_cny_per_million: float = Field(default=8.64, ge=0)
+    # Prices in the provider's own currency; when set they replace the CNY prices.
+    input_usd_per_million: float | None = Field(default=None, ge=0)
+    output_usd_per_million: float | None = Field(default=None, ge=0)
     revision: str = "unconfigured"
     credential_id: str | None = None
     api_format: Literal['chat_completions', 'responses', 'anthropic'] = 'chat_completions'
@@ -60,6 +73,27 @@ class Entry(BaseModel):
         if self.reasoning_effort and self.provider not in ("deepseek","openai_compatible"):
             raise ValueError("reasoning_effort 仅用于官方 adapter 的聊天模型")
         return self
+
+    @model_validator(mode="after")
+    def official_jev_defaults(self):
+        # A Jev entry must never inherit DeepSeek's endpoint, key or prices.
+        if self.provider=="jev":
+            for name,value in JEV_DEFAULTS.items():
+                if name not in self.model_fields_set:
+                    setattr(self,name,value)
+            if not self.model_fields_set & PRICE_FIELDS:
+                self.input_usd_per_million,self.output_usd_per_million=JEV_USD_PER_MILLION
+        if (self.input_usd_per_million is None)!=(self.output_usd_per_million is None):
+            raise ValueError("USD 价格需同时给出输入与输出")
+        return self
+
+    def prices_cny(self, usd_cny_rate: float) -> tuple[float, float]:
+        """(input, output) CNY per million tokens; USD prices need a configured rate."""
+        if self.input_usd_per_million is None:
+            return self.input_cny_per_million,self.output_cny_per_million
+        if not usd_cny_rate>0:
+            raise ValueError("未配置 POKERBENCH_USD_CNY_RATE，无法换算 USD 计价模型的费用")
+        return self.input_usd_per_million*usd_cny_rate,self.output_usd_per_million*usd_cny_rate
 
 
 def default_entries() -> list[Entry]:

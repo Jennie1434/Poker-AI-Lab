@@ -25,6 +25,18 @@ class ProviderError(Exception):
     pass
 
 
+def retry_after(headers) -> float:
+    """Seconds the server asked us to wait (``retry-after-ms`` or ``retry-after``), capped at 30."""
+    for name,scale in (("retry-after-ms",1/1000),("retry-after",1)):
+        try:
+            value=float(headers.get(name,""))*scale
+        except ValueError:
+            continue
+        if math.isfinite(value) and value>0:
+            return min(30.0,value)
+    return 0.0
+
+
 def condition_legal_actions(response: dict, request: dict):
     """Explicit forced-action policy for endpoints with a reserved abstention class."""
     answers=response.get("answers",{})
@@ -145,8 +157,12 @@ class Provider:
                                                 run_budget,timeout,max_tokens,should_stop,key_override is not None)
         payload=request
         url=entry.base_url.rstrip("/")+"/v1/systemone"
+        try:
+            input_price,output_price=entry.prices_cny(self.settings.pokerbench_usd_cny_rate)
+        except ValueError as exc:
+            raise ProviderError(str(exc)) from None
         # Conservative byte-based input token bound; rate is peak, includes thinking output.
-        reserve=(len(json.dumps(payload).encode())+512)*entry.input_cny_per_million/1e6+max_tokens*entry.output_cny_per_million/1e6
+        reserve=(len(json.dumps(payload).encode())+512)*input_price/1e6+max_tokens*output_price/1e6
         async with self.capacity(entry,benchmark=benchmark):
             started=time.monotonic()
             attempts=[]
@@ -163,11 +179,15 @@ class Provider:
                 if payload is not request:
                     meta["format_repair"]="lossless_compact_json_state"
                 retryable=True
+                delay=attempt+1
                 try:
                     async with httpx.AsyncClient(timeout=timeout,trust_env=key_override is None) as client:
                         response=await client.post(url,json=payload,headers=headers)
+                    if response.headers.get("x-typesafe-request-id"):
+                        meta["request_id"]=response.headers["x-typesafe-request-id"][:100]
                     if response.status_code!=200:
                         retryable=response.status_code in (408,429,500,502,503,504,529)
+                        delay=max(delay,retry_after(response.headers))
                         if benchmark and entry.provider=="systemone" and response.status_code==422 and isinstance(payload.get("state"),(dict,list)):
                             try:detail=response.json().get("detail","")
                             except (ValueError,AttributeError):detail=""
@@ -185,7 +205,10 @@ class Provider:
                     input_tokens=usage.get("prompt_tokens",usage.get("input_tokens"))
                     output_tokens=usage.get("completion_tokens",usage.get("output_tokens"))
                     if all(isinstance(n,int) and not isinstance(n,bool) and n>=0 for n in (input_tokens,output_tokens)):
-                        charge=(input_tokens*entry.input_cny_per_million+output_tokens*entry.output_cny_per_million)/1e6
+                        charge=(input_tokens*input_price+output_tokens*output_price)/1e6
+                        if entry.input_usd_per_million is not None:
+                            meta.update(charge_usd=(input_tokens*entry.input_usd_per_million+output_tokens*entry.output_usd_per_million)/1e6,
+                                        usd_cny_rate=self.settings.pokerbench_usd_cny_rate)
                     meta.update(model=raw.get("model",entry.model),input_tokens=input_tokens,
                                 output_tokens=output_tokens)
                     mismatch=identity_error(entry,raw)
@@ -203,7 +226,7 @@ class Provider:
                     total_cost+=reserve if charge is None else charge
                     attempts.append({"attempt":attempt+1,"outcome":"rejected","reason":reason,"call_id":call_id})
                     if retryable and attempt<2:
-                        await asyncio.sleep(attempt+1)
+                        await asyncio.sleep(delay)
                         continue
                     raise ProviderError(f"{reason}；已尝试 {attempt+1} 次，未执行动作") from None
                 meta.update(latency=time.monotonic()-start,outcome="accepted")

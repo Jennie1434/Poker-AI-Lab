@@ -4,10 +4,13 @@
     "name": "Jev Official",
     "color": "#176b54",
     "provider": "jev",
-    "model": "jev-1.13.0",
+    "model": "jev-1.14.0",
     "base_url": "https://api.typesafe.ai",
     "key_env": "JEV_API_KEY",
-    "proxy": false
+    "proxy": false,
+    "expected_model": "jev-1.14.0",
+    "input_usd_per_million": 0.042,
+    "output_usd_per_million": 0.0
   },
   {
     "id": "deepseek",

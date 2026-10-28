@@ -272,10 +272,13 @@ async def test_native_revision_change_is_rejected_before_action(provider,monkeyp
 async def test_jev_keeps_native_protocol(provider,monkeypatch):
     sent=[]
     native={'answers':{'action':{'type':'choice','choice':'call','probabilities':{'fold':.2,'call':.8},'confidence':.6}}}
-    async def post(client,url,**kw):sent.append((url,kw['json']));return httpx.Response(200,json=native)
+    async def post(client,url,**kw):sent.append((url,kw['json'],kw['headers']));return httpx.Response(200,json=native)
     monkeypatch.setattr(httpx.AsyncClient,'post',post)
+    # Jev uses its own key, never the DeepSeek one.
+    monkeypatch.setenv('JEV_API_KEY','jev-test-key')
     out=await provider.call(Entry(id='j',name='j',provider='jev',base_url='https://api.typesafe.ai'),REQ,decision_id='jev',run_id='r')
     assert sent[0][0].endswith('/v1/systemone') and set(sent[0][1])=={'model','state','questions'}
+    assert sent[0][2]=={'Authorization':'Bearer jev-test-key'}
     assert 'adapter' not in out and out['probability_source']=='endpoint'
 
 
