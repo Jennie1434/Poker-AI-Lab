@@ -56,21 +56,26 @@ l'estimation, mais reste sous la borne haute (0,090 USD), qui a tenu.
 | Contre station | 61 % |
 | Contre TAG (33 décisions) | 52 % |
 
-**Nature des désaccords : Jev est nettement plus passif et plus prudent que CFR.**
+**Nature des désaccords.** Par action individuelle, Jev semble beaucoup plus passif que CFR :
+son action préférée est une relance dans 14 cas, contre 140 pour CFR.
 
-| Action principale | CFR | Jev |
-| :-- | --: | --: |
-| Agressive (mise ou relance) | 140 | 14 |
-| Fold | 63 | 110 |
-
-- Dans 119 des 140 cas où CFR relance, Jev préfère check ou call.
-- Dans 60 cas où CFR suit, Jev préfère se coucher, surtout preflop face à une relance.
+> **Correction (analyse complémentaire, `pilot-review.md`).** Cette passivité est surtout un
+> **artefact de mesure**. Jev répartit sa masse de relance sur ~6 tailles. Par famille d'actions,
+> il préfère bet/raise dans **242** décisions, contre 171 pour CFR, et met en moyenne 0,45 sur
+> les relances contre 0,36 pour CFR.
+>
+> Ses vrais écarts sont ailleurs :
+> - il se couche plus face aux mises (0,32 contre 0,23), surtout preflop et contre l'hyper-agressif ;
+> - il se couche trop avec des mains moyennes et fortes ;
+> - il relance plus les mains faibles ;
+> - il mise moins à la river avec la valeur ;
+> - ses distributions sont beaucoup plus étalées.
 
 **Exemples frappants**, sans conclusion sur qui a raison :
 - river, brelan de 8 (8♦4♣ sur 2♦8♥7♦Q♣8♣) : CFR relance à 99 % ; Jev donne 34 % au fold ;
 - river, quinte à l'As (Q♠J♠ sur K♠5♦A♦T♣4♦), face à une relance : CFR relance à 100 % ;
   Jev donne 27 % au fold ;
-- preflop en grosse blind face à une ouverture à 300 : avec 9♣6♦, 8♠5♦ et K♥9♦, CFR défend ;
+- preflop en grosse blind face à une ouverture (200 ou 300) : avec 9♣6♦, 8♠5♦ et K♥9♦, CFR défend ;
   Jev se couche à 57-58 % avec les deux premières.
 
 ## 4. Ce que cela implique
@@ -79,6 +84,8 @@ l'estimation, mais reste sous la borne haute (0,090 USD), qui a tenu.
 - Il ne dit pas si Jev joue mieux ou moins bien : un désaccord n'est pas une erreur.
 - Les exemples montrent toutefois des abandons de mains très fortes que la théorie
   réprouverait, ce qui rend une amélioration générale peu probable sans filtre.
+- Voir `pilot-review.md` pour l'analyse par famille, les tailles de relance, les 15 plus
+  gros désaccords et la réponse rejetée.
 
 **Coût et durée révisés pour l'étape 1** du benchmark (TAG et equity, ~6 600 appels) :
 - coût attendu **≈ 0,55 USD** (au lieu de 0,26), borne haute toujours 1,2 USD ;

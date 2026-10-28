@@ -1,0 +1,2223 @@
+{
+ "decisions": 500,
+ "families": {
+  "all": {
+   "decisions": 500,
+   "cfr": {
+    "fold": 0.09906611172428867,
+    "check/call": 0.5423017438073936,
+    "bet/raise": 0.3586321444683177
+   },
+   "jev": {
+    "fold": 0.1402171717171717,
+    "check/call": 0.4102789898989899,
+    "bet/raise": 0.4495038383838384
+   },
+   "top_action_agreement": 0.572,
+   "family_agreement": 0.5,
+   "mean_family_tv": 0.3540533255809366
+  },
+  "street=flop": {
+   "decisions": 150,
+   "cfr": {
+    "fold": 0.09571452448183261,
+    "check/call": 0.5790553534826808,
+    "bet/raise": 0.3252301220354866
+   },
+   "jev": {
+    "fold": 0.10707609427609428,
+    "check/call": 0.42281346801346803,
+    "bet/raise": 0.47011043771043776
+   },
+   "top_action_agreement": 0.5866666666666667,
+   "family_agreement": 0.41333333333333333,
+   "mean_family_tv": 0.32983674089961124
+  },
+  "street=preflop": {
+   "decisions": 150,
+   "cfr": {
+    "fold": 0.08546076140719305,
+    "check/call": 0.5217475866041837,
+    "bet/raise": 0.3927916519886232
+   },
+   "jev": {
+    "fold": 0.22938114478114477,
+    "check/call": 0.3257367003367003,
+    "bet/raise": 0.4448821548821549
+   },
+   "top_action_agreement": 0.4666666666666667,
+   "family_agreement": 0.5266666666666666,
+   "mean_family_tv": 0.37251645880144646
+  },
+  "street=river": {
+   "decisions": 100,
+   "cfr": {
+    "fold": 0.11518741164666972,
+    "check/call": 0.5564062377333272,
+    "bet/raise": 0.328406350620003
+   },
+   "jev": {
+    "fold": 0.1072,
+    "check/call": 0.48026969696969696,
+    "bet/raise": 0.412530303030303
+   },
+   "top_action_agreement": 0.66,
+   "family_agreement": 0.59,
+   "mean_family_tv": 0.35606951626608
+  },
+  "street=turn": {
+   "decisions": 100,
+   "cfr": {
+    "fold": 0.10838021814123512,
+    "check/call": 0.5038980711733442,
+    "bet/raise": 0.3877217106854207
+   },
+   "jev": {
+    "fold": 0.0892,
+    "check/call": 0.4483,
+    "bet/raise": 0.4625
+   },
+   "top_action_agreement": 0.62,
+   "family_agreement": 0.5,
+   "mean_family_tv": 0.3606673120870166
+  },
+  "facing_bet=False": {
+   "decisions": 284,
+   "cfr": {
+    "fold": 0.0,
+    "check/call": 0.5657727535659198,
+    "bet/raise": 0.43422724643408017
+   },
+   "jev": {
+    "fold": 0.0,
+    "check/call": 0.5030697823303457,
+    "bet/raise": 0.4969302176696543
+   },
+   "top_action_agreement": 0.6795774647887324,
+   "family_agreement": 0.5985915492957746,
+   "mean_family_tv": 0.2599059256979417
+  },
+  "facing_bet=True": {
+   "decisions": 216,
+   "cfr": {
+    "fold": 0.22931970306548305,
+    "check/call": 0.5114417124582203,
+    "bet/raise": 0.25923858447629666
+   },
+   "jev": {
+    "fold": 0.32457678638234194,
+    "check/call": 0.2882762813318369,
+    "bet/raise": 0.3871469322858212
+   },
+   "top_action_agreement": 0.4305555555555556,
+   "family_agreement": 0.37037037037037035,
+   "mean_family_tv": 0.47783972172339295
+  },
+  "opponent=equity": {
+   "decisions": 156,
+   "cfr": {
+    "fold": 0.09982243676401924,
+    "check/call": 0.5397390488039417,
+    "bet/raise": 0.360438514432039
+   },
+   "jev": {
+    "fold": 0.09333333333333334,
+    "check/call": 0.43716006216006215,
+    "bet/raise": 0.46950660450660453
+   },
+   "top_action_agreement": 0.6602564102564102,
+   "family_agreement": 0.5769230769230769,
+   "mean_family_tv": 0.3212186453734557
+  },
+  "opponent=hyper": {
+   "decisions": 147,
+   "cfr": {
+    "fold": 0.1332246066881425,
+    "check/call": 0.6435082594117403,
+    "bet/raise": 0.22326713390011727
+   },
+   "jev": {
+    "fold": 0.26577269291555006,
+    "check/call": 0.33192675049817905,
+    "bet/raise": 0.4023005565862709
+   },
+   "top_action_agreement": 0.4489795918367347,
+   "family_agreement": 0.3129251700680272,
+   "mean_family_tv": 0.4689518072136831
+  },
+  "opponent=station": {
+   "decisions": 164,
+   "cfr": {
+    "fold": 0.061108383094077734,
+    "check/call": 0.4946443890984831,
+    "bet/raise": 0.4442472278074392
+   },
+   "jev": {
+    "fold": 0.062134146341463414,
+    "check/call": 0.4652050997782705,
+    "bet/raise": 0.47266075388026607
+   },
+   "top_action_agreement": 0.6097560975609756,
+   "family_agreement": 0.6219512195121951,
+   "mean_family_tv": 0.28818997047649375
+  },
+  "opponent=tag": {
+   "decisions": 33,
+   "cfr": {
+    "fold": 0.1319685974658072,
+    "check/call": 0.3404298892304504,
+    "bet/raise": 0.5276015133037424
+   },
+   "jev": {
+    "fold": 0.1906060606060606,
+    "check/call": 0.3592623201714111,
+    "bet/raise": 0.4501316192225283
+   },
+   "top_action_agreement": 0.5151515151515151,
+   "family_agreement": 0.36363636363636365,
+   "mean_family_tv": 0.3247722210197828
+  }
+ },
+ "family_confusion_cfr_to_jev": {
+  "bet/raise→bet/raise": 107,
+  "bet/raise→fold": 13,
+  "check/call→bet/raise": 123,
+  "fold→fold": 31,
+  "check/call→fold": 46,
+  "check/call→check/call": 112,
+  "bet/raise→check/call": 51,
+  "fold→bet/raise": 12,
+  "fold→check/call": 5
+ },
+ "size_split": {
+  "jev_top_action_raise": 14,
+  "jev_top_family_raise": 242,
+  "cfr_top_family_raise": 171,
+  "hidden_aggression_decisions": 228,
+  "cfr_aggressive_where_jev_family_also_raises": 107,
+  "cfr_aggressive_where_jev_top_action_raises": 13,
+  "mean_jev_raise_mass_when_cfr_aggressive": 0.5055691417094926,
+  "mean_cfr_raise_mass_when_cfr_aggressive": 0.7491664273537988,
+  "jev_sizes_used_mean": 6.138832997987928,
+  "jev_largest_size_share_mean": 0.3590727857813448,
+  "cfr_sizes_used_mean": 2.3280839895013123,
+  "sizes_offered_mean": 6.102
+ },
+ "uniformity": {
+  "jev_normalized_entropy": 0.7730919861430914,
+  "cfr_normalized_entropy": 0.3395326691702827,
+  "jev_tv_to_uniform": 0.3961838961038961,
+  "cfr_tv_to_uniform": 0.6842381503669193,
+  "jev_max_probability_mean": 0.4572658585858586,
+  "cfr_max_probability_mean": 0.7197774316529517,
+  "uniform_raise_family_mass_mean": 0.8065531746031745,
+  "jev_raise_family_mass_mean": 0.4495038383838384,
+  "cfr_raise_family_mass_mean": 0.3586321444683177,
+  "jev_raise_over_uniform": -0.3570493362193362,
+  "cfr_raise_over_uniform": -0.4479210301348569,
+  "jev_equity_raise_correlation": 0.36077624361384036,
+  "cfr_equity_raise_correlation": 0.2987865511666595,
+  "jev_equity_fold_correlation": -0.458459465150518,
+  "cfr_equity_fold_correlation": -0.4950929942699992
+ },
+ "hand_strength": {
+  "strong_decisions": 75,
+  "strong_facing_bet": 25,
+  "strong_jev_fold_mass_mean": 0.266,
+  "strong_cfr_fold_mass_mean": 0.17184576469847654,
+  "strong_folds_jev_ge_25pct": 12,
+  "strong_folds_cfr_ge_25pct": 4,
+  "river_cfr_raises": 30,
+  "river_cfr_raises_value": 17,
+  "river_jev_raise_mass_mean": 0.459,
+  "river_cfr_raise_mass_mean": 0.7678630256974303,
+  "equity_buckets": {
+   "0-20%": {
+    "decisions": 9,
+    "cfr_fold": 0.7999396882533969,
+    "jev_fold": 0.47000000000000003,
+    "cfr_raise": 0.08813843837838439,
+    "jev_raise": 0.2644444444444444
+   },
+   "20-40%": {
+    "decisions": 46,
+    "cfr_fold": 0.48043410375039985,
+    "jev_fold": 0.4121739130434783,
+    "cfr_raise": 0.17884513447310352,
+    "jev_raise": 0.30978260869565216
+   },
+   "40-60%": {
+    "decisions": 107,
+    "cfr_fold": 0.14138056874031027,
+    "jev_fold": 0.3302671575568772,
+    "cfr_raise": 0.25918210054674623,
+    "jev_raise": 0.39087605022184463
+   },
+   "60-80%": {
+    "decisions": 42,
+    "cfr_fold": 0.097748431779303,
+    "jev_fold": 0.20904761904761904,
+    "cfr_raise": 0.3512171139505045,
+    "jev_raise": 0.49119047619047623
+   },
+   "80-100%": {
+    "decisions": 12,
+    "cfr_fold": 0.08337290878345383,
+    "jev_fold": 0.23333333333333334,
+    "cfr_raise": 0.37431738094073536,
+    "jev_raise": 0.37833333333333335
+   }
+  }
+ },
+ "top15": [
+  {
+   "hash": "bafe4b808872",
+   "street": "river",
+   "opponent": "equity",
+   "position": "BB",
+   "cards": [
+    "4c",
+    "8d"
+   ],
+   "board": [
+    "2d",
+    "8h",
+    "7d",
+    "Qc",
+    "8c"
+   ],
+   "pot": 500,
+   "to_call": 100,
+   "made": "Three of a Kind",
+   "equity": 0.961,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.0,
+    "bet/raise": 1.0
+   },
+   "jev_family": {
+    "fold": 0.34,
+    "check/call": 0.43,
+    "bet/raise": 0.23
+   },
+   "jev_raise_sizes_used": 7,
+   "tv": 0.953,
+   "family_tv": 0.77,
+   "history": "2:call 1:check 1:check 2:check 1:check 2:raise100 1:call 1:check 2:raise100"
+  },
+  {
+   "hash": "a97c5badf2aa",
+   "street": "river",
+   "opponent": "station",
+   "position": "BB",
+   "cards": [
+    "Qs",
+    "Js"
+   ],
+   "board": [
+    "Ks",
+    "5d",
+    "Ad",
+    "Tc",
+    "4d"
+   ],
+   "pot": 2500,
+   "to_call": 500,
+   "made": "Straight",
+   "equity": 0.951,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.0,
+    "bet/raise": 1.0
+   },
+   "jev_family": {
+    "fold": 0.27,
+    "check/call": 0.41,
+    "bet/raise": 0.32
+   },
+   "jev_raise_sizes_used": 7,
+   "tv": 0.9,
+   "family_tv": 0.68,
+   "history": "2:call 1:check 1:check 2:check 1:raise200 2:raise400 1:call 1:raise500 2:raise1000"
+  },
+  {
+   "hash": "b745ff337c41",
+   "street": "preflop",
+   "opponent": "hyper",
+   "position": "BB",
+   "cards": [
+    "9c",
+    "6d"
+   ],
+   "board": [],
+   "pot": 400,
+   "to_call": 200,
+   "made": "preflop 96o",
+   "equity": 0.437,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.998,
+    "bet/raise": 0.002
+   },
+   "jev_family": {
+    "fold": 0.57,
+    "check/call": 0.14,
+    "bet/raise": 0.29
+   },
+   "jev_raise_sizes_used": 6,
+   "tv": 0.858,
+   "family_tv": 0.858,
+   "history": "2:raise300"
+  },
+  {
+   "hash": "b406bbcb986b",
+   "street": "preflop",
+   "opponent": "hyper",
+   "position": "BB",
+   "cards": [
+    "8s",
+    "8d"
+   ],
+   "board": [],
+   "pot": 500,
+   "to_call": 300,
+   "made": "preflop 88",
+   "equity": 0.69,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.012,
+    "bet/raise": 0.988
+   },
+   "jev_family": {
+    "fold": 0.12,
+    "check/call": 0.24,
+    "bet/raise": 0.64
+   },
+   "jev_raise_sizes_used": 6,
+   "tv": 0.85,
+   "family_tv": 0.348,
+   "history": "2:raise400"
+  },
+  {
+   "hash": "89a1fa8f8358",
+   "street": "preflop",
+   "opponent": "hyper",
+   "position": "BTN/SB",
+   "cards": [
+    "Qs",
+    "5c"
+   ],
+   "board": [],
+   "pot": 900,
+   "to_call": 300,
+   "made": "preflop Q5o",
+   "equity": 0.496,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 1.0,
+    "bet/raise": 0.0
+   },
+   "jev_family": {
+    "fold": 0.47,
+    "check/call": 0.15,
+    "bet/raise": 0.38
+   },
+   "jev_raise_sizes_used": 6,
+   "tv": 0.85,
+   "family_tv": 0.85,
+   "history": "1:raise300 2:raise600"
+  },
+  {
+   "hash": "d08e33dac717",
+   "street": "turn",
+   "opponent": "hyper",
+   "position": "BTN/SB",
+   "cards": [
+    "5s",
+    "5c"
+   ],
+   "board": [
+    "6s",
+    "Qd",
+    "4d",
+    "3h"
+   ],
+   "pot": 800,
+   "to_call": 200,
+   "made": "Pair",
+   "equity": 0.626,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.108,
+    "bet/raise": 0.892
+   },
+   "jev_family": {
+    "fold": 0.27,
+    "check/call": 0.38,
+    "bet/raise": 0.35
+   },
+   "jev_raise_sizes_used": 7,
+   "tv": 0.843,
+   "family_tv": 0.542,
+   "history": "1:raise300 2:call 2:check 1:check 2:raise200"
+  },
+  {
+   "hash": "e4d42b1beda3",
+   "street": "flop",
+   "opponent": "hyper",
+   "position": "BB",
+   "cards": [
+    "Ad",
+    "Js"
+   ],
+   "board": [
+    "6s",
+    "9c",
+    "7h"
+   ],
+   "pot": 8400,
+   "to_call": 3600,
+   "made": "High Card",
+   "equity": 0.45,
+   "cfr_family": {
+    "fold": 1.0,
+    "check/call": 0.0,
+    "bet/raise": 0.0
+   },
+   "jev_family": {
+    "fold": 0.16,
+    "check/call": 0.31,
+    "bet/raise": 0.53
+   },
+   "jev_raise_sizes_used": 6,
+   "tv": 0.84,
+   "family_tv": 0.84,
+   "history": "2:raise400 1:raise1200 2:raise2400 1:call 1:check 2:raise3600"
+  },
+  {
+   "hash": "f09e709f2d3f",
+   "street": "preflop",
+   "opponent": "hyper",
+   "position": "BTN/SB",
+   "cards": [
+    "Jh",
+    "3s"
+   ],
+   "board": [],
+   "pot": 300,
+   "to_call": 100,
+   "made": "preflop J3o",
+   "equity": 0.438,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.943,
+    "bet/raise": 0.057
+   },
+   "jev_family": {
+    "fold": 0.64,
+    "check/call": 0.14,
+    "bet/raise": 0.22
+   },
+   "jev_raise_sizes_used": 6,
+   "tv": 0.839,
+   "family_tv": 0.803,
+   "history": "1:call 2:raise200"
+  },
+  {
+   "hash": "a5069193f063",
+   "street": "turn",
+   "opponent": "hyper",
+   "position": "BTN/SB",
+   "cards": [
+    "9h",
+    "Kc"
+   ],
+   "board": [
+    "4c",
+    "6h",
+    "3s",
+    "Js"
+   ],
+   "pot": 1800,
+   "to_call": 600,
+   "made": "High Card",
+   "equity": 0.299,
+   "cfr_family": {
+    "fold": 0.969,
+    "check/call": 0.03,
+    "bet/raise": 0.001
+   },
+   "jev_family": {
+    "fold": 0.13,
+    "check/call": 0.39,
+    "bet/raise": 0.48
+   },
+   "jev_raise_sizes_used": 7,
+   "tv": 0.839,
+   "family_tv": 0.839,
+   "history": "1:raise200 2:raise500 1:call 2:raise100 1:call 2:raise600"
+  },
+  {
+   "hash": "aca54f590f09",
+   "street": "preflop",
+   "opponent": "hyper",
+   "position": "BB",
+   "cards": [
+    "Th",
+    "As"
+   ],
+   "board": [],
+   "pot": 400,
+   "to_call": 200,
+   "made": "preflop ATo",
+   "equity": 0.633,
+   "cfr_family": {
+    "fold": 0.001,
+    "check/call": 0.012,
+    "bet/raise": 0.988
+   },
+   "jev_family": {
+    "fold": 0.13,
+    "check/call": 0.25,
+    "bet/raise": 0.62
+   },
+   "jev_raise_sizes_used": 6,
+   "tv": 0.83,
+   "family_tv": 0.368,
+   "history": "2:raise300"
+  },
+  {
+   "hash": "df3c486a5e4a",
+   "street": "preflop",
+   "opponent": "equity",
+   "position": "BB",
+   "cards": [
+    "Kh",
+    "9d"
+   ],
+   "board": [],
+   "pot": 300,
+   "to_call": 100,
+   "made": "preflop K9o",
+   "equity": 0.574,
+   "cfr_family": {
+    "fold": 0.009,
+    "check/call": 0.118,
+    "bet/raise": 0.873
+   },
+   "jev_family": {
+    "fold": 0.24,
+    "check/call": 0.27,
+    "bet/raise": 0.49
+   },
+   "jev_raise_sizes_used": 6,
+   "tv": 0.822,
+   "family_tv": 0.383,
+   "history": "2:raise200"
+  },
+  {
+   "hash": "5fde2dd37725",
+   "street": "river",
+   "opponent": "equity",
+   "position": "BTN/SB",
+   "cards": [
+    "Qs",
+    "5c"
+   ],
+   "board": [
+    "Jd",
+    "Ah",
+    "8h",
+    "9s",
+    "Td"
+   ],
+   "pot": 1000,
+   "to_call": 0,
+   "made": "Straight",
+   "equity": 0.891,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.0,
+    "bet/raise": 1.0
+   },
+   "jev_family": {
+    "fold": 0.0,
+    "check/call": 0.56,
+    "bet/raise": 0.44
+   },
+   "jev_raise_sizes_used": 7,
+   "tv": 0.803,
+   "family_tv": 0.56,
+   "history": "1:raise300 2:call 2:raise100 1:call 2:raise100 1:call 2:check"
+  },
+  {
+   "hash": "7a21a9c16b9f",
+   "street": "river",
+   "opponent": "tag",
+   "position": "BTN/SB",
+   "cards": [
+    "2c",
+    "6s"
+   ],
+   "board": [
+    "2d",
+    "5h",
+    "Qs",
+    "6d",
+    "Ad"
+   ],
+   "pot": 400,
+   "to_call": 0,
+   "made": "Two Pair",
+   "equity": 0.85,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.0,
+    "bet/raise": 1.0
+   },
+   "jev_family": {
+    "fold": 0.0,
+    "check/call": 0.6,
+    "bet/raise": 0.4
+   },
+   "jev_raise_sizes_used": 7,
+   "tv": 0.801,
+   "family_tv": 0.6,
+   "history": "1:call 2:check 2:check 1:check 2:check 1:raise100 2:call 2:check"
+  },
+  {
+   "hash": "a93b6db216aa",
+   "street": "river",
+   "opponent": "station",
+   "position": "BTN/SB",
+   "cards": [
+    "Qc",
+    "6c"
+   ],
+   "board": [
+    "Td",
+    "2s",
+    "5h",
+    "3s",
+    "7c"
+   ],
+   "pot": 400,
+   "to_call": 0,
+   "made": "High Card",
+   "equity": 0.134,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.039,
+    "bet/raise": 0.961
+   },
+   "jev_family": {
+    "fold": 0.0,
+    "check/call": 0.61,
+    "bet/raise": 0.39
+   },
+   "jev_raise_sizes_used": 7,
+   "tv": 0.801,
+   "family_tv": 0.571,
+   "history": "1:raise200 2:call 2:check 1:check 2:check 1:check 2:check"
+  },
+  {
+   "hash": "7458e334f4a0",
+   "street": "preflop",
+   "opponent": "hyper",
+   "position": "BB",
+   "cards": [
+    "8s",
+    "5d"
+   ],
+   "board": [],
+   "pot": 300,
+   "to_call": 100,
+   "made": "preflop 85o",
+   "equity": 0.426,
+   "cfr_family": {
+    "fold": 0.01,
+    "check/call": 0.986,
+    "bet/raise": 0.005
+   },
+   "jev_family": {
+    "fold": 0.58,
+    "check/call": 0.19,
+    "bet/raise": 0.23
+   },
+   "jev_raise_sizes_used": 6,
+   "tv": 0.796,
+   "family_tv": 0.796,
+   "history": "2:raise200"
+  }
+ ],
+ "strong_hand_folds": [
+  {
+   "hash": "f22cc9ee88f5",
+   "street": "river",
+   "opponent": "hyper",
+   "position": "BTN/SB",
+   "cards": [
+    "Th",
+    "2d"
+   ],
+   "board": [
+    "4h",
+    "2s",
+    "Qc",
+    "As",
+    "2c"
+   ],
+   "pot": 7350,
+   "to_call": 3150,
+   "made": "Three of a Kind",
+   "equity": 0.945,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 1.0,
+    "bet/raise": 0.0
+   },
+   "jev_family": {
+    "fold": 0.63,
+    "check/call": 0.21,
+    "bet/raise": 0.16
+   },
+   "jev_raise_sizes_used": 6,
+   "tv": 0.79,
+   "family_tv": 0.79,
+   "history": "1:raise300 2:raise500 1:call 2:raise750 1:call 2:raise850 1:call 2:raise3150"
+  },
+  {
+   "hash": "de04f61f8ac3",
+   "street": "river",
+   "opponent": "hyper",
+   "position": "BTN/SB",
+   "cards": [
+    "2h",
+    "2d"
+   ],
+   "board": [
+    "Kd",
+    "4h",
+    "4d",
+    "9h",
+    "3s"
+   ],
+   "pot": 1300,
+   "to_call": 100,
+   "made": "Two Pair",
+   "equity": 0.52,
+   "cfr_family": {
+    "fold": 0.225,
+    "check/call": 0.65,
+    "bet/raise": 0.125
+   },
+   "jev_family": {
+    "fold": 0.61,
+    "check/call": 0.21,
+    "bet/raise": 0.18
+   },
+   "jev_raise_sizes_used": 7,
+   "tv": 0.545,
+   "family_tv": 0.44,
+   "history": "1:call 2:raise300 1:call 2:raise300 1:call 2:check 1:check 2:raise100"
+  },
+  {
+   "hash": "f463c462655c",
+   "street": "river",
+   "opponent": "hyper",
+   "position": "BB",
+   "cards": [
+    "5s",
+    "9c"
+   ],
+   "board": [
+    "7h",
+    "7d",
+    "Ks",
+    "9h",
+    "3c"
+   ],
+   "pot": 14700,
+   "to_call": 6300,
+   "made": "Two Pair",
+   "equity": 0.73,
+   "cfr_family": {
+    "fold": 1.0,
+    "check/call": 0.0,
+    "bet/raise": 0.0
+   },
+   "jev_family": {
+    "fold": 0.5,
+    "check/call": 0.29,
+    "bet/raise": 0.21
+   },
+   "jev_raise_sizes_used": 3,
+   "tv": 0.5,
+   "family_tv": 0.5,
+   "history": "2:raise250 1:call 1:check 2:raise100 1:call 1:check 2:raise350 1:raise1750 2:raise3850 1:call 1:check 2:raise6300"
+  },
+  {
+   "hash": "2fd246acffd4",
+   "street": "flop",
+   "opponent": "hyper",
+   "position": "BTN/SB",
+   "cards": [
+    "2h",
+    "2d"
+   ],
+   "board": [
+    "Kd",
+    "4h",
+    "4d"
+   ],
+   "pot": 900,
+   "to_call": 300,
+   "made": "Two Pair",
+   "equity": 0.537,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.978,
+    "bet/raise": 0.021
+   },
+   "jev_family": {
+    "fold": 0.47,
+    "check/call": 0.26,
+    "bet/raise": 0.27
+   },
+   "jev_raise_sizes_used": 7,
+   "tv": 0.719,
+   "family_tv": 0.718,
+   "history": "1:call 2:raise300 1:call 2:raise300"
+  },
+  {
+   "hash": "756fc1f15aff",
+   "street": "river",
+   "opponent": "station",
+   "position": "BTN/SB",
+   "cards": [
+    "4c",
+    "Kd"
+   ],
+   "board": [
+    "Qs",
+    "8d",
+    "6h",
+    "8h",
+    "8c"
+   ],
+   "pot": 5600,
+   "to_call": 1400,
+   "made": "Three of a Kind",
+   "equity": 0.495,
+   "cfr_family": {
+    "fold": 1.0,
+    "check/call": 0.0,
+    "bet/raise": 0.0
+   },
+   "jev_family": {
+    "fold": 0.43,
+    "check/call": 0.25,
+    "bet/raise": 0.32
+   },
+   "jev_raise_sizes_used": 7,
+   "tv": 0.57,
+   "family_tv": 0.57,
+   "history": "1:call 2:check 2:check 1:check 2:raise100 1:raise500 2:call 2:raise100 1:raise1500 2:raise2900"
+  },
+  {
+   "hash": "992a9c60594b",
+   "street": "river",
+   "opponent": "equity",
+   "position": "BTN/SB",
+   "cards": [
+    "7d",
+    "8s"
+   ],
+   "board": [
+    "8h",
+    "Ts",
+    "Qs",
+    "Qc",
+    "5h"
+   ],
+   "pot": 1100,
+   "to_call": 100,
+   "made": "Two Pair",
+   "equity": 0.708,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.995,
+    "bet/raise": 0.005
+   },
+   "jev_family": {
+    "fold": 0.35,
+    "check/call": 0.37,
+    "bet/raise": 0.28
+   },
+   "jev_raise_sizes_used": 7,
+   "tv": 0.625,
+   "family_tv": 0.625,
+   "history": "1:raise300 2:call 2:raise100 1:call 2:raise100 1:call 2:raise100"
+  },
+  {
+   "hash": "bafe4b808872",
+   "street": "river",
+   "opponent": "equity",
+   "position": "BB",
+   "cards": [
+    "4c",
+    "8d"
+   ],
+   "board": [
+    "2d",
+    "8h",
+    "7d",
+    "Qc",
+    "8c"
+   ],
+   "pot": 500,
+   "to_call": 100,
+   "made": "Three of a Kind",
+   "equity": 0.961,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.0,
+    "bet/raise": 1.0
+   },
+   "jev_family": {
+    "fold": 0.34,
+    "check/call": 0.43,
+    "bet/raise": 0.23
+   },
+   "jev_raise_sizes_used": 7,
+   "tv": 0.953,
+   "family_tv": 0.77,
+   "history": "2:call 1:check 1:check 2:check 1:check 2:raise100 1:call 1:check 2:raise100"
+  },
+  {
+   "hash": "fac0f9b7af42",
+   "street": "river",
+   "opponent": "hyper",
+   "position": "BB",
+   "cards": [
+    "3c",
+    "Qh"
+   ],
+   "board": [
+    "9c",
+    "Jc",
+    "3h",
+    "4c",
+    "Kc"
+   ],
+   "pot": 3200,
+   "to_call": 800,
+   "made": "Flush",
+   "equity": 0.723,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 1.0,
+    "bet/raise": 0.0
+   },
+   "jev_family": {
+    "fold": 0.32,
+    "check/call": 0.34,
+    "bet/raise": 0.34
+   },
+   "jev_raise_sizes_used": 7,
+   "tv": 0.66,
+   "family_tv": 0.66,
+   "history": "2:raise300 1:call 1:check 2:raise300 1:call 1:raise600 2:call 1:check 2:raise800"
+  },
+  {
+   "hash": "76d3025be90b",
+   "street": "river",
+   "opponent": "equity",
+   "position": "BTN/SB",
+   "cards": [
+    "2c",
+    "7c"
+   ],
+   "board": [
+    "2d",
+    "Kc",
+    "2s",
+    "Jd",
+    "Th"
+   ],
+   "pot": 4000,
+   "to_call": 1000,
+   "made": "Three of a Kind",
+   "equity": 0.941,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 1.0,
+    "bet/raise": 0.0
+   },
+   "jev_family": {
+    "fold": 0.31,
+    "check/call": 0.39,
+    "bet/raise": 0.3
+   },
+   "jev_raise_sizes_used": 7,
+   "tv": 0.61,
+   "family_tv": 0.61,
+   "history": "1:raise200 2:call 2:raise100 1:call 2:raise100 1:call 2:raise100 1:raise1100 2:raise2100"
+  },
+  {
+   "hash": "01967fd384ca",
+   "street": "flop",
+   "opponent": "equity",
+   "position": "BB",
+   "cards": [
+    "Jd",
+    "3h"
+   ],
+   "board": [
+    "Ad",
+    "As",
+    "3s"
+   ],
+   "pot": 1100,
+   "to_call": 300,
+   "made": "Two Pair",
+   "equity": 0.642,
+   "cfr_family": {
+    "fold": 0.879,
+    "check/call": 0.117,
+    "bet/raise": 0.003
+   },
+   "jev_family": {
+    "fold": 0.3,
+    "check/call": 0.28,
+    "bet/raise": 0.42
+   },
+   "jev_raise_sizes_used": 7,
+   "tv": 0.579,
+   "family_tv": 0.579,
+   "history": "2:call 1:check 1:raise300 2:raise600"
+  },
+  {
+   "hash": "a97c5badf2aa",
+   "street": "river",
+   "opponent": "station",
+   "position": "BB",
+   "cards": [
+    "Qs",
+    "Js"
+   ],
+   "board": [
+    "Ks",
+    "5d",
+    "Ad",
+    "Tc",
+    "4d"
+   ],
+   "pot": 2500,
+   "to_call": 500,
+   "made": "Straight",
+   "equity": 0.951,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.0,
+    "bet/raise": 1.0
+   },
+   "jev_family": {
+    "fold": 0.27,
+    "check/call": 0.41,
+    "bet/raise": 0.32
+   },
+   "jev_raise_sizes_used": 7,
+   "tv": 0.9,
+   "family_tv": 0.68,
+   "history": "2:call 1:check 1:check 2:check 1:raise200 2:raise400 1:call 1:raise500 2:raise1000"
+  },
+  {
+   "hash": "d5cab2fa79ff",
+   "street": "river",
+   "opponent": "hyper",
+   "position": "BTN/SB",
+   "cards": [
+    "9d",
+    "Tc"
+   ],
+   "board": [
+    "4c",
+    "Qd",
+    "Td",
+    "6c",
+    "4s"
+   ],
+   "pot": 1500,
+   "to_call": 500,
+   "made": "Two Pair",
+   "equity": 0.723,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.494,
+    "bet/raise": 0.506
+   },
+   "jev_family": {
+    "fold": 0.25,
+    "check/call": 0.46,
+    "bet/raise": 0.29
+   },
+   "jev_raise_sizes_used": 7,
+   "tv": 0.513,
+   "family_tv": 0.25,
+   "history": "1:raise300 2:raise500 1:call 2:check 1:check 2:check 1:check 2:raise500"
+  }
+ ],
+ "river_raises": [
+  {
+   "hash": "a93b6db216aa",
+   "street": "river",
+   "opponent": "station",
+   "position": "BTN/SB",
+   "cards": [
+    "Qc",
+    "6c"
+   ],
+   "board": [
+    "Td",
+    "2s",
+    "5h",
+    "3s",
+    "7c"
+   ],
+   "pot": 400,
+   "to_call": 0,
+   "made": "High Card",
+   "equity": 0.134,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.039,
+    "bet/raise": 0.961
+   },
+   "jev_family": {
+    "fold": 0.0,
+    "check/call": 0.61,
+    "bet/raise": 0.39
+   },
+   "jev_raise_sizes_used": 7,
+   "tv": 0.801,
+   "family_tv": 0.571,
+   "history": "1:raise200 2:call 2:check 1:check 2:check 1:check 2:check"
+  },
+  {
+   "hash": "8bc894a5aa0b",
+   "street": "river",
+   "opponent": "tag",
+   "position": "BTN/SB",
+   "cards": [
+    "8s",
+    "Qh"
+   ],
+   "board": [
+    "2s",
+    "8c",
+    "4d",
+    "Jh",
+    "6h"
+   ],
+   "pot": 200,
+   "to_call": 0,
+   "made": "Pair",
+   "equity": 0.746,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.411,
+    "bet/raise": 0.589
+   },
+   "jev_family": {
+    "fold": 0.0,
+    "check/call": 0.55,
+    "bet/raise": 0.45
+   },
+   "jev_raise_sizes_used": 5,
+   "tv": 0.31,
+   "family_tv": 0.139,
+   "history": "1:call 2:check 2:check 1:check 2:check 1:check 2:check"
+  },
+  {
+   "hash": "a5393560935d",
+   "street": "river",
+   "opponent": "station",
+   "position": "BB",
+   "cards": [
+    "Ah",
+    "Jh"
+   ],
+   "board": [
+    "Jc",
+    "7d",
+    "6s",
+    "Jd",
+    "7h"
+   ],
+   "pot": 800,
+   "to_call": 0,
+   "made": "Full House",
+   "equity": 0.979,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.281,
+    "bet/raise": 0.719
+   },
+   "jev_family": {
+    "fold": 0.0,
+    "check/call": 0.48,
+    "bet/raise": 0.52
+   },
+   "jev_raise_sizes_used": 7,
+   "tv": 0.428,
+   "family_tv": 0.199,
+   "history": "2:call 1:raise200 2:call 1:check 2:check 1:raise200 2:call"
+  },
+  {
+   "hash": "a46854dcfa1d",
+   "street": "river",
+   "opponent": "equity",
+   "position": "BTN/SB",
+   "cards": [
+    "As",
+    "Kh"
+   ],
+   "board": [
+    "9s",
+    "3c",
+    "5c",
+    "Th",
+    "Kd"
+   ],
+   "pot": 800,
+   "to_call": 0,
+   "made": "Pair",
+   "equity": 0.901,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.38,
+    "bet/raise": 0.62
+   },
+   "jev_family": {
+    "fold": 0.0,
+    "check/call": 0.39,
+    "bet/raise": 0.61
+   },
+   "jev_raise_sizes_used": 7,
+   "tv": 0.353,
+   "family_tv": 0.01,
+   "history": "1:call 2:check 2:check 1:raise100 2:call 2:check 1:raise200 2:call 2:check"
+  },
+  {
+   "hash": "a97c5badf2aa",
+   "street": "river",
+   "opponent": "station",
+   "position": "BB",
+   "cards": [
+    "Qs",
+    "Js"
+   ],
+   "board": [
+    "Ks",
+    "5d",
+    "Ad",
+    "Tc",
+    "4d"
+   ],
+   "pot": 2500,
+   "to_call": 500,
+   "made": "Straight",
+   "equity": 0.951,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.0,
+    "bet/raise": 1.0
+   },
+   "jev_family": {
+    "fold": 0.27,
+    "check/call": 0.41,
+    "bet/raise": 0.32
+   },
+   "jev_raise_sizes_used": 7,
+   "tv": 0.9,
+   "family_tv": 0.68,
+   "history": "2:call 1:check 1:check 2:check 1:raise200 2:raise400 1:call 1:raise500 2:raise1000"
+  },
+  {
+   "hash": "47102eb4721b",
+   "street": "river",
+   "opponent": "equity",
+   "position": "BB",
+   "cards": [
+    "Qh",
+    "2c"
+   ],
+   "board": [
+    "6d",
+    "Qc",
+    "Qs",
+    "6c",
+    "Td"
+   ],
+   "pot": 200,
+   "to_call": 0,
+   "made": "Full House",
+   "equity": 0.981,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.151,
+    "bet/raise": 0.849
+   },
+   "jev_family": {
+    "fold": 0.0,
+    "check/call": 0.45,
+    "bet/raise": 0.55
+   },
+   "jev_raise_sizes_used": 5,
+   "tv": 0.431,
+   "family_tv": 0.299,
+   "history": "2:call 1:check 1:check 2:check 1:check 2:check"
+  },
+  {
+   "hash": "0e55616baf22",
+   "street": "river",
+   "opponent": "station",
+   "position": "BTN/SB",
+   "cards": [
+    "9c",
+    "8s"
+   ],
+   "board": [
+    "3c",
+    "Th",
+    "4s",
+    "Ah",
+    "Ac"
+   ],
+   "pot": 5400,
+   "to_call": 0,
+   "made": "Pair",
+   "equity": 0.172,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.17,
+    "bet/raise": 0.83
+   },
+   "jev_family": {
+    "fold": 0.0,
+    "check/call": 0.51,
+    "bet/raise": 0.49
+   },
+   "jev_raise_sizes_used": 7,
+   "tv": 0.635,
+   "family_tv": 0.34,
+   "history": "1:raise300 2:call 2:check 1:raise600 2:call 2:check 1:raise1800 2:call 2:check"
+  },
+  {
+   "hash": "8be761973916",
+   "street": "river",
+   "opponent": "station",
+   "position": "BTN/SB",
+   "cards": [
+    "7s",
+    "Th"
+   ],
+   "board": [
+    "9h",
+    "7c",
+    "Ts",
+    "3h",
+    "7d"
+   ],
+   "pot": 2400,
+   "to_call": 0,
+   "made": "Full House",
+   "equity": 0.995,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.0,
+    "bet/raise": 1.0
+   },
+   "jev_family": {
+    "fold": 0.0,
+    "check/call": 0.48,
+    "bet/raise": 0.52
+   },
+   "jev_raise_sizes_used": 7,
+   "tv": 0.703,
+   "family_tv": 0.48,
+   "history": "1:raise300 2:call 2:check 1:raise300 2:call 2:check 1:raise600 2:call 2:check"
+  },
+  {
+   "hash": "1f1b7bda6e46",
+   "street": "river",
+   "opponent": "station",
+   "position": "BB",
+   "cards": [
+    "As",
+    "Ks"
+   ],
+   "board": [
+    "Ts",
+    "Qc",
+    "Js",
+    "9d",
+    "Qs"
+   ],
+   "pot": 2400,
+   "to_call": 0,
+   "made": "Royal Flush",
+   "equity": 1.0,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.405,
+    "bet/raise": 0.595
+   },
+   "jev_family": {
+    "fold": 0.0,
+    "check/call": 0.32,
+    "bet/raise": 0.68
+   },
+   "jev_raise_sizes_used": 7,
+   "tv": 0.451,
+   "family_tv": 0.085,
+   "history": "2:call 1:raise200 2:call 1:raise400 2:call 1:raise600 2:call"
+  },
+  {
+   "hash": "32c163dac2d2",
+   "street": "river",
+   "opponent": "station",
+   "position": "BB",
+   "cards": [
+    "8s",
+    "9h"
+   ],
+   "board": [
+    "4d",
+    "6h",
+    "8h",
+    "7c",
+    "Ts"
+   ],
+   "pot": 200,
+   "to_call": 0,
+   "made": "Straight",
+   "equity": 0.925,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.151,
+    "bet/raise": 0.849
+   },
+   "jev_family": {
+    "fold": 0.0,
+    "check/call": 0.45,
+    "bet/raise": 0.55
+   },
+   "jev_raise_sizes_used": 5,
+   "tv": 0.422,
+   "family_tv": 0.299,
+   "history": "2:call 1:check 1:check 2:check 1:check 2:check"
+  },
+  {
+   "hash": "adcc81a6e58a",
+   "street": "river",
+   "opponent": "station",
+   "position": "BB",
+   "cards": [
+    "Kc",
+    "Th"
+   ],
+   "board": [
+    "6d",
+    "Qh",
+    "Td",
+    "8d",
+    "7c"
+   ],
+   "pot": 200,
+   "to_call": 0,
+   "made": "Pair",
+   "equity": 0.557,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.407,
+    "bet/raise": 0.593
+   },
+   "jev_family": {
+    "fold": 0.0,
+    "check/call": 0.48,
+    "bet/raise": 0.52
+   },
+   "jev_raise_sizes_used": 5,
+   "tv": 0.424,
+   "family_tv": 0.073,
+   "history": "2:call 1:check 1:check 2:check 1:check 2:check"
+  },
+  {
+   "hash": "db75a4c4d70e",
+   "street": "river",
+   "opponent": "station",
+   "position": "BTN/SB",
+   "cards": [
+    "2c",
+    "Qs"
+   ],
+   "board": [
+    "Js",
+    "Qh",
+    "9h",
+    "Ah",
+    "3h"
+   ],
+   "pot": 4800,
+   "to_call": 0,
+   "made": "Pair",
+   "equity": 0.505,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.17,
+    "bet/raise": 0.83
+   },
+   "jev_family": {
+    "fold": 0.0,
+    "check/call": 0.5,
+    "bet/raise": 0.5
+   },
+   "jev_raise_sizes_used": 7,
+   "tv": 0.625,
+   "family_tv": 0.33,
+   "history": "1:raise300 2:call 2:check 1:raise300 2:call 2:check 1:raise1800 2:call 2:check"
+  },
+  {
+   "hash": "0a4a8e5c6c5f",
+   "street": "river",
+   "opponent": "equity",
+   "position": "BB",
+   "cards": [
+    "As",
+    "Tc"
+   ],
+   "board": [
+    "Ah",
+    "Qs",
+    "Ac",
+    "3s",
+    "Qd"
+   ],
+   "pot": 4400,
+   "to_call": 1200,
+   "made": "Full House",
+   "equity": 0.971,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.17,
+    "bet/raise": 0.83
+   },
+   "jev_family": {
+    "fold": 0.24,
+    "check/call": 0.38,
+    "bet/raise": 0.38
+   },
+   "jev_raise_sizes_used": 7,
+   "tv": 0.71,
+   "family_tv": 0.45,
+   "history": "2:call 1:raise200 2:call 1:raise200 2:call 1:check 2:check 1:raise1200 2:raise2400"
+  },
+  {
+   "hash": "5fde2dd37725",
+   "street": "river",
+   "opponent": "equity",
+   "position": "BTN/SB",
+   "cards": [
+    "Qs",
+    "5c"
+   ],
+   "board": [
+    "Jd",
+    "Ah",
+    "8h",
+    "9s",
+    "Td"
+   ],
+   "pot": 1000,
+   "to_call": 0,
+   "made": "Straight",
+   "equity": 0.891,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.0,
+    "bet/raise": 1.0
+   },
+   "jev_family": {
+    "fold": 0.0,
+    "check/call": 0.56,
+    "bet/raise": 0.44
+   },
+   "jev_raise_sizes_used": 7,
+   "tv": 0.803,
+   "family_tv": 0.56,
+   "history": "1:raise300 2:call 2:raise100 1:call 2:raise100 1:call 2:check"
+  },
+  {
+   "hash": "0295a4b8596f",
+   "street": "river",
+   "opponent": "station",
+   "position": "BB",
+   "cards": [
+    "Kh",
+    "9h"
+   ],
+   "board": [
+    "4c",
+    "Kc",
+    "7s",
+    "9d",
+    "Td"
+   ],
+   "pot": 600,
+   "to_call": 0,
+   "made": "Two Pair",
+   "equity": 0.938,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.389,
+    "bet/raise": 0.611
+   },
+   "jev_family": {
+    "fold": 0.0,
+    "check/call": 0.44,
+    "bet/raise": 0.56
+   },
+   "jev_raise_sizes_used": 7,
+   "tv": 0.268,
+   "family_tv": 0.051,
+   "history": "2:call 1:raise300 2:call 1:check 2:check 1:check 2:check"
+  },
+  {
+   "hash": "bafe4b808872",
+   "street": "river",
+   "opponent": "equity",
+   "position": "BB",
+   "cards": [
+    "4c",
+    "8d"
+   ],
+   "board": [
+    "2d",
+    "8h",
+    "7d",
+    "Qc",
+    "8c"
+   ],
+   "pot": 500,
+   "to_call": 100,
+   "made": "Three of a Kind",
+   "equity": 0.961,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.0,
+    "bet/raise": 1.0
+   },
+   "jev_family": {
+    "fold": 0.34,
+    "check/call": 0.43,
+    "bet/raise": 0.23
+   },
+   "jev_raise_sizes_used": 7,
+   "tv": 0.953,
+   "family_tv": 0.77,
+   "history": "2:call 1:check 1:check 2:check 1:check 2:raise100 1:call 1:check 2:raise100"
+  },
+  {
+   "hash": "b5c0bb19d0e1",
+   "street": "river",
+   "opponent": "station",
+   "position": "BTN/SB",
+   "cards": [
+    "5s",
+    "Qh"
+   ],
+   "board": [
+    "8c",
+    "3d",
+    "Ts",
+    "8s",
+    "Js"
+   ],
+   "pot": 1200,
+   "to_call": 0,
+   "made": "Pair",
+   "equity": 0.203,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.408,
+    "bet/raise": 0.592
+   },
+   "jev_family": {
+    "fold": 0.0,
+    "check/call": 0.6,
+    "bet/raise": 0.4
+   },
+   "jev_raise_sizes_used": 7,
+   "tv": 0.457,
+   "family_tv": 0.192,
+   "history": "1:raise300 2:call 2:check 1:raise300 2:call 2:check 1:check 2:check"
+  },
+  {
+   "hash": "0ee438ee4e16",
+   "street": "river",
+   "opponent": "hyper",
+   "position": "BTN/SB",
+   "cards": [
+    "8h",
+    "Qh"
+   ],
+   "board": [
+    "Js",
+    "Td",
+    "7s",
+    "4s",
+    "4c"
+   ],
+   "pot": 1750,
+   "to_call": 450,
+   "made": "Pair",
+   "equity": 0.191,
+   "cfr_family": {
+    "fold": 0.443,
+    "check/call": 0.026,
+    "bet/raise": 0.531
+   },
+   "jev_family": {
+    "fold": 0.4,
+    "check/call": 0.29,
+    "bet/raise": 0.31
+   },
+   "jev_raise_sizes_used": 7,
+   "tv": 0.494,
+   "family_tv": 0.264,
+   "history": "1:raise200 2:raise300 1:call 2:raise100 1:call 2:raise250 1:call 2:raise450"
+  },
+  {
+   "hash": "b4097eac3aec",
+   "street": "river",
+   "opponent": "station",
+   "position": "BB",
+   "cards": [
+    "2h",
+    "5d"
+   ],
+   "board": [
+    "7c",
+    "8s",
+    "5c",
+    "Kc",
+    "5h"
+   ],
+   "pot": 200,
+   "to_call": 0,
+   "made": "Three of a Kind",
+   "equity": 0.887,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.151,
+    "bet/raise": 0.849
+   },
+   "jev_family": {
+    "fold": 0.0,
+    "check/call": 0.66,
+    "bet/raise": 0.34
+   },
+   "jev_raise_sizes_used": 5,
+   "tv": 0.551,
+   "family_tv": 0.509,
+   "history": "2:call 1:check 1:check 2:check 1:check 2:check"
+  },
+  {
+   "hash": "7a21a9c16b9f",
+   "street": "river",
+   "opponent": "tag",
+   "position": "BTN/SB",
+   "cards": [
+    "2c",
+    "6s"
+   ],
+   "board": [
+    "2d",
+    "5h",
+    "Qs",
+    "6d",
+    "Ad"
+   ],
+   "pot": 400,
+   "to_call": 0,
+   "made": "Two Pair",
+   "equity": 0.85,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.0,
+    "bet/raise": 1.0
+   },
+   "jev_family": {
+    "fold": 0.0,
+    "check/call": 0.6,
+    "bet/raise": 0.4
+   },
+   "jev_raise_sizes_used": 7,
+   "tv": 0.801,
+   "family_tv": 0.6,
+   "history": "1:call 2:check 2:check 1:check 2:check 1:raise100 2:call 2:check"
+  },
+  {
+   "hash": "11d72af4223c",
+   "street": "river",
+   "opponent": "hyper",
+   "position": "BTN/SB",
+   "cards": [
+    "Td",
+    "6d"
+   ],
+   "board": [
+    "3c",
+    "Kd",
+    "Qs",
+    "Jd",
+    "Ac"
+   ],
+   "pot": 7500,
+   "to_call": 0,
+   "made": "Straight",
+   "equity": 0.931,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.0,
+    "bet/raise": 1.0
+   },
+   "jev_family": {
+    "fold": 0.0,
+    "check/call": 0.55,
+    "bet/raise": 0.45
+   },
+   "jev_raise_sizes_used": 7,
+   "tv": 0.794,
+   "family_tv": 0.55,
+   "history": "1:raise300 2:raise600 1:call 2:raise900 1:call 2:raise2250 1:call 2:check"
+  },
+  {
+   "hash": "7a09d225c235",
+   "street": "river",
+   "opponent": "equity",
+   "position": "BTN/SB",
+   "cards": [
+    "Ad",
+    "Th"
+   ],
+   "board": [
+    "5h",
+    "Qd",
+    "Qs",
+    "5s",
+    "Ah"
+   ],
+   "pot": 200,
+   "to_call": 0,
+   "made": "Two Pair",
+   "equity": 0.771,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.411,
+    "bet/raise": 0.589
+   },
+   "jev_family": {
+    "fold": 0.0,
+    "check/call": 0.51,
+    "bet/raise": 0.49
+   },
+   "jev_raise_sizes_used": 5,
+   "tv": 0.29,
+   "family_tv": 0.099,
+   "history": "1:call 2:check 2:check 1:check 2:check 1:check 2:check"
+  },
+  {
+   "hash": "75788c87e71c",
+   "street": "river",
+   "opponent": "equity",
+   "position": "BB",
+   "cards": [
+    "8h",
+    "Ts"
+   ],
+   "board": [
+    "5h",
+    "2s",
+    "Kh",
+    "4h",
+    "8c"
+   ],
+   "pot": 200,
+   "to_call": 0,
+   "made": "Pair",
+   "equity": 0.677,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.407,
+    "bet/raise": 0.593
+   },
+   "jev_family": {
+    "fold": 0.0,
+    "check/call": 0.46,
+    "bet/raise": 0.54
+   },
+   "jev_raise_sizes_used": 5,
+   "tv": 0.414,
+   "family_tv": 0.053,
+   "history": "2:call 1:check 1:check 2:check 1:check 2:check"
+  },
+  {
+   "hash": "ffba9ef316e2",
+   "street": "river",
+   "opponent": "equity",
+   "position": "BB",
+   "cards": [
+    "9d",
+    "3h"
+   ],
+   "board": [
+    "Th",
+    "2h",
+    "6s",
+    "Qc",
+    "9s"
+   ],
+   "pot": 200,
+   "to_call": 0,
+   "made": "Pair",
+   "equity": 0.625,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.407,
+    "bet/raise": 0.593
+   },
+   "jev_family": {
+    "fold": 0.0,
+    "check/call": 0.6,
+    "bet/raise": 0.4
+   },
+   "jev_raise_sizes_used": 5,
+   "tv": 0.434,
+   "family_tv": 0.193,
+   "history": "2:call 1:check 1:check 2:check 1:check 2:check"
+  },
+  {
+   "hash": "6258df91c431",
+   "street": "river",
+   "opponent": "station",
+   "position": "BB",
+   "cards": [
+    "As",
+    "Kd"
+   ],
+   "board": [
+    "4s",
+    "Jc",
+    "9c",
+    "Kh",
+    "2d"
+   ],
+   "pot": 400,
+   "to_call": 0,
+   "made": "Pair",
+   "equity": 0.884,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.389,
+    "bet/raise": 0.611
+   },
+   "jev_family": {
+    "fold": 0.0,
+    "check/call": 0.44,
+    "bet/raise": 0.56
+   },
+   "jev_raise_sizes_used": 7,
+   "tv": 0.348,
+   "family_tv": 0.051,
+   "history": "2:call 1:raise200 2:call 1:check 2:check 1:check 2:check"
+  },
+  {
+   "hash": "d5cab2fa79ff",
+   "street": "river",
+   "opponent": "hyper",
+   "position": "BTN/SB",
+   "cards": [
+    "9d",
+    "Tc"
+   ],
+   "board": [
+    "4c",
+    "Qd",
+    "Td",
+    "6c",
+    "4s"
+   ],
+   "pot": 1500,
+   "to_call": 500,
+   "made": "Two Pair",
+   "equity": 0.723,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.494,
+    "bet/raise": 0.506
+   },
+   "jev_family": {
+    "fold": 0.25,
+    "check/call": 0.46,
+    "bet/raise": 0.29
+   },
+   "jev_raise_sizes_used": 7,
+   "tv": 0.513,
+   "family_tv": 0.25,
+   "history": "1:raise300 2:raise500 1:call 2:check 1:check 2:check 1:check 2:raise500"
+  },
+  {
+   "hash": "f813967d8d98",
+   "street": "river",
+   "opponent": "station",
+   "position": "BTN/SB",
+   "cards": [
+    "8h",
+    "Td"
+   ],
+   "board": [
+    "Js",
+    "9h",
+    "Ks",
+    "Jd",
+    "Ts"
+   ],
+   "pot": 600,
+   "to_call": 0,
+   "made": "Two Pair",
+   "equity": 0.545,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.252,
+    "bet/raise": 0.748
+   },
+   "jev_family": {
+    "fold": 0.0,
+    "check/call": 0.53,
+    "bet/raise": 0.47
+   },
+   "jev_raise_sizes_used": 7,
+   "tv": 0.51,
+   "family_tv": 0.278,
+   "history": "1:call 2:check 2:check 1:check 2:check 1:raise200 2:call 2:check"
+  },
+  {
+   "hash": "ebfb7e63f9e7",
+   "street": "river",
+   "opponent": "station",
+   "position": "BB",
+   "cards": [
+    "3d",
+    "7c"
+   ],
+   "board": [
+    "6c",
+    "2d",
+    "3h",
+    "As",
+    "Th"
+   ],
+   "pot": 200,
+   "to_call": 0,
+   "made": "Pair",
+   "equity": 0.52,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.262,
+    "bet/raise": 0.738
+   },
+   "jev_family": {
+    "fold": 0.0,
+    "check/call": 0.59,
+    "bet/raise": 0.41
+   },
+   "jev_raise_sizes_used": 5,
+   "tv": 0.474,
+   "family_tv": 0.328,
+   "history": "2:call 1:check 1:check 2:check 1:check 2:check"
+  },
+  {
+   "hash": "7a74b60ba0c0",
+   "street": "river",
+   "opponent": "equity",
+   "position": "BTN/SB",
+   "cards": [
+    "Qd",
+    "8h"
+   ],
+   "board": [
+    "4h",
+    "2d",
+    "9d",
+    "5h",
+    "3c"
+   ],
+   "pot": 1800,
+   "to_call": 0,
+   "made": "High Card",
+   "equity": 0.105,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.19,
+    "bet/raise": 0.81
+   },
+   "jev_family": {
+    "fold": 0.0,
+    "check/call": 0.55,
+    "bet/raise": 0.45
+   },
+   "jev_raise_sizes_used": 7,
+   "tv": 0.554,
+   "family_tv": 0.36,
+   "history": "1:call 2:check 2:check 1:raise100 2:call 2:raise100 1:raise700 2:call 2:check"
+  },
+  {
+   "hash": "c62f92b311c2",
+   "street": "river",
+   "opponent": "equity",
+   "position": "BTN/SB",
+   "cards": [
+    "4d",
+    "Jd"
+   ],
+   "board": [
+    "Ad",
+    "Td",
+    "Ah",
+    "9d",
+    "6c"
+   ],
+   "pot": 3600,
+   "to_call": 0,
+   "made": "Flush",
+   "equity": 0.96,
+   "cfr_family": {
+    "fold": 0.0,
+    "check/call": 0.0,
+    "bet/raise": 1.0
+   },
+   "jev_family": {
+    "fold": 0.0,
+    "check/call": 0.45,
+    "bet/raise": 0.55
+   },
+   "jev_raise_sizes_used": 7,
+   "tv": 0.743,
+   "family_tv": 0.45,
+   "history": "1:raise300 2:call 2:check 1:raise600 2:call 2:check 1:raise900 2:call 2:check"
+  }
+ ]
+}
