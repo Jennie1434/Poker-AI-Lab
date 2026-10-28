@@ -1,0 +1,22 @@
+{
+  "config": {
+    "agent_a": "cfr",
+    "agent_b": "hyper",
+    "allin_stats": true,
+    "cfr_adaptive": true,
+    "cfr_allin": "",
+    "cfr_policy": "artifacts/mission5/policy-v2-72001-300000.json.gz",
+    "deck_seed": 171003,
+    "equity_samples": 64,
+    "hands": 10000,
+    "measure_time": true,
+    "no_flop_no_drop": true,
+    "policy_seed": 181003,
+    "public_stats": true,
+    "rake_cap_bb": "3",
+    "rake_percent": "5",
+    "tag_samples": 64
+  },
+  "cpu_seconds": 239.3198417540002,
+  "wall_seconds": 242.19279757699996
+}

@@ -1,0 +1,4191 @@
+{
+  "ci_method": "normal 95% on independent two-hand block means; paired per-hand differences on identical deals",
+  "decisions": {
+    "allin-any": {
+      "accepted": false,
+      "verdicts": {
+        "equity": "inconclusive",
+        "hyper": "inconclusive",
+        "shover": "inconclusive",
+        "station": "inconclusive",
+        "tag": "inconclusive"
+      }
+    },
+    "allin-top": {
+      "accepted": false,
+      "verdicts": {
+        "equity": "inconclusive",
+        "hyper": "inconclusive",
+        "shover": "worse",
+        "station": "inconclusive",
+        "tag": "inconclusive"
+      }
+    }
+  },
+  "default": "adapt",
+  "no_flop_no_drop": true,
+  "paired": [
+    {
+      "comparison": "allin-top - adapt",
+      "difference": {
+        "bb_per_100": 0.6633333333333333,
+        "break_even_rate": 0.9999666666666667,
+        "ci95_bb_per_100": [
+          -0.6367761097449025,
+          1.9634427764115692
+        ],
+        "loss_rate": 0.0,
+        "profit_bb": 199.0,
+        "profit_chips": 19900,
+        "standard_error_bb_per_100": 0.6633333333333333,
+        "stddev_block_mean_bb": 0.8124140980230874,
+        "stddev_hand_bb": 1.1489270356873553,
+        "win_rate": 3.3333333333333335e-05
+      },
+      "opponent": "hyper",
+      "verdict": "inconclusive"
+    },
+    {
+      "comparison": "allin-top - adapt",
+      "difference": {
+        "bb_per_100": 0.0,
+        "break_even_rate": 1.0,
+        "ci95_bb_per_100": [
+          0.0,
+          0.0
+        ],
+        "loss_rate": 0.0,
+        "profit_bb": 0.0,
+        "profit_chips": 0,
+        "standard_error_bb_per_100": 0.0,
+        "stddev_block_mean_bb": 0.0,
+        "stddev_hand_bb": 0.0,
+        "win_rate": 0.0
+      },
+      "opponent": "tag",
+      "verdict": "inconclusive"
+    },
+    {
+      "comparison": "allin-top - adapt",
+      "difference": {
+        "bb_per_100": 0.0,
+        "break_even_rate": 1.0,
+        "ci95_bb_per_100": [
+          0.0,
+          0.0
+        ],
+        "loss_rate": 0.0,
+        "profit_bb": 0.0,
+        "profit_chips": 0,
+        "standard_error_bb_per_100": 0.0,
+        "stddev_block_mean_bb": 0.0,
+        "stddev_hand_bb": 0.0,
+        "win_rate": 0.0
+      },
+      "opponent": "station",
+      "verdict": "inconclusive"
+    },
+    {
+      "comparison": "allin-top - adapt",
+      "difference": {
+        "bb_per_100": 0.0,
+        "break_even_rate": 1.0,
+        "ci95_bb_per_100": [
+          0.0,
+          0.0
+        ],
+        "loss_rate": 0.0,
+        "profit_bb": 0.0,
+        "profit_chips": 0,
+        "standard_error_bb_per_100": 0.0,
+        "stddev_block_mean_bb": 0.0,
+        "stddev_hand_bb": 0.0,
+        "win_rate": 0.0
+      },
+      "opponent": "equity",
+      "verdict": "inconclusive"
+    },
+    {
+      "comparison": "allin-top - adapt",
+      "difference": {
+        "bb_per_100": -145.98333333333332,
+        "break_even_rate": 0.9298333333333333,
+        "ci95_bb_per_100": [
+          -204.1943238916277,
+          -87.77234277503894
+        ],
+        "loss_rate": 0.038566666666666666,
+        "profit_bb": -43795.0,
+        "profit_chips": -4379500,
+        "standard_error_bb_per_100": 29.700030723755766,
+        "stddev_block_mean_bb": 36.3749603090925,
+        "stddev_hand_bb": 51.564702726359215,
+        "win_rate": 0.0316
+      },
+      "opponent": "shover",
+      "verdict": "worse"
+    },
+    {
+      "comparison": "allin-any - adapt",
+      "difference": {
+        "bb_per_100": -0.6633333333333333,
+        "break_even_rate": 0.9999666666666667,
+        "ci95_bb_per_100": [
+          -1.9634427764115692,
+          0.6367761097449025
+        ],
+        "loss_rate": 3.3333333333333335e-05,
+        "profit_bb": -199.0,
+        "profit_chips": -19900,
+        "standard_error_bb_per_100": 0.6633333333333333,
+        "stddev_block_mean_bb": 0.8124140980230874,
+        "stddev_hand_bb": 1.1489270356873553,
+        "win_rate": 0.0
+      },
+      "opponent": "hyper",
+      "verdict": "inconclusive"
+    },
+    {
+      "comparison": "allin-any - adapt",
+      "difference": {
+        "bb_per_100": 0.0,
+        "break_even_rate": 1.0,
+        "ci95_bb_per_100": [
+          0.0,
+          0.0
+        ],
+        "loss_rate": 0.0,
+        "profit_bb": 0.0,
+        "profit_chips": 0,
+        "standard_error_bb_per_100": 0.0,
+        "stddev_block_mean_bb": 0.0,
+        "stddev_hand_bb": 0.0,
+        "win_rate": 0.0
+      },
+      "opponent": "tag",
+      "verdict": "inconclusive"
+    },
+    {
+      "comparison": "allin-any - adapt",
+      "difference": {
+        "bb_per_100": 0.0,
+        "break_even_rate": 1.0,
+        "ci95_bb_per_100": [
+          0.0,
+          0.0
+        ],
+        "loss_rate": 0.0,
+        "profit_bb": 0.0,
+        "profit_chips": 0,
+        "standard_error_bb_per_100": 0.0,
+        "stddev_block_mean_bb": 0.0,
+        "stddev_hand_bb": 0.0,
+        "win_rate": 0.0
+      },
+      "opponent": "station",
+      "verdict": "inconclusive"
+    },
+    {
+      "comparison": "allin-any - adapt",
+      "difference": {
+        "bb_per_100": 0.0,
+        "break_even_rate": 1.0,
+        "ci95_bb_per_100": [
+          0.0,
+          0.0
+        ],
+        "loss_rate": 0.0,
+        "profit_bb": 0.0,
+        "profit_chips": 0,
+        "standard_error_bb_per_100": 0.0,
+        "stddev_block_mean_bb": 0.0,
+        "stddev_hand_bb": 0.0,
+        "win_rate": 0.0
+      },
+      "opponent": "equity",
+      "verdict": "inconclusive"
+    },
+    {
+      "comparison": "allin-any - adapt",
+      "difference": {
+        "bb_per_100": -23.916666666666668,
+        "break_even_rate": 0.9358666666666666,
+        "ci95_bb_per_100": [
+          -79.72338727143197,
+          31.890053938098635
+        ],
+        "loss_rate": 0.03333333333333333,
+        "profit_bb": -7175.0,
+        "profit_chips": -717500,
+        "standard_error_bb_per_100": 28.47333983938562,
+        "stddev_block_mean_bb": 34.87257693967735,
+        "stddev_hand_bb": 49.396719531789145,
+        "win_rate": 0.0308
+      },
+      "opponent": "shover",
+      "verdict": "inconclusive"
+    }
+  ],
+  "rake_cap_bb": 3,
+  "results": [
+    {
+      "call_rate_vs_all_in": 0.4427083333333333,
+      "faced_preflop_all_ins": 1152,
+      "hands": 30000,
+      "opponent": "hyper",
+      "position_net_bb100": {
+        "BB": 490.93646666666666,
+        "BTN": 760.4574
+      },
+      "rake": {
+        "0": {
+          "bb_per_100": 696.5849999999999,
+          "break_even_rate": 0.0165,
+          "ci95_bb_per_100": [
+            603.8382454025576,
+            789.3317545974422
+          ],
+          "loss_rate": 0.6343666666666666,
+          "profit_bb": 208975.5,
+          "profit_chips": 20897550,
+          "standard_error_bb_per_100": 47.32064228170357,
+          "stddev_block_mean_bb": 57.95571394547244,
+          "stddev_hand_bb": 81.78935704239487,
+          "win_rate": 0.34913333333333335
+        },
+        "2": {
+          "bb_per_100": 642.9101333333333,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            551.0972886532114,
+            734.7229780134552
+          ],
+          "loss_rate": 0.6508666666666667,
+          "profit_bb": 192873.04,
+          "profit_chips": 19287304,
+          "standard_error_bb_per_100": 46.84414887433132,
+          "stddev_block_mean_bb": 57.37213108854136,
+          "stddev_hand_bb": 80.96598747756167,
+          "win_rate": 0.34913333333333335
+        },
+        "5": {
+          "bb_per_100": 625.6969333333333,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            533.9258790925769,
+            717.4679875740896
+          ],
+          "loss_rate": 0.6508666666666667,
+          "profit_bb": 187709.08,
+          "profit_chips": 18770908,
+          "standard_error_bb_per_100": 46.82282682979621,
+          "stddev_block_mean_bb": 57.346017023849406,
+          "stddev_hand_bb": 80.93180752706182,
+          "win_rate": 0.34913333333333335
+        },
+        "7": {
+          "bb_per_100": 619.173,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            527.4086120410415,
+            710.9373879589585
+          ],
+          "loss_rate": 0.6508666666666667,
+          "profit_bb": 185751.9,
+          "profit_chips": 18575190,
+          "standard_error_bb_per_100": 46.81942560311535,
+          "stddev_block_mean_bb": 57.341851388915586,
+          "stddev_hand_bb": 80.92667285713917,
+          "win_rate": 0.34913333333333335
+        }
+      },
+      "seed_net_bb100": [
+        591.6808,
+        765.0922,
+        520.3178
+      ],
+      "variant": "adapt"
+    },
+    {
+      "call_rate_vs_all_in": 0.4418402777777778,
+      "faced_preflop_all_ins": 1152,
+      "hands": 30000,
+      "opponent": "hyper",
+      "position_net_bb100": {
+        "BB": 492.2631333333333,
+        "BTN": 760.4574
+      },
+      "rake": {
+        "0": {
+          "bb_per_100": 697.2483333333333,
+          "break_even_rate": 0.0165,
+          "ci95_bb_per_100": [
+            604.5121520658452,
+            789.9845146008215
+          ],
+          "loss_rate": 0.6343666666666666,
+          "profit_bb": 209174.5,
+          "profit_chips": 20917450,
+          "standard_error_bb_per_100": 47.31524762647649,
+          "stddev_block_mean_bb": 57.94910686915014,
+          "stddev_hand_bb": 81.78064025348786,
+          "win_rate": 0.34913333333333335
+        },
+        "2": {
+          "bb_per_100": 643.5734666666667,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            551.7712035489652,
+            735.3757297843682
+          ],
+          "loss_rate": 0.6508666666666667,
+          "profit_bb": 193072.04,
+          "profit_chips": 19307204,
+          "standard_error_bb_per_100": 46.83875001878914,
+          "stddev_block_mean_bb": 57.365518867904704,
+          "stddev_hand_bb": 80.95722601585196,
+          "win_rate": 0.34913333333333335
+        },
+        "5": {
+          "bb_per_100": 626.3602666666667,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            534.5997669382546,
+            718.1207663950788
+          ],
+          "loss_rate": 0.6508666666666667,
+          "profit_bb": 187908.08,
+          "profit_chips": 18790808,
+          "standard_error_bb_per_100": 46.817441775566934,
+          "stddev_block_mean_bb": 57.33942170629994,
+          "stddev_hand_bb": 80.92305647500244,
+          "win_rate": 0.34913333333333335
+        },
+        "7": {
+          "bb_per_100": 619.8363333333333,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            528.0824885739903,
+            711.5901780926763
+          ],
+          "loss_rate": 0.6508666666666667,
+          "profit_bb": 185950.9,
+          "profit_chips": 18595090,
+          "standard_error_bb_per_100": 46.81404632079242,
+          "stddev_block_mean_bb": 57.33526314047881,
+          "stddev_hand_bb": 80.91792659802165,
+          "win_rate": 0.34913333333333335
+        }
+      },
+      "seed_net_bb100": [
+        591.6808,
+        767.0822000000001,
+        520.3178
+      ],
+      "variant": "allin-top"
+    },
+    {
+      "call_rate_vs_all_in": 0.4435763888888889,
+      "faced_preflop_all_ins": 1152,
+      "hands": 30000,
+      "opponent": "hyper",
+      "position_net_bb100": {
+        "BB": 490.93646666666666,
+        "BTN": 759.1307333333333
+      },
+      "rake": {
+        "0": {
+          "bb_per_100": 695.9216666666666,
+          "break_even_rate": 0.0165,
+          "ci95_bb_per_100": [
+            603.1461190812823,
+            788.6972142520509
+          ],
+          "loss_rate": 0.6343666666666666,
+          "profit_bb": 208776.5,
+          "profit_chips": 20877650,
+          "standard_error_bb_per_100": 47.33533285161664,
+          "stddev_block_mean_bb": 57.97370614563128,
+          "stddev_hand_bb": 81.79807236445819,
+          "win_rate": 0.34913333333333335
+        },
+        "2": {
+          "bb_per_100": 642.2468,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            550.4049688329951,
+            734.0886311670049
+          ],
+          "loss_rate": 0.6508666666666667,
+          "profit_bb": 192674.04,
+          "profit_chips": 19267404,
+          "standard_error_bb_per_100": 46.85893817000802,
+          "stddev_block_mean_bb": 57.390244202572894,
+          "stddev_hand_bb": 80.97474744787075,
+          "win_rate": 0.34913333333333335
+        },
+        "5": {
+          "bb_per_100": 625.0336,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            533.2335779322482,
+            716.8336220677518
+          ],
+          "loss_rate": 0.6508666666666667,
+          "profit_bb": 187510.08,
+          "profit_chips": 18751008,
+          "standard_error_bb_per_100": 46.83760660494716,
+          "stddev_block_mean_bb": 57.364118477665855,
+          "stddev_hand_bb": 80.94055708934285,
+          "win_rate": 0.34913333333333335
+        },
+        "7": {
+          "bb_per_100": 618.5096666666666,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            526.7163208513468,
+            710.3030124819863
+          ],
+          "loss_rate": 0.6508666666666667,
+          "profit_bb": 185552.9,
+          "profit_chips": 18555290,
+          "standard_error_bb_per_100": 46.83420029111451,
+          "stddev_block_mean_bb": 57.35994661226897,
+          "stddev_hand_bb": 80.93541762741991,
+          "win_rate": 0.34913333333333335
+        }
+      },
+      "seed_net_bb100": [
+        591.6808,
+        763.1021999999999,
+        520.3178
+      ],
+      "variant": "allin-any"
+    },
+    {
+      "call_rate_vs_all_in": null,
+      "faced_preflop_all_ins": 0,
+      "hands": 30000,
+      "opponent": "tag",
+      "position_net_bb100": {
+        "BB": 11.334,
+        "BTN": 16.373333333333335
+      },
+      "rake": {
+        "0": {
+          "bb_per_100": 20.598333333333333,
+          "break_even_rate": 0.0028333333333333335,
+          "ci95_bb_per_100": [
+            3.7115852340935866,
+            37.48508143257308
+          ],
+          "loss_rate": 0.2367,
+          "profit_bb": 6179.5,
+          "profit_chips": 617950,
+          "standard_error_bb_per_100": 8.61584612392894,
+          "stddev_block_mean_bb": 10.55221335298107,
+          "stddev_hand_bb": 14.91104871715994,
+          "win_rate": 0.7604666666666666
+        },
+        "2": {
+          "bb_per_100": 17.033833333333334,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            0.30063055642013126,
+            33.767036110246536
+          ],
+          "loss_rate": 0.23953333333333332,
+          "profit_bb": 5110.15,
+          "profit_chips": 511015,
+          "standard_error_bb_per_100": 8.537505234230105,
+          "stddev_block_mean_bb": 10.456265750102169,
+          "stddev_hand_bb": 14.775481562734628,
+          "win_rate": 0.7604666666666666
+        },
+        "5": {
+          "bb_per_100": 13.853666666666667,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            -2.846882505561764,
+            30.554215838895097
+          ],
+          "loss_rate": 0.23953333333333332,
+          "profit_bb": 4156.1,
+          "profit_chips": 415610,
+          "standard_error_bb_per_100": 8.520844925702836,
+          "stddev_block_mean_bb": 10.435861122677595,
+          "stddev_hand_bb": 14.746623035631606,
+          "win_rate": 0.7604666666666666
+        },
+        "7": {
+          "bb_per_100": 12.176333333333336,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            -4.514987040069808,
+            28.86765370673648
+          ],
+          "loss_rate": 0.23953333333333332,
+          "profit_bb": 3652.9,
+          "profit_chips": 365290,
+          "standard_error_bb_per_100": 8.516136268350923,
+          "stddev_block_mean_bb": 10.4300942187347,
+          "stddev_hand_bb": 14.738458311814792,
+          "win_rate": 0.7604666666666666
+        }
+      },
+      "seed_net_bb100": [
+        36.782199999999996,
+        20.0604,
+        -15.281600000000001
+      ],
+      "variant": "adapt"
+    },
+    {
+      "call_rate_vs_all_in": null,
+      "faced_preflop_all_ins": 0,
+      "hands": 30000,
+      "opponent": "tag",
+      "position_net_bb100": {
+        "BB": 11.334,
+        "BTN": 16.373333333333335
+      },
+      "rake": {
+        "0": {
+          "bb_per_100": 20.598333333333333,
+          "break_even_rate": 0.0028333333333333335,
+          "ci95_bb_per_100": [
+            3.7115852340935866,
+            37.48508143257308
+          ],
+          "loss_rate": 0.2367,
+          "profit_bb": 6179.5,
+          "profit_chips": 617950,
+          "standard_error_bb_per_100": 8.61584612392894,
+          "stddev_block_mean_bb": 10.55221335298107,
+          "stddev_hand_bb": 14.91104871715994,
+          "win_rate": 0.7604666666666666
+        },
+        "2": {
+          "bb_per_100": 17.033833333333334,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            0.30063055642013126,
+            33.767036110246536
+          ],
+          "loss_rate": 0.23953333333333332,
+          "profit_bb": 5110.15,
+          "profit_chips": 511015,
+          "standard_error_bb_per_100": 8.537505234230105,
+          "stddev_block_mean_bb": 10.456265750102169,
+          "stddev_hand_bb": 14.775481562734628,
+          "win_rate": 0.7604666666666666
+        },
+        "5": {
+          "bb_per_100": 13.853666666666667,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            -2.846882505561764,
+            30.554215838895097
+          ],
+          "loss_rate": 0.23953333333333332,
+          "profit_bb": 4156.1,
+          "profit_chips": 415610,
+          "standard_error_bb_per_100": 8.520844925702836,
+          "stddev_block_mean_bb": 10.435861122677595,
+          "stddev_hand_bb": 14.746623035631606,
+          "win_rate": 0.7604666666666666
+        },
+        "7": {
+          "bb_per_100": 12.176333333333336,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            -4.514987040069808,
+            28.86765370673648
+          ],
+          "loss_rate": 0.23953333333333332,
+          "profit_bb": 3652.9,
+          "profit_chips": 365290,
+          "standard_error_bb_per_100": 8.516136268350923,
+          "stddev_block_mean_bb": 10.4300942187347,
+          "stddev_hand_bb": 14.738458311814792,
+          "win_rate": 0.7604666666666666
+        }
+      },
+      "seed_net_bb100": [
+        36.782199999999996,
+        20.0604,
+        -15.281600000000001
+      ],
+      "variant": "allin-top"
+    },
+    {
+      "call_rate_vs_all_in": null,
+      "faced_preflop_all_ins": 0,
+      "hands": 30000,
+      "opponent": "tag",
+      "position_net_bb100": {
+        "BB": 11.334,
+        "BTN": 16.373333333333335
+      },
+      "rake": {
+        "0": {
+          "bb_per_100": 20.598333333333333,
+          "break_even_rate": 0.0028333333333333335,
+          "ci95_bb_per_100": [
+            3.7115852340935866,
+            37.48508143257308
+          ],
+          "loss_rate": 0.2367,
+          "profit_bb": 6179.5,
+          "profit_chips": 617950,
+          "standard_error_bb_per_100": 8.61584612392894,
+          "stddev_block_mean_bb": 10.55221335298107,
+          "stddev_hand_bb": 14.91104871715994,
+          "win_rate": 0.7604666666666666
+        },
+        "2": {
+          "bb_per_100": 17.033833333333334,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            0.30063055642013126,
+            33.767036110246536
+          ],
+          "loss_rate": 0.23953333333333332,
+          "profit_bb": 5110.15,
+          "profit_chips": 511015,
+          "standard_error_bb_per_100": 8.537505234230105,
+          "stddev_block_mean_bb": 10.456265750102169,
+          "stddev_hand_bb": 14.775481562734628,
+          "win_rate": 0.7604666666666666
+        },
+        "5": {
+          "bb_per_100": 13.853666666666667,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            -2.846882505561764,
+            30.554215838895097
+          ],
+          "loss_rate": 0.23953333333333332,
+          "profit_bb": 4156.1,
+          "profit_chips": 415610,
+          "standard_error_bb_per_100": 8.520844925702836,
+          "stddev_block_mean_bb": 10.435861122677595,
+          "stddev_hand_bb": 14.746623035631606,
+          "win_rate": 0.7604666666666666
+        },
+        "7": {
+          "bb_per_100": 12.176333333333336,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            -4.514987040069808,
+            28.86765370673648
+          ],
+          "loss_rate": 0.23953333333333332,
+          "profit_bb": 3652.9,
+          "profit_chips": 365290,
+          "standard_error_bb_per_100": 8.516136268350923,
+          "stddev_block_mean_bb": 10.4300942187347,
+          "stddev_hand_bb": 14.738458311814792,
+          "win_rate": 0.7604666666666666
+        }
+      },
+      "seed_net_bb100": [
+        36.782199999999996,
+        20.0604,
+        -15.281600000000001
+      ],
+      "variant": "allin-any"
+    },
+    {
+      "call_rate_vs_all_in": null,
+      "faced_preflop_all_ins": 0,
+      "hands": 30000,
+      "opponent": "station",
+      "position_net_bb100": {
+        "BB": 94.59666666666666,
+        "BTN": 137.43133333333333
+      },
+      "rake": {
+        "0": {
+          "bb_per_100": 156.905,
+          "break_even_rate": 0.03123333333333333,
+          "ci95_bb_per_100": [
+            120.70802314660503,
+            193.10197685339497
+          ],
+          "loss_rate": 0.5002333333333333,
+          "profit_bb": 47071.5,
+          "profit_chips": 4707150,
+          "standard_error_bb_per_100": 18.468184690592327,
+          "stddev_block_mean_bb": 22.618814483715614,
+          "stddev_hand_bb": 31.823437350528202,
+          "win_rate": 0.46853333333333336
+        },
+        "2": {
+          "bb_per_100": 136.14493333333334,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            100.3547241855791,
+            171.93514248108758
+          ],
+          "loss_rate": 0.5314666666666666,
+          "profit_bb": 40843.48,
+          "profit_chips": 4084348,
+          "standard_error_bb_per_100": 18.260646333332065,
+          "stddev_block_mean_bb": 22.36463294504407,
+          "stddev_hand_bb": 31.462542091264563,
+          "win_rate": 0.46853333333333336
+        },
+        "5": {
+          "bb_per_100": 116.014,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            80.31593184617539,
+            151.7120681538246
+          ],
+          "loss_rate": 0.5314666666666666,
+          "profit_bb": 34804.2,
+          "profit_chips": 3480420,
+          "standard_error_bb_per_100": 18.213634758294752,
+          "stddev_block_mean_bb": 22.307055759621083,
+          "stddev_hand_bb": 31.378132910057456,
+          "win_rate": 0.46853333333333336
+        },
+        "7": {
+          "bb_per_100": 105.4215,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            69.7521154273257,
+            141.09088457267427
+          ],
+          "loss_rate": 0.5314666666666666,
+          "profit_bb": 31626.45,
+          "profit_chips": 3162645,
+          "standard_error_bb_per_100": 18.19900000919907,
+          "stddev_block_mean_bb": 22.289131925722046,
+          "stddev_hand_bb": 31.35062638613358,
+          "win_rate": 0.46853333333333336
+        }
+      },
+      "seed_net_bb100": [
+        116.43050000000001,
+        150.814,
+        80.7975
+      ],
+      "variant": "adapt"
+    },
+    {
+      "call_rate_vs_all_in": null,
+      "faced_preflop_all_ins": 0,
+      "hands": 30000,
+      "opponent": "station",
+      "position_net_bb100": {
+        "BB": 94.59666666666666,
+        "BTN": 137.43133333333333
+      },
+      "rake": {
+        "0": {
+          "bb_per_100": 156.905,
+          "break_even_rate": 0.03123333333333333,
+          "ci95_bb_per_100": [
+            120.70802314660503,
+            193.10197685339497
+          ],
+          "loss_rate": 0.5002333333333333,
+          "profit_bb": 47071.5,
+          "profit_chips": 4707150,
+          "standard_error_bb_per_100": 18.468184690592327,
+          "stddev_block_mean_bb": 22.618814483715614,
+          "stddev_hand_bb": 31.823437350528202,
+          "win_rate": 0.46853333333333336
+        },
+        "2": {
+          "bb_per_100": 136.14493333333334,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            100.3547241855791,
+            171.93514248108758
+          ],
+          "loss_rate": 0.5314666666666666,
+          "profit_bb": 40843.48,
+          "profit_chips": 4084348,
+          "standard_error_bb_per_100": 18.260646333332065,
+          "stddev_block_mean_bb": 22.36463294504407,
+          "stddev_hand_bb": 31.462542091264563,
+          "win_rate": 0.46853333333333336
+        },
+        "5": {
+          "bb_per_100": 116.014,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            80.31593184617539,
+            151.7120681538246
+          ],
+          "loss_rate": 0.5314666666666666,
+          "profit_bb": 34804.2,
+          "profit_chips": 3480420,
+          "standard_error_bb_per_100": 18.213634758294752,
+          "stddev_block_mean_bb": 22.307055759621083,
+          "stddev_hand_bb": 31.378132910057456,
+          "win_rate": 0.46853333333333336
+        },
+        "7": {
+          "bb_per_100": 105.4215,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            69.7521154273257,
+            141.09088457267427
+          ],
+          "loss_rate": 0.5314666666666666,
+          "profit_bb": 31626.45,
+          "profit_chips": 3162645,
+          "standard_error_bb_per_100": 18.19900000919907,
+          "stddev_block_mean_bb": 22.289131925722046,
+          "stddev_hand_bb": 31.35062638613358,
+          "win_rate": 0.46853333333333336
+        }
+      },
+      "seed_net_bb100": [
+        116.43050000000001,
+        150.814,
+        80.7975
+      ],
+      "variant": "allin-top"
+    },
+    {
+      "call_rate_vs_all_in": null,
+      "faced_preflop_all_ins": 0,
+      "hands": 30000,
+      "opponent": "station",
+      "position_net_bb100": {
+        "BB": 94.59666666666666,
+        "BTN": 137.43133333333333
+      },
+      "rake": {
+        "0": {
+          "bb_per_100": 156.905,
+          "break_even_rate": 0.03123333333333333,
+          "ci95_bb_per_100": [
+            120.70802314660503,
+            193.10197685339497
+          ],
+          "loss_rate": 0.5002333333333333,
+          "profit_bb": 47071.5,
+          "profit_chips": 4707150,
+          "standard_error_bb_per_100": 18.468184690592327,
+          "stddev_block_mean_bb": 22.618814483715614,
+          "stddev_hand_bb": 31.823437350528202,
+          "win_rate": 0.46853333333333336
+        },
+        "2": {
+          "bb_per_100": 136.14493333333334,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            100.3547241855791,
+            171.93514248108758
+          ],
+          "loss_rate": 0.5314666666666666,
+          "profit_bb": 40843.48,
+          "profit_chips": 4084348,
+          "standard_error_bb_per_100": 18.260646333332065,
+          "stddev_block_mean_bb": 22.36463294504407,
+          "stddev_hand_bb": 31.462542091264563,
+          "win_rate": 0.46853333333333336
+        },
+        "5": {
+          "bb_per_100": 116.014,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            80.31593184617539,
+            151.7120681538246
+          ],
+          "loss_rate": 0.5314666666666666,
+          "profit_bb": 34804.2,
+          "profit_chips": 3480420,
+          "standard_error_bb_per_100": 18.213634758294752,
+          "stddev_block_mean_bb": 22.307055759621083,
+          "stddev_hand_bb": 31.378132910057456,
+          "win_rate": 0.46853333333333336
+        },
+        "7": {
+          "bb_per_100": 105.4215,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            69.7521154273257,
+            141.09088457267427
+          ],
+          "loss_rate": 0.5314666666666666,
+          "profit_bb": 31626.45,
+          "profit_chips": 3162645,
+          "standard_error_bb_per_100": 18.19900000919907,
+          "stddev_block_mean_bb": 22.289131925722046,
+          "stddev_hand_bb": 31.35062638613358,
+          "win_rate": 0.46853333333333336
+        }
+      },
+      "seed_net_bb100": [
+        116.43050000000001,
+        150.814,
+        80.7975
+      ],
+      "variant": "allin-any"
+    },
+    {
+      "call_rate_vs_all_in": null,
+      "faced_preflop_all_ins": 0,
+      "hands": 30000,
+      "opponent": "equity",
+      "position_net_bb100": {
+        "BB": 169.11666666666667,
+        "BTN": 115.67966666666666
+      },
+      "rake": {
+        "0": {
+          "bb_per_100": 170.86666666666665,
+          "break_even_rate": 0.020233333333333332,
+          "ci95_bb_per_100": [
+            133.68018634643332,
+            208.05314698689997
+          ],
+          "loss_rate": 0.48633333333333334,
+          "profit_bb": 51260.0,
+          "profit_chips": 5126000,
+          "standard_error_bb_per_100": 18.973042675046855,
+          "stddev_block_mean_bb": 23.237136710957394,
+          "stddev_hand_bb": 32.79935951846798,
+          "win_rate": 0.49343333333333333
+        },
+        "2": {
+          "bb_per_100": 155.66899999999998,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            118.88204943347823,
+            192.45595056652172
+          ],
+          "loss_rate": 0.5065666666666667,
+          "profit_bb": 46700.7,
+          "profit_chips": 4670070,
+          "standard_error_bb_per_100": 18.76919721826142,
+          "stddev_block_mean_bb": 22.987478033202958,
+          "stddev_hand_bb": 32.44500276772043,
+          "win_rate": 0.49343333333333333
+        },
+        "5": {
+          "bb_per_100": 142.39816666666667,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            105.65900347561308,
+            179.13732985772026
+          ],
+          "loss_rate": 0.5065666666666667,
+          "profit_bb": 42719.45,
+          "profit_chips": 4271945,
+          "standard_error_bb_per_100": 18.744815456226455,
+          "stddev_block_mean_bb": 22.95761659519514,
+          "stddev_hand_bb": 32.40271431520561,
+          "win_rate": 0.49343333333333333
+        },
+        "7": {
+          "bb_per_100": 134.94206666666665,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            98.22003183276854,
+            171.66410150056475
+          ],
+          "loss_rate": 0.5065666666666667,
+          "profit_bb": 40482.62,
+          "profit_chips": 4048262,
+          "standard_error_bb_per_100": 18.736076337910717,
+          "stddev_block_mean_bb": 22.946913404857458,
+          "stddev_hand_bb": 32.38795800363402,
+          "win_rate": 0.49343333333333333
+        }
+      },
+      "seed_net_bb100": [
+        123.06049999999999,
+        183.8315,
+        120.3025
+      ],
+      "variant": "adapt"
+    },
+    {
+      "call_rate_vs_all_in": null,
+      "faced_preflop_all_ins": 0,
+      "hands": 30000,
+      "opponent": "equity",
+      "position_net_bb100": {
+        "BB": 169.11666666666667,
+        "BTN": 115.67966666666666
+      },
+      "rake": {
+        "0": {
+          "bb_per_100": 170.86666666666665,
+          "break_even_rate": 0.020233333333333332,
+          "ci95_bb_per_100": [
+            133.68018634643332,
+            208.05314698689997
+          ],
+          "loss_rate": 0.48633333333333334,
+          "profit_bb": 51260.0,
+          "profit_chips": 5126000,
+          "standard_error_bb_per_100": 18.973042675046855,
+          "stddev_block_mean_bb": 23.237136710957394,
+          "stddev_hand_bb": 32.79935951846798,
+          "win_rate": 0.49343333333333333
+        },
+        "2": {
+          "bb_per_100": 155.66899999999998,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            118.88204943347823,
+            192.45595056652172
+          ],
+          "loss_rate": 0.5065666666666667,
+          "profit_bb": 46700.7,
+          "profit_chips": 4670070,
+          "standard_error_bb_per_100": 18.76919721826142,
+          "stddev_block_mean_bb": 22.987478033202958,
+          "stddev_hand_bb": 32.44500276772043,
+          "win_rate": 0.49343333333333333
+        },
+        "5": {
+          "bb_per_100": 142.39816666666667,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            105.65900347561308,
+            179.13732985772026
+          ],
+          "loss_rate": 0.5065666666666667,
+          "profit_bb": 42719.45,
+          "profit_chips": 4271945,
+          "standard_error_bb_per_100": 18.744815456226455,
+          "stddev_block_mean_bb": 22.95761659519514,
+          "stddev_hand_bb": 32.40271431520561,
+          "win_rate": 0.49343333333333333
+        },
+        "7": {
+          "bb_per_100": 134.94206666666665,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            98.22003183276854,
+            171.66410150056475
+          ],
+          "loss_rate": 0.5065666666666667,
+          "profit_bb": 40482.62,
+          "profit_chips": 4048262,
+          "standard_error_bb_per_100": 18.736076337910717,
+          "stddev_block_mean_bb": 22.946913404857458,
+          "stddev_hand_bb": 32.38795800363402,
+          "win_rate": 0.49343333333333333
+        }
+      },
+      "seed_net_bb100": [
+        123.06049999999999,
+        183.8315,
+        120.3025
+      ],
+      "variant": "allin-top"
+    },
+    {
+      "call_rate_vs_all_in": null,
+      "faced_preflop_all_ins": 0,
+      "hands": 30000,
+      "opponent": "equity",
+      "position_net_bb100": {
+        "BB": 169.11666666666667,
+        "BTN": 115.67966666666666
+      },
+      "rake": {
+        "0": {
+          "bb_per_100": 170.86666666666665,
+          "break_even_rate": 0.020233333333333332,
+          "ci95_bb_per_100": [
+            133.68018634643332,
+            208.05314698689997
+          ],
+          "loss_rate": 0.48633333333333334,
+          "profit_bb": 51260.0,
+          "profit_chips": 5126000,
+          "standard_error_bb_per_100": 18.973042675046855,
+          "stddev_block_mean_bb": 23.237136710957394,
+          "stddev_hand_bb": 32.79935951846798,
+          "win_rate": 0.49343333333333333
+        },
+        "2": {
+          "bb_per_100": 155.66899999999998,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            118.88204943347823,
+            192.45595056652172
+          ],
+          "loss_rate": 0.5065666666666667,
+          "profit_bb": 46700.7,
+          "profit_chips": 4670070,
+          "standard_error_bb_per_100": 18.76919721826142,
+          "stddev_block_mean_bb": 22.987478033202958,
+          "stddev_hand_bb": 32.44500276772043,
+          "win_rate": 0.49343333333333333
+        },
+        "5": {
+          "bb_per_100": 142.39816666666667,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            105.65900347561308,
+            179.13732985772026
+          ],
+          "loss_rate": 0.5065666666666667,
+          "profit_bb": 42719.45,
+          "profit_chips": 4271945,
+          "standard_error_bb_per_100": 18.744815456226455,
+          "stddev_block_mean_bb": 22.95761659519514,
+          "stddev_hand_bb": 32.40271431520561,
+          "win_rate": 0.49343333333333333
+        },
+        "7": {
+          "bb_per_100": 134.94206666666665,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            98.22003183276854,
+            171.66410150056475
+          ],
+          "loss_rate": 0.5065666666666667,
+          "profit_bb": 40482.62,
+          "profit_chips": 4048262,
+          "standard_error_bb_per_100": 18.736076337910717,
+          "stddev_block_mean_bb": 22.946913404857458,
+          "stddev_hand_bb": 32.38795800363402,
+          "win_rate": 0.49343333333333333
+        }
+      },
+      "seed_net_bb100": [
+        123.06049999999999,
+        183.8315,
+        120.3025
+      ],
+      "variant": "allin-any"
+    },
+    {
+      "call_rate_vs_all_in": 0.38968397401455573,
+      "faced_preflop_all_ins": 20473,
+      "hands": 30000,
+      "opponent": "shover",
+      "position_net_bb100": {
+        "BB": 1350.6848,
+        "BTN": 1153.3244666666667
+      },
+      "rake": {
+        "0": {
+          "bb_per_100": 1323.065,
+          "break_even_rate": 0.013733333333333334,
+          "ci95_bb_per_100": [
+            1199.1328497763436,
+            1446.9971502236565
+          ],
+          "loss_rate": 0.7050666666666666,
+          "profit_bb": 396919.5,
+          "profit_chips": 39691950,
+          "standard_error_bb_per_100": 63.23185078971723,
+          "stddev_block_mean_bb": 77.44288496330438,
+          "stddev_hand_bb": 109.6137787031975,
+          "win_rate": 0.2812
+        },
+        "2": {
+          "bb_per_100": 1258.3176,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            1135.481694974092,
+            1381.153505025908
+          ],
+          "loss_rate": 0.7188,
+          "profit_bb": 377495.28,
+          "profit_chips": 37749528,
+          "standard_error_bb_per_100": 62.67253173773694,
+          "stddev_block_mean_bb": 76.7578618229199,
+          "stddev_hand_bb": 108.64732091728926,
+          "win_rate": 0.2812
+        },
+        "5": {
+          "bb_per_100": 1252.0046333333332,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            1129.1754283012829,
+            1374.8338383653836
+          ],
+          "loss_rate": 0.7188,
+          "profit_bb": 375601.39,
+          "profit_chips": 37560139,
+          "standard_error_bb_per_100": 62.66911331070958,
+          "stddev_block_mean_bb": 76.75367512194993,
+          "stddev_hand_bb": 108.64241221493066,
+          "win_rate": 0.2812
+        },
+        "7": {
+          "bb_per_100": 1249.4248,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            1126.5951041098604,
+            1372.2544958901397
+          ],
+          "loss_rate": 0.7188,
+          "profit_bb": 374827.44,
+          "profit_chips": 37482744,
+          "standard_error_bb_per_100": 62.66936375311209,
+          "stddev_block_mean_bb": 76.75398184999797,
+          "stddev_hand_bb": 108.64253380292423,
+          "win_rate": 0.2812
+        }
+      },
+      "seed_net_bb100": [
+        1150.8367,
+        1369.1703,
+        1236.0068999999999
+      ],
+      "variant": "adapt"
+    },
+    {
+      "call_rate_vs_all_in": 0.301421384262199,
+      "faced_preflop_all_ins": 20473,
+      "hands": 30000,
+      "opponent": "shover",
+      "position_net_bb100": {
+        "BB": 1168.2181333333333,
+        "BTN": 1043.8244666666667
+      },
+      "rake": {
+        "0": {
+          "bb_per_100": 1166.9616666666666,
+          "break_even_rate": 0.011333333333333334,
+          "ci95_bb_per_100": [
+            1055.313092223464,
+            1278.610241109869
+          ],
+          "loss_rate": 0.74,
+          "profit_bb": 350088.5,
+          "profit_chips": 35008850,
+          "standard_error_bb_per_100": 56.964605127375876,
+          "stddev_block_mean_bb": 69.76710798060063,
+          "stddev_hand_bb": 98.69662357938047,
+          "win_rate": 0.24866666666666667
+        },
+        "2": {
+          "bb_per_100": 1112.3342666666665,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            1001.703335945062,
+            1222.965197388271
+          ],
+          "loss_rate": 0.7513333333333333,
+          "profit_bb": 333700.28,
+          "profit_chips": 33370028,
+          "standard_error_bb_per_100": 56.44538960626176,
+          "stddev_block_mean_bb": 69.13120143396921,
+          "stddev_hand_bb": 97.79858759776535,
+          "win_rate": 0.24866666666666667
+        },
+        "5": {
+          "bb_per_100": 1106.0212999999999,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            995.3987846471005,
+            1216.6438153528993
+          ],
+          "loss_rate": 0.7513333333333333,
+          "profit_bb": 331806.39,
+          "profit_chips": 33180639,
+          "standard_error_bb_per_100": 56.4410959719034,
+          "stddev_block_mean_bb": 69.12594282730916,
+          "stddev_hand_bb": 97.7921919263736,
+          "win_rate": 0.24866666666666667
+        },
+        "7": {
+          "bb_per_100": 1103.4414666666667,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            992.8190924594898,
+            1214.0638408738437
+          ],
+          "loss_rate": 0.7513333333333333,
+          "profit_bb": 331032.44,
+          "profit_chips": 33103244,
+          "standard_error_bb_per_100": 56.44102395745642,
+          "stddev_block_mean_bb": 69.12585462798457,
+          "stddev_hand_bb": 97.79194187641733,
+          "win_rate": 0.24866666666666667
+        }
+      },
+      "seed_net_bb100": [
+        1060.9017,
+        1210.0103000000001,
+        1047.1519
+      ],
+      "variant": "allin-top"
+    },
+    {
+      "call_rate_vs_all_in": 0.4437063449421189,
+      "faced_preflop_all_ins": 20473,
+      "hands": 30000,
+      "opponent": "shover",
+      "position_net_bb100": {
+        "BB": 1298.2114666666666,
+        "BTN": 1157.9644666666666
+      },
+      "rake": {
+        "0": {
+          "bb_per_100": 1304.5083333333332,
+          "break_even_rate": 0.015266666666666666,
+          "ci95_bb_per_100": [
+            1173.1884657392484,
+            1435.828200927418
+          ],
+          "loss_rate": 0.6864333333333333,
+          "profit_bb": 391352.5,
+          "profit_chips": 39135250,
+          "standard_error_bb_per_100": 67.00116360806582,
+          "stddev_block_mean_bb": 82.05933150624739,
+          "stddev_hand_bb": 115.9025046702875,
+          "win_rate": 0.2983
+        },
+        "2": {
+          "bb_per_100": 1234.4009333333333,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            1104.2135079159084,
+            1364.5883587507583
+          ],
+          "loss_rate": 0.7017,
+          "profit_bb": 370320.28,
+          "profit_chips": 37032028,
+          "standard_error_bb_per_100": 66.42337637034498,
+          "stddev_block_mean_bb": 81.35168955009328,
+          "stddev_hand_bb": 114.90506084917324,
+          "win_rate": 0.2983
+        },
+        "5": {
+          "bb_per_100": 1228.0879666666667,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            1097.9059327217703,
+            1358.270000611563
+          ],
+          "loss_rate": 0.7017,
+          "profit_bb": 368426.39,
+          "profit_chips": 36842639,
+          "standard_error_bb_per_100": 66.42062556850819,
+          "stddev_block_mean_bb": 81.34832051965145,
+          "stddev_hand_bb": 114.90028807664578,
+          "win_rate": 0.2983
+        },
+        "7": {
+          "bb_per_100": 1225.5081333333333,
+          "break_even_rate": 0.0,
+          "ci95_bb_per_100": [
+            1095.325246502373,
+            1355.6910201642936
+          ],
+          "loss_rate": 0.7017,
+          "profit_bb": 367652.44,
+          "profit_chips": 36765244,
+          "standard_error_bb_per_100": 66.42106072245527,
+          "stddev_block_mean_bb": 81.3488534722164,
+          "stddev_hand_bb": 114.900349341169,
+          "win_rate": 0.2983
+        }
+      },
+      "seed_net_bb100": [
+        1199.1567,
+        1359.7053,
+        1125.4018999999998
+      ],
+      "variant": "allin-any"
+    }
+  ],
+  "runs": [
+    {
+      "all_in_responses": {
+        "call_rate": 0.42702702702702705,
+        "faced": 370
+      },
+      "audit": {
+        "decisions": 42180,
+        "fallback": 4524,
+        "fallback_by_street": {
+          "flop": 1085,
+          "preflop": 935,
+          "river": 1334,
+          "turn": 1170
+        },
+        "fallback_rate": 0.10725462304409673
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": 0.09815242494226328,
+        "pfr": 0.4448,
+        "streets": {
+          "flop": {
+            "call": 0.35735709244883557,
+            "check": 0.28405081157374734,
+            "decisions": 11336,
+            "fold": 0.11167960479887086,
+            "fold_facing_bet": 0.19861939127706307,
+            "raise": 0.24691249117854622,
+            "raise_facing_bet": 0.16582993410731095
+          },
+          "preflop": {
+            "call": 0.5808324634655533,
+            "check": 0.03627348643006263,
+            "decisions": 15328,
+            "fold": 0.08168058455114822,
+            "fold_facing_bet": null,
+            "raise": 0.3012134655532359,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.29971484316374003,
+            "check": 0.3369353144229326,
+            "decisions": 6663,
+            "fold": 0.18565210865976287,
+            "fold_facing_bet": 0.32475715410868994,
+            "raise": 0.17769773375356446,
+            "raise_facing_bet": 0.15095825676030455
+          },
+          "turn": {
+            "call": 0.35558567717158024,
+            "check": 0.29639670168304527,
+            "decisions": 8853,
+            "fold": 0.11069693889077149,
+            "fold_facing_bet": 0.19635343618513323,
+            "raise": 0.23732068225460295,
+            "raise_facing_bet": 0.17291124023241836
+          }
+        },
+        "vpip": 0.902
+      },
+      "name": "adapt-v-hyper-171001",
+      "opponent": "hyper",
+      "variant": "adapt"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": 0.42702702702702705,
+        "faced": 370
+      },
+      "audit": {
+        "decisions": 42180,
+        "fallback": 4524,
+        "fallback_by_street": {
+          "flop": 1085,
+          "preflop": 935,
+          "river": 1334,
+          "turn": 1170
+        },
+        "fallback_rate": 0.10725462304409673
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": 0.09815242494226328,
+        "pfr": 0.4448,
+        "streets": {
+          "flop": {
+            "call": 0.35735709244883557,
+            "check": 0.28405081157374734,
+            "decisions": 11336,
+            "fold": 0.11167960479887086,
+            "fold_facing_bet": 0.19861939127706307,
+            "raise": 0.24691249117854622,
+            "raise_facing_bet": 0.16582993410731095
+          },
+          "preflop": {
+            "call": 0.5808324634655533,
+            "check": 0.03627348643006263,
+            "decisions": 15328,
+            "fold": 0.08168058455114822,
+            "fold_facing_bet": null,
+            "raise": 0.3012134655532359,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.29971484316374003,
+            "check": 0.3369353144229326,
+            "decisions": 6663,
+            "fold": 0.18565210865976287,
+            "fold_facing_bet": 0.32475715410868994,
+            "raise": 0.17769773375356446,
+            "raise_facing_bet": 0.15095825676030455
+          },
+          "turn": {
+            "call": 0.35558567717158024,
+            "check": 0.29639670168304527,
+            "decisions": 8853,
+            "fold": 0.11069693889077149,
+            "fold_facing_bet": 0.19635343618513323,
+            "raise": 0.23732068225460295,
+            "raise_facing_bet": 0.17291124023241836
+          }
+        },
+        "vpip": 0.902
+      },
+      "name": "allin-top-v-hyper-171001",
+      "opponent": "hyper",
+      "variant": "allin-top"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": 0.42702702702702705,
+        "faced": 370
+      },
+      "audit": {
+        "decisions": 42180,
+        "fallback": 4524,
+        "fallback_by_street": {
+          "flop": 1085,
+          "preflop": 935,
+          "river": 1334,
+          "turn": 1170
+        },
+        "fallback_rate": 0.10725462304409673
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": 0.09815242494226328,
+        "pfr": 0.4448,
+        "streets": {
+          "flop": {
+            "call": 0.35735709244883557,
+            "check": 0.28405081157374734,
+            "decisions": 11336,
+            "fold": 0.11167960479887086,
+            "fold_facing_bet": 0.19861939127706307,
+            "raise": 0.24691249117854622,
+            "raise_facing_bet": 0.16582993410731095
+          },
+          "preflop": {
+            "call": 0.5808324634655533,
+            "check": 0.03627348643006263,
+            "decisions": 15328,
+            "fold": 0.08168058455114822,
+            "fold_facing_bet": null,
+            "raise": 0.3012134655532359,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.29971484316374003,
+            "check": 0.3369353144229326,
+            "decisions": 6663,
+            "fold": 0.18565210865976287,
+            "fold_facing_bet": 0.32475715410868994,
+            "raise": 0.17769773375356446,
+            "raise_facing_bet": 0.15095825676030455
+          },
+          "turn": {
+            "call": 0.35558567717158024,
+            "check": 0.29639670168304527,
+            "decisions": 8853,
+            "fold": 0.11069693889077149,
+            "fold_facing_bet": 0.19635343618513323,
+            "raise": 0.23732068225460295,
+            "raise_facing_bet": 0.17291124023241836
+          }
+        },
+        "vpip": 0.902
+      },
+      "name": "allin-any-v-hyper-171001",
+      "opponent": "hyper",
+      "variant": "allin-any"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": null,
+        "faced": 0
+      },
+      "audit": {
+        "decisions": 11419,
+        "fallback": 0,
+        "fallback_by_street": {},
+        "fallback_rate": 0.0
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": 0.5882852292020373,
+        "pfr": 0.5152152800258983,
+        "streets": {
+          "flop": {
+            "call": 0.08586525759577279,
+            "check": 0.37868780273007485,
+            "decisions": 2271,
+            "fold": 0.0959929546455306,
+            "fold_facing_bet": 0.459915611814346,
+            "raise": 0.43945398502862176,
+            "raise_facing_bet": 0.12869198312236288
+          },
+          "preflop": {
+            "call": 0.290448343079922,
+            "check": 0.0,
+            "decisions": 6669,
+            "fold": 0.23091917828759934,
+            "fold_facing_bet": null,
+            "raise": 0.47863247863247865,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.0824295010845987,
+            "check": 0.3926247288503254,
+            "decisions": 922,
+            "fold": 0.1399132321041215,
+            "fold_facing_bet": 0.5201612903225806,
+            "raise": 0.38503253796095444,
+            "raise_facing_bet": 0.17338709677419356
+          },
+          "turn": {
+            "call": 0.0783558124598587,
+            "check": 0.325626204238921,
+            "decisions": 1557,
+            "fold": 0.12074502247912652,
+            "fold_facing_bet": 0.47715736040609136,
+            "raise": 0.47527296082209375,
+            "raise_facing_bet": 0.2131979695431472
+          }
+        },
+        "vpip": 0.772094528973778
+      },
+      "name": "adapt-v-tag-171001",
+      "opponent": "tag",
+      "variant": "adapt"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": null,
+        "faced": 0
+      },
+      "audit": {
+        "decisions": 11419,
+        "fallback": 0,
+        "fallback_by_street": {},
+        "fallback_rate": 0.0
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": 0.5882852292020373,
+        "pfr": 0.5152152800258983,
+        "streets": {
+          "flop": {
+            "call": 0.08586525759577279,
+            "check": 0.37868780273007485,
+            "decisions": 2271,
+            "fold": 0.0959929546455306,
+            "fold_facing_bet": 0.459915611814346,
+            "raise": 0.43945398502862176,
+            "raise_facing_bet": 0.12869198312236288
+          },
+          "preflop": {
+            "call": 0.290448343079922,
+            "check": 0.0,
+            "decisions": 6669,
+            "fold": 0.23091917828759934,
+            "fold_facing_bet": null,
+            "raise": 0.47863247863247865,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.0824295010845987,
+            "check": 0.3926247288503254,
+            "decisions": 922,
+            "fold": 0.1399132321041215,
+            "fold_facing_bet": 0.5201612903225806,
+            "raise": 0.38503253796095444,
+            "raise_facing_bet": 0.17338709677419356
+          },
+          "turn": {
+            "call": 0.0783558124598587,
+            "check": 0.325626204238921,
+            "decisions": 1557,
+            "fold": 0.12074502247912652,
+            "fold_facing_bet": 0.47715736040609136,
+            "raise": 0.47527296082209375,
+            "raise_facing_bet": 0.2131979695431472
+          }
+        },
+        "vpip": 0.772094528973778
+      },
+      "name": "allin-top-v-tag-171001",
+      "opponent": "tag",
+      "variant": "allin-top"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": null,
+        "faced": 0
+      },
+      "audit": {
+        "decisions": 11419,
+        "fallback": 0,
+        "fallback_by_street": {},
+        "fallback_rate": 0.0
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": 0.5882852292020373,
+        "pfr": 0.5152152800258983,
+        "streets": {
+          "flop": {
+            "call": 0.08586525759577279,
+            "check": 0.37868780273007485,
+            "decisions": 2271,
+            "fold": 0.0959929546455306,
+            "fold_facing_bet": 0.459915611814346,
+            "raise": 0.43945398502862176,
+            "raise_facing_bet": 0.12869198312236288
+          },
+          "preflop": {
+            "call": 0.290448343079922,
+            "check": 0.0,
+            "decisions": 6669,
+            "fold": 0.23091917828759934,
+            "fold_facing_bet": null,
+            "raise": 0.47863247863247865,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.0824295010845987,
+            "check": 0.3926247288503254,
+            "decisions": 922,
+            "fold": 0.1399132321041215,
+            "fold_facing_bet": 0.5201612903225806,
+            "raise": 0.38503253796095444,
+            "raise_facing_bet": 0.17338709677419356
+          },
+          "turn": {
+            "call": 0.0783558124598587,
+            "check": 0.325626204238921,
+            "decisions": 1557,
+            "fold": 0.12074502247912652,
+            "fold_facing_bet": 0.47715736040609136,
+            "raise": 0.47527296082209375,
+            "raise_facing_bet": 0.2131979695431472
+          }
+        },
+        "vpip": 0.772094528973778
+      },
+      "name": "allin-any-v-tag-171001",
+      "opponent": "tag",
+      "variant": "allin-any"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": null,
+        "faced": 0
+      },
+      "audit": {
+        "decisions": 37463,
+        "fallback": 317,
+        "fallback_by_street": {
+          "flop": 51,
+          "river": 172,
+          "turn": 94
+        },
+        "fallback_rate": 0.00846168219309719
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": null,
+        "pfr": 0.4448,
+        "streets": {
+          "flop": {
+            "call": 0.03157568878340729,
+            "check": 0.4453616757816531,
+            "decisions": 9691,
+            "fold": 0.0340522133938706,
+            "fold_facing_bet": 0.4483695652173913,
+            "raise": 0.48901042204106904,
+            "raise_facing_bet": 0.1358695652173913
+          },
+          "preflop": {
+            "call": 0.143,
+            "check": 0.3407,
+            "decisions": 10000,
+            "fold": 0.0715,
+            "fold_facing_bet": null,
+            "raise": 0.4448,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.05121608980355472,
+            "check": 0.5205799812909261,
+            "decisions": 8552,
+            "fold": 0.06396164639850327,
+            "fold_facing_bet": 0.470335339638865,
+            "raise": 0.3642422825070159,
+            "raise_facing_bet": 0.1530524505588994
+          },
+          "turn": {
+            "call": 0.043275488069414315,
+            "check": 0.45336225596529284,
+            "decisions": 9220,
+            "fold": 0.04154013015184382,
+            "fold_facing_bet": 0.41227125941872983,
+            "raise": 0.461822125813449,
+            "raise_facing_bet": 0.15823466092572658
+          }
+        },
+        "vpip": 0.5878
+      },
+      "name": "adapt-v-station-171001",
+      "opponent": "station",
+      "variant": "adapt"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": null,
+        "faced": 0
+      },
+      "audit": {
+        "decisions": 37463,
+        "fallback": 317,
+        "fallback_by_street": {
+          "flop": 51,
+          "river": 172,
+          "turn": 94
+        },
+        "fallback_rate": 0.00846168219309719
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": null,
+        "pfr": 0.4448,
+        "streets": {
+          "flop": {
+            "call": 0.03157568878340729,
+            "check": 0.4453616757816531,
+            "decisions": 9691,
+            "fold": 0.0340522133938706,
+            "fold_facing_bet": 0.4483695652173913,
+            "raise": 0.48901042204106904,
+            "raise_facing_bet": 0.1358695652173913
+          },
+          "preflop": {
+            "call": 0.143,
+            "check": 0.3407,
+            "decisions": 10000,
+            "fold": 0.0715,
+            "fold_facing_bet": null,
+            "raise": 0.4448,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.05121608980355472,
+            "check": 0.5205799812909261,
+            "decisions": 8552,
+            "fold": 0.06396164639850327,
+            "fold_facing_bet": 0.470335339638865,
+            "raise": 0.3642422825070159,
+            "raise_facing_bet": 0.1530524505588994
+          },
+          "turn": {
+            "call": 0.043275488069414315,
+            "check": 0.45336225596529284,
+            "decisions": 9220,
+            "fold": 0.04154013015184382,
+            "fold_facing_bet": 0.41227125941872983,
+            "raise": 0.461822125813449,
+            "raise_facing_bet": 0.15823466092572658
+          }
+        },
+        "vpip": 0.5878
+      },
+      "name": "allin-top-v-station-171001",
+      "opponent": "station",
+      "variant": "allin-top"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": null,
+        "faced": 0
+      },
+      "audit": {
+        "decisions": 37463,
+        "fallback": 317,
+        "fallback_by_street": {
+          "flop": 51,
+          "river": 172,
+          "turn": 94
+        },
+        "fallback_rate": 0.00846168219309719
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": null,
+        "pfr": 0.4448,
+        "streets": {
+          "flop": {
+            "call": 0.03157568878340729,
+            "check": 0.4453616757816531,
+            "decisions": 9691,
+            "fold": 0.0340522133938706,
+            "fold_facing_bet": 0.4483695652173913,
+            "raise": 0.48901042204106904,
+            "raise_facing_bet": 0.1358695652173913
+          },
+          "preflop": {
+            "call": 0.143,
+            "check": 0.3407,
+            "decisions": 10000,
+            "fold": 0.0715,
+            "fold_facing_bet": null,
+            "raise": 0.4448,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.05121608980355472,
+            "check": 0.5205799812909261,
+            "decisions": 8552,
+            "fold": 0.06396164639850327,
+            "fold_facing_bet": 0.470335339638865,
+            "raise": 0.3642422825070159,
+            "raise_facing_bet": 0.1530524505588994
+          },
+          "turn": {
+            "call": 0.043275488069414315,
+            "check": 0.45336225596529284,
+            "decisions": 9220,
+            "fold": 0.04154013015184382,
+            "fold_facing_bet": 0.41227125941872983,
+            "raise": 0.461822125813449,
+            "raise_facing_bet": 0.15823466092572658
+          }
+        },
+        "vpip": 0.5878
+      },
+      "name": "allin-any-v-station-171001",
+      "opponent": "station",
+      "variant": "allin-any"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": null,
+        "faced": 0
+      },
+      "audit": {
+        "decisions": 33895,
+        "fallback": 1181,
+        "fallback_by_street": {
+          "flop": 326,
+          "preflop": 78,
+          "river": 425,
+          "turn": 352
+        },
+        "fallback_rate": 0.03484289718247529
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": 0.34124087591240876,
+        "pfr": 0.4477071600965406,
+        "streets": {
+          "flop": {
+            "call": 0.10651654045436429,
+            "check": 0.3723595057791949,
+            "decisions": 10036,
+            "fold": 0.1032283778397768,
+            "fold_facing_bet": 0.4211382113821138,
+            "raise": 0.417895575926664,
+            "raise_facing_bet": 0.1443089430894309
+          },
+          "preflop": {
+            "call": 0.1831470335339639,
+            "check": 0.29005445686443104,
+            "decisions": 10467,
+            "fold": 0.09811789433457534,
+            "fold_facing_bet": null,
+            "raise": 0.4286806152670297,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.10842123465329413,
+            "check": 0.45270620785059656,
+            "decisions": 5783,
+            "fold": 0.12000691682517724,
+            "fold_facing_bet": 0.4518229166666667,
+            "raise": 0.31886564067093204,
+            "raise_facing_bet": 0.13997395833333334
+          },
+          "turn": {
+            "call": 0.11893809961887239,
+            "check": 0.39006439742410304,
+            "decisions": 7609,
+            "fold": 0.08792219739781837,
+            "fold_facing_bet": 0.36299511665762346,
+            "raise": 0.4030753055592062,
+            "raise_facing_bet": 0.14595767769940315
+          }
+        },
+        "vpip": 0.6092115848753017
+      },
+      "name": "adapt-v-equity-171001",
+      "opponent": "equity",
+      "variant": "adapt"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": null,
+        "faced": 0
+      },
+      "audit": {
+        "decisions": 33895,
+        "fallback": 1181,
+        "fallback_by_street": {
+          "flop": 326,
+          "preflop": 78,
+          "river": 425,
+          "turn": 352
+        },
+        "fallback_rate": 0.03484289718247529
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": 0.34124087591240876,
+        "pfr": 0.4477071600965406,
+        "streets": {
+          "flop": {
+            "call": 0.10651654045436429,
+            "check": 0.3723595057791949,
+            "decisions": 10036,
+            "fold": 0.1032283778397768,
+            "fold_facing_bet": 0.4211382113821138,
+            "raise": 0.417895575926664,
+            "raise_facing_bet": 0.1443089430894309
+          },
+          "preflop": {
+            "call": 0.1831470335339639,
+            "check": 0.29005445686443104,
+            "decisions": 10467,
+            "fold": 0.09811789433457534,
+            "fold_facing_bet": null,
+            "raise": 0.4286806152670297,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.10842123465329413,
+            "check": 0.45270620785059656,
+            "decisions": 5783,
+            "fold": 0.12000691682517724,
+            "fold_facing_bet": 0.4518229166666667,
+            "raise": 0.31886564067093204,
+            "raise_facing_bet": 0.13997395833333334
+          },
+          "turn": {
+            "call": 0.11893809961887239,
+            "check": 0.39006439742410304,
+            "decisions": 7609,
+            "fold": 0.08792219739781837,
+            "fold_facing_bet": 0.36299511665762346,
+            "raise": 0.4030753055592062,
+            "raise_facing_bet": 0.14595767769940315
+          }
+        },
+        "vpip": 0.6092115848753017
+      },
+      "name": "allin-top-v-equity-171001",
+      "opponent": "equity",
+      "variant": "allin-top"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": null,
+        "faced": 0
+      },
+      "audit": {
+        "decisions": 33895,
+        "fallback": 1181,
+        "fallback_by_street": {
+          "flop": 326,
+          "preflop": 78,
+          "river": 425,
+          "turn": 352
+        },
+        "fallback_rate": 0.03484289718247529
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": 0.34124087591240876,
+        "pfr": 0.4477071600965406,
+        "streets": {
+          "flop": {
+            "call": 0.10651654045436429,
+            "check": 0.3723595057791949,
+            "decisions": 10036,
+            "fold": 0.1032283778397768,
+            "fold_facing_bet": 0.4211382113821138,
+            "raise": 0.417895575926664,
+            "raise_facing_bet": 0.1443089430894309
+          },
+          "preflop": {
+            "call": 0.1831470335339639,
+            "check": 0.29005445686443104,
+            "decisions": 10467,
+            "fold": 0.09811789433457534,
+            "fold_facing_bet": null,
+            "raise": 0.4286806152670297,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.10842123465329413,
+            "check": 0.45270620785059656,
+            "decisions": 5783,
+            "fold": 0.12000691682517724,
+            "fold_facing_bet": 0.4518229166666667,
+            "raise": 0.31886564067093204,
+            "raise_facing_bet": 0.13997395833333334
+          },
+          "turn": {
+            "call": 0.11893809961887239,
+            "check": 0.39006439742410304,
+            "decisions": 7609,
+            "fold": 0.08792219739781837,
+            "fold_facing_bet": 0.36299511665762346,
+            "raise": 0.4030753055592062,
+            "raise_facing_bet": 0.14595767769940315
+          }
+        },
+        "vpip": 0.6092115848753017
+      },
+      "name": "allin-any-v-equity-171001",
+      "opponent": "equity",
+      "variant": "allin-any"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": 0.39280469897209985,
+        "faced": 6810
+      },
+      "audit": {
+        "decisions": 24065,
+        "fallback": 901,
+        "fallback_by_street": {
+          "flop": 207,
+          "preflop": 53,
+          "river": 359,
+          "turn": 282
+        },
+        "fallback_rate": 0.03744026594639518
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": 0.4969976905311778,
+        "pfr": 0.3423,
+        "streets": {
+          "flop": {
+            "call": 0.3354679802955665,
+            "check": 0.2630541871921182,
+            "decisions": 4060,
+            "fold": 0.12192118226600986,
+            "fold_facing_bet": 0.21796565389696168,
+            "raise": 0.27955665024630544,
+            "raise_facing_bet": 0.18229854689564068
+          },
+          "preflop": {
+            "call": 0.42976737802785975,
+            "check": 0.03815274823303369,
+            "decisions": 14573,
+            "fold": 0.29465449804432853,
+            "fold_facing_bet": null,
+            "raise": 0.237425375694778,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.30811965811965814,
+            "check": 0.3299145299145299,
+            "decisions": 2340,
+            "fold": 0.18034188034188034,
+            "fold_facing_bet": 0.31328878990348924,
+            "raise": 0.18162393162393162,
+            "raise_facing_bet": 0.1514476614699332
+          },
+          "turn": {
+            "call": 0.35316946959896506,
+            "check": 0.28654592496765846,
+            "decisions": 3092,
+            "fold": 0.10090556274256145,
+            "fold_facing_bet": 0.17697107203630175,
+            "raise": 0.259379042690815,
+            "raise_facing_bet": 0.20363017583664209
+          }
+        },
+        "vpip": 0.7338
+      },
+      "name": "adapt-v-shover-171001",
+      "opponent": "shover",
+      "variant": "adapt"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": 0.3086637298091043,
+        "faced": 6810
+      },
+      "audit": {
+        "decisions": 24065,
+        "fallback": 901,
+        "fallback_by_street": {
+          "flop": 207,
+          "preflop": 53,
+          "river": 359,
+          "turn": 282
+        },
+        "fallback_rate": 0.03744026594639518
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": 0.5676674364896074,
+        "pfr": 0.3423,
+        "streets": {
+          "flop": {
+            "call": 0.3354679802955665,
+            "check": 0.2630541871921182,
+            "decisions": 4060,
+            "fold": 0.12192118226600986,
+            "fold_facing_bet": 0.21796565389696168,
+            "raise": 0.27955665024630544,
+            "raise_facing_bet": 0.18229854689564068
+          },
+          "preflop": {
+            "call": 0.39044808893158583,
+            "check": 0.03815274823303369,
+            "decisions": 14573,
+            "fold": 0.3339737871406025,
+            "fold_facing_bet": null,
+            "raise": 0.237425375694778,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.30811965811965814,
+            "check": 0.3299145299145299,
+            "decisions": 2340,
+            "fold": 0.18034188034188034,
+            "fold_facing_bet": 0.31328878990348924,
+            "raise": 0.18162393162393162,
+            "raise_facing_bet": 0.1514476614699332
+          },
+          "turn": {
+            "call": 0.35316946959896506,
+            "check": 0.28654592496765846,
+            "decisions": 3092,
+            "fold": 0.10090556274256145,
+            "fold_facing_bet": 0.17697107203630175,
+            "raise": 0.259379042690815,
+            "raise_facing_bet": 0.20363017583664209
+          }
+        },
+        "vpip": 0.7048
+      },
+      "name": "allin-top-v-shover-171001",
+      "opponent": "shover",
+      "variant": "allin-top"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": 0.44669603524229073,
+        "faced": 6810
+      },
+      "audit": {
+        "decisions": 24065,
+        "fallback": 901,
+        "fallback_by_street": {
+          "flop": 207,
+          "preflop": 53,
+          "river": 359,
+          "turn": 282
+        },
+        "fallback_rate": 0.03744026594639518
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": 0.4533487297921478,
+        "pfr": 0.3423,
+        "streets": {
+          "flop": {
+            "call": 0.3354679802955665,
+            "check": 0.2630541871921182,
+            "decisions": 4060,
+            "fold": 0.12192118226600986,
+            "fold_facing_bet": 0.21796565389696168,
+            "raise": 0.27955665024630544,
+            "raise_facing_bet": 0.18229854689564068
+          },
+          "preflop": {
+            "call": 0.45495093666369313,
+            "check": 0.03815274823303369,
+            "decisions": 14573,
+            "fold": 0.26947093940849515,
+            "fold_facing_bet": null,
+            "raise": 0.237425375694778,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.30811965811965814,
+            "check": 0.3299145299145299,
+            "decisions": 2340,
+            "fold": 0.18034188034188034,
+            "fold_facing_bet": 0.31328878990348924,
+            "raise": 0.18162393162393162,
+            "raise_facing_bet": 0.1514476614699332
+          },
+          "turn": {
+            "call": 0.35316946959896506,
+            "check": 0.28654592496765846,
+            "decisions": 3092,
+            "fold": 0.10090556274256145,
+            "fold_facing_bet": 0.17697107203630175,
+            "raise": 0.259379042690815,
+            "raise_facing_bet": 0.20363017583664209
+          }
+        },
+        "vpip": 0.7519
+      },
+      "name": "allin-any-v-shover-171001",
+      "opponent": "shover",
+      "variant": "allin-any"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": 0.44019138755980863,
+        "faced": 418
+      },
+      "audit": {
+        "decisions": 41692,
+        "fallback": 4241,
+        "fallback_by_street": {
+          "flop": 1038,
+          "preflop": 894,
+          "river": 1229,
+          "turn": 1080
+        },
+        "fallback_rate": 0.10172215293101794
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": 0.09788421297372704,
+        "pfr": 0.4345,
+        "streets": {
+          "flop": {
+            "call": 0.3482334047109208,
+            "check": 0.28381513204853676,
+            "decisions": 11208,
+            "fold": 0.11179514632405425,
+            "fold_facing_bet": 0.19898364300460536,
+            "raise": 0.2561563169164882,
+            "raise_facing_bet": 0.1811973955851993
+          },
+          "preflop": {
+            "call": 0.5837154460893489,
+            "check": 0.037927420411371676,
+            "decisions": 15266,
+            "fold": 0.08273287043102319,
+            "fold_facing_bet": null,
+            "raise": 0.29562426306825623,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.30713291041312085,
+            "check": 0.33467429986074576,
+            "decisions": 6463,
+            "fold": 0.1708185053380783,
+            "fold_facing_bet": 0.300163132137031,
+            "raise": 0.1873742843880551,
+            "raise_facing_bet": 0.16014138118542687
+          },
+          "turn": {
+            "call": 0.3562535693889206,
+            "check": 0.28303826384922903,
+            "decisions": 8755,
+            "fold": 0.11776127926898915,
+            "fold_facing_bet": 0.20529669454400637,
+            "raise": 0.24294688749286122,
+            "raise_facing_bet": 0.17363600159299084
+          }
+        },
+        "vpip": 0.9004
+      },
+      "name": "adapt-v-hyper-171002",
+      "opponent": "hyper",
+      "variant": "adapt"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": 0.43779904306220097,
+        "faced": 418
+      },
+      "audit": {
+        "decisions": 41692,
+        "fallback": 4241,
+        "fallback_by_street": {
+          "flop": 1038,
+          "preflop": 894,
+          "river": 1229,
+          "turn": 1080
+        },
+        "fallback_rate": 0.10172215293101794
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": 0.09811671704254825,
+        "pfr": 0.4345,
+        "streets": {
+          "flop": {
+            "call": 0.3482334047109208,
+            "check": 0.28381513204853676,
+            "decisions": 11208,
+            "fold": 0.11179514632405425,
+            "fold_facing_bet": 0.19898364300460536,
+            "raise": 0.2561563169164882,
+            "raise_facing_bet": 0.1811973955851993
+          },
+          "preflop": {
+            "call": 0.5836499410454605,
+            "check": 0.037927420411371676,
+            "decisions": 15266,
+            "fold": 0.08279837547491156,
+            "fold_facing_bet": null,
+            "raise": 0.29562426306825623,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.30713291041312085,
+            "check": 0.33467429986074576,
+            "decisions": 6463,
+            "fold": 0.1708185053380783,
+            "fold_facing_bet": 0.300163132137031,
+            "raise": 0.1873742843880551,
+            "raise_facing_bet": 0.16014138118542687
+          },
+          "turn": {
+            "call": 0.3562535693889206,
+            "check": 0.28303826384922903,
+            "decisions": 8755,
+            "fold": 0.11776127926898915,
+            "fold_facing_bet": 0.20529669454400637,
+            "raise": 0.24294688749286122,
+            "raise_facing_bet": 0.17363600159299084
+          }
+        },
+        "vpip": 0.9003
+      },
+      "name": "allin-top-v-hyper-171002",
+      "opponent": "hyper",
+      "variant": "allin-top"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": 0.44258373205741625,
+        "faced": 418
+      },
+      "audit": {
+        "decisions": 41692,
+        "fallback": 4241,
+        "fallback_by_street": {
+          "flop": 1038,
+          "preflop": 894,
+          "river": 1229,
+          "turn": 1080
+        },
+        "fallback_rate": 0.10172215293101794
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": 0.09788421297372704,
+        "pfr": 0.4345,
+        "streets": {
+          "flop": {
+            "call": 0.3482334047109208,
+            "check": 0.28381513204853676,
+            "decisions": 11208,
+            "fold": 0.11179514632405425,
+            "fold_facing_bet": 0.19898364300460536,
+            "raise": 0.2561563169164882,
+            "raise_facing_bet": 0.1811973955851993
+          },
+          "preflop": {
+            "call": 0.5837809511332372,
+            "check": 0.037927420411371676,
+            "decisions": 15266,
+            "fold": 0.0826673653871348,
+            "fold_facing_bet": null,
+            "raise": 0.29562426306825623,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.30713291041312085,
+            "check": 0.33467429986074576,
+            "decisions": 6463,
+            "fold": 0.1708185053380783,
+            "fold_facing_bet": 0.300163132137031,
+            "raise": 0.1873742843880551,
+            "raise_facing_bet": 0.16014138118542687
+          },
+          "turn": {
+            "call": 0.3562535693889206,
+            "check": 0.28303826384922903,
+            "decisions": 8755,
+            "fold": 0.11776127926898915,
+            "fold_facing_bet": 0.20529669454400637,
+            "raise": 0.24294688749286122,
+            "raise_facing_bet": 0.17363600159299084
+          }
+        },
+        "vpip": 0.9004
+      },
+      "name": "allin-any-v-hyper-171002",
+      "opponent": "hyper",
+      "variant": "allin-any"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": null,
+        "faced": 0
+      },
+      "audit": {
+        "decisions": 11348,
+        "fallback": 0,
+        "fallback_by_street": {},
+        "fallback_rate": 0.0
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": 0.58348134991119,
+        "pfr": 0.5032647730982697,
+        "streets": {
+          "flop": {
+            "call": 0.08676599474145487,
+            "check": 0.37861524978089395,
+            "decisions": 2282,
+            "fold": 0.09333917616126206,
+            "fold_facing_bet": 0.4456066945606695,
+            "raise": 0.4412795793163891,
+            "raise_facing_bet": 0.1401673640167364
+          },
+          "preflop": {
+            "call": 0.2978013646702047,
+            "check": 0.0,
+            "decisions": 6595,
+            "fold": 0.23335860500379074,
+            "fold_facing_bet": null,
+            "raise": 0.4688400303260046,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.09978308026030369,
+            "check": 0.3665943600867679,
+            "decisions": 922,
+            "fold": 0.12689804772234273,
+            "fold_facing_bet": 0.4517374517374517,
+            "raise": 0.4067245119305857,
+            "raise_facing_bet": 0.19305019305019305
+          },
+          "turn": {
+            "call": 0.07682375726275016,
+            "check": 0.30342156229825695,
+            "decisions": 1549,
+            "fold": 0.12265978050355068,
+            "fold_facing_bet": 0.47858942065491183,
+            "raise": 0.4970948999354422,
+            "raise_facing_bet": 0.2216624685138539
+          }
+        },
+        "vpip": 0.7709761671563826
+      },
+      "name": "adapt-v-tag-171002",
+      "opponent": "tag",
+      "variant": "adapt"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": null,
+        "faced": 0
+      },
+      "audit": {
+        "decisions": 11348,
+        "fallback": 0,
+        "fallback_by_street": {},
+        "fallback_rate": 0.0
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": 0.58348134991119,
+        "pfr": 0.5032647730982697,
+        "streets": {
+          "flop": {
+            "call": 0.08676599474145487,
+            "check": 0.37861524978089395,
+            "decisions": 2282,
+            "fold": 0.09333917616126206,
+            "fold_facing_bet": 0.4456066945606695,
+            "raise": 0.4412795793163891,
+            "raise_facing_bet": 0.1401673640167364
+          },
+          "preflop": {
+            "call": 0.2978013646702047,
+            "check": 0.0,
+            "decisions": 6595,
+            "fold": 0.23335860500379074,
+            "fold_facing_bet": null,
+            "raise": 0.4688400303260046,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.09978308026030369,
+            "check": 0.3665943600867679,
+            "decisions": 922,
+            "fold": 0.12689804772234273,
+            "fold_facing_bet": 0.4517374517374517,
+            "raise": 0.4067245119305857,
+            "raise_facing_bet": 0.19305019305019305
+          },
+          "turn": {
+            "call": 0.07682375726275016,
+            "check": 0.30342156229825695,
+            "decisions": 1549,
+            "fold": 0.12265978050355068,
+            "fold_facing_bet": 0.47858942065491183,
+            "raise": 0.4970948999354422,
+            "raise_facing_bet": 0.2216624685138539
+          }
+        },
+        "vpip": 0.7709761671563826
+      },
+      "name": "allin-top-v-tag-171002",
+      "opponent": "tag",
+      "variant": "allin-top"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": null,
+        "faced": 0
+      },
+      "audit": {
+        "decisions": 11348,
+        "fallback": 0,
+        "fallback_by_street": {},
+        "fallback_rate": 0.0
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": 0.58348134991119,
+        "pfr": 0.5032647730982697,
+        "streets": {
+          "flop": {
+            "call": 0.08676599474145487,
+            "check": 0.37861524978089395,
+            "decisions": 2282,
+            "fold": 0.09333917616126206,
+            "fold_facing_bet": 0.4456066945606695,
+            "raise": 0.4412795793163891,
+            "raise_facing_bet": 0.1401673640167364
+          },
+          "preflop": {
+            "call": 0.2978013646702047,
+            "check": 0.0,
+            "decisions": 6595,
+            "fold": 0.23335860500379074,
+            "fold_facing_bet": null,
+            "raise": 0.4688400303260046,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.09978308026030369,
+            "check": 0.3665943600867679,
+            "decisions": 922,
+            "fold": 0.12689804772234273,
+            "fold_facing_bet": 0.4517374517374517,
+            "raise": 0.4067245119305857,
+            "raise_facing_bet": 0.19305019305019305
+          },
+          "turn": {
+            "call": 0.07682375726275016,
+            "check": 0.30342156229825695,
+            "decisions": 1549,
+            "fold": 0.12265978050355068,
+            "fold_facing_bet": 0.47858942065491183,
+            "raise": 0.4970948999354422,
+            "raise_facing_bet": 0.2216624685138539
+          }
+        },
+        "vpip": 0.7709761671563826
+      },
+      "name": "allin-any-v-tag-171002",
+      "opponent": "tag",
+      "variant": "allin-any"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": null,
+        "faced": 0
+      },
+      "audit": {
+        "decisions": 37350,
+        "fallback": 391,
+        "fallback_by_street": {
+          "flop": 73,
+          "river": 187,
+          "turn": 131
+        },
+        "fallback_rate": 0.010468540829986613
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": null,
+        "pfr": 0.4401,
+        "streets": {
+          "flop": {
+            "call": 0.029387417218543047,
+            "check": 0.44733029801324503,
+            "decisions": 9664,
+            "fold": 0.03445778145695364,
+            "fold_facing_bet": 0.45867768595041325,
+            "raise": 0.48882450331125826,
+            "raise_facing_bet": 0.15013774104683195
+          },
+          "preflop": {
+            "call": 0.1446,
+            "check": 0.3407,
+            "decisions": 10000,
+            "fold": 0.0746,
+            "fold_facing_bet": null,
+            "raise": 0.4401,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.0493131384290243,
+            "check": 0.5230715040507221,
+            "decisions": 8517,
+            "fold": 0.06375484325466714,
+            "fold_facing_bet": 0.46252129471890974,
+            "raise": 0.36386051426558647,
+            "raise_facing_bet": 0.1797274275979557
+          },
+          "turn": {
+            "call": 0.040789617188352056,
+            "check": 0.4375613480205039,
+            "decisions": 9169,
+            "fold": 0.039589922565165234,
+            "fold_facing_bet": 0.39846322722283206,
+            "raise": 0.48205911222597886,
+            "raise_facing_bet": 0.19099890230515917
+          }
+        },
+        "vpip": 0.5847
+      },
+      "name": "adapt-v-station-171002",
+      "opponent": "station",
+      "variant": "adapt"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": null,
+        "faced": 0
+      },
+      "audit": {
+        "decisions": 37350,
+        "fallback": 391,
+        "fallback_by_street": {
+          "flop": 73,
+          "river": 187,
+          "turn": 131
+        },
+        "fallback_rate": 0.010468540829986613
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": null,
+        "pfr": 0.4401,
+        "streets": {
+          "flop": {
+            "call": 0.029387417218543047,
+            "check": 0.44733029801324503,
+            "decisions": 9664,
+            "fold": 0.03445778145695364,
+            "fold_facing_bet": 0.45867768595041325,
+            "raise": 0.48882450331125826,
+            "raise_facing_bet": 0.15013774104683195
+          },
+          "preflop": {
+            "call": 0.1446,
+            "check": 0.3407,
+            "decisions": 10000,
+            "fold": 0.0746,
+            "fold_facing_bet": null,
+            "raise": 0.4401,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.0493131384290243,
+            "check": 0.5230715040507221,
+            "decisions": 8517,
+            "fold": 0.06375484325466714,
+            "fold_facing_bet": 0.46252129471890974,
+            "raise": 0.36386051426558647,
+            "raise_facing_bet": 0.1797274275979557
+          },
+          "turn": {
+            "call": 0.040789617188352056,
+            "check": 0.4375613480205039,
+            "decisions": 9169,
+            "fold": 0.039589922565165234,
+            "fold_facing_bet": 0.39846322722283206,
+            "raise": 0.48205911222597886,
+            "raise_facing_bet": 0.19099890230515917
+          }
+        },
+        "vpip": 0.5847
+      },
+      "name": "allin-top-v-station-171002",
+      "opponent": "station",
+      "variant": "allin-top"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": null,
+        "faced": 0
+      },
+      "audit": {
+        "decisions": 37350,
+        "fallback": 391,
+        "fallback_by_street": {
+          "flop": 73,
+          "river": 187,
+          "turn": 131
+        },
+        "fallback_rate": 0.010468540829986613
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": null,
+        "pfr": 0.4401,
+        "streets": {
+          "flop": {
+            "call": 0.029387417218543047,
+            "check": 0.44733029801324503,
+            "decisions": 9664,
+            "fold": 0.03445778145695364,
+            "fold_facing_bet": 0.45867768595041325,
+            "raise": 0.48882450331125826,
+            "raise_facing_bet": 0.15013774104683195
+          },
+          "preflop": {
+            "call": 0.1446,
+            "check": 0.3407,
+            "decisions": 10000,
+            "fold": 0.0746,
+            "fold_facing_bet": null,
+            "raise": 0.4401,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.0493131384290243,
+            "check": 0.5230715040507221,
+            "decisions": 8517,
+            "fold": 0.06375484325466714,
+            "fold_facing_bet": 0.46252129471890974,
+            "raise": 0.36386051426558647,
+            "raise_facing_bet": 0.1797274275979557
+          },
+          "turn": {
+            "call": 0.040789617188352056,
+            "check": 0.4375613480205039,
+            "decisions": 9169,
+            "fold": 0.039589922565165234,
+            "fold_facing_bet": 0.39846322722283206,
+            "raise": 0.48205911222597886,
+            "raise_facing_bet": 0.19099890230515917
+          }
+        },
+        "vpip": 0.5847
+      },
+      "name": "allin-any-v-station-171002",
+      "opponent": "station",
+      "variant": "allin-any"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": null,
+        "faced": 0
+      },
+      "audit": {
+        "decisions": 33788,
+        "fallback": 1159,
+        "fallback_by_street": {
+          "flop": 311,
+          "preflop": 60,
+          "river": 427,
+          "turn": 361
+        },
+        "fallback_rate": 0.034302119095536876
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": 0.32510288065843623,
+        "pfr": 0.4410137785376647,
+        "streets": {
+          "flop": {
+            "call": 0.10433306709265176,
+            "check": 0.36871006389776356,
+            "decisions": 10016,
+            "fold": 0.10083865814696485,
+            "fold_facing_bet": 0.4142739950779327,
+            "raise": 0.4261182108626198,
+            "raise_facing_bet": 0.15709598031173092
+          },
+          "preflop": {
+            "call": 0.18183561906588663,
+            "check": 0.29452383235830054,
+            "decisions": 10427,
+            "fold": 0.09974105687158338,
+            "fold_facing_bet": null,
+            "raise": 0.4238994917042294,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.10529072812991094,
+            "check": 0.4587043827483848,
+            "decisions": 5727,
+            "fold": 0.10948140387637506,
+            "fold_facing_bet": 0.4253731343283582,
+            "raise": 0.32652348524532915,
+            "raise_facing_bet": 0.1655359565807327
+          },
+          "turn": {
+            "call": 0.10777106852192177,
+            "check": 0.3801522709372539,
+            "decisions": 7618,
+            "fold": 0.09004988185875558,
+            "fold_facing_bet": 0.37879624516841526,
+            "raise": 0.4220267786820688,
+            "raise_facing_bet": 0.16786305908337934
+          }
+        },
+        "vpip": 0.6036407522880418
+      },
+      "name": "adapt-v-equity-171002",
+      "opponent": "equity",
+      "variant": "adapt"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": null,
+        "faced": 0
+      },
+      "audit": {
+        "decisions": 33788,
+        "fallback": 1159,
+        "fallback_by_street": {
+          "flop": 311,
+          "preflop": 60,
+          "river": 427,
+          "turn": 361
+        },
+        "fallback_rate": 0.034302119095536876
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": 0.32510288065843623,
+        "pfr": 0.4410137785376647,
+        "streets": {
+          "flop": {
+            "call": 0.10433306709265176,
+            "check": 0.36871006389776356,
+            "decisions": 10016,
+            "fold": 0.10083865814696485,
+            "fold_facing_bet": 0.4142739950779327,
+            "raise": 0.4261182108626198,
+            "raise_facing_bet": 0.15709598031173092
+          },
+          "preflop": {
+            "call": 0.18183561906588663,
+            "check": 0.29452383235830054,
+            "decisions": 10427,
+            "fold": 0.09974105687158338,
+            "fold_facing_bet": null,
+            "raise": 0.4238994917042294,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.10529072812991094,
+            "check": 0.4587043827483848,
+            "decisions": 5727,
+            "fold": 0.10948140387637506,
+            "fold_facing_bet": 0.4253731343283582,
+            "raise": 0.32652348524532915,
+            "raise_facing_bet": 0.1655359565807327
+          },
+          "turn": {
+            "call": 0.10777106852192177,
+            "check": 0.3801522709372539,
+            "decisions": 7618,
+            "fold": 0.09004988185875558,
+            "fold_facing_bet": 0.37879624516841526,
+            "raise": 0.4220267786820688,
+            "raise_facing_bet": 0.16786305908337934
+          }
+        },
+        "vpip": 0.6036407522880418
+      },
+      "name": "allin-top-v-equity-171002",
+      "opponent": "equity",
+      "variant": "allin-top"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": null,
+        "faced": 0
+      },
+      "audit": {
+        "decisions": 33788,
+        "fallback": 1159,
+        "fallback_by_street": {
+          "flop": 311,
+          "preflop": 60,
+          "river": 427,
+          "turn": 361
+        },
+        "fallback_rate": 0.034302119095536876
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": 0.32510288065843623,
+        "pfr": 0.4410137785376647,
+        "streets": {
+          "flop": {
+            "call": 0.10433306709265176,
+            "check": 0.36871006389776356,
+            "decisions": 10016,
+            "fold": 0.10083865814696485,
+            "fold_facing_bet": 0.4142739950779327,
+            "raise": 0.4261182108626198,
+            "raise_facing_bet": 0.15709598031173092
+          },
+          "preflop": {
+            "call": 0.18183561906588663,
+            "check": 0.29452383235830054,
+            "decisions": 10427,
+            "fold": 0.09974105687158338,
+            "fold_facing_bet": null,
+            "raise": 0.4238994917042294,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.10529072812991094,
+            "check": 0.4587043827483848,
+            "decisions": 5727,
+            "fold": 0.10948140387637506,
+            "fold_facing_bet": 0.4253731343283582,
+            "raise": 0.32652348524532915,
+            "raise_facing_bet": 0.1655359565807327
+          },
+          "turn": {
+            "call": 0.10777106852192177,
+            "check": 0.3801522709372539,
+            "decisions": 7618,
+            "fold": 0.09004988185875558,
+            "fold_facing_bet": 0.37879624516841526,
+            "raise": 0.4220267786820688,
+            "raise_facing_bet": 0.16786305908337934
+          }
+        },
+        "vpip": 0.6036407522880418
+      },
+      "name": "allin-any-v-equity-171002",
+      "opponent": "equity",
+      "variant": "allin-any"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": 0.3856660302540755,
+        "faced": 6809
+      },
+      "audit": {
+        "decisions": 23876,
+        "fallback": 879,
+        "fallback_by_street": {
+          "flop": 191,
+          "preflop": 39,
+          "river": 352,
+          "turn": 297
+        },
+        "fallback_rate": 0.0368152119282962
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": 0.5066263659614043,
+        "pfr": 0.3407,
+        "streets": {
+          "flop": {
+            "call": 0.32443224357374595,
+            "check": 0.26528574993760917,
+            "decisions": 4007,
+            "fold": 0.12078861991514848,
+            "fold_facing_bet": 0.21501554864504666,
+            "raise": 0.2894933865734964,
+            "raise_facing_bet": 0.20746334962239005
+          },
+          "preflop": {
+            "call": 0.42657054582904225,
+            "check": 0.03975283213182286,
+            "decisions": 14565,
+            "fold": 0.29728801922416753,
+            "fold_facing_bet": null,
+            "raise": 0.23638860281496737,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.31571876399462606,
+            "check": 0.3318405732198836,
+            "decisions": 2233,
+            "fold": 0.15853112404836542,
+            "fold_facing_bet": 0.2774294670846395,
+            "raise": 0.19390953873712494,
+            "raise_facing_bet": 0.1700626959247649
+          },
+          "turn": {
+            "call": 0.3536307391729078,
+            "check": 0.26766525561706284,
+            "decisions": 3071,
+            "fold": 0.11331813741452296,
+            "fold_facing_bet": 0.19376391982182628,
+            "raise": 0.2653858677955063,
+            "raise_facing_bet": 0.20155902004454343
+          }
+        },
+        "vpip": 0.7296
+      },
+      "name": "adapt-v-shover-171002",
+      "opponent": "shover",
+      "variant": "adapt"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": 0.29872227933617274,
+        "faced": 6809
+      },
+      "audit": {
+        "decisions": 23876,
+        "fallback": 879,
+        "fallback_by_street": {
+          "flop": 191,
+          "preflop": 39,
+          "river": 352,
+          "turn": 297
+        },
+        "fallback_rate": 0.0368152119282962
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": 0.5761450825389445,
+        "pfr": 0.3407,
+        "streets": {
+          "flop": {
+            "call": 0.32443224357374595,
+            "check": 0.26528574993760917,
+            "decisions": 4007,
+            "fold": 0.12078861991514848,
+            "fold_facing_bet": 0.21501554864504666,
+            "raise": 0.2894933865734964,
+            "raise_facing_bet": 0.20746334962239005
+          },
+          "preflop": {
+            "call": 0.38592516306213526,
+            "check": 0.03975283213182286,
+            "decisions": 14565,
+            "fold": 0.33793340199107447,
+            "fold_facing_bet": null,
+            "raise": 0.23638860281496737,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.31571876399462606,
+            "check": 0.3318405732198836,
+            "decisions": 2233,
+            "fold": 0.15853112404836542,
+            "fold_facing_bet": 0.2774294670846395,
+            "raise": 0.19390953873712494,
+            "raise_facing_bet": 0.1700626959247649
+          },
+          "turn": {
+            "call": 0.3536307391729078,
+            "check": 0.26766525561706284,
+            "decisions": 3071,
+            "fold": 0.11331813741452296,
+            "fold_facing_bet": 0.19376391982182628,
+            "raise": 0.2653858677955063,
+            "raise_facing_bet": 0.20155902004454343
+          }
+        },
+        "vpip": 0.7009
+      },
+      "name": "allin-top-v-shover-171002",
+      "opponent": "shover",
+      "variant": "allin-top"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": 0.4420619767954178,
+        "faced": 6809
+      },
+      "audit": {
+        "decisions": 23876,
+        "fallback": 879,
+        "fallback_by_street": {
+          "flop": 191,
+          "preflop": 39,
+          "river": 352,
+          "turn": 297
+        },
+        "fallback_rate": 0.0368152119282962
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": 0.45524296675191817,
+        "pfr": 0.3407,
+        "streets": {
+          "flop": {
+            "call": 0.32443224357374595,
+            "check": 0.26528574993760917,
+            "decisions": 4007,
+            "fold": 0.12078861991514848,
+            "fold_facing_bet": 0.21501554864504666,
+            "raise": 0.2894933865734964,
+            "raise_facing_bet": 0.20746334962239005
+          },
+          "preflop": {
+            "call": 0.4529351184346035,
+            "check": 0.03975283213182286,
+            "decisions": 14565,
+            "fold": 0.27092344661860623,
+            "fold_facing_bet": null,
+            "raise": 0.23638860281496737,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.31571876399462606,
+            "check": 0.3318405732198836,
+            "decisions": 2233,
+            "fold": 0.15853112404836542,
+            "fold_facing_bet": 0.2774294670846395,
+            "raise": 0.19390953873712494,
+            "raise_facing_bet": 0.1700626959247649
+          },
+          "turn": {
+            "call": 0.3536307391729078,
+            "check": 0.26766525561706284,
+            "decisions": 3071,
+            "fold": 0.11331813741452296,
+            "fold_facing_bet": 0.19376391982182628,
+            "raise": 0.2653858677955063,
+            "raise_facing_bet": 0.20155902004454343
+          }
+        },
+        "vpip": 0.7503
+      },
+      "name": "allin-any-v-shover-171002",
+      "opponent": "shover",
+      "variant": "allin-any"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": 0.46153846153846156,
+        "faced": 364
+      },
+      "audit": {
+        "decisions": 41871,
+        "fallback": 4161,
+        "fallback_by_street": {
+          "flop": 1034,
+          "preflop": 874,
+          "river": 1200,
+          "turn": 1053
+        },
+        "fallback_rate": 0.09937665687468654
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": 0.09771309771309772,
+        "pfr": 0.4326,
+        "streets": {
+          "flop": {
+            "call": 0.35066430469441984,
+            "check": 0.28219663418954827,
+            "decisions": 11290,
+            "fold": 0.1183348095659876,
+            "fold_facing_bet": 0.20933876527734252,
+            "raise": 0.2488042515500443,
+            "raise_facing_bet": 0.1703227828267001
+          },
+          "preflop": {
+            "call": 0.5881272548376517,
+            "check": 0.03653656936700558,
+            "decisions": 15245,
+            "fold": 0.07891111839947523,
+            "fold_facing_bet": null,
+            "raise": 0.2964250573958675,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.319129508446203,
+            "check": 0.3244559427788769,
+            "decisions": 6571,
+            "fold": 0.17470704611170293,
+            "fold_facing_bet": 0.2991920771436018,
+            "raise": 0.18170750266321717,
+            "raise_facing_bet": 0.15428720354443576
+          },
+          "turn": {
+            "call": 0.3584711922418711,
+            "check": 0.2922989161437536,
+            "decisions": 8765,
+            "fold": 0.11568739304050199,
+            "fold_facing_bet": 0.20163054285146154,
+            "raise": 0.23354249857387335,
+            "raise_facing_bet": 0.17359315967389144
+          }
+        },
+        "vpip": 0.9022
+      },
+      "name": "adapt-v-hyper-171003",
+      "opponent": "hyper",
+      "variant": "adapt"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": 0.46153846153846156,
+        "faced": 364
+      },
+      "audit": {
+        "decisions": 41871,
+        "fallback": 4161,
+        "fallback_by_street": {
+          "flop": 1034,
+          "preflop": 874,
+          "river": 1200,
+          "turn": 1053
+        },
+        "fallback_rate": 0.09937665687468654
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": 0.09771309771309772,
+        "pfr": 0.4326,
+        "streets": {
+          "flop": {
+            "call": 0.35066430469441984,
+            "check": 0.28219663418954827,
+            "decisions": 11290,
+            "fold": 0.1183348095659876,
+            "fold_facing_bet": 0.20933876527734252,
+            "raise": 0.2488042515500443,
+            "raise_facing_bet": 0.1703227828267001
+          },
+          "preflop": {
+            "call": 0.5881272548376517,
+            "check": 0.03653656936700558,
+            "decisions": 15245,
+            "fold": 0.07891111839947523,
+            "fold_facing_bet": null,
+            "raise": 0.2964250573958675,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.319129508446203,
+            "check": 0.3244559427788769,
+            "decisions": 6571,
+            "fold": 0.17470704611170293,
+            "fold_facing_bet": 0.2991920771436018,
+            "raise": 0.18170750266321717,
+            "raise_facing_bet": 0.15428720354443576
+          },
+          "turn": {
+            "call": 0.3584711922418711,
+            "check": 0.2922989161437536,
+            "decisions": 8765,
+            "fold": 0.11568739304050199,
+            "fold_facing_bet": 0.20163054285146154,
+            "raise": 0.23354249857387335,
+            "raise_facing_bet": 0.17359315967389144
+          }
+        },
+        "vpip": 0.9022
+      },
+      "name": "allin-top-v-hyper-171003",
+      "opponent": "hyper",
+      "variant": "allin-top"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": 0.46153846153846156,
+        "faced": 364
+      },
+      "audit": {
+        "decisions": 41871,
+        "fallback": 4161,
+        "fallback_by_street": {
+          "flop": 1034,
+          "preflop": 874,
+          "river": 1200,
+          "turn": 1053
+        },
+        "fallback_rate": 0.09937665687468654
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": 0.09771309771309772,
+        "pfr": 0.4326,
+        "streets": {
+          "flop": {
+            "call": 0.35066430469441984,
+            "check": 0.28219663418954827,
+            "decisions": 11290,
+            "fold": 0.1183348095659876,
+            "fold_facing_bet": 0.20933876527734252,
+            "raise": 0.2488042515500443,
+            "raise_facing_bet": 0.1703227828267001
+          },
+          "preflop": {
+            "call": 0.5881272548376517,
+            "check": 0.03653656936700558,
+            "decisions": 15245,
+            "fold": 0.07891111839947523,
+            "fold_facing_bet": null,
+            "raise": 0.2964250573958675,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.319129508446203,
+            "check": 0.3244559427788769,
+            "decisions": 6571,
+            "fold": 0.17470704611170293,
+            "fold_facing_bet": 0.2991920771436018,
+            "raise": 0.18170750266321717,
+            "raise_facing_bet": 0.15428720354443576
+          },
+          "turn": {
+            "call": 0.3584711922418711,
+            "check": 0.2922989161437536,
+            "decisions": 8765,
+            "fold": 0.11568739304050199,
+            "fold_facing_bet": 0.20163054285146154,
+            "raise": 0.23354249857387335,
+            "raise_facing_bet": 0.17359315967389144
+          }
+        },
+        "vpip": 0.9022
+      },
+      "name": "allin-any-v-hyper-171003",
+      "opponent": "hyper",
+      "variant": "allin-any"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": null,
+        "faced": 0
+      },
+      "audit": {
+        "decisions": 11414,
+        "fallback": 1,
+        "fallback_by_street": {
+          "river": 1
+        },
+        "fallback_rate": 8.761170492377782e-05
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": 0.5741379310344827,
+        "pfr": 0.5079545454545454,
+        "streets": {
+          "flop": {
+            "call": 0.08842652795838751,
+            "check": 0.3740788903337668,
+            "decisions": 2307,
+            "fold": 0.1035977459904638,
+            "fold_facing_bet": 0.4649805447470817,
+            "raise": 0.43389683571738186,
+            "raise_facing_bet": 0.13813229571984437
+          },
+          "preflop": {
+            "call": 0.29421512503766195,
+            "check": 0.0,
+            "decisions": 6638,
+            "fold": 0.23335341970473034,
+            "fold_facing_bet": null,
+            "raise": 0.4724314552576077,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.08145766345123258,
+            "check": 0.3837084673097535,
+            "decisions": 933,
+            "fold": 0.14255091103965703,
+            "fold_facing_bet": 0.5298804780876494,
+            "raise": 0.39228295819935693,
+            "raise_facing_bet": 0.16733067729083664
+          },
+          "turn": {
+            "call": 0.06705729166666667,
+            "check": 0.3033854166666667,
+            "decisions": 1536,
+            "fold": 0.11979166666666667,
+            "fold_facing_bet": 0.5,
+            "raise": 0.509765625,
+            "raise_facing_bet": 0.22010869565217392
+          }
+        },
+        "vpip": 0.7688311688311689
+      },
+      "name": "adapt-v-tag-171003",
+      "opponent": "tag",
+      "variant": "adapt"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": null,
+        "faced": 0
+      },
+      "audit": {
+        "decisions": 11414,
+        "fallback": 1,
+        "fallback_by_street": {
+          "river": 1
+        },
+        "fallback_rate": 8.761170492377782e-05
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": 0.5741379310344827,
+        "pfr": 0.5079545454545454,
+        "streets": {
+          "flop": {
+            "call": 0.08842652795838751,
+            "check": 0.3740788903337668,
+            "decisions": 2307,
+            "fold": 0.1035977459904638,
+            "fold_facing_bet": 0.4649805447470817,
+            "raise": 0.43389683571738186,
+            "raise_facing_bet": 0.13813229571984437
+          },
+          "preflop": {
+            "call": 0.29421512503766195,
+            "check": 0.0,
+            "decisions": 6638,
+            "fold": 0.23335341970473034,
+            "fold_facing_bet": null,
+            "raise": 0.4724314552576077,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.08145766345123258,
+            "check": 0.3837084673097535,
+            "decisions": 933,
+            "fold": 0.14255091103965703,
+            "fold_facing_bet": 0.5298804780876494,
+            "raise": 0.39228295819935693,
+            "raise_facing_bet": 0.16733067729083664
+          },
+          "turn": {
+            "call": 0.06705729166666667,
+            "check": 0.3033854166666667,
+            "decisions": 1536,
+            "fold": 0.11979166666666667,
+            "fold_facing_bet": 0.5,
+            "raise": 0.509765625,
+            "raise_facing_bet": 0.22010869565217392
+          }
+        },
+        "vpip": 0.7688311688311689
+      },
+      "name": "allin-top-v-tag-171003",
+      "opponent": "tag",
+      "variant": "allin-top"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": null,
+        "faced": 0
+      },
+      "audit": {
+        "decisions": 11414,
+        "fallback": 1,
+        "fallback_by_street": {
+          "river": 1
+        },
+        "fallback_rate": 8.761170492377782e-05
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": 0.5741379310344827,
+        "pfr": 0.5079545454545454,
+        "streets": {
+          "flop": {
+            "call": 0.08842652795838751,
+            "check": 0.3740788903337668,
+            "decisions": 2307,
+            "fold": 0.1035977459904638,
+            "fold_facing_bet": 0.4649805447470817,
+            "raise": 0.43389683571738186,
+            "raise_facing_bet": 0.13813229571984437
+          },
+          "preflop": {
+            "call": 0.29421512503766195,
+            "check": 0.0,
+            "decisions": 6638,
+            "fold": 0.23335341970473034,
+            "fold_facing_bet": null,
+            "raise": 0.4724314552576077,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.08145766345123258,
+            "check": 0.3837084673097535,
+            "decisions": 933,
+            "fold": 0.14255091103965703,
+            "fold_facing_bet": 0.5298804780876494,
+            "raise": 0.39228295819935693,
+            "raise_facing_bet": 0.16733067729083664
+          },
+          "turn": {
+            "call": 0.06705729166666667,
+            "check": 0.3033854166666667,
+            "decisions": 1536,
+            "fold": 0.11979166666666667,
+            "fold_facing_bet": 0.5,
+            "raise": 0.509765625,
+            "raise_facing_bet": 0.22010869565217392
+          }
+        },
+        "vpip": 0.7688311688311689
+      },
+      "name": "allin-any-v-tag-171003",
+      "opponent": "tag",
+      "variant": "allin-any"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": null,
+        "faced": 0
+      },
+      "audit": {
+        "decisions": 37298,
+        "fallback": 339,
+        "fallback_by_street": {
+          "flop": 56,
+          "river": 181,
+          "turn": 102
+        },
+        "fallback_rate": 0.009088959193522442
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": null,
+        "pfr": 0.4376,
+        "streets": {
+          "flop": {
+            "call": 0.03337466418681546,
+            "check": 0.44668319900805953,
+            "decisions": 9678,
+            "fold": 0.034097954122752634,
+            "fold_facing_bet": 0.4370860927152318,
+            "raise": 0.4858441826823724,
+            "raise_facing_bet": 0.13509933774834437
+          },
+          "preflop": {
+            "call": 0.1435,
+            "check": 0.3431,
+            "decisions": 10000,
+            "fold": 0.0758,
+            "fold_facing_bet": null,
+            "raise": 0.4376,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.05284791544333529,
+            "check": 0.524603640634175,
+            "decisions": 8515,
+            "fold": 0.05918966529653553,
+            "fold_facing_bet": 0.4386422976501306,
+            "raise": 0.36335877862595417,
+            "raise_facing_bet": 0.16971279373368145
+          },
+          "turn": {
+            "call": 0.03942888522789676,
+            "check": 0.4499725425590335,
+            "decisions": 9105,
+            "fold": 0.03756177924217463,
+            "fold_facing_bet": 0.4,
+            "raise": 0.4730367929708951,
+            "raise_facing_bet": 0.18011695906432748
+          }
+        },
+        "vpip": 0.5811
+      },
+      "name": "adapt-v-station-171003",
+      "opponent": "station",
+      "variant": "adapt"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": null,
+        "faced": 0
+      },
+      "audit": {
+        "decisions": 37298,
+        "fallback": 339,
+        "fallback_by_street": {
+          "flop": 56,
+          "river": 181,
+          "turn": 102
+        },
+        "fallback_rate": 0.009088959193522442
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": null,
+        "pfr": 0.4376,
+        "streets": {
+          "flop": {
+            "call": 0.03337466418681546,
+            "check": 0.44668319900805953,
+            "decisions": 9678,
+            "fold": 0.034097954122752634,
+            "fold_facing_bet": 0.4370860927152318,
+            "raise": 0.4858441826823724,
+            "raise_facing_bet": 0.13509933774834437
+          },
+          "preflop": {
+            "call": 0.1435,
+            "check": 0.3431,
+            "decisions": 10000,
+            "fold": 0.0758,
+            "fold_facing_bet": null,
+            "raise": 0.4376,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.05284791544333529,
+            "check": 0.524603640634175,
+            "decisions": 8515,
+            "fold": 0.05918966529653553,
+            "fold_facing_bet": 0.4386422976501306,
+            "raise": 0.36335877862595417,
+            "raise_facing_bet": 0.16971279373368145
+          },
+          "turn": {
+            "call": 0.03942888522789676,
+            "check": 0.4499725425590335,
+            "decisions": 9105,
+            "fold": 0.03756177924217463,
+            "fold_facing_bet": 0.4,
+            "raise": 0.4730367929708951,
+            "raise_facing_bet": 0.18011695906432748
+          }
+        },
+        "vpip": 0.5811
+      },
+      "name": "allin-top-v-station-171003",
+      "opponent": "station",
+      "variant": "allin-top"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": null,
+        "faced": 0
+      },
+      "audit": {
+        "decisions": 37298,
+        "fallback": 339,
+        "fallback_by_street": {
+          "flop": 56,
+          "river": 181,
+          "turn": 102
+        },
+        "fallback_rate": 0.009088959193522442
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": null,
+        "pfr": 0.4376,
+        "streets": {
+          "flop": {
+            "call": 0.03337466418681546,
+            "check": 0.44668319900805953,
+            "decisions": 9678,
+            "fold": 0.034097954122752634,
+            "fold_facing_bet": 0.4370860927152318,
+            "raise": 0.4858441826823724,
+            "raise_facing_bet": 0.13509933774834437
+          },
+          "preflop": {
+            "call": 0.1435,
+            "check": 0.3431,
+            "decisions": 10000,
+            "fold": 0.0758,
+            "fold_facing_bet": null,
+            "raise": 0.4376,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.05284791544333529,
+            "check": 0.524603640634175,
+            "decisions": 8515,
+            "fold": 0.05918966529653553,
+            "fold_facing_bet": 0.4386422976501306,
+            "raise": 0.36335877862595417,
+            "raise_facing_bet": 0.16971279373368145
+          },
+          "turn": {
+            "call": 0.03942888522789676,
+            "check": 0.4499725425590335,
+            "decisions": 9105,
+            "fold": 0.03756177924217463,
+            "fold_facing_bet": 0.4,
+            "raise": 0.4730367929708951,
+            "raise_facing_bet": 0.18011695906432748
+          }
+        },
+        "vpip": 0.5811
+      },
+      "name": "allin-any-v-station-171003",
+      "opponent": "station",
+      "variant": "allin-any"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": null,
+        "faced": 0
+      },
+      "audit": {
+        "decisions": 33761,
+        "fallback": 1250,
+        "fallback_by_street": {
+          "flop": 349,
+          "preflop": 61,
+          "river": 451,
+          "turn": 389
+        },
+        "fallback_rate": 0.037024969639524896
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": 0.31066176470588236,
+        "pfr": 0.4375,
+        "streets": {
+          "flop": {
+            "call": 0.10390648416425217,
+            "check": 0.37316415226296334,
+            "decisions": 10009,
+            "fold": 0.10520531521630533,
+            "fold_facing_bet": 0.42493946731234866,
+            "raise": 0.4177240483564792,
+            "raise_facing_bet": 0.1553672316384181
+          },
+          "preflop": {
+            "call": 0.18714176538020635,
+            "check": 0.2948987390141383,
+            "decisions": 10468,
+            "fold": 0.09906381352693924,
+            "fold_facing_bet": null,
+            "raise": 0.4188956820787161,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.11454673225579762,
+            "check": 0.45238931834153195,
+            "decisions": 5692,
+            "fold": 0.11735769501054111,
+            "fold_facing_bet": 0.4309677419354839,
+            "raise": 0.3157062543921293,
+            "raise_facing_bet": 0.14838709677419354
+          },
+          "turn": {
+            "call": 0.1107744994731296,
+            "check": 0.3858008429926238,
+            "decisions": 7592,
+            "fold": 0.09246575342465753,
+            "fold_facing_bet": 0.3804878048780488,
+            "raise": 0.410958904109589,
+            "raise_facing_bet": 0.16368563685636855
+          }
+        },
+        "vpip": 0.601386655948553
+      },
+      "name": "adapt-v-equity-171003",
+      "opponent": "equity",
+      "variant": "adapt"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": null,
+        "faced": 0
+      },
+      "audit": {
+        "decisions": 33761,
+        "fallback": 1250,
+        "fallback_by_street": {
+          "flop": 349,
+          "preflop": 61,
+          "river": 451,
+          "turn": 389
+        },
+        "fallback_rate": 0.037024969639524896
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": 0.31066176470588236,
+        "pfr": 0.4375,
+        "streets": {
+          "flop": {
+            "call": 0.10390648416425217,
+            "check": 0.37316415226296334,
+            "decisions": 10009,
+            "fold": 0.10520531521630533,
+            "fold_facing_bet": 0.42493946731234866,
+            "raise": 0.4177240483564792,
+            "raise_facing_bet": 0.1553672316384181
+          },
+          "preflop": {
+            "call": 0.18714176538020635,
+            "check": 0.2948987390141383,
+            "decisions": 10468,
+            "fold": 0.09906381352693924,
+            "fold_facing_bet": null,
+            "raise": 0.4188956820787161,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.11454673225579762,
+            "check": 0.45238931834153195,
+            "decisions": 5692,
+            "fold": 0.11735769501054111,
+            "fold_facing_bet": 0.4309677419354839,
+            "raise": 0.3157062543921293,
+            "raise_facing_bet": 0.14838709677419354
+          },
+          "turn": {
+            "call": 0.1107744994731296,
+            "check": 0.3858008429926238,
+            "decisions": 7592,
+            "fold": 0.09246575342465753,
+            "fold_facing_bet": 0.3804878048780488,
+            "raise": 0.410958904109589,
+            "raise_facing_bet": 0.16368563685636855
+          }
+        },
+        "vpip": 0.601386655948553
+      },
+      "name": "allin-top-v-equity-171003",
+      "opponent": "equity",
+      "variant": "allin-top"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": null,
+        "faced": 0
+      },
+      "audit": {
+        "decisions": 33761,
+        "fallback": 1250,
+        "fallback_by_street": {
+          "flop": 349,
+          "preflop": 61,
+          "river": 451,
+          "turn": 389
+        },
+        "fallback_rate": 0.037024969639524896
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": 0.31066176470588236,
+        "pfr": 0.4375,
+        "streets": {
+          "flop": {
+            "call": 0.10390648416425217,
+            "check": 0.37316415226296334,
+            "decisions": 10009,
+            "fold": 0.10520531521630533,
+            "fold_facing_bet": 0.42493946731234866,
+            "raise": 0.4177240483564792,
+            "raise_facing_bet": 0.1553672316384181
+          },
+          "preflop": {
+            "call": 0.18714176538020635,
+            "check": 0.2948987390141383,
+            "decisions": 10468,
+            "fold": 0.09906381352693924,
+            "fold_facing_bet": null,
+            "raise": 0.4188956820787161,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.11454673225579762,
+            "check": 0.45238931834153195,
+            "decisions": 5692,
+            "fold": 0.11735769501054111,
+            "fold_facing_bet": 0.4309677419354839,
+            "raise": 0.3157062543921293,
+            "raise_facing_bet": 0.14838709677419354
+          },
+          "turn": {
+            "call": 0.1107744994731296,
+            "check": 0.3858008429926238,
+            "decisions": 7592,
+            "fold": 0.09246575342465753,
+            "fold_facing_bet": 0.3804878048780488,
+            "raise": 0.410958904109589,
+            "raise_facing_bet": 0.16368563685636855
+          }
+        },
+        "vpip": 0.601386655948553
+      },
+      "name": "allin-any-v-equity-171003",
+      "opponent": "equity",
+      "variant": "allin-any"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": 0.39057484680478555,
+        "faced": 6854
+      },
+      "audit": {
+        "decisions": 23723,
+        "fallback": 810,
+        "fallback_by_street": {
+          "flop": 194,
+          "preflop": 47,
+          "river": 304,
+          "turn": 265
+        },
+        "fallback_rate": 0.034144079585212664
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": 0.5021945021945022,
+        "pfr": 0.3382,
+        "streets": {
+          "flop": {
+            "call": 0.33883667767335535,
+            "check": 0.25628651257302515,
+            "decisions": 3937,
+            "fold": 0.12420624841249682,
+            "fold_facing_bet": 0.2178173719376392,
+            "raise": 0.28067056134112267,
+            "raise_facing_bet": 0.18797327394209354
+          },
+          "preflop": {
+            "call": 0.4296418505533787,
+            "check": 0.03828968172131711,
+            "decisions": 14547,
+            "fold": 0.29662473362205266,
+            "fold_facing_bet": null,
+            "raise": 0.23544373410325153,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.33452754142409313,
+            "check": 0.32691446484549935,
+            "decisions": 2233,
+            "fold": 0.15584415584415584,
+            "fold_facing_bet": 0.2668711656441718,
+            "raise": 0.18271383788625167,
+            "raise_facing_bet": 0.1602760736196319
+          },
+          "turn": {
+            "call": 0.35196274118429804,
+            "check": 0.27944111776447106,
+            "decisions": 3006,
+            "fold": 0.1187624750499002,
+            "fold_facing_bet": 0.20481927710843373,
+            "raise": 0.24983366600133067,
+            "raise_facing_bet": 0.18818129661503155
+          }
+        },
+        "vpip": 0.731
+      },
+      "name": "adapt-v-shover-171003",
+      "opponent": "shover",
+      "variant": "adapt"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": 0.2969069156696819,
+        "faced": 6854
+      },
+      "audit": {
+        "decisions": 23723,
+        "fallback": 810,
+        "fallback_by_street": {
+          "flop": 194,
+          "preflop": 47,
+          "river": 304,
+          "turn": 265
+        },
+        "fallback_rate": 0.034144079585212664
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": 0.574959574959575,
+        "pfr": 0.3382,
+        "streets": {
+          "flop": {
+            "call": 0.33883667767335535,
+            "check": 0.25628651257302515,
+            "decisions": 3937,
+            "fold": 0.12420624841249682,
+            "fold_facing_bet": 0.2178173719376392,
+            "raise": 0.28067056134112267,
+            "raise_facing_bet": 0.18797327394209354
+          },
+          "preflop": {
+            "call": 0.38550903966453565,
+            "check": 0.03828968172131711,
+            "decisions": 14547,
+            "fold": 0.34075754451089574,
+            "fold_facing_bet": null,
+            "raise": 0.23544373410325153,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.33452754142409313,
+            "check": 0.32691446484549935,
+            "decisions": 2233,
+            "fold": 0.15584415584415584,
+            "fold_facing_bet": 0.2668711656441718,
+            "raise": 0.18271383788625167,
+            "raise_facing_bet": 0.1602760736196319
+          },
+          "turn": {
+            "call": 0.35196274118429804,
+            "check": 0.27944111776447106,
+            "decisions": 3006,
+            "fold": 0.1187624750499002,
+            "fold_facing_bet": 0.20481927710843373,
+            "raise": 0.24983366600133067,
+            "raise_facing_bet": 0.18818129661503155
+          }
+        },
+        "vpip": 0.7005
+      },
+      "name": "allin-top-v-shover-171003",
+      "opponent": "shover",
+      "variant": "allin-top"
+    },
+    {
+      "all_in_responses": {
+        "call_rate": 0.44236941931718704,
+        "faced": 6854
+      },
+      "audit": {
+        "decisions": 23723,
+        "fallback": 810,
+        "fallback_by_street": {
+          "flop": 194,
+          "preflop": 47,
+          "river": 304,
+          "turn": 265
+        },
+        "fallback_rate": 0.034144079585212664
+      },
+      "frequencies": {
+        "bb_fold_vs_raise": 0.46176946176946176,
+        "pfr": 0.3382,
+        "streets": {
+          "flop": {
+            "call": 0.33883667767335535,
+            "check": 0.25628651257302515,
+            "decisions": 3937,
+            "fold": 0.12420624841249682,
+            "fold_facing_bet": 0.2178173719376392,
+            "raise": 0.28067056134112267,
+            "raise_facing_bet": 0.18797327394209354
+          },
+          "preflop": {
+            "call": 0.4540455076648106,
+            "check": 0.03828968172131711,
+            "decisions": 14547,
+            "fold": 0.2722210765106208,
+            "fold_facing_bet": null,
+            "raise": 0.23544373410325153,
+            "raise_facing_bet": null
+          },
+          "river": {
+            "call": 0.33452754142409313,
+            "check": 0.32691446484549935,
+            "decisions": 2233,
+            "fold": 0.15584415584415584,
+            "fold_facing_bet": 0.2668711656441718,
+            "raise": 0.18271383788625167,
+            "raise_facing_bet": 0.1602760736196319
+          },
+          "turn": {
+            "call": 0.35196274118429804,
+            "check": 0.27944111776447106,
+            "decisions": 3006,
+            "fold": 0.1187624750499002,
+            "fold_facing_bet": 0.20481927710843373,
+            "raise": 0.24983366600133067,
+            "raise_facing_bet": 0.18818129661503155
+          }
+        },
+        "vpip": 0.748
+      },
+      "name": "allin-any-v-shover-171003",
+      "opponent": "shover",
+      "variant": "allin-any"
+    }
+  ]
+}
